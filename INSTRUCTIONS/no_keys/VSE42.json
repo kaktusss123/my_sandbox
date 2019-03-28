@@ -1,0 +1,243 @@
+{
+    "_task_id" : "VSE42_test_1",
+    "_start_urls" : [
+		"https://dom.vse42.ru/property/28811190/?viewtype=property&category=commercial&sort=datedesc"
+    ],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "",
+    "_source": "VSE42",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 256,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 256,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 256,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+    "item_page" : {
+        "_target_xpath" : "//div[@class='obj-adv-box radvert ']//div[@class='grid_4']/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"currency" : {
+                "type" : "string",
+                "value" : "RUB"
+            },
+			"header" : {
+                "type" : "string",
+                "path": "//h1[@class='title']//text()"
+            },
+			"date_created" : {
+                "type" : "date",
+                "path": "(//span[@class='afterheader']//span/text())[1]",
+				"regex": "Создано: (.+)",
+				"time" : "from string"
+            },
+			"date_updated" : {
+                "type" : "date",
+                "path": "(//span[@class='afterheader']//span/text())[2]",
+				"regex": "Обновленно: (.+)",
+				"time" : "from string"
+            },			
+			"seller" : {
+				"type" : "string",
+				"path": "//a[@class='radvert-agency-link']/text()"
+			},
+			"phone" : {
+				"type" : "phone",
+				"path": "//div[@class='manger-info--phone']//text()"
+			},
+			"price": {
+				"type" : "string",
+				"path": "//div[@class='btn-group price-dropdown js-dropdown-openhover']//button[@type='button']/text()"
+			},
+			"longitude" :{
+				"type" : "string",
+				"path": "//div[@class='block map active']//img",
+				"regex": ",(.+)\">"
+			},
+			"latitude" :{
+				"type" : "string",
+				"path": "//div[@class='block map active']//img",
+				"regex": "markers=(.+),"
+			},
+			"detail": {
+				"type" : "string",
+				"path": "//h3[contains(.,'Дополнительная')]/parent::div//div[@class='section-body']/text()"
+			},
+			"price": {
+				"type" : "float",
+				"path": "//div[contains(.,'Цена')]/parent::div//div[@class='grid_3 omega cost-value']/text()",
+				"regex": "(.+) ⃏"
+			},
+			"sale_land": {
+				"type" : "float",
+				"path": "//div[contains(.,'Цена')]/parent::div//div[@class='grid_3 omega cost-value']/text()",
+				"regex": "\\((.+) м"
+			}
+        },
+		 "tables" : {
+			"table_1" : {
+                "_keys_xpath" : "//div[@class='section-body']//div[@class='field']//div[@class='label grid_2 alpha']/text()",
+                "_vals_xpath" : "//div[@class='section-body']//div[@class='field']//div[@class='value grid_3 omega']/text()",
+				"key_converter" : {
+					"комнат": {
+						"name": "count_room",
+						"type" : "float"
+					},
+					"опубликовал": {
+						"name": "none",
+						"type" : "string"
+					},
+					"площадь_жилая": {
+						"name": "square_life",
+						"type" : "float",
+						"regex": "(.+) кв"
+					},
+					"площадь_кухни": {
+						"name": "square_kitchen",
+						"type" : "float",
+						"regex": "(.+) кв"
+					},
+					"площадь_общая": {
+						"name": "square_flat",
+						"type" : "float",
+						"regex": "(.+) кв"
+					},
+					"санузел": {
+						"name": "bathroom",
+						"type" : "string"
+					},
+					"телефон": {
+						"name": "none",
+						"type" : "string"
+					},
+					"тип_дома": {
+						"name": "plan",
+						"type" : "string"
+					},
+					"этаж": {
+						"name": ["floor_room","floor_building"],
+						"type" : ["float","float"],
+						"regex": ["(.+)\/","\/(.+)"]
+					},
+					"id_объявления":{
+						"name": "none",
+						"type" : "string"
+					},
+					"всего_этажей": {
+						"name": "floor_building",
+						"type" : "float"
+					},
+					"газ": {
+						"name": "gas",
+						"type" : "string"
+					},
+					"материал_стен": {
+						"name": "material",
+						"type" : "string"
+					},
+					"площадь_прилегающего_участка": {
+						"name": "square_land",
+						"type" : "string"
+					},
+					"тип_объекта": {
+						"name": "type_building",
+						"type" : "string"
+					},
+					"водопровод": {
+						"name": "water",
+						"type" : "string"
+					},
+					"отопление": {
+						"name": "heating",
+						"type" : "string"
+					},
+					"балкон": {
+						"name": "balcony",
+						"type" : "string"
+					},
+					"коммуникации": {
+						"name": "none",
+						"type" : "string"
+					},
+					"площадь_участка": {
+						"name": "square_land",
+						"type" : "float",
+						"regex": "\\d*\\W?\\d+"
+					},
+					"электричество": {
+						"name": "electricity",
+						"type" : "string"
+					},
+					"назначение": {
+						"name": "purpose",
+						"type" : "string"
+					},
+					"укажите_назначение_вручную":{
+						"name": "purpose",
+						"type" : "string"
+					},
+					"площадь_объекта": {
+						"name": "square",
+						"type" : "float",
+						"regex" : "\\d*\\W?\\d+"
+					},
+					"состояние": {
+						"name": "remont",
+						"type" : "string"
+					},
+					"email": {
+						"name": "none",
+						"type" : "string"
+					}
+				}
+			}
+		}
+    }
+}

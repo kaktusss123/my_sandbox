@@ -1,0 +1,360 @@
+{
+	"_task_id": "DOSKA>RU",
+	"_start_urls": [
+		"https://www.doska.ru/msg/real-estate/kvartiri/moskva/aviamotornaja/hxdof.html"
+	],
+	"_segment": "C",
+	"_operation": "sale",
+	"_federal_subject": "23",
+	"_source": "AYAX",
+	"global_settings": {
+		"CONCURRENT_REQUESTS": 724,
+		"SPLASH_URL": "http://0.0.0.0:8050",
+		"LOG_LEVEL": "DEBUG",
+		"AUTOTHROTTLE_ENABLED": true,
+		"AUTOTHROTTLE_START_DELAY": 1.0,
+		"AUTOTHROTTLE_MAX_DELAY": 5.0,
+		"AUTOTHROTTLE_TARGET_CONCURRENCY": 724,
+		"CONCURRENT_REQUESTS_PER_DOMAIN": 724,
+		"RETRY_ENABLED": true,
+		"RETRY_HTTP_CODES": [
+			500,
+			503,
+			504,
+			400,
+			403,
+			408,
+			429,
+			505,
+			404,
+			303,
+			302
+		],
+		"HTTPERROR_ALLOWED_CODES": [],
+		"RETRY_TIMES": 10,
+		"ROBOTSTXT_ENABLED": false,
+		"ROBOTSTXT_OBEY": false,
+		"REDIRECT_ENABLED": false,
+		"COOKIES_ENABLED": false,
+		"RANDOM_UA_TYPE": "random",
+		"DOWNLOAD_TIMEOUT": 60.0
+	},
+	"crawling_settings": {
+		"global_crawling_type": "common",
+		"js": "//",
+		"rotate_useragents": true,
+		"allowed_domains": "",
+		"proxy_settings": {
+			"types": [
+				"https"
+			],
+			"amount": 10000
+		}
+	},
+	"paginations": {
+		"methods": {
+			"crawling_type": "common",
+			"filter_duplicates": true
+		},
+		"paginations_by_url": {
+			"replace_pattern": [
+				["https://www.doska.ru/real-estate/kvartiri/moskva/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/moskovskaja-oblastj/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/sankt-peterburg/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/leningradskaja-oblastj/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/altajskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/amurskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/belgorodskaja/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/brjanskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/vladimirskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/volgogradskaja/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/vologodskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/voronezhskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/evrejskaja-ao/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/ivanovskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/irkutskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/kaliningradskaja/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/kaluzhskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/kam4atskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/kemerovskaja/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/kirovskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/krasnodarskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/krasnojarskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/krim/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/lipeckaja/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/magadanskaja/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/murmanskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/nizhegorodskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/novgorodskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/novosibirskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/omskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/orenburgskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/orlovskaja/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/penzenskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/permskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/primorskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/pskovskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/adigeja/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/baskkortostan/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/karelija/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/respublika-tatarstan/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/rostovskaja/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/rjazanskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/saratovskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/sverdlovskaja/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/smolenskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/stavropolskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/tambovskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/tverskaja/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/tomskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/tulskaja/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/tjumenskaja/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/udmurtskaja-respublika/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/uljanovskaja/page", 1],	
+				["https://www.doska.ru/real-estate/kvartiri/habarovskij-kraj/page", 1],	
+				["https://www.doska.ru/real-estate/kvartiri/hanti-mansijskij-ao/page", 1],	
+				["https://www.doska.ru/real-estate/kvartiri/4eljabinskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/kvartiri/jaroslavskaja-oblast/page", 1],	
+				["https://www.doska.ru/real-estate/kvartiri/drugoe/page", 1],	
+
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/moskva/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/moskovskaja-oblastj/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/sankt-peterburg/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/leningradskaja-oblastj/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/altajskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/amurskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/belgorodskaja/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/brjanskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/vladimirskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/volgogradskaja/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/vologodskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/voronezhskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/evrejskaja-ao/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/ivanovskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/irkutskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/kaliningradskaja/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/kaluzhskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/kam4atskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/kemerovskaja/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/kirovskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/krasnodarskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/krasnojarskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/krim/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/lipeckaja/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/magadanskaja/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/murmanskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/nizhegorodskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/novgorodskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/novosibirskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/omskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/orenburgskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/orlovskaja/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/penzenskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/permskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/primorskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/pskovskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/adigeja/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/baskkortostan/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/karelija/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/respublika-tatarstan/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/rostovskaja/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/rjazanskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/saratovskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/sverdlovskaja/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/smolenskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/stavropolskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/tambovskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/tverskaja/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/tomskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/tulskaja/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/tjumenskaja/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/udmurtskaja-respublika/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/uljanovskaja/page", 1],	
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/habarovskij-kraj/page", 1],	
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/hanti-mansijskij-ao/page", 1],	
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/4eljabinskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/jaroslavskaja-oblast/page", 1],	
+				["https://www.doska.ru/real-estate/zemlja-i-u4astki/drugoe/page", 1],
+
+				["https://www.doska.ru/real-estate/doma-hozajstva/moskva/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/moskovskaja-oblastj/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/sankt-peterburg/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/leningradskaja-oblastj/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/altajskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/amurskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/belgorodskaja/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/brjanskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/vladimirskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/volgogradskaja/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/vologodskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/voronezhskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/evrejskaja-ao/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/ivanovskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/irkutskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/kaliningradskaja/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/kaluzhskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/kam4atskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/kemerovskaja/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/kirovskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/krasnodarskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/krasnojarskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/krim/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/lipeckaja/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/magadanskaja/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/murmanskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/nizhegorodskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/novgorodskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/novosibirskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/omskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/orenburgskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/orlovskaja/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/penzenskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/permskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/primorskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/pskovskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/adigeja/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/baskkortostan/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/karelija/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/respublika-tatarstan/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/rostovskaja/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/rjazanskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/saratovskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/sverdlovskaja/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/smolenskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/stavropolskij-kraj/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/tambovskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/tverskaja/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/tomskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/tulskaja/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/tjumenskaja/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/udmurtskaja-respublika/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/uljanovskaja/page", 1],	
+				["https://www.doska.ru/real-estate/doma-hozajstva/habarovskij-kraj/page", 1],	
+				["https://www.doska.ru/real-estate/doma-hozajstva/hanti-mansijskij-ao/page", 1],	
+				["https://www.doska.ru/real-estate/doma-hozajstva/4eljabinskaja-oblast/page", 1],
+				["https://www.doska.ru/real-estate/doma-hozajstva/jaroslavskaja-oblast/page", 1],	
+				["https://www.doska.ru/real-estate/doma-hozajstva/drugoe/page", 1],				
+
+				["https://www.doska.ru/real-estate/ogorodi-i-dachi/page", 1],
+
+				["https://www.doska.ru/real-estate/ofisi/drugoe/page", 1],				
+				
+				["https://www.doska.ru/real-estate/garages/page", 1],
+				["https://www.doska.ru/real-estate/ofisi/page",1],
+				["https://www.doska.ru/real-estate/premises/storehouses-and-storages/page", 1],
+				["https://www.doska.ru/real-estate/premises/hangars/page", 1],
+				["https://www.doska.ru/real-estate/premises/bathhouses/page", 1],
+				["https://www.doska.ru/real-estate/premises/buildings-and-complexes/page", 1],
+				["https://www.doska.ru/real-estate/premises/shops/page", 1],
+				["https://www.doska.ru/real-estate/premises/workshops/page", 1],				
+				["https://www.doska.ru/real-estate/premises/penthouses/page", 1],				
+				["https://www.doska.ru/real-estate/premises/basements-and-semi-basements/page", 1],
+				["https://www.doska.ru/real-estate/premises/production-facilities/page", 1],
+				["https://www.doska.ru/real-estate/premises/restaurants-cafe-dining-halls/page", 1],				
+				["https://www.doska.ru/real-estate/premises/saloons/page", 1],				
+				["https://www.doska.ru/real-estate/premises/training-halls/page", 1],					
+				["https://www.doska.ru/real-estate/premises/other/page", 1]
+				
+				],
+			"amount": 100
+		}
+	},
+	"item_page": {
+		"_target_xpath": "(//table[@align='center'])[2]//td[@class='msga2']/a/@href",
+		"methods": {
+			"crawling_type": "common",
+			"filter_duplicates": false,
+			"js": ""
+		},
+		"fields": {
+			"title_name": {
+				"type" : "string",
+                "xpath" : "//title/text()"
+			},
+			"date_info": {
+				"type": "date",
+				"time": "now"
+			},
+			"date_created": {
+				"type": "date",
+				"time": "from string",
+				"xpath": "//td[contains(text(),'Дата:')]/text()",
+				"regex": "(?<=Дата:).+"
+			},
+			"description": {
+				"type": "list to string",
+				"xpath": "//div[@id='msg_div_msg']/text()"
+			},
+			"total_price": {
+				"type": "float",
+				"xpath": "//span[@class='ads_price']/text()",
+				"regex": "[0-9 ,.]+"
+			},
+			"price_currency": {
+				"type": "string",
+				"xpath": "//span[@class='ads_price']/text()",
+				"regex": "[А-Яа-я]+"
+			},
+			"price_per_m": {
+				"type": "string",
+				"xpath": "//span[@class='ads_price']/span/text()"
+			},
+			"purpose": {
+				"type": "string",
+				"xpath": "//h2[@class='headtitle']/a[1]/text()"
+			}
+		},
+		"tables": {
+			"table_1": {
+				"_keys_xpath": "//td[@class='ads_opt_name']/text()",
+				"_vals_xpath": "//td[@class='ads_opt']//text()",
+				"key_converter": {
+					"комнат" : {
+                            "name" : "rooms_cnt",
+                            "type" : "string"
+                        },
+					"область" : {
+                            "name" : "district_federal_name",
+                            "type" : "string"
+                        },
+					"площадь" : {
+                            "name" : "area_total",
+                            "type" : "float"
+                        },
+					"район_м" : {
+                            "name" : "intown_district",
+                            "type" : "string"
+                        },
+					"удобства" : {
+                            "name" : "is_comfort",
+                            "type" : "string"
+                        },
+					"улица" : {
+                            "name" : "address_street",
+                            "type" : "string"
+                        },
+					"этаж__этажей" : {
+                            "name" : ["floor","floors_cnt"],
+                            "type" : ["float","float"],
+							"regex": ["^\\d+", "\\d+$"]
+                        },
+					"город" : {
+                            "name" : "address_city",
+                            "type" : "string"
+                        },
+					"район" : {
+                            "name" : "district_name",
+                            "type" : "string"
+                        },
+					"адрес_и_номер_дома": {
+                            "name" : "street_name",
+                            "type" : "string"
+                        }
+				}
+			}
+		}
+	}
+}
+
+
+

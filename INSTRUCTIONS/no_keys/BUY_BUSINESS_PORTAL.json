@@ -1,0 +1,265 @@
+{
+    "_task_id" : "BUY_BUSINESS_PORTAL",
+    "_start_urls" : [
+		"https://bbport.ru/commercial/arenda/avtobiznes/avtomojka-pri-vezde-v-parking-zhk-komfort-klassa_8788/"
+    ],
+    "_segment" : "business",
+    "_operation" : "sale",
+    "_federal_subject" : "",
+    "_source": "BCINFORM",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 1024,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 1024,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 1024,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            502,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : true,
+        "COOKIES_ENABLED" : true,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+    "paginations": {
+    "methods": {
+      "crawling_type": "рфк",
+      "filter_duplicates": true
+    },
+    "paginations_by_xpath": {
+      "paginations_xpath": "//li[@class='pagination']",
+      "paginations_xpath_active": "//span[@class='pagination__btn active']//parent::li",
+      "paginations_xpath_next": "//span[@class='pagination__btn active']//parent::li/following-sibling::li[1]/a/@href"
+    }
+  },
+    "item_page" : {
+        "_target_xpath" : "//div[@class='object__line']/a/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+            "name" : {
+                "type" : "string",
+                "path": "//h1[contains(@class,'title')]/text()"
+            },
+            "business_category": {
+              "type": "string",
+              "path": "//a[@class='categories__link']/text()"
+            },
+			"description" : {
+				"type" : "list to string",
+				"path": "//div[@class='info__text']/p/text()"
+			},
+			"phone": {
+				"type" : "phone",
+				"path": "//div[@class='phone color-red']//@data-phone"
+			},
+			"seller_name": {
+				"type" : "string",
+				"path": "//a[@class='userInfo__subtitle']/text()"
+			},
+            "segment": {
+				"type" : "string",
+				"path": "(//a[@class='breadcrumbs__link']/text())[2]"
+			},
+            "metro": {
+				"type" : "string",
+				"path": "//div[@class='objectP__right']//span[@class='metro__text']/text()"
+			},
+            "address_city": {
+				"type" : "string",
+				"path": "//div[@class='locBox']//div[@class='locBox__heading mb_5']/text()"
+			}
+        },
+		 "tables" : {
+			"table_1" : {
+		        "_keys_xpath" : "//div[@class='smBox__header']/div/text()",
+                "_vals_xpath" : "//div[@class='smBox__footer']//div[@class='countBox']",
+				"key_converter" : {
+                  "возраст": {
+                    "name": ["business_age","business_age_term"],
+                    "type": ["float","string"],
+                    "regex": ["(?<=blue\">)\\d*\\W?\\d+(?=</di)", "(?<=black\">).+(?=</div> \\t)"]
+                  },
+                  "прибыль": {
+                    "name": ["business_income","business_income_unit"],
+                    "type": ["float","string"],
+                    "regex": ["(?<=blue\">)[0-9 ]+(?=</di)", "(?<=black\">).+(?=</div> \\t)"]
+                  },
+                  "стоимость": {
+                    "name": ["business_cost","business_cost_unit"],
+                    "type": ["float","string"],
+                    "regex": ["(?<=blue\">)[0-9 ]+(?=</div> \\t)", "(?<=black\">).+(?=</div> \\t)"]
+                  },
+                  "стоимость_аренды": {
+                    "name": ["price_rent","price_rent_unit"],
+                    "type": ["float","string"],
+                    "regex": ["(?<=blue\">)[0-9 ]+(?=</div> \\t)", "(?<=black\">).+(?=</div> \\t)"]
+                  },
+                  "стоимость_за_кв_м": {
+                    "name": ["prive_per_m","prive_per_m_unit"],
+                    "type": ["float","string"],
+                    "regex": ["(?<=blue\">)[0-9 ]+(?=</div> \\t)", "(?<=black\">).+(?=</div> \\t)"]
+                  },
+                  "площадь": {
+                    "name": ["area_total","area_unit"],
+                    "type": ["float","string"],
+                    "regex": ["(?<=blue\">)[0-9 ]+(?=</div> \\t)", "(?<=black\">).+(?=</div> \\t)"]
+                  }
+
+				}
+			},
+            "table_2" : {
+		        "_keys_xpath" : "//div[@class='objectP__lbl']/text()",
+                "_vals_xpath" : "//div[@class='objectP__val']/text()",
+				"key_converter" : {
+                  "выручка": {
+                    "name": ["business_revenue","business_revenue_unit"],
+                    "type": ["float","string"],
+                    "regex": ["^\\d*\\W?\\d+", "[А-Яа-я ]+"]
+                  },
+                  "доля_в_бизнесе": {
+                    "name": "seller_share",
+                    "type": "string"
+                  },
+                  "расход": {
+                    "name": ["business_spendings","business_spendings_unit"],
+                    "type": ["float","string"],
+                    "regex": ["^\\d*\\W?\\d+", "[А-Яа-я ]+"]
+                  },
+                  "причина_продажи": {
+                    "name": "sale_reason",
+                    "type": "string"
+                  }
+                }
+			},
+            "table_3" : {
+		        "_keys_xpath" : "//div[@class='info__lbl']/text()",
+                "_vals_xpath" : "//div[@class='info__val']/text()",
+				"key_converter" : {
+                  "организационноправовая_форма": {
+                    "name": "business_type",
+                    "type": "string"
+                  },
+                  "продажа_с_юр_лицом": {
+                    "name": "business_type_sale",
+                    "type": "string"
+                  },
+                  "система_документооборота": {
+                    "name": "documentation_system",
+                    "type": "string"
+                  },
+                  "система_налогообложения": {
+                    "name": "loan_type",
+                    "type": "string"
+                  },
+                  "вентиляция": {
+                    "name": "is_ventilation",
+                    "type": "string"
+                  },
+                  "доп_линии": {
+                    "name": "none",
+                    "type": "float"
+                  },
+                  "вход": {
+                    "name": "is_entrance",
+                    "type": "string"
+                  },
+                  "категория": {
+                    "name": "building_category",
+                    "type": "string"
+                  },
+                  "комиссия": {
+                    "name": ["agent_fee","agent_fee_unit"],
+                    "type": ["float","string"],
+                    "regex": ["\\d*\\W?\\d+","[А-Яа-я ]+"]
+                  },
+                  "кондиционер": {
+                    "name": "is_air_conditioning",
+                    "type": "string"
+                  },
+                  "можно_по_частям": {
+                    "name": "none",
+                    "type": "float"
+                  },
+                  "пожарная_сигнализация": {
+                    "name": "is_fire",
+                    "type": "string"
+                  },
+                  "состояние": {
+                    "name": "is_design",
+                    "type": "string"
+                  },
+                  "этаж": {
+                    "name": ["floor","floors"],
+                    "type": ["float","string"],
+                    "regex": ["^\\d+","\\d+$"]
+                  }
+                }
+			}
+		},
+      "_follow": {
+        "post_request": {
+          "link": "https://move.ru/ajax/itemsV3/getPhone/",
+          "fields": {
+            "item_id": {
+              "type": "string",
+              "path": "(//div[contains(@class,'phone_number_button-block')]/a/@data-item-id)[1]"
+            }
+          }
+        },
+        "methods": {
+          "crawling_type": "post",
+          "content_type": "json",
+          "js": "//",
+          "filter_duplicates": false
+        },
+        "fields": {
+          "phone": {
+            "type": "phone",
+            "path": "data.phones"
+          }
+        }
+    }
+    }
+}
+
+

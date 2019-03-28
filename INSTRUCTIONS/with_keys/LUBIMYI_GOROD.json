@@ -1,0 +1,234 @@
+{
+    "_task_id" : "LUBGOROD_test_1",
+    "_start_urls" : [
+		"https://lgorod.com/catalog/kvartiry/?PAGEN_1=1",
+		"https://lgorod.com/catalog/komnaty-sektsii/?PAGEN_1=1",
+		"https://lgorod.com/catalog/kommercheskaya-nedvizhimost/?PAGEN_1=1",
+		"https://lgorod.com/catalog/doma/?PAGEN_1=1",
+		"https://lgorod.com/catalog/zemelnye-uchastki/?PAGEN_1=1",
+		"https://lgorod.com/catalog/garazhi-pogreba/?PAGEN_1=1"
+	],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "",
+    "_source": "LUBGOROD",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 256,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 256,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 256,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+	"paginations": {
+    "methods": {
+      "crawling_type": "common",
+      "filter_duplicates": true
+    },
+    "paginations_by_xpath": {
+		"pattern": "https://lgorod.com/catalog/kvartiry/?PAGEN_1=$generator$/",
+		"items_in_paginations": "//p[contains(@class,'catalog-section-count-records')]/text()",
+      "paginations_xpath": "//div[@class='pagination-pages clearfix']//a",
+      "paginations_xpath_active": "//div[@class='pagination-pages clearfix']/span",
+      "paginations_xpath_next": "//a[contains(@class,'page selected')]/following-sibling::a[1]/@href"
+    }
+  },
+
+    "item_page" : {
+        "_target_xpath" : "//div[@class='catalog-item']//div[@class='catalog-list-view-elem-header']/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"price_currency" : {
+                "type" : "string",
+                "value" : "RUB"
+            },
+			"title_name" : {
+                "type" : "list to string",
+                "xpath" : "//div[@class='block-title']//h1/text()"
+            },			
+			"description" : {
+				"type" : "string",
+				"xpath": "(//div[@class='common-wrapper']//div[@class='description']/text())[2]"
+			},
+			"seller_name" : {
+				"type" : "string",
+				"xpath": "//div[@class='call-request']//div[@class='title']//text()"
+			},
+			"company_name": {
+				"type" : "string",
+				"value": "АН Любимый город"
+			},
+			"phone" : {
+				"type" : "phone",
+				"xpath": "//span[@class='phone-request']//text()"
+			},
+			"date_created" : {
+                "type" : "date",
+                "xpath" : "(//div[@class='info']//span//text())[4]",
+				"regex": "Опубликовано: (.+)",
+				"time" : "from string"
+            },
+			"source_longitude" :{
+				"type" : "float",
+				"xpath": "//div[@class='detail-map']//input//@value",
+				"regex": ",(.+)"
+			},
+			"source_latitude" :{
+				"type" : "float",
+				"xpath": "//div[@class='detail-map']//input//@value",
+				"regex": "(.+),"
+			},
+			"price_total" :{
+				"type" : "list to float",
+				"xpath": "//div[@class='price-value']//text()",
+				"regex": "(\\d*\\W?\\d+) "
+			},
+			"rent_price_per_area" :{
+				"type" : "list to float",
+				"xpath": "//div[@class='price-per-meter']//text()",
+				"regex": "- (.+)    тыс"
+			},
+			"street_name": {
+				"type" : "string",
+				"xpath": "//div[@class='street']/text()"
+			},
+			"address_city": {
+				"type" : "string",
+				"xpath": "//div[@class='breadcrumps']//li[4]//a//text()"
+			},
+			"intown_district": {
+				"type" : "string",
+				"xpath": "//div[@class='breadcrumps']//li[5]//a//text()"
+			},
+			"segment": {
+				"type" : "string",
+				"xpath": "(//div[@class='breadcrumps']//li[last()]/text())[last()]"
+			},
+			"operation":{
+				"type" : "string",
+				"xpath": "//div[@class='block-title']//h1/text()",
+				"regex": "Продажа|Аренда"
+			}
+        },
+		 "tables" : {
+			"table_1" : {
+                "_keys_xpath" : "//div[@class='detail-params']//li",
+                "_vals_xpath" : "//div[@class='detail-params']//li",
+				"key_regex" : "p>(.+)<\/p",
+				"key_converter" : {
+					"год_постройки": {
+						"name": "year_built",
+						"type" : "string",
+						"regex" : "span>(.+)<\/span"
+					},
+					"общая_площадь": {
+						"name": "area_total",
+						"type" : "string",
+						"regex" : "span>(.+) м"
+					},
+					"состояние": {
+						"name": "decoration_type",
+						"type" : "string",
+						"regex" : "span>(.+)<\/span"
+					},
+					"тип_дома": {
+						"name": "wall_material",
+						"type" : "string",
+						"regex" : "span>(.+)<\/span"
+					},
+					"этаж": {
+						"name": ["floor","floors_cnt"],
+						"type" : ["string","string"],
+						"regex" : ["span>(.+)  из", "из (.+)<\/span"]
+					},
+					"балкон": {
+						"name": "is_balcony",
+						"type" : "string",
+						"regex" : "span>(.+)<\/span"
+					}, 	
+					"жилая_площадь": {
+						"name": "area_living",
+						"type" : "string",
+						"regex" : "span>(.+) м"
+					},
+					"жилая_площадь_площадь_кухни": {
+						"name": "none",
+						"type" : "string"
+					},
+					"количество_комнат": {
+						"name": "rooms_cnt",
+						"type" : "string",
+						"regex" : "span>(.+)<\/span"
+					},
+					"планировка": {
+						"name": "layout_type",
+						"type" : "string",
+						"regex" : "span>(.+)<\/span"
+					},
+					"площадь_кухни": {
+						"name": "kitchen_area",
+						"type" : "string",
+						"regex" : "span>(.+) м"
+					},
+					"санузел":		{
+						"name": "is_wc",
+						"type" : "string",
+						"regex" : "span>(.+)<\/span"
+					},
+					"площадь_участка":{
+						"name": "land_area",
+						"type" : "float",
+						"regex" : "span>(.+) сот"
+					}
+				}
+			}
+		}
+    }
+}
+
+

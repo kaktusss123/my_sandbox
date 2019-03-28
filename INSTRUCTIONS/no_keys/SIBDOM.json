@@ -1,0 +1,269 @@
+{
+    "_task_id" : "SIBDOM_test_1",
+    "_start_urls" : [
+		"https://www.sibdom.ru/stickers/view/3330138/"
+    ],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "",
+    "_source": "SIBDOM",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 256,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 256,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 256,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+    "item_page" : {
+        "_target_xpath" : "//div[@class='catalog']/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"currency" : {
+                "type" : "string",
+                "value" : "RUB"
+            },
+			"header" : {
+                "type" : "string",
+                "path": "//div[@class='card-title']//h1/text()"
+            },			
+			"detail" : {
+				"type" : "list to string",
+				"path": "//div[@class='card-text card-description']//p/text()"
+			},
+			"date_created" : {
+                "type" : "list to string",
+                "path": "//a[contains(.,'обновлено')]/text()",
+				"regex": "обновлено (.+)"
+            },
+			"date_updated" : {
+                "type" : "list to string",
+                "path": "//a[contains(.,'обновлено')]/text()",
+				"regex": "обновлено (.+)"
+            },
+			"price" :{
+				"type" : "string",
+				"path": "//span[@class='card-banner-price--full']/text()",
+				"regex": "(.+) руб"
+			},
+			"sale_land":{
+				"type" : "string",
+				"path": "//span[@class='card-banner-price--part']/text()",
+				"regex": "(.+) руб"
+			},
+			"longitude" :{
+				"type" : "string",
+				"path": "//script[text()[contains(.,'centroid')]]/text()",
+				"regex": "centroid:\\s*\\'POINT\\((\\d*\\W?\\d+)"
+			},
+			"latitude" :{
+				"type" : "string",
+				"path": "//script[text()[contains(.,'centroid')]]/text()",
+				"regex": "(\\d*\\W?\\d+)\\)\\', selection"
+			},
+			"phone": {
+				"type" : "phone",
+				"path": "//div[@id='myModal']//div[@class='modal-header']"
+			},
+			"seller": {
+				"type" : "string",
+				"path": "//div[@class='card-feedback-contacts ']//a//text()"
+			},
+			"seller_type": {
+				"type" : "string",
+				"path": "//div[@class='card-feedback-contacts card-feedback-margin']//a//text()"
+			}
+        },
+		
+		 "tables" : {
+			"table_1" : {
+		        "_keys_xpath" : "//div[@class='block-package-wrap block-package-wrap-info']//div[@class='card-info-name']//span//text()",
+                "_vals_xpath" : "//div[@class='block-package-wrap block-package-wrap-info']//div[@class='card-info-content']",
+				"key_converter" : {
+					"балкон": {
+						"name": "balcony",
+						"type" : "string",
+						"regex": "\\r\\s*(.+) "
+					},
+					"город_район": {
+						"name": "none",
+						"type" : "string"
+					},
+					"застройщик": {
+						"name": "none",
+						"type" : "string"
+					},
+					"новостройка": {
+						"name": "name_jk",
+						"type" : "string",
+						"regex": "\\r\\s*(.+) "
+					},
+					"ориентир": {
+						"name": "none",
+						"type" : "string"
+					},
+					"планировка": {
+						"name": "plan",
+						"type" : "string",
+						"regex": "\\r\\s*(.+) "
+					},
+					"площадь": {
+						"name": ["square","square_land"],
+						"type" : ["string","string"],
+						"regex": ["\\r\\s*(.+) ","\\r\\s*(.+) соток"]
+					},
+					"санузел": {
+						"name": "bathroom",
+						"type" : "string",
+						"regex": "\\r\\s*(.+) "
+					},
+					"состояние": {
+						"name": "none",
+						"type" : "string"
+					},
+					"срок_сдачи": {
+						"name": "year_building",
+						"type" : "string",
+						"regex": "\\r\\s*(.+) — по проекту"
+					},
+					"тип_дома": {
+						"name": "material",
+						"type" : "string",
+						"regex": "\\r\\s*(.+) "
+					},
+					"этаж__всего_этажей": {
+						"name": ["floor_room","floor_building"],
+						"type" : ["string","string"],
+						"regex": ["(\\d*\\W?\\d+) \/", "\/ (.+)"]
+					},
+					"адрес": {
+						"name": "address",
+						"type" : "string",
+						"regex": "\\r\\s*(.+)"
+					},
+					"год_постройки": {
+						"name": "year_building",
+						"type" : "string",
+						"regex": "\\r\\s*(.+)"
+					},
+					"материал_стен": {
+						"name": "material",
+						"type" : "string",
+						"regex": "\\r\\s*(.+) "
+					},
+					"название_жк": {
+						"name": "name_jk",
+						"type" : "string",
+						"regex": "\\r\\s*(.+)"
+					},
+					"общая_площадь": {
+						"name": "square",
+						"type" : "string",
+						"regex": "\\r\\s*(.+) м"
+					},
+					"этаж": {
+						"name": ["floor_room","floor_building"],
+						"type" : ["string","string"],
+						"regex": ["\\r\\s*(\\d*\\W?\\d+) ","\/ (.+) "]
+					},
+					"водопровод": {
+						"name": "water",
+						"type" : "string",
+						"regex": "\\r\\s*(.+) "
+					},
+					"канализация": {
+						"name": "sewage",
+						"type" : "string",
+						"regex": "\\r\\s*(.+) "
+					},
+					"категория_земель": {
+						"name": "class_land",
+						"type" : "string",
+						"regex": "\\r\\s*(.+)"
+					},
+					"подъезд": {
+						"name": "none",
+						"type" : "string"
+					},
+					"электричество": {
+						"name": "electricity",
+						"type" : "string",
+						"regex": "\\r\\s*(.+) "
+					},
+					"интернет": {
+						"name": "internet",
+						"type" : "string",
+						"regex": "\\r\\s*(.+) "
+					},
+					"мебель": {
+						"name": "furniture",
+						"type" : "string",
+						"regex": "\\r\\s*(.+) "
+					},
+					"состояние_объекта": {
+						"name": "remont",
+						"type" : "string",
+						"regex": "\\r\\s*(.+) "
+					},
+					"бытовая_техника": {
+						"name": "appliances",
+						"type" : "string",
+						"regex": "\\r\\s*(.+) "
+					},
+					"лоджия": {
+						"name": "balcony",
+						"type" : "string",
+						"regex": "\\r\\s*(.+) "
+					}
+				}
+			}
+		}
+    }
+}
+
+

@@ -1,0 +1,198 @@
+{
+    "_task_id" : "STROIKA74_test_1",
+    "_start_urls" : [
+		"http://www.stroyka74.ru/nedv/272216/"
+    ],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "74",
+    "_source": "STROIKA74",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 256,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 256,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 256,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+    "item_page" : {
+        "_target_xpath" : "//ul[@class='ad_items_list_new']//li//div[@class='title']//a/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"date_created": {
+                "type" : "date",
+                "path": "//div[@class='dops']//div//text()",
+				"regex": "Опубликовано: (.+)",
+				"time" : "from string"
+			},
+			"currency" : {
+                "type" : "string",
+                "value" : "RUB"
+            },
+			"header" : {
+                "type" : "string",
+                "path": "//h1//text()"
+            },
+			"seller" : {
+				"type" : "string",
+				"path": "//div[@class='conts']//div[@class='cont_show']//text()",
+				"regex": ", (.+)"
+			},
+			"phone": {
+				"type" : "phone",
+				"path": "//div[@class='conts']//div[@class='cont_show']//text()"
+			},
+			"detail": {
+			    "type" : "list to string",
+                "path": "//div[@class='format_text format_text_dop']//text()"
+			},
+			"torg": {
+				"type" : "string",
+				"path": "//span[@class='torg']//span//text()"
+			},
+			"address": {
+                "type" : "string",
+                "path": "//div[@class='location']//text()"
+			},
+			"price": {
+                "type" : "float",
+                "path": "//div[@class='price']//strong//text()"
+			},
+			"square": {
+                "type" : "string",
+                "path": "//div[@class='area_nums']//text()",
+				"regex": "(\\d*\\W?\\d+)\/"
+			},
+			"square_life": {
+                "type" : "string",
+                "path": "//div[@class='area_nums']//text()",
+				"regex": "\/(\\d*\\W?\\d+)\/"
+			},
+			"square_kitchen": {
+                "type" : "string",
+                "path": "//div[@class='area_nums']//text()",
+				"regex": "\/(\\d*\\W?\\d+)м"
+			},
+			"floor_room": {
+                "type" : "float",
+                "path": "//div[@class='area_nums']//text()",
+				"regex" : "этаж (\\d*\\W?\\d+)\/"
+			},
+			"floor_building": {
+                "type" : "float",
+                "path": "//div[@class='area_nums']//text()",
+				"regex" : "\/(\\d*\\W?\\d+)$"
+			},
+			"longitude" :{
+				"type" : "float",
+				"path": "//script[text()[contains(.,'center')]]//text()",
+				"regex": ", (\\d*\\W?\\d+\\W?\\d+)],\\s*zoom"
+			},
+			"latitude" :{
+				"type" : "float",
+				"path": "//script[text()[contains(.,'center')]]//text()",
+				"regex": "center: \\[(\\d*\\W?\\d+\\W?\\d+)"
+			}
+        },
+		 "tables" : {
+			"table_1" : {
+                "_keys_xpath" : "//div[@class='params']//li/text()",
+                "_vals_xpath" : "//div[@class='params']//li/text()",
+				"key_regex": "(\\D*)",
+				"key_converter" : {
+					"отдельный_вход": {
+						"name" : "entrance",
+                        "type" : "string"
+					},
+					"первая_линия": {
+						"name" : "first_line",
+                        "type" : "string"
+					},
+					"площадь_м": {
+						"name" : "square",
+                        "type" : "float",
+						"regex": "(\\d*\\W?\\d+)"
+					},
+					"свободная_планировка": {
+						"name" : "plan",
+                        "type" : "string"
+					},
+					 "охрана": {
+						"name" : "security",
+                        "type" : "string"
+					},
+					"парковка": {
+						"name" : "parking",
+                        "type" : "string"
+					},
+					"раздельный_санузел": {
+						"name" : "bathroom",
+                        "type" : "string"
+					},
+					"совмещенный_санузел": {
+						"name" : "bathroom",
+                        "type" : "string"
+					},
+					"цокольное_помещение": {
+						"name" : "none",
+                        "type" : "string"
+					},
+					"кирпичный_дом":  {
+						"name" : "material",
+                        "type" : "string"
+					},
+					"сдача_дома_—__год":  {
+						"name" : "year_building",
+                        "type" : "float",
+						"regex": "(\\d*\\W?\\d+)"
+					}
+				}
+			}
+		}
+    }
+}

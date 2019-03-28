@@ -1,0 +1,554 @@
+{
+    "_task_id" : "REALTYVISION_test_1",
+    "_start_urls" : [
+		"https://bratsk.realtyvision.ru/arenda-nedvizhimosti/usobjects/215263/"
+    ],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "50",
+    "_source": "REALTYVISION",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 256,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 256,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 256,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+    "item_page" : {
+        "_target_xpath" : "//div//tr//td[@style='width: 150px; ']//a/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"address": {
+				"type" : "string",
+                "path": "//p[@style='font-size: 17px; margin-top: 0; padding-top: 0; margin-bottom: 0; padding-bottom: 5px; color: #009900; ']//text()"
+			},
+			"currency" : {
+                "type" : "string",
+                "value" : "RUB"
+            },
+			"header" : {
+                "type" : "string",
+                "path": "//h1//span[@itemprop='name']//text()"
+            },
+			"price" : {
+                "type" : "string",
+                "path": "//span[@itemprop='price']//text()"
+            },
+			"price_unit": {
+                "type" : "string",
+                "path": "//b[@style='color: #ff0000; font-weight: bold; ']/text()"
+			},
+			"date_created": {
+				"type" : "date",
+				"path": "//p[contains(.,'Добавлено')]//text()",
+				"regex": "Добавлено: (.+)",
+				"time" : "from string"
+			},
+			"date_updated": {
+				"type" : "date",
+				"path": "//p[contains(.,'Обновлено')]//text()",
+				"regex": "Обновлено: (.+)",
+				"time" : "from string"
+			},
+			"longitude" :{
+				"type" : "float",
+				"path": "//script[text()[contains(.,'mapCenter')]]/text()",
+				"regex": ", (\\d*\\W?\\d+)],\\s*map"
+			},
+			"latitude" :{
+				"type" : "float",
+				"path": "//script[text()[contains(.,'mapCenter')]]/text()",
+				"regex": "mapCenter = \\[(\\d*\\W?\\d+),"
+			},
+			"detail": {
+                "type" : "list to string",
+                "path": "//h2[text()[contains(.,'Рекламная')]]/following-sibling::p//text()"
+			}
+		},
+		
+		 "tables" : {
+			"table_1" : {
+                "_keys_xpath" : "//table[@class='inner-table']//tr//td[@class='label']/text()",
+                "_vals_xpath" : "//table[@class='inner-table']//tr",
+				"key_converter" : {
+					"ванна": {
+						"type" : "string",
+						"name": "bathroom",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"год_постройки": {
+						"type" : "float",
+						"name": "year_building",
+						"regex": "\/td>\\s*<td>(\\d*\\W?\\d+)<"
+					},
+					"год_приобретения": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"дверь": {
+						"type" : "string",
+						"name": "door",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"домофон": {
+						"type" : "string",
+						"name": "intercom",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"железная_дверь_в_подъезде": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"инсоляция": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"интернет": {
+						"type" : "string",
+						"name": "internet",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"ипотека":{
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"кухня": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"лифт": {
+						"type" : "string",
+						"name": "lift",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"материал": {
+						"type" : "string",
+						"name": "material",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"окна": {
+						"type" : "string",
+						"name": "type_windows",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"ориентир": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"планировка": {
+						"type" : "string",
+						"name": "plan",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"площадь": {
+						"type" : ["string","string","string"],
+						"name": ["square","square_life","square_kitchen"],
+						"regex": ["\/td>\\s*<td>(\\d*\\W?\\d+)\/","\/(\\d*\\W?\\d+)\/","\/(\\d*\\W?\\d+)<"]
+					},
+					"подъезд": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"расп_дома": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"расп_квартиры": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"санузел": {
+						"type" : "string",
+						"name": "bathroom",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"сертификат": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"сигнализация": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"состояние": {
+						"type" : "string",
+						"name": "remont",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"телефон": {
+						"type" : "string",
+						"name": "sp_phone",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"число_собственников": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"электрическая_плита": {
+						"type" : "string",
+						"name": "segment",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"этаж": {
+						"type" : ["float","float"],
+						"name": ["floor_room","floor_building"],
+						"regex": ["\/td>\\s*<td>(\\d*\\W?\\d+)\/","\/(\\d*\\W?\\d+)<"]
+					},
+					"вид_из_окон": {
+						"type" : "string",
+						"name": "vid",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"водоснабжение": {
+						"type" : "string",
+						"name": "water",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"возможен_обмен": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"входы": {
+						"type" : "string",
+						"name": "vhod",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"высота_потолков": {
+						"type" : "string",
+						"name": "height",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"крыша": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"назначение": {
+						"type" : "string",
+						"name": "suprose",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"отопление": {
+						"type" : "string",
+						"name": "heating",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"парковка": {
+						"type" : ["string","float"],
+						"name": ["parking","count_parking"],
+						"regex": ["\/td>\\s*<td>(.+)<", "\/td>\\s*<td>(.+)-"]
+					},
+					"подъездные_пути": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"покрытие_пола": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"стены": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"субъект_собственности": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"торг":{
+						"type" : "string",
+						"name": "torg",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"форма_владения": {
+						"type" : "string",
+						"name": "pravo",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"энергоснабжение": {
+						"type" : "string",
+						"name": "electricity",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"балкон": {
+						"type" : "string",
+						"name": "balcony",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"благоустройство": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"документы": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"на_площадке": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"новая_сантехника": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"серия": {
+						"type" : "string",
+						"name": "ser_building",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"продажа_бизнеса": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"материал_дороги":{
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"насаждения":{
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"ограждение": {
+						"type" : "string",
+						"name": "fence",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"постройки_1": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"постройки_2": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"собственность": {
+						"type" : "string",
+						"name": "pravo",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"участок": {
+						"type" : "string",
+						"name": "square_land",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"форма": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"электричество": {
+						"type" : "string",
+						"name": "electricity",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"вода_подведена": {
+						"type" : "string",
+						"name": "water",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"землеотвод": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"канализация_подведена": {
+						"type" : "string",
+						"name": "sewage",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"уклон": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"количество_су": {
+						"type" : "string",
+						"name": "bathroom",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"площадь_участка":{
+						"type" : "string",
+						"name": "square_land",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"тип_строения": {
+						"type" : "string",
+						"name": "type_building",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"балкон__лоджия": {
+						"type" : "string",
+						"name": "balcony",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"залог": {
+						"type" : "string",
+						"name": "deposit",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"количество_кроватей": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"количество_спальных_мест": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"комиссия_агента": {
+						"type" : "string",
+						"name": "bonus",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"комм_платежи": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"мебель": {
+						"type" : "string",
+						"name": "furniture",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"парковочное_место": {
+						"type" : "string",
+						"name": "parking",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"плита": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"срок_аренды": {
+						"type" : "string",
+						"name": "arenda_time",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"стиральная_машина": {
+						"type" : "string",
+						"name": "washer",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"телевизор": {
+						"type" : "string",
+						"name": "tv",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"холодильник": {
+						"type" : "string",
+						"name": "fridge",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"микроволновка": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"можно_с_детьми":{
+						"type" : "string",
+						"name": "children_allowed",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"кабельное__цифровое_тв":{
+						"type" : "string",
+						"name": "tv",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"кондиционер": {
+						"type" : "string",
+						"name": "condition",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"условия_оплаты": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"утюг": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					},
+					"фен": {
+						"type" : "string",
+						"name": "none",
+						"regex": "\/td>\\s*<td>(.+)<"
+					}
+				}
+			}
+		}
+    }
+}

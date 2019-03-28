@@ -1,0 +1,251 @@
+{
+    "_task_id": "NNN_LR_3",
+    "_start_urls": [
+        "http://rostov.life-realty.ru/commerce/commerce_321157/"
+    ],
+    "_segment": "",
+    "_operation": "",
+    "_federal_subject": "",
+    "_source": "LIFEREALTY",
+    "global_settings": {
+        "CONCURRENT_REQUESTS": 512,
+        "CONCURRENT_REQUESTS_PER_DOMAIN": 512,
+        "DOWNLOAD_TIMEOUT": 60,
+        "SPLASH_URL": "http://0.0.0.0:8050",
+        "LOG_LEVEL": "INFO",
+        "AUTOTHROTTLE_ENABLED": false,
+        "AUTOTHROTTLE_START_DELAY": 1.0,
+        "AUTOTHROTTLE_MAX_DELAY": 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY": 512,
+        "HTTPERROR_ALLOWED_CODES": [],
+        "RETRY_ENABLED": true,
+        "RETRY_TIMES": 10,
+        "RETRY_HTTP_CODES": [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+            301
+        ],
+        "ROBOTSTXT_ENABLED": false,
+        "ROBOTSTXT_OBEY": false,
+        "REDIRECT_ENABLED": false,
+        "COOKIES_ENABLED": false,
+        "RANDOM_UA_TYPE": "random"
+    },
+    "crawling_settings": {
+        "global_crawling_type": "common",
+        "js": "//",
+        "rotate_useragents": true,
+        "allowed_domains": [],
+        "proxy_settings": {
+            "types": [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+    "paginations": {
+        "methods": {
+            "crawling_type": "common",
+            "filter_duplicates": true
+        },
+        "paginations_by_url": {
+            "replace_pattern": [
+                ["http://rostov.life-realty.ru/commerce/oficy/?page=", 1],
+                ["http://rostov.life-realty.ru/commerce/torgovye/?page=", 1
+                ],
+                [
+                    "http://rostov.life-realty.ru/commerce/skladskie/?page=",
+                    1
+                ],
+                [
+                    "http://rostov.life-realty.ru/commerce/proizvodstvo/?page=",
+                    1
+                ],
+                [
+                    "http://krasnodar.life-realty.ru/commerce/oficy/?page=",
+                    1
+                ],
+                [
+                    "http://krasnodar.life-realty.ru/commerce/torgovye/?page=",
+                    1
+                ],
+                [
+                    "http://krasnodar.life-realty.ru/commerce/skladskie/?page=",
+                    1
+                ],
+                [
+                    "http://krasnodar.life-realty.ru/commerce/proizvodstvo/?page=",
+                    1
+                ],
+                [
+                    "http://novgorod.life-realty.ru/commerce/oficy/?page=",
+                    1
+                ],
+                [
+                    "http://novgorod.life-realty.ru/commerce/torgovye/?page=",
+                    1
+                ],
+                [
+                    "http://novgorod.life-realty.ru/commerce/skladskie/?page=",
+                    1
+                ],
+                [
+                    "http://novgorod.life-realty.ru/commerce/proizvodstvo/?page=",
+                    1
+                ],
+                [
+                    "http://ekaterinburg.life-realty.ru/commerce/oficy/?page=",
+                    1
+                ],
+                [
+                    "http://ekaterinburg.life-realty.ru/commerce/torgovye/?page=",
+                    1
+                ],
+                [
+                    "http://ekaterinburg.life-realty.ru/commerce/skladskie/?page=",
+                    1
+                ],
+                [
+                    "http://ekaterinburg.life-realty.ru/commerce/proizvodstvo/?page=",
+                    1
+                ]
+            ],
+            "amount": 10
+        }
+    },
+    "item_page": {
+            "_target_xpath": "//td[@class='txt']/a/@href",
+            "methods": {
+                "crawling_type": "common",
+                "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+                "filter_duplicates": true
+            },
+            "fields": {
+				"operation": {
+                    "type": "string",
+                    "xpath": "//h1//text()",
+					"regex": "Продается|Сдается"
+                },
+                "date_info": {
+                    "type": "date",
+                    "time": "now"
+                },
+                "price_currency": {
+                    "type": "string",
+                    "value": "RUB"
+                },
+                "title_name": {
+                    "type": "string",
+                    "xpath": "//h1//text()"
+                },
+                "description": {
+                    "type": "list to string",
+                    "xpath": "//h4[contains(.,'Дополнительная')]/parent::div/text()"
+                },
+                "seller_name": {
+                    "type": "string",
+                    "xpath": "//div[@class='card_contacts']//div[@class='c_face']//text()"
+                },
+				"company_name": {
+                    "type": "list to string",
+                    "xpath": "//table[@class='card_saler_info']//b//text()"
+                },
+                "phone": {
+                    "type": "phone",
+                    "xpath": "//div[@class='c_phone']/text()"
+                },
+                "date_created": {
+                    "type": "date",
+                    "xpath": "//div[@class='card_date']//text()",
+                    "regex": "добавлено (.+)",
+                    "time": "from string"
+                },
+                "date_updated": {
+                    "type": "date",
+                    "xpath": "//div[@class='card_date']//text()",
+                    "regex": "добавлено (.+)",
+                    "time": "from string"
+                },
+                "price_total": {
+                    "type": "list to string",
+                    "xpath": "//div[@class='card_price']/text()"
+                },
+                "source_longitude": {
+                    "type": "float",
+                    "xpath": "//script[text()[contains(.,'center')]]//text()",
+                    "regex": ", (\\d*\\W?\\d+\\W?\\d+)\\],\\s*zoom:"
+                },
+                "source_latitude": {
+                    "type": "float",
+                    "xpath": "//script[text()[contains(.,'center')]]//text()",
+                    "regex": "center: \\[(\\d*\\W?\\d+\\W?\\d+),"
+                },
+				"segment": {
+                    "type": "string",
+                    "xpath": "(//li//a[@class='current']//text())[1]"
+                },
+				"purpose": {
+                    "type": "string",
+                    "xpath": "//h1//text()",
+					"regex": "офис |помещение свободного назначения|под гостиницу|под общепит|склад|участок|квартира|комната|дом"
+                }
+            },
+            "tables": {
+                "table_1": {
+                    "_keys_xpath": "//h4[contains(.,'Параметры')]/parent::div/text()",
+                    "_vals_xpath": "//h4[contains(.,'Параметры')]/parent::div/text()",
+                    "key_regex": "^.+(?=:)",
+                    "key_converter": {
+                        "площадь_участка": {
+                            "name": "land_area",
+                            "type": "float",
+                            "regex": "участка: (.+) сот"
+                        },
+                        "тип_земли": {
+                            "name": "land_category",
+                            "type": "string",
+                            "regex": "земли: (.+)"
+                        },
+                        "площадь_помещения": {
+                            "name": "area_total",
+                            "type": "string",
+                            "regex": "помещения: (.+) м"
+                        }
+                    }
+                },
+                "table_2": {
+                    "_keys_xpath": "//h4[contains(.,'Местонахождение')]/parent::div/text()",
+                    "_vals_xpath": "//h4[contains(.,'Местонахождение')]/parent::div/text()",
+                    "key_regex": "^.+(?=:)",
+                    "key_converter": {
+                        "адрес": {
+                            "name": "street_name",
+                            "type": "string",
+                            "regex": "Адрес: (.+)"
+                        },
+                        "населенный_пункт": {
+                            "name": "address_city",
+                            "type": "string",
+                            "regex": "пункт: (.+)"
+                        },
+                        "район": {
+                            "name": "intown_district",
+                            "type": "string",
+                            "regex": "Район: (.+)"
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+

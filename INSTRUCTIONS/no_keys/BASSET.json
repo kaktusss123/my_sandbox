@@ -1,0 +1,464 @@
+{
+    "_task_id" : "BISINESS_ASSET_test_1",
+    "_start_urls" : [
+		"https://business-asset.com/ru/msk/prodazha-biznesa/ru025757/"
+    ],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "",
+    "_source": "BISINESS_ASSET",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 256,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 256,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 256,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+    "item_page" : {
+        "_target_xpath" : "//h2//a/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"currency" : {
+                "type" : "string",
+                "value" : "RUB"
+            },
+			"detail": {
+			    "type" : "list to string",
+                "path": "//p[@itemprop='description']/text()"
+			},
+			"date_created": {
+			    "type" : "date",
+                "path": "(//div[@class='date']/text())[1]",
+				"time" : "from string"
+			},
+			"header" : {
+                "type" : "list to string",
+                "path": "//h1//text()"
+            },
+			"name" : {
+                "type" : "list to string",
+                "path": "//h1//text()"
+            },
+			"seller" : {
+				"type" : "string",
+				"path": "(//p[@class='contactName']//text())[1]"
+			},
+			"address": {
+				"type" : "string",
+				"path": "(//div[@class='text']/text())[last()]"
+			},
+			"longitude" :{
+				"type" : "string",
+				"path": "//script[text()[contains(.,'latitude')]]/text()",
+				"regex": "longitude\":\"(\\d*\\W?\\d+\\W?\\d+)\","
+			},
+			"latitude" :{
+				"type" : "string",
+				"path": "//script[text()[contains(.,'latitude')]]/text()",
+				"regex": "latitude\":\"(\\d*\\W?\\d+\\W?\\d+)\","
+			}
+		},
+		 "tables" : {
+			"table_1" : {
+                "_keys_xpath" : "//div[@class='rows']//div[@class='label']",
+                "_vals_xpath" : "//div[@class='rows']//div[@class='val']",
+				"key_regex": "[А-Яа-яй]+",
+				"key_converter" : {
+					"активность": {
+						"name" : "none",
+                        "type" : "string"
+					},
+					"вид": {
+						"name" : "none",
+                        "type" : "string"
+					},
+					"возраст_лет": {
+						"name" : "buseness_age",
+                        "type" : "string",
+						"regex": "val\">(\\d*\\W?\\d+)"
+					},
+					"площадь": {
+						"name" : "square",
+                        "type" : "string",
+						"regex": "val\">(\\d*\\W?\\d+) "
+					},
+					"размер_комиссии": {
+						"name" : "bonus",
+                        "type" : "string"
+					},
+					"тип": {
+						"name" : "seller_type",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"выручка_в_месяц_кассовая_выручка_с_учетом_налогов_с_продаж_ндс_и_прочего": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "val\">(\\d*\\W?\\d+)"
+					},
+					"кассовая_прибыль_с_в_месяц_сумма_которая_остается_на_счету_предприятия_после_всех_необходимых_выплат_это_сумма_которую_можно_свободно_вынимать_из_бизнеса_не_нарушая_его_нормальной_деятельности":{
+						"name" : "revenue",
+                        "type" : "string",
+						"regex": "val\">(\\d*\\W?\\d+)"
+					}, 
+					"окупаемость_лет": {
+						"name" : "payoff",
+                        "type" : "string",
+						"regex": "val\">(\\d*\\W?\\d+)"
+					},
+					 "персонал": {
+						"name" : "employees_count",
+                        "type" : "string",
+						"regex": "val\">(\\d*\\W?\\d+)"
+					}
+				}
+			},
+			"table_2" : {
+                "_keys_xpath" : "//div[@class='list-dl']//div[@class='label']",
+                "_vals_xpath" : "//div[@class='list-dl']//div[@class='label']/following-sibling::div",
+				"key_regex": "[А-Яа-яй]+",
+				"key_converter" : {
+					"в_аренде_до": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"важные_особенности": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"выручка_в_месяц": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "(\\d*\\W?\\d+)"
+					},
+					"год_постройки": {
+						"name" : "year_building",
+                        "type" : "string"
+					},
+					"город": {
+						"name" : "address_city",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"долги_перед_третьими_лицами": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"дополнительное_описание": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"залог_аванс_предоплата": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"кассовая_прибыль_с_в_месяц": {
+						"name" : "revenue",
+                        "type" : "string",
+						"regex": "val\">(\\d*\\W?\\d+)"
+					},
+					"количество_владельцев": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"количество_машиномест": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"количество_объектов": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"количество_помещений": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"коммуникации_и_важные_особенности": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"конкуренция_на_рынке": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"материальные_активы_и_оборотный_капитал_которые_включены_в_стоимость": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"необходимые_дополнительные_инвестиции_и_вложения_для_нормальной_деятельности_предприятия_требуются_дополнительные_денежные_вливания_которые_не_входят_в_цену_продажи_бизнеса_без_этих_вложений_бизнес_перестанет_существовать_инвестиции_в_развитие_не_учитываются": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"общая_площадь_1": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"общая_площадь_2": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"организационно_правовая_форма": {
+						"name" : "business_form",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"оценочная_стоимость_1": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"оценочная_стоимость_2": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"оценочная_стоимость_включена_в_цену_продажи": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"положение_этаж": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"потенциал_роста_бизнеса": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"права_на_землю": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"права_на_помещения": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"причина_продажи": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"продаваемая_доля": {
+						"name" : "share",
+                        "type" : "string"
+					},
+					"прочая_важная_информация": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"рабочие_часы": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"ремонт": {
+						"name" : "remont",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"сроки_для_сделки": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"статус": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"телефон_1": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"телефон_2": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"тип_1": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"тип_2": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"тип_объекта": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"условия_аренды": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"характеристики_местоположения": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"цена": {
+						"name" : "price",
+                        "type" : "string",
+						"regex": "(\\d*\\W?\\d+)"
+					},
+					"цена_выручка_соотношение_продажной_цены_и_годовой_выручки_показатель_показывает_уровень_оценки_бизнеса_по_отношению_к_размерам_самой_компании_как_правило_значение_меньше": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "(\\d*\\W?\\d+)"
+					},
+					"цена_прибыль_окупаемость_соотношение_цены_и_кассовой_прибыли_в_год_показатель_примерно_отражает_окупаемость_инвестиций_сколько_лет_потребуется_чтобы_вернуть_деньги_потраченные_на_покупку_бизнеса": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "(\\d*\\W?\\d+)"
+					},
+					"точный_адрес": {
+						"name" : "address",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"уступки_по_оплате": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"высота_потолков": {
+						"name" : "height",
+                        "type" : "string",
+						"regex": "\\d*\\W?\\d+"
+					},
+					"комиссия_по_сделке": {
+						"name" : "bonus",
+                        "type" : "string",
+						"regex": "\\d*\\W?\\d+"
+					},
+					"материал_стен": {
+						"name" : "material",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"оценочная_стоимость": {
+						"name" : "none",
+                        "type" : "string"
+					},
+					"численность_персонала": {
+						"name" : "employees_count",
+                        "type" : "string"
+					},
+					"до_метро":  {
+						"name" : "remoteness",
+                        "type" : "string"
+					},
+					"помощь_и_поддержка_которую_вы_готовы_оказать":  {
+						"name" : "none",
+                        "type" : "string"
+					},
+					"район_метро":  {
+						"name" : "metro",
+                        "type" : "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"персонал": {
+						"name" : "employees_count",
+                        "type" : "string"
+					},
+					"выделено_электроэнергии": {
+						"name" : "moschnost",
+                        "type" : "string",
+						"regex": "(.+)<span"
+					},
+					"веб_сайт_1": {
+						"name" : "none",
+                        "type" : "string"
+					},
+					"веб_сайт_2": {
+						"name" : "none",
+                        "type" : "string"
+					},
+					"веб_сайт_3": {
+						"name" : "none",
+                        "type" : "string"
+					},
+					 "дополнительное_уточнение_причины_продажи": {
+						"name" : "none",
+                        "type" : "string"
+					},
+					  "дополнительное_уточнение_по_персоналу": {
+						"name" : "none",
+                        "type" : "string"
+					}
+				}
+			}
+		}
+    }
+}

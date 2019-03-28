@@ -1,0 +1,313 @@
+{
+	"_task_id": "ALTERA_INVEST",
+	"_start_urls": [
+		"https://alterainvest.ru/rus/products/"
+	],
+	"_segment": "",
+	"_operation": "",
+	"_federal_subject": "",
+	"_source": "ALTERA_INVEST",
+	"global_settings": {
+		"CONCURRENT_REQUESTS": 512,
+		"CONCURRENT_REQUESTS_PER_DOMAIN": 512,
+		"DOWNLOAD_TIMEOUT": 60,
+		"SPLASH_URL": "http://0.0.0.0:8050",
+		"LOG_LEVEL": "INFO",
+		"AUTOTHROTTLE_ENABLED": false,
+		"AUTOTHROTTLE_START_DELAY": 1.0,
+		"AUTOTHROTTLE_MAX_DELAY": 60,
+		"AUTOTHROTTLE_TARGET_CONCURRENCY": 512,
+		"HTTPERROR_ALLOWED_CODES": [],
+		"RETRY_ENABLED": true,
+		"RETRY_TIMES": 100,
+		"RETRY_HTTP_CODES": [
+			500,
+			503,
+			504,
+			400,
+			403,
+			408,
+			429,
+			505,
+			404,
+			303,
+			302,
+			301
+		],
+		"ROBOTSTXT_ENABLED": false,
+		"ROBOTSTXT_OBEY": false,
+		"REDIRECT_ENABLED": false,
+		"COOKIES_ENABLED": false,
+		"RANDOM_UA_TYPE": "random"
+	},
+	"crawling_settings": {
+		"global_crawling_type": "common",
+		"js": "//",
+		"rotate_useragents": true,
+		"allowed_domains": [],
+		"proxy_settings": {
+			"types": [
+				"https"
+			],
+			"amount": 10000
+		}
+	},
+	"paginations": {
+		"methods": {
+			"crawling_type": "common",
+			"filter_duplicates": true
+		},
+		"paginations_by_url": {
+			"replace_pattern": [
+				"https://alterainvest.ru/rus/products/?page=",
+				1
+			],
+			"amount": 215
+		}
+	},
+	"item_page": {
+		"_target_xpath": "//div[@class='catalog_img']/a/@href",
+		"methods": {
+			"crawling_type": "common",
+			"js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+			"filter_duplicates": true
+		},
+		"fields": {
+			"date_info": {
+				"type": "date",
+				"time": "now"
+			},
+			"date_created": {
+				"type": "date",
+				"path": "//li[@class='new_cart__topbar__left__inform__item inform__item__date']/text()",
+				"time": "from string"
+			},
+			"description": {
+				"type": "list to string",
+				"path": "//div[@class='subway']//text()"
+			},
+			"name": {
+				"type": "string",
+				"path": "//h1[@class='new_cart__topbar__article']/text()"
+			},
+			"phone": {
+				"type": "phone",
+				"path": "//span[@class='suphone_s_card']/a/text()"
+			},
+			"seller_name": {
+				"type": "list to string",
+				"path": "//div[@class='name']/text()"
+			},
+			"segment":{
+				"type": "string",
+				"value": "Готовый бизнес"
+			},
+			"operation":{
+				"type": "string",
+				"value": "sale"
+			}
+		},
+		"tables": {
+			"_first": {
+				"_keys_xpath": "//div[@class='block']/text()[normalize-space()]",
+				"_vals_xpath": "//span[@class='only-block-item']//text()[1]",
+				"key_converter": {
+					"доходность": {
+						"name": ["profitability", "profitability_units"
+						],
+						"type": ["float", "string"
+						],
+						"regex": ["\\d*\\W?\\d+", "\\D+"]
+					},
+					"окупаемость": {
+						"name": [
+							"payoff",
+							"payoff_term"
+						],
+						"type": [
+							"float",
+							"string"
+						],
+						"regex": [
+							"\\d*\\W?\\d+",
+							"\\D+"
+						]
+					},
+					"прибыль": {
+						"name": "revenue",
+						"type": "float",
+						"regex": "\\d*\\W?\\d+"
+					},
+					"цена_объекта": {
+						"name": "price",
+						"type": "float",
+						"regex": "\\d*\\W?\\d+"
+					}
+				}
+			},
+			"_address": {
+				"_keys_xpath": "//div[@class='textbox-right']//tr/td[1]/text()",
+				"_vals_xpath": "//div[@class='textbox-right']//tr/td[2]",
+				"key_converter": {
+					"город": {
+						"name": "address_city",
+						"type": "string"
+					},
+					"район": {
+						"name": "address_district",
+						"type": "string",
+						"regex": "(?<=td>).+(?=</td>)"
+					},
+					"окупаемость": {
+						"name": ["payoff", "payoff_term"],
+						"type": ["float","string"],
+						"regex": ["(?<=td>)\\d*\\W?\\d+", "[А-Яа-я]+" ]
+					},
+					"прибыль": {
+						"name": ["revenue", "revenue_term"],
+						"type": ["float","string"],
+						"regex": ["(?<=td>)\\d*\\W?\\d+", "[А-Яа-я]+" ]
+					},
+					"цена": {
+						"name": ["price", "price_unit"],
+						"type": ["float","string"],
+						"regex": ["(?<=td>).+(?=\\<span)", "rouble" ]
+					}
+				}
+			},
+			"big_table": {
+				"_keys_xpath": "//div[@class='new_cart__info-object__label']/text()",
+				"_vals_xpath": "//div[@class='new_cart__info-object__txt']",
+				"key_converter": {
+					"адрес":{
+						"name": "none",
+						"type": "string"
+					},
+					"город": {
+						"name": "address_city",
+						"type": "string",
+						"regex": "(?<=\\>).+(?=\\<\\/)"
+					},
+					"документы_и_лицензии": {
+						"name": "is_documents",
+						"type": "string",
+						"regex": "(?<=\\<p>).*(?=\\<\\/p)"
+					},
+					"доля": {
+						"name": "share",
+						"type": "float",
+						"regex": "(?<=\\>)\\d*\\W?\\d+(?=\\<\\/)"
+					},
+					"дополнительная_информация_о_помещениях": {
+						"name": "assets_permits_info",
+						"type": "string",
+						"regex": "(?<=-p\">).*(?=\\<\\/p)"
+					},
+					"информация_об_арендодателе": {
+						"name": "assets_landlord_info",
+						"type": "string",
+						"regex": "(?<=txt\">).*(?=</div>)"
+					},
+					"количество_работников": {
+						"name": "employees_count",
+						"type": "float",
+						"regex": "\\d*\\W?\\d+"
+					},
+					"метро": {
+						"name": "metro",
+						"type": "string",
+						"regex": "(?<=txt\">).*(?=</div>)"
+					},
+					"окупаемость": {
+						"name": ["payoff", "payoff_term"],
+						"type": ["float","string"],
+						"regex":  ["(?<=txt\">)\\d*\\W?\\d+", "[А-Яа-я]+" ]
+					},
+					"организационноправовая_форма": {
+						"name": "business_form",
+						"type": "string",
+						"regex": "[А-Яа-я ]+"
+					},
+					"площадь_помещений": {
+						"name": "area_total",
+						"type": "float",
+						"regex": "(?<=txt\">)\\d*\\W?\\d+"
+					},
+					"прибыль": {
+						"name": ["revenue", "revenue_term"],
+						"type": ["float","string"],
+						"regex": ["\\d*\\W?\\d+", "[А-Яа-я]+" ]
+					},
+					"раздел": {
+						"name": "business_type",
+						"type": "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"среднемесячные_обороты": {
+						"name":  ["cashflow", "cashflow_term"],
+						"type": ["float","string"],
+						"regex": ["\\d*\\W?\\d+", "[А-Яа-я]+" ]
+					},
+					"среднемесячные_расходы": {
+						"name":  ["expenses", "expenses_term"],
+						"type": ["float","string"],
+						"regex": ["\\d*\\W?\\d+", "[А-Яа-я]+" ]
+					},
+					"средства_производства": {
+						"name": "production_goods",
+						"type": "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"стоимость_аренды": {
+						"name":  ["rent_expenses", "rent_expenses_term"],
+						"type": ["float","string"],
+						"regex": ["(?<=>)\\d*\\W?\\d+", "[А-Яа-я]+" ]
+					},
+					"цена": {
+						"name": ["price", "price_unit"],
+						"type": ["float","string"],
+						"regex": ["(?<=txt\">).+(?=\\<span)", "rouble" ]
+					},
+					"район": {
+						"name": "address_district",
+						"type": "string",
+						"regex": "(?<=txt\">).+(?=</div>)"
+					},
+					"возраст_бизнеса": {
+						"name": "buseness_age",
+						"type": "float",
+						"regex": "(?<=txt\">)\\d*\\W?\\d+"
+					},
+					"список_персонала": {
+						"name": "personnel_info",
+						"type": "string",
+						"regex": "[А-Яа-яй]+"
+					},
+					"фонд_зп": {
+						"name":  ["salary_funding", "salary_funding_term"],
+						"type": ["float","string"],
+						"regex": ["(?<=>)\\d*\\W?\\d+", "[А-Яа-я]+" ]
+					},
+					"нематериальные_активы": {
+						"name": "employees_count",
+						"type": "float",
+						"regex": "(?<=</p>).*(?=</div>)"
+					},
+					"площадь_участка": {
+						"name":  ["area_land", "area_land_unit"],
+						"type": ["float","string"],
+						"regex": ["(?<=>)\\d*\\W?\\d+", "[А-Яа-я]+" ]
+					},
+					"аренда_площадь_помещений": {
+						"name": "none",
+						"type": "string",
+						"regex": "(?<=</p>).*(?=</div>)"
+					}
+				}
+			}
+		}
+	}
+}
+
+
+

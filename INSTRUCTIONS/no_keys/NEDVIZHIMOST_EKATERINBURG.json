@@ -1,0 +1,282 @@
+{
+    "_task_id" : "E1_test_1",
+    "_start_urls" : [
+		"https://homes.e1.ru/view/245358731/"
+    ],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "66",
+    "_source": "E1",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 256,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 256,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 256,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+    "item_page" : {
+        "_target_xpath" : "//tbody[@class='re-search-result-table__body']//td[@class='re-search-result-table__body-cell re-search-result-table__body-cell_price']//a/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"currency" : {
+                "type" : "string",
+                "value" : "RUB"
+            },
+			"header" : {
+                "type" : "string",
+                "path": "//h2[@class='card__header']//text()"
+            },
+			"seller" : {
+				"type" : "string",
+				"path": "(//div[@class='organization-informer _sms-contacts-widget__organization-informer']//text())[2]"
+			},
+			"date_created": {
+                "type" : "date",
+                "path": "(//p[@class='card__information']//span[@class='card__publication-date']//text())[2]",
+				"time" : "from string"
+			},
+			"date_updated": {
+                "type" : "date",
+                "path": "(//p[@class='card__information']//span[@class='card__publication-date']//text())[1]",
+				"time" : "from string"
+			},
+			"address": {
+			    "type" : "string",
+                "path": "//p[@class='card__address']//text()"
+			},
+			"price": {
+			    "type" : "float",
+                "path": "//p[@class='card__cost']//text()",
+				"regex": "\\d*\\W?\\d+\\W?\\d+"
+			},
+			"sale_land": {
+				"type" : "float",
+                "path": "//p[@class='card__price']//text()",
+				"regex": "(\\d*\\W?\\d+\\W?\\d+) руб"
+			},
+			"detail": {
+			    "type" : "list to string",
+                "path": "//div[@class='card__comments-section']//p//text()"
+			},
+			"metro":{
+			    "type" : "string",
+                "path": "//p[@class='card__underground']//text()",
+				"regex": "(.+),"
+			},
+			"remoteness":{
+			    "type" : "string",
+                "path": "//p[@class='card__underground']//text()",
+				"regex": ", (.+)"
+			},
+			"district":{
+			    "type" : "string",
+                "path": "//p[@class='card__micro-district']//text()"
+			}
+        },
+		 "tables" : {
+			"table_1" : {
+                "_keys_xpath" : "//div[@class='card__details _m_float']//dt[@class='key-value__key']/text()",
+                "_vals_xpath" : "//div[@class='card__details _m_float']//dl[@class='key-value key-value_type_with-grid']",
+				"key_converter" : {
+					"жилой_комплексдом": {
+						"name" : "name_jk",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"материал_дома": {
+						"name" : "material",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"оформление_отношений": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"планировка": {
+						"name" : "plan",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"санузел": {
+						"name" : "bathroom",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"сдача": {
+						"name" : "year_building",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"тип_квартиры": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"этаж": {
+						"name" : "floor_room",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"этажность": {
+						"name" : "floor_building",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"высота_потолков_м": {
+						"name" : "height",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"интернет": {
+						"name" : "internet",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"коммунальные_платежи_включены_в_стоимость": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"отдельный_вход": {
+						"name" : "entrance",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"парковка_количество_машиномест": {
+						"name" : "count_parking",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"тип_здания": {
+						"name" : "type_building",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"год_постройки": {
+						"name" : "year_building",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"назначение_помещения": {
+						"name" : "purpose",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"асфальтовая_дорога": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"вода_подведена": {
+						"name" : "water",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"канализация_подведена": {
+						"name" : "sewage",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"лоджия": {
+						"name" : "balcony",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"состояние": {
+						"name" : "remont",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"тип_дома": {
+						"name" : "ser_building",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					 "форма_собственности":{
+						"name" : "none",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"мощность_квт":{
+						"name" : "none",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					},
+					"балкон":{
+						"name" : "balcony",
+                        "type" : "string",
+						"regex": "value\">(.+)<\/dd"
+					}
+				}
+			},
+			"table_2" : {
+                "_keys_xpath" : "//div[@class='sms-card-list']//dt[@class='sms-card-list__key']/text()",
+                "_vals_xpath" : "//div[@class='sms-card-list']//dd[@class='sms-card-list__value']/text()",
+				"key_converter" : {
+					"жилая": {
+						"name" : "square_life",
+                        "type" : "float",
+						"regex": "\\d*\\W?\\d+\\W?\\d+"
+					},
+					"кухня": {
+						"name" : "square_kitchen",
+                        "type" : "float",
+						"regex": "\\d*\\W?\\d+\\W?\\d+"
+					},
+					"oбщая": {
+						"name" : "square_flat",
+                        "type" : "float",
+						"regex": "\\d*\\W?\\d+\\W?\\d+"
+					}
+				}
+			}
+		}
+    }
+}

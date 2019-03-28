@@ -1,0 +1,201 @@
+{
+    "_task_id" : "NNN_ADVECS_VOR_1",
+    "_start_urls" : [
+		"http://www.advecs.vrn.ru/catalog/object/4891"
+    ],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "Воронежская область",
+    "_source": "advecs.com",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 512,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 512,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 512,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+	"paginations" : {
+        "methods" : {
+            "crawling_type" : "common",
+            "filter_duplicates" : true
+            },
+       "paginations_by_url": {
+            "replace_pattern": [
+				"http://www.advecs.vrn.ru/search/page/",1
+			],
+            "amount": 50
+        }
+    },
+    "item_page" : {
+        "_target_xpath" : "//li[@class='tr']/a/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"description" : {
+				"type" : "list to string",
+				"xpath": "//p[@class='object-text']/text()"
+			},
+			"title_name" : {
+				"type" : "list to string",
+				"xpath": "(//h1[@class='page-slide-object-title']/text())[2]"
+			},
+			"address" : {
+				"type" : "list to string",
+				"xpath": "//span[@class='fulladdress-text']/text()"
+			},
+			"price_total" : {
+                "type" : "list to float",
+				"xpath" : "//h3[@class='object-price']//text()",
+				"regex" : "\\d*\\W?\\d+"
+            },
+			"price_currency" : {
+                "type" : "list to string",
+				"xpath" : "//h3[@class='object-price']//span//text()",
+                "regex" : "[А-Яа-я]+"
+            },
+			"company_name" : {
+                "type" : "string",
+				"value" : "АДВЕКС"
+            },
+			"seller_name" : {
+                "type" : "string",
+				"xpath" : "//h2//text()"
+            },
+			"phone": {
+				"type" : "phone",
+				"xpath": "//p[@class='object-phone']//span//text()"
+			},
+			"area_total" : {
+                "type" : "list to float",
+				"xpath" : "//p[contains(.,'S общ.')]/text()",
+				"regex" : "\\d*\\W?\\d+"
+            },
+			"area_living" : {
+                "type" : "list to float",
+				"xpath" : "//p[contains(.,'S жилая')]/text()",
+				"regex" : "\\d*\\W?\\d+"
+            },
+			"kitchen_area" : {
+                "type" : "list to float",
+				"xpath" : "//p[contains(.,'S кухни')]/text()",
+				"regex" : "\\d*\\W?\\d+"
+            },
+			"segment": {
+                "type" : "string",
+				"xpath" : "(//h1//text())[1]"
+            },
+			"purpose": {
+			     "type" : "list to string",
+				"xpath" : "(//h1[@class='page-slide-object-title']/text())[2]"
+			}
+        },
+		"tables" : {
+			"table_1" : {
+                "_keys_xpath" : "//div[@class='tr-list']//li//span/text()",
+                "_vals_xpath" : "//div[@class='tr-list']//li/text()",
+				"key_converter" : {
+					"балконылоджии": {
+						"name": "is_balcony",
+						"type" : "string"
+					},
+					"возможность_покупки_в_ипотеку": {
+						"name": "can_mortgage",
+						"type" : "string"
+					},
+					"высота_потолков": {
+						"name": "ceiling_height",
+						"type" : "float",
+						"regex": "\\d*\\W?\\d+"
+					},
+					"материал_постройки": {
+						"name": "wall_material",
+						"type" : "string"
+					},
+					"ремонт": {
+						"name": "decoration_type",
+						"type" : "string"
+					},
+					"санузел": {
+						"name": "is_wc",
+						"type" : "string"
+					},
+					"этаж": {
+						"name": "floor",
+						"type" : "float"
+					},
+					"этажность": {
+						"name": "floors_cnt",
+						"type" : "float"
+					},
+					"год_постройки": {
+						"name": "year_built",
+						"type" : "float",
+						"regex": "\\d*\\W?\\d+"
+					},
+					"количество_комнат": {
+						"name": "rooms_cnt",
+						"type" : "float",
+						"regex": "\\d*\\W?\\d+"
+					},
+					"коммуникации": {
+						"name": "none",
+						"type" : "string"
+					},
+					"целевое_использование":{
+						"name": "none",
+						"type" : "string"
+					},
+					"наличие_подвала":{
+						"name": "none",
+						"type" : "string"
+					}
+				}
+			}
+		}
+	}
+}

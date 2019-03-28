@@ -1,0 +1,221 @@
+{
+    "_task_id" : "DOM43_test_1",
+    "_start_urls" : [
+		"https://dom43.ru/realty/zemelnyij-uchastok-poselenij-izhs-na-prodazhu-238369/"
+    ],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "43",
+    "_source": "DOM43",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 256,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 256,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 256,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+    "item_page" : {
+        "_target_xpath" : "//div[@class='property-card']//div[@class='property-card__title pull-left']//a/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"currency" : {
+                "type" : "string",
+                "value" : "RUB"
+            },
+			"header" : {
+                "type" : "string",
+                "path": "//h1[@class='realty__title']//text()"
+            },
+			"seller" : {
+				"type" : "string",
+				"path": "(//div[@class='realty__contacts']//div[@class='col-sm-10']//p)[1]//text()"
+			},
+			"phone": {
+				"type" : "phone",
+				"path": "//div[@id='phone-number']//text()"
+			},
+			"detail": {
+			    "type" : "list to string",
+                "path": "//div[@class='realty__block realty__description']//text()"
+			},
+			"address": {
+                "type" : "string",
+                "path": "//p[@id='realty-address']//text()"
+			}
+        },
+		 "tables" : {
+			"table_1" : {
+                "_keys_xpath" : "//div[@class='realty__block realty__fields']//p//strong/text()",
+                "_vals_xpath" : "//div[@class='realty__block realty__fields']//p",
+				"key_converter" : {
+					"жилая_площадь": {
+						"name" : "square_life",
+                        "type" : "float",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"комнат_в_квартире": {
+						"name" : "count_rooms",
+                        "type" : "float",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"микрорайон_г_кирова": {
+						"name" : "district",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					 "категория_земель": {
+						"name" : "class_land",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"новостройка": {
+						"name" : "novostroi",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"общая_площадь": {
+						"name" : "square",
+                        "type" : "float",
+						"regex": "<\/strong>\\s*(\\d*\\W?\\d+)"
+					},
+					"тип": {
+						"name" : "segment",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"ипотека": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"операция": {
+						"name" : "operation",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"планировка": {
+						"name" : "plan",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"площадь_кухни": {
+						"name" : "square_kitchen",
+                        "type" : "float",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"тип_дома": {
+						"name" : "material",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"цена": {
+						"name" : "price",
+                        "type" : "float",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"этаж": {
+						"name" : "floor_room",
+                        "type" : "float",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"этажность": {
+						"name" : "floor_building",
+                        "type" : "float",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"балкон": {
+						"name" : "balcony",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"залог": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"коммунальные_услуги_входят_в_стоимость": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"санузел": {
+						"name" : "bathroom",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"интернет": {
+						"name" : "internet",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"мебель_в_квартире": {
+						"name" : "furniture",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"мебель_на_кухне": {
+						"name" : "furniture_kitchen",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"ремонт": {
+						"name" : "remont",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					},
+					"холодильник": {
+						"name" : "fridge",
+                        "type" : "string",
+						"regex": "<\/strong>\\s*(.+)\\s*<\/p>"
+					}
+				}
+			}
+		}
+    }
+}

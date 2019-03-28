@@ -1,0 +1,277 @@
+{
+	"_task_id": "GRADSTROYAN",
+	"_start_urls": [
+		"http://gradstroy35.ru/kupit/kvartiru/45540"
+	],
+	"_segment": "C",
+	"_operation": "sale",
+	"_federal_subject": "23",
+	"_source": "AYAX",
+	"global_settings": {
+		"CONCURRENT_REQUESTS": 724,
+		"SPLASH_URL": "http://0.0.0.0:8050",
+		"LOG_LEVEL": "DEBUG",
+		"AUTOTHROTTLE_ENABLED": true,
+		"AUTOTHROTTLE_START_DELAY": 1.0,
+		"AUTOTHROTTLE_MAX_DELAY": 5.0,
+		"AUTOTHROTTLE_TARGET_CONCURRENCY": 724,
+		"CONCURRENT_REQUESTS_PER_DOMAIN": 724,
+		"RETRY_ENABLED": true,
+		"RETRY_HTTP_CODES": [
+			500,
+			503,
+			504,
+			400,
+			403,
+			408,
+			429,
+			505,
+			404,
+			303,
+			302
+		],
+		"HTTPERROR_ALLOWED_CODES": [],
+		"RETRY_TIMES": 10,
+		"ROBOTSTXT_ENABLED": false,
+		"ROBOTSTXT_OBEY": false,
+		"REDIRECT_ENABLED": false,
+		"COOKIES_ENABLED": false,
+		"RANDOM_UA_TYPE": "random",
+		"DOWNLOAD_TIMEOUT": 60.0
+	},
+	"crawling_settings": {
+		"global_crawling_type": "common",
+		"js": "//",
+		"rotate_useragents": true,
+		"allowed_domains": "",
+		"proxy_settings": {
+			"types": [
+				"https"
+			],
+			"amount": 10000
+		}
+	},
+	"paginations": {
+		"methods": {
+			"crawling_type": "common",
+			"filter_duplicates": true
+		},
+		"paginations_by_url": {
+			"replace_pattern": [
+				"http://gradstroy35.ru/kupit/zemlyu/?page=",
+				1,
+				"&sort=created&priceMin=&priceMax=&distanceMin=&distanceMax=&lotareaMin=&lotareaMax="
+			],
+			"amount": 100
+		}
+	},
+	"item_page": {
+		"_target_xpath": "//a[@itemprop='url']/@href",
+		"methods": {
+			"crawling_type": "common",
+			"filter_duplicates": false,
+			"js": ""
+		},
+		"fields": {
+			"area_total": {
+				"type": "float",
+				"path": "//span[@itemprop='name']/text()",
+				"regex": "\\d+\\s?(?=м²)"
+			},
+			"date_info": {
+				"type": "date",
+				"time": "now"
+			},
+			"name": {
+				"type": "string",
+				"path": "//span[@itemprop='name']/text()"
+			},
+			"date_created": {
+				"type": "date",
+				"time": "from string",
+				"path": "//time/text()",
+				"regex": "(?<=щено).+"
+			},
+			"description": {
+				"type": "list to string",
+				"path": "//div[@id='offer-description']//text()"
+			},
+			"seller_name": {
+				"type": "string",
+				"path": "(//a[@class='author'])[1]/text()"
+			},
+			"phone": {
+				"type": "phone",
+				"path": "(//a[@class='author'])[1]/following-sibling::a[1]/text()"
+			},
+			"price": {
+				"type": "float",
+				"path": "//meta[@itemprop='price']/@content"
+			},
+			"price_currency": {
+				"type": "string",
+				"path": "//meta[@itemprop='priceCurrency']/@content"
+			},
+			"price_term": {
+				"type": "string",
+				"path": "//section[@id='offer-price']/h2/text()",
+				"regex": "[А-Яа-я]+"
+			},
+			"latitude": {
+				"type": "float",
+				"path": "//div[@class='offer-map']/@data-lat"
+			},
+			"longitude": {
+				"type": "float",
+				"path": "//div[@class='offer-map']/@data-long"
+			}
+		},
+		"tables": {
+			"table_1": {
+				"_keys_xpath": "//div[@class='name']/text()",
+				"_vals_xpath": "//div[@class='value']",
+				"key_converter": {
+					"площадь_участка": {
+						"name": [
+							"area_land",
+							"area_land_unit"
+						],
+						"type": [
+							"float",
+							"string"
+						],
+						"regex": [
+							"(?<=e\">)\\d*\\W?\\d+",
+							"[A-Яа-я]+(?=</div>)"
+						]
+					},
+					"тип_участка": {
+						"name": "land_type",
+						"type": "float",
+						"regex": "(?<=e\">).+(?=</div>)"
+					},
+					"этаж": {
+						"name": ["floor","floors_count"],
+						"type": ["float","float"],
+						"regex": ["(?<=e\">)\\d+","\\d+(?=</div>)"]
+					},
+					"ежемесячный_платеж": {
+						"name": "nil",
+						"value": " "
+					},
+					"процентная_ставка": {
+						"name": "nil",
+						"value": " "
+					},
+					"срок_кредита": {
+						"name": "nil",
+						"value": " "
+					},
+					"сумма_всех_платежей": {
+						"name": "nil",
+						"value": " "
+					},
+					"сумма_кредита": {
+						"name": "nil",
+						"value": " "
+					},
+					"переплата": {
+						"name": "nil",
+						"value": " "
+					},
+					"первый_взнос": {
+						"name": "nil",
+						"value": " "
+					},
+					"цена_квартиры": {
+						"name": "nil",
+						"value": " "
+					},
+					"год_постройки": {
+						"name": "year_built",
+						"type": "float",
+						"regex": "(?<=e\">).+(?=</div>)"
+					},
+					"жилая_площадь": {
+						"name": "area_living",
+						"type": "float",
+						"regex": "(?<=e\">)\\d*\\W?\\d+"
+					},
+					"количество_комнат": {
+						"name": "rooms_count",
+						"type": "float",
+						"regex": "(?<=e\">)\\d*\\W?\\d+"
+					},
+					"комнат_в_квартире": {
+						"name": "rooms_total",
+						"type": "float",
+						"regex": "(?<=e\">)\\d*\\W?\\d+"
+					},
+					"площадь_комнаты": {
+						"name": "area_room",
+						"type": "float",
+						"regex": "(?<=e\">)\\d*\\W?\\d+"
+					},
+					"количество_этажей": {
+						"name": "floors_count",
+						"type": "float",
+						"regex": "(?<=e\">)\\d*\\W?\\d+"
+					},
+					"этажность": {
+						"name": "floors_count",
+						"type": "float",
+						"regex": "(?<=e\">)\\d*\\W?\\d+"
+					},
+					"площадь_кухни": {
+						"name": "area_kitchen",
+						"type": "float",
+						"regex": "(?<=e\">)\\d*\\W?\\d+"
+					},
+					"общая_площадь": {
+						"name": "area_total",
+						"type": "float",
+						"regex": "(?<=e\">)\\d*\\W?\\d+"
+					},
+					"площадь_дома": {
+						"name": "area_total",
+						"type": "float",
+						"regex": "(?<=e\">)\\d*\\W?\\d+"
+					},
+					"лоджия": {
+						"name": "is_balcony",
+						"type": "string",
+						"regex": "(?<=e\">).+(?=</div>)"
+					},
+					"балкон": {
+						"name": "is_balcony",
+						"type": "string",
+						"regex": "(?<=e\">).+(?=</div>)"
+					},
+					"пассажирский_лифт": {
+						"name": "is_elevator",
+						"type": "string",
+						"regex": "(?<=e\">).+(?=</div>)"
+					},
+					"тип_стен": {
+						"name": "building_walls",
+						"type": "string",
+						"regex": "(?<=e\">).+(?=</div>)"
+					},
+					"машиномест": {
+						"name": "parking_units",
+						"type": "float",
+						"regex": "(?<=e\">).+(?=</div>)"
+					},
+					"площадь": {
+						"name": "nil",
+						"type": "float",
+						"regex": "(?<=e\">)\\d*\\W?\\d+"
+					}
+				}
+			}
+		}
+	}
+}
+
+
+

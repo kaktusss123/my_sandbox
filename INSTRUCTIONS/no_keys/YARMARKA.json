@@ -1,0 +1,167 @@
+{
+    "_task_id" : "YA39_test_1",
+    "_start_urls" : [
+		"http://www.yarmarka-ryazan.ru/estate/area/prodayu/547335-zemelnyy_uchastok_ryazanskaya_obl_kasimovskiy_rayon_selo_maleevo/"
+    ],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "",
+    "_source": "YA39",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 256,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 256,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 256,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+    "item_page" : {
+        "_target_xpath" : "//div[@class='item-container']//div[@class='item-info-primary']/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"currency" : {
+                "type" : "string",
+                "value" : "RUB"
+            },
+			"header" : {
+                "type" : "string",
+                "path": "//h1[@class='page-header__caption']//text()"
+            },
+			"seller" : {
+				"type" : "string",
+				"path": "//span[@class='product-contacts__text']/text()"
+			},
+			"phone" : {
+				"type" : "phone",
+				"path": "//span[@class='product-contacts__phone']//text()"
+			},
+			"longitude" :{
+				"type" : "float",
+				"path": "//script[text()[contains(.,'BX_YMapAddPlacemark')]]//text()",
+				"regex": "LON\\':\\'(\\d*\\W?\\d+)"
+			},
+			"latitude" :{
+				"type" : "float",
+				"path": "//script[text()[contains(.,'BX_YMapAddPlacemark')]]//text()",
+				"regex": "LAT\\':\\'(\\d*\\W?\\d+)"
+			},
+			"date_created": {
+                "type" : "date",
+                "path": "(//span[@class='product-widjets__item-text']//text())[1]",
+				"regex": "Размещено: (.+)",
+				"time" : "from string"
+			},
+			"address": {
+			    "type" : "string",
+                "path": "(//div[@class='product-info']//text())[3]"
+			},
+			"price": {
+			    "type" : "float",
+                "path": "//span[@class='product-contacts__price']//text()",
+				"regex": "\\d*\\W?\\d+\\W?\\d+"
+			}
+			
+        },
+		 "tables" : {
+			"table_1" : {
+                "_keys_xpath" : "//div[@class='product-info']//ul//li//span/text()",
+                "_vals_xpath" : "//div[@class='product-info']//ul//li//b/text()",
+				"key_converter" : {
+					"количество_комнат": {
+						"name" : "count_rooms",
+                        "type" : "float"
+					},
+					"материал_дома": {
+						"name" : "material",
+                        "type" : "string"
+					},
+					"общая_площадь_м2": {
+						"name" : "square_flat",
+                        "type" : "float"
+					},
+					"площадь_кухни_м2": {
+						"name" : "square_kitchen",
+                        "type" : "float"
+					},
+					"тип_квартиры": {
+						"name" : "plan",
+                        "type" : "string"
+					},
+					"этаж": {
+						"name" : "floor_room",
+                        "type" : "string"
+					},
+					"этажность_дома": {
+						"name" : "floor_building",
+                        "type" : "float"
+					},
+					"жилая_площадь_м2": {
+						"name" : "square_life",
+                        "type" : "float"
+					},
+					"состояние": {
+						"name" : "remont",
+                        "type" : "string"
+					},
+					"тип_помещения": {
+						"name" : "type_building",
+                        "type" : "string"
+					},
+					"категория_земли": {
+						"name" : "class_land",
+                        "type" : "string"
+					},
+					"площадь_земельного_участка_сот": {
+						"name" : "square_land",
+                        "type" : "float"
+					}
+				}
+			}
+		}
+    }
+}

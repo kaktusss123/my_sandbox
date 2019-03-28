@@ -1,0 +1,152 @@
+{
+    "_task_id" : "ZSEREDINA_test_1",
+    "_start_urls" : [
+		"http://oskol.ndv31.ru/zhilaya-nedvizhimost/prodaetsya-1-komnatnaya-kvartira-staryy-oskol-dubrava-1-m-n-53"
+    ],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "",
+    "_source": "ZSEREDINA",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 256,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 256,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 256,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+    "item_page" : {
+        "_target_xpath" : "//h3[@class='field-content']/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"currency" : {
+                "type" : "string",
+                "value" : "RUB"
+            },
+			"header" : {
+                "type" : "string",
+                "path": "//div[@class='page--header']//h1//text()"
+            },					
+			"detail" : {
+				"type" : "list to string",
+				"path": "//div[@class='object-info--description']//text()"
+			},
+			"seller" : {
+				"type" : "string",
+				"path": "//div[@class='manager-info--name']//text()"
+			},
+			"seller_type":{
+				"type" : "string",
+				"value": "Менеджер"
+			},
+			"phone" : {
+				"type" : "phone",
+				"path": "//div[@class='manger-info--phone']//text()"
+			},
+			"email_seller": {
+				"type" : "string",
+				"path": "//div[@class='manger-info--mail']//text()"
+			},
+			"price": {
+				"type" : "float",
+				"path": "//div[@class='object-info--price']//div[@class='field-item even']//text()",
+				"regex": "\\d*\\W?\\d+"
+			},
+			"sale_land": {
+				"type" : "float",
+				"path": "//div[@class='object-info--price-sq']/text()",
+				"regex": "\\d*\\W?\\d+"
+			}
+        },
+		 "tables" : {
+			"table_1" : {
+                "_keys_xpath" : "//div[@class='object-info--field-item-wrapper']//span/text()[normalize-space()]",
+                "_vals_xpath" : "//div[@class='object-info--field-item-wrapper']",
+				"key_converter" : {
+					"адрес": {
+						"name": "address", 
+						"type" : "string",
+						"regex": "item\">(.+)<\/div>\\s*<\/div>"
+					},
+					"дата_публикации": {
+						"name": "date_created", 
+						"type" : "string",
+						"regex": "item\">(.+)<\/div>\\s*<\/div>"
+					},
+					"площадь_земли": {
+						"name": "square_land", 
+						"type" : "string",
+						"regex": "item\">(.+)сот"
+					},
+					"длительность_аренды": {
+						"name": "arenda_time", 
+						"type" : "string",
+						"regex": "item\">(.+)<\/div>"
+					},
+					"комнат": {
+						"name": "count_rooms", 
+						"type" : "string",
+						"regex": "\\d*\\W?\\d+"
+					},
+					"площадь": {
+						"name": "square", 
+						"type" : "string",
+						"regex": "общ. (.+) м"
+					},
+					"этаж": {
+						"name": ["floor_room","floor_building"], 
+						"type" : ["string","string"],
+						"regex": [">(\\d*\\W?\\d+)\/","\/(\\d*\\W?\\d+)"]
+					}
+				}
+			}
+		}
+    }
+}
+
+

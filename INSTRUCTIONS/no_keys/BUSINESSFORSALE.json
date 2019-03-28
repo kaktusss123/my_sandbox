@@ -1,0 +1,177 @@
+{
+    "_task_id": "businessforsale_777",
+    "_start_urls": ["http://businessesforsale.ru/search/default.aspx?location=3;&industry=XX;"],
+    "_segment": "B",
+    "_operation": "sale",
+    "_federal_subject": "00",
+    "_source": "businessforsale",
+    "global_settings": {
+        "CONCURRENT_REQUESTS": 1024,
+        "SPLASH_URL": "http://0.0.0.0:8050",
+        "LOG_LEVEL": "INFO",
+        "AUTOTHROTTLE_ENABLED": true,
+        "AUTOTHROTTLE_START_DELAY": 1.0,
+        "AUTOTHROTTLE_MAX_DELAY": 5.0,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+        "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
+        "RETRY_ENABLED": true,
+        "RETRY_HTTP_CODES": [500, 503, 504, 400, 403, 408, 429, 505, 404, 303, 302],
+        "HTTPERROR_ALLOWED_CODES": [],
+        "RETRY_TIMES": 30,
+        "ROBOTSTXT_ENABLED": false,
+        "ROBOTSTXT_OBEY": false,
+        "REDIRECT_ENABLED": false,
+        "COOKIES_ENABLED": false,
+        "RANDOM_UA_TYPE": "random",
+        "DOWNLOAD_TIMEOUT": 60.0
+    },
+    "crawling_settings": {
+        "global_crawling_type": "common",
+        "js": "//",
+        "rotate_useragents": true,
+        "allowed_domains": "",
+        "proxy_settings": {
+            "types": ["http", "https"],
+            "amount": 20000
+        }
+    },
+    "paginations": {
+        "methods": {
+          "crawling_type": "common",
+          "filter_duplicates": true
+        },
+        "paginations_by_xpath": {
+          "paginations_xpath": "//p[@class='searchPaging bottom']",
+          "paginations_xpath_active": "//p[@class='searchPaging bottom']/span/strong",
+          "paginations_xpath_next": "//p[@class='searchPaging bottom']/span/strong/following-sibling::a[1]/@href"
+        }
+      },
+    "item_page": {
+        "_target_xpath": "//table[@id='search']//tr/td[@class='definecell'][2]//a/@href",
+        "methods": {
+            "crawling_type": "common",
+            "filter_duplicates": false,
+            "js": "//"
+        },
+        "fields": {
+            "date_info": {
+                "type": "date",
+                "time": "now"
+            },
+            "name": {
+                "type": "string",
+                "path": "//h1[@id='apAdTitle']/text()"
+            },
+            "address": {
+                "type": "string",
+                "path": "//h2[@id='apSubtitle']/text()"
+            },
+            "business_types": {
+                "type": "string",
+                "path": "//div[@id='apContainerLeft']/h3/text()"
+            },
+            "description": {
+                "type": "list to string",
+                "path": "//div[@id='apContainerLeft']/p[4]//text()"
+            },
+            "currency": {
+                "type": "string",
+                "value": "US_DOLLARS"
+            },
+            "seller_name": {
+                "type": "string",
+                "path": "//p[@class='ap_listedByName']/text()"
+            },
+            "phone": {
+                "type": "phone",
+                "path": "//div[@id='apContactContent']/text()"
+            }
+        },
+        "tables": {
+            "table_1": {
+                "_keys_xpath": "//div[@id='apContainerLeft']/table[1]//th/text()",
+                "_vals_xpath": "//div[@id='apContainerLeft']/table[1]//td/.",
+                "key_converter": {
+                    "цена": {
+                        "name": "price",
+                        "type": "float",
+                        "regex": "(?<=\\$)[\\d,\\s,\\,,\\.]+"
+                    },
+                    "выручка": {
+                        "name": "revenue",
+                        "type": "float",
+                        "regex": "(?<=\\$)[\\d,\\s,\\,,\\.]+"
+                    },
+                    "прибыль": {
+                        "name": "income",
+                        "type": "float",
+                        "regex": "(?<=\\$)[\\d,\\s,\\,,\\.]+"
+                    },
+                    "основные_средства": {
+                        "name": "property_assets",
+                        "type": "float",
+                        "regex": "(?<=\\$)[\\d,\\s,\\,,\\.]+"
+                    },
+                    "материалы": {
+                        "name": "is_materials",
+                        "type": "float",
+                        "regex": "(?<=\\$)[\\d,\\s,\\,,\\.]+"
+                    },
+                    "недвижимость": {
+                        "name": "real_estate_assets",
+                        "type": "float",
+                        "regex": "(?<=\\$)[\\d,\\s,\\,,\\.]+"
+                    },
+                    "возраст_годы": {
+                        "name": "business_age",
+                        "type": "float",
+                        "regex": "[\\d,\\s,\\,,\\.]+"
+                    },
+                    "персонал": {
+                        "name": "is_personnel",
+                        "type": "float",
+                        "regex": "[\\d,\\s,\\,,\\.]+"
+                    }
+
+                }
+            },
+            "table_2": {
+                "_keys_xpath": "//div[@id='apContainerLeft']/p[5 <= position() and position() < 1000]/b/text()",
+                "_vals_xpath": "//div[@id='apContainerLeft']/p[5 <= position() and position() < 1000]",
+                "key_converter": {
+                    "активы": {
+                        "name": "business_assets",
+                        "type": "string",
+                        "regex": "[^<br>|^</p>|^<p>|^<b>]+"
+                    },
+                    "поддержка_и_обучение": {
+                        "name": "byers_support",
+                        "type": "string",
+                        "regex": "[^<br>|^</p>|^<p>|^<b>]+"
+                    },
+                    "причины_продажи": {
+                        "name": "sale_reason",
+                        "type": "string",
+                        "regex": "[^<br>|^</p>|^<p>|^<b>]+"
+                    },
+                    "рынок__конкуренция": {
+                        "name": "market_competitors",
+                        "type": "string",
+                        "regex": "[^<br>|^</p>|^<p>|^<b>]+"
+                    },
+                    "рост_развитие": {
+                        "name": "growth_descritpion",
+                        "type": "string",
+                        "regex": "[^<br>|^</p>|^<p>|^<b>]+"
+                    },
+                    "финансирование": {
+                        "name": "growth_descritpion",
+                        "type": "string",
+                        "regex": "[^<br>|^</p>|^<p>|^<b>]+"
+                    }
+                }
+            }
+
+            }
+        }
+    }

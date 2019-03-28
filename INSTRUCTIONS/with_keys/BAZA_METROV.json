@@ -1,0 +1,398 @@
+{
+    "_task_id" : "NN_BAZAMETROV_1",
+    "_start_urls" : [
+		"https://bazametrov.ru/office",
+		"https://bazametrov.ru/sklad",
+		"https://bazametrov.ru/garage",
+		"https://bazametrov.ru/obshepit",
+		"https://bazametrov.ru/torgovye",
+		"https://bazametrov.ru/zdanie",
+		"https://bazametrov.ru/yur-adress",
+		"https://bazametrov.ru/bytovie",
+		"https://bazametrov.ru/pod-avtoservis",
+		"https://bazametrov.ru/pod-proizvodstvo",
+		"https://bazametrov.ru/psn",
+		"https://bazametrov.ru/pod-stolovuyu",
+		"https://bazametrov.ru/kafe",
+		"https://bazametrov.ru/pod-magazin",
+		"https://bazametrov.ru/pod-biznes",
+		"https://bazametrov.ru/arenda-zemli",
+		"https://bazametrov.ru/gotoviy-bisnes",
+
+		"https://bazametrov.ru/prodazha/office",
+		"https://bazametrov.ru/prodazha/sklad",
+		"https://bazametrov.ru/prodazha/garage",
+		"https://bazametrov.ru/prodazha/obshepit",
+		"https://bazametrov.ru/prodazha/torgovye",
+		"https://bazametrov.ru/prodazha/zdanie",
+		"https://bazametrov.ru/prodazha/yur-adress",
+		"https://bazametrov.ru/prodazha/bytovie",
+		"https://bazametrov.ru/prodazha/pod-avtoservis",
+		"https://bazametrov.ru/prodazha/pod-proizvodstvo",
+		"https://bazametrov.ru/prodazha/psn",
+		"https://bazametrov.ru/prodazha/pod-stolovuyu",
+		"https://bazametrov.ru/prodazha/kafe",
+		"https://bazametrov.ru/prodazha/pod-magazin",
+		"https://bazametrov.ru/prodazha/pod-biznes",
+		"https://bazametrov.ru/prodazha/arenda-zemli",
+		"https://bazametrov.ru/prodazha/gotoviy-bisnes"
+	],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "moscow",
+    "_source": "BDMETROV",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 512,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 512,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 512,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 20,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+	"paginations" : {
+        "methods" : {
+            "crawling_type" : "common",
+            "filter_duplicates" : true
+        },
+        "paginations_by_xpath": {
+            "paginations_xpath": "//div[@class='pagination']",
+            "paginations_xpath_active": "//li[@class='pagination-link selected']",
+            "paginations_xpath_next" : "//li[@class='next']/a/@href"
+        }
+   },
+    "item_page" : {
+        "_target_xpath" : "//div[@class='s-item-name']/a/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "district_name": {
+                "type" : "string",
+                "xpath" : "//div[@class='breadcrumbs']//a[3]/text()",
+				"regex": "(.+) район"
+            },
+			"date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"date_created" : {
+                "type" : "date",
+                "xpath" : "//div[@class='block-item']",
+				"regex" : "<nobr>(.+)<\/nobr><br",
+                "time" : "from string"
+            },
+			"date_updated" : {
+                "type" : "date",
+                "xpath" : "//div[@class='block-item']//nobr/text()",
+                "time" : "from string"
+            },
+			"title_name" : {
+                "type" : "string",
+                "xpath" : "//div[@class='main-content-wrapper']//div[@class='office-wrap']//h1//text()"
+            },			
+			"description" : {
+				"type" : "string",
+				"xpath": "//div[@class='item_description']//text()"
+			},
+			"seller_name" : {
+				"type" : "string",
+				"xpath": "//span[@class='user-name']//text()"
+			},
+			"seller_type" : {
+				"type" : "string",
+				"xpath": "//div[@class='block-item boxphone']//div[@class='title_block_item']/text()",
+				"regex": "(.+) \/"	
+			},
+			"phone" : {
+				"type" : "phone",
+				"xpath": "(//ul[@class='tabs__list']//span[@id='owner-phone']//text())[1]"
+			},
+			"segment" : {
+				"type" : "string",
+				"xpath": "(//div[@class='office-wrap']//h1//text())[1]",
+				"regex": "(.+) [0-9]",
+				"operation": ["lower"]
+			},			
+			"source_longitude" :{
+				"type" : "float",
+				"xpath": "//script[contains(text(),'new ymaps.Placemark(')]/text()",
+				"regex" : "(?<=map\\.setCenter\\(\\[)\\d+\\W?\\d+"
+			},
+			"source_latitude" :{
+				"type" : "float",
+				"xpath": "//script[contains(text(),'new ymaps.Placemark(')]/text()",
+				"regex": "(?<=\\d,).+(?=]\\);)"
+			},
+			"operation": {
+				"type" : "string",
+				"xpath": "(//div[@class='block-item boxphone']//dl//dt//text())[1]",
+				"regex": "(.+):"
+			},
+			"purpose": {
+				"type" : "string",
+				"xpath": "//h3[text()[contains(.,'Назначение помещения')]]//following::p[1]/text()"
+			},
+			"metro_minutes" : {
+				"type" : "string",
+				"xpath": "//dd//i[@data-toggle='tooltip']/@title"
+			}
+        },
+		"tables" : {
+			"main_table": {
+				"_keys_xpath": "//div[@class='block-item boxphone']/dl[@class='ap-descr']//dt/text()",
+				"_vals_xpath": "//div[@class='block-item boxphone']/dl[@class='ap-descr']//dd/span/text()",
+				"key_converter": {
+					"аренда": {
+						"name": ["price_total", "price_term", "price_currency"],
+						"type": ["float", "string", "string"],
+						"regex": ["\\d*\\W?\\d+", "мес|год", "руб|usd|eur"]
+					},
+					"продажа": {
+						"name": ["price_total", "price_term", "price_currency"],
+						"type": ["float", "string", "string"],
+						"regex": ["\\d*\\W?\\d+", "мес|год", "руб|usd|eur"]
+					},
+					"метро":{
+						"name": "metro_station",
+						"type" : "string"
+					},
+					"класс":{
+						"name": "object_class",
+						"type" : "string"
+					},
+					"площадь":{
+						"name": ["area_total", "area_unit"],
+						"type" : ["float","string"],
+						"regex" : ["\\d*\\W?\\d+", "[А-Яа-я]+"]
+					}
+				}
+			},
+			"about_permit" : {
+                "_keys_xpath" : "//ul[@class='tabs__list']//dt//text()",
+                "_vals_xpath" : "//ul[@class='tabs__list']//dd",
+				"key_converter" : {
+					"адрес":{
+						"name": "address",
+						"type" : "string",
+						"regex" :">(.+)<"
+					},
+					"округ":{
+						"name": "intown_district",
+						"type" : "string",
+						"regex" : "(?<=\">).+(?=</a)"
+					},
+					"класс_строения":{
+						"name": "object_class",
+						"type" : "string",
+						"regex" :"(?<=>).+(?=<)"
+					},
+					"общая_площадь":{
+						"name": "area_total",
+						"type" : "float",
+						"regex" : "(?<=d>)\\d*\\W?\\d+"
+					},
+					"тип_строения":{
+						"name": "building_type",
+						"type" : "string",
+						"regex" :"(?<=>).+(?=<)"
+					},
+					"цена_помещения":{
+						"name": "none",
+						"type" : "string",
+						"value" :" "
+					},
+					"телефон_владельца":{
+						"name": "none", 
+						"type" : "string",
+						"value" : " "
+					},
+					"ближайшие_станции_метро":{
+						"name": "none",
+						"type" : "string",
+						"value" : " "
+					},
+					"аренда": {
+						"name": "none",
+						"type" : "string",
+						"value": " "
+					},
+					"продажа": {
+						"name": "none",
+						"type" : "string",
+						"value": " "
+					},
+					"комиссиятип_договора":{
+						"name": "price_condition",
+						"type" : "string",
+						"regex" :"(?<=>)[А-Яа-я0-9 ]+(?=<)"
+					},
+					"тип_договора_аренды": {
+						"name": "contract_type",
+						"type" : "string",
+						"regex" :"(?<=>).+(?=<)"
+					},
+					"тип_входа": {
+						"name": "is_entrance",
+						"type" : "string",
+						"regex": "(?<=>).+(?=<)"
+					},
+					"ставка_в_год": {
+						"name": "none",
+						"type" : "string",
+						"value" : " "
+					},
+					"аренда_частями": {
+						"name": "none", 
+						"type" : "string",
+						"value" : " "
+					},
+					"количество_комнат":{
+						"name": "rooms_cnt",
+						"type" : "float"
+					}
+				}
+			},
+			"about_bc" : {
+                "_keys_xpath" : "//ul[@class='tabs__list']//div[@class='notification-block']//span/text()[1]",
+                "_vals_xpath" : "//ul[@class='tabs__list']//div[@class='notification-block']//span/text()[1]",
+				"key_regex" : "^.+(?=:)",
+				"key_converter" : {
+					"адрес": {
+						"name": "none",
+						"type" : "string",
+						"value" : " "
+					},
+					"ближайшие_метро": {
+						"name": "none",
+						"type" : "string",
+						"value" : " "
+					},
+					"класс_здания": {
+						"name": "none",
+						"type" : "string",
+						"value" : " "
+					},
+					"охрана": {
+						"name": "security_type",
+						"type" : "string",
+						"regex" : "(?<=:).+"
+					},
+					"парковка": {
+						"name": "is_parking",
+						"type" : "string",
+						"regex" : "(?<=:).+"
+					},
+					"интернет_и_телефония_провайдеров": {
+						"name": "is_internet",
+						"type" : "string",
+						"regex" : "(?<=:).+"
+					}
+				}
+			},
+			"_comment" : {
+				"_keys_xpath" : "//ul[@class='apartment-description-ul']//span//text()",
+				"_vals_xpath" : "//ul[@class='apartment-description-ul']//span//text()",
+				"key_converter" : {
+				    "мебель": {
+						"name": "is_furniture",
+						"type" : "string"
+					},
+					"электричество": {
+						"name": "is_electiricity",
+						"type" : "string"
+					},
+					"отопление": {
+						"name": "is_heating",
+						"type" : "string"
+					},
+					"канализация": {
+						"name": "is_sewage",
+						"type" : "string"
+					},
+					"газ": {
+						"name": "is_gas",
+						"type" : "string"
+					},
+					"водоснабжение": {
+						"name": "is_plumbing",
+						"type" : "string"
+					},
+					"парковка": {
+						"name": "is_parking",
+						"type" : "string"
+					},
+					"охрана": {
+						"name": "security_type",
+						"type" : "string"
+					},
+					"интернет": {
+						"name": "is_internet",
+						"type" : "string"
+					},
+					"санузел": {
+						"name": "is_wc",
+						"type" : "string"
+					},
+					"мансарда": {
+						"name": "is_attic",
+						"type" : "string"
+					},
+					"антрессоль": {
+						"name": "is_attic",
+						"type" : "string"
+					},
+					"кухня": {
+						"name": "is_kitchen",
+						"type" : "string"
+					},
+					"кафе": {
+						"name": "purpose", 
+						"type" : "string"
+					}
+				}
+			}
+		}
+	}
+}
+
+
+

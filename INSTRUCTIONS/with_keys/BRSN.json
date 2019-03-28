@@ -1,0 +1,211 @@
+{
+	"_task_id": "NNN_BRSN",
+	"_start_urls": [
+		"http://www.brsn.ru/comercheskay.html?limitstart=0"
+	],
+	"_segment": "",
+	"_operation": "",
+	"_federal_subject": "Брянская область",
+	"_source": "BRSN",
+	"global_settings": {
+		"CONCURRENT_REQUESTS": 512,
+		"CONCURRENT_REQUESTS_PER_DOMAIN": 512,
+		"DOWNLOAD_TIMEOUT": 60,
+		"SPLASH_URL": "http://0.0.0.0:8050",
+		"LOG_LEVEL": "INFO",
+		"AUTOTHROTTLE_ENABLED": false,
+		"AUTOTHROTTLE_START_DELAY": 1.0,
+		"AUTOTHROTTLE_MAX_DELAY": 60,
+		"AUTOTHROTTLE_TARGET_CONCURRENCY": 512,
+		"HTTPERROR_ALLOWED_CODES": [],
+		"RETRY_ENABLED": true,
+		"RETRY_TIMES": 100,
+		"RETRY_HTTP_CODES": [
+			500,
+			503,
+			504,
+			400,
+			403,
+			408,
+			429,
+			505,
+			404,
+			303,
+			302,
+			301
+		],
+		"ROBOTSTXT_ENABLED": false,
+		"ROBOTSTXT_OBEY": false,
+		"REDIRECT_ENABLED": false,
+		"COOKIES_ENABLED": false,
+		"RANDOM_UA_TYPE": "random"
+	},
+	"crawling_settings": {
+		"global_crawling_type": "common",
+		"js": "//",
+		"rotate_useragents": true,
+		"allowed_domains": [],
+		"proxy_settings": {
+			"types": [
+				"https"
+			],
+			"amount": 10000
+		}
+	},
+	"paginations": {
+		"methods": {
+			"crawling_type": "common",
+			"filter_duplicates": true
+		},
+		"paginations_by_xpath": {
+			"pagination_xpath": "//ul[@class='pagination']/li/a",
+			"pagination_xpath_active": "//ul[@class='pagination']/li[@class='active']/span",
+			"pagination_xpath_next": "(//ul[@class='pagination']/li[@class='active']/following-sibling::li/a)[1]/@href"
+		}
+	},
+	"item_page": {
+		"_target_xpath": "//a[@class='objectdesc']/@href",
+		"methods": {
+			"crawling_type": "common",
+			"js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+			"filter_duplicates": true
+		},
+		"fields": {
+			"operation": {
+				"type": "string",
+				"xpath": "(//div[@class='col-sm-8 col-md-8'])[1]/h1/text()",
+				"regex": "Продаются|Сдам|Продам|Продается|Сдаются|Сдается"
+			},
+			"street_name": {
+				"type": "string",
+				"xpath": "//div[@class='sttnmls_navigation text-center']//a[last()]/text()"
+			},
+			"segment": {
+				"type": "string",
+				"xpath": "//div[@class='breadcrumbs-content']//span/text()"
+			},
+			"purpose": {
+				"type": "string",
+				"xpath": "//a[@class='object-address-link'][2]/following-sibling::p",
+				"regex": "используется как (.+)"
+			},
+			"date_info": {
+				"type": "date",
+				"time": "now"
+			},
+			"date_created": {
+				"type": "date",
+				"time": "from string",
+				"xpath": "//div[@class='calendar']/b[contains(text(),'Добавлено')]/following-sibling::span/text()"
+			},
+			"date_updated": {
+				"type": "date",
+				"time": "from string",
+				"xpath": "//div[@class='calendar']/b[contains(text(),'Обновлено')]/following-sibling::span/text()"
+			},
+			"title_name": {
+				"type": "string",
+				"xpath": "(//div[@class='col-sm-8 col-md-8'])[1]/h1/text()"
+			},
+			"address_district": {
+				"type": "string",
+				"xpath": "//a[@class='object-address-link']/text()"
+			},
+			"source_latitude": {
+				"type": "float",
+				"xpath": "//a[@class='ymaps-logo-link ymaps-logo-link-ru']"
+			},
+			"source_longitude": {
+				"type": "float",
+				"xpath": "//a[@class='ymaps-logo-link ymaps-logo-link-ru']"
+			},
+			"price_total": {
+				"type": "float",
+				"xpath": "//div[@class='pricecard']/text()|//div[@class='pricecard rent month']/text()[normalize-space()]"
+			},
+			"price_term": {
+				"type": "string",
+				"xpath": "//span[@class='period']/text()"
+			},
+			"rent_price_per_area": {
+				"type": "float",
+				"xpath": "(//div[@class='priceqmcard']/text())[1]",
+				"regex": "\\d*\\W?\\d+"
+			},
+			"price_currency": {
+				"type": "string",
+				"value": "RUB"
+			},
+			"area_total": {
+				"type": "float",
+				"xpath": "//a[@class='object-address-link'][2]/following-sibling::p",
+				"regex": "(?<=<b>)\\d+(?=/)|(?<=площадь: <b>)\\d+(?=</b>)"
+			},
+			"area_living": {
+				"type": "float",
+				"xpath": "//a[@class='object-address-link'][2]/following-sibling::p",
+				"regex": "(?<=/)\\d+(?=/)"
+			},
+			"floor": {
+				"type": "float",
+				"xpath": "//a[@class='object-address-link'][2]/following-sibling::p",
+				"regex": "(?<=<b>)\\d+(?=</b>-этаж )"
+			},
+			"floors_cnt": {
+				"type": "float",
+				"xpath": "//a[@class='object-address-link'][2]/following-sibling::p",
+				"regex": "(?<=<b>)\\d+(?=</b>-этажного)|(?<=<b>)\\d+(?=</b> этаж\\(а)"
+			},
+			"rooms_cnt": {
+				"type": "float",
+				"xpath": "//a[@class='object-address-link'][2]/following-sibling::p",
+				"regex": "(?<=<b>)\\d+(?=</b>-комнатную)|(?<=<b>)\\d+(?=</b> комнат)"
+			},
+			"building_type": {
+				"type": "string",
+				"xpath": "//a[@class='object-address-link'][2]/following-sibling::p",
+				"regex": "(?<=этажного).+(?=дома)"
+			},
+			"address_street": {
+				"type": "string",
+				"xpath": "//a[@class='object-address-link'][2]/following-sibling::p",
+				"regex" : "(?<=justify\\\">\\n).+(?=площадь:)|(?<= на).+"
+			},
+			"phone": {
+				"type": "phone",
+				"xpath": "//div[@class='sttnmls_contact_info']"
+			},
+			"seller_name": {
+				"type": "string",
+				"xpath": "(//div[@class='media-body'])[1]/b/text()"
+			},
+			"company_name": {
+				"type": "string",
+				"xpath": "(//div[@class='media-body'])[2]/b/text()"
+			},
+			"description": {
+				"type": "list to string",
+				"xpath": "//h3[contains(text(),'Дополнительная информация:')]/following-sibling::p//text()"
+			},
+			"land_area": {
+				"type": "float",
+				"xpath": "//a[@class='object-address-link'][2]/following-sibling::p",
+				"regex": "(?<=участок: <b>)\\d+(?=</b>)"
+			},
+			"area_land_unit": {
+				"type": "string",
+				"xpath": "//a[@class='object-address-link'][2]/following-sibling::p",
+				"regex": "соток|гектар"
+			},
+			"address": {
+				"type": "list to string",
+				"xpath": "//div[@class='sttnmls_navigation text-center']//a/text()"
+			}
+		}
+		}
+	}
+
+
+
+
+

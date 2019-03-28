@@ -1,0 +1,737 @@
+{
+  "_task_id": "kvadrat_test_1",
+  "_start_urls": [
+    "https://kvadrat22.ru/sellflatbank-50-1.html",
+    "https://kvadrat22.ru/sellflatbank-7-1.html",
+    "https://kvadrat22.ru/sellflatbank-9-1.html",
+    "https://kvadrat22.ru/sellflatbank-10-1.html",
+    "https://kvadrat22.ru/buyflatbank-1000-1.html",
+    "https://kvadrat22.ru/changeflatbank-1000-1.html",
+    "https://kvadrat22.ru/newflatbank-1000-1.html",
+    "https://kvadrat22.ru/giveflatbank-50-1.html",
+    "https://kvadrat22.ru/giveflatbank-7-1.html",
+    "https://kvadrat22.ru/giveflatbank-9-1.html",
+    "https://kvadrat22.ru/dayflatbank-1000-1.html",
+    "https://kvadrat22.ru/takeflatbank-1000-1.html",
+    "https://kvadrat22.ru/sellcombank-1-1.html",
+    "https://kvadrat22.ru/sellcombank-2-1.html",
+    "https://kvadrat22.ru/sellcombank-4-1.html",
+    "https://kvadrat22.ru/sellcombank-3-1.html",
+    "https://kvadrat22.ru/buycombank-1000-1.html",
+    "https://kvadrat22.ru/givecombank-1-1.html",
+    "https://kvadrat22.ru/givecombank-2-1.html",
+    "https://kvadrat22.ru/givecombank-4-1.html",
+    "https://kvadrat22.ru/givecombank-3-1.html",
+    "https://kvadrat22.ru/takecombank-1000-1.html",
+    "https://kvadrat22.ru/sellzagbank-1000-1.html",
+    "https://kvadrat22.ru/buyzagbank-1000-1.html",
+    "https://kvadrat22.ru/givezagbank-1000-1.html",
+    "https://kvadrat22.ru/takezagbank-1000-1.html",
+    "https://kvadrat22.ru/selllandbank-1-1.html",
+    "https://kvadrat22.ru/selllandbank-2-1.html",
+    "https://kvadrat22.ru/buylandbank-1000-1.html",
+    "https://kvadrat22.ru/givelandbank-1000-1.html",
+    "https://kvadrat22.ru/takelandbank-1000-1.html",
+    "https://kvadrat22.ru/sellgarbank-1000-1.html",
+    "https://kvadrat22.ru/buygarbank-1000-1.html",
+    "https://kvadrat22.ru/givegarbank-1000-1.html",
+    "https://kvadrat22.ru/takegarbank-1000-1.html",
+    "https://kvadrat24.ru/sellflatbank-50-1.html",
+    "https://kvadrat24.ru/sellflatbank-7-1.html",
+    "https://kvadrat24.ru/sellflatbank-9-1.html",
+    "https://kvadrat24.ru/sellflatbank-10-1.html",
+    "https://kvadrat24.ru/buyflatbank-1000-1.html",
+    "https://kvadrat24.ru/changeflatbank-1000-1.html",
+    "https://kvadrat24.ru/newflatbank-1000-1.html",
+    "https://kvadrat24.ru/giveflatbank-50-1.html",
+    "https://kvadrat24.ru/giveflatbank-7-1.html",
+    "https://kvadrat24.ru/giveflatbank-9-1.html",
+    "https://kvadrat24.ru/dayflatbank-1000-1.html",
+    "https://kvadrat24.ru/takeflatbank-1000-1.html",
+    "https://kvadrat24.ru/sellcombank-1-1.html",
+    "https://kvadrat24.ru/sellcombank-2-1.html",
+    "https://kvadrat24.ru/sellcombank-4-1.html",
+    "https://kvadrat24.ru/sellcombank-3-1.html",
+    "https://kvadrat24.ru/buycombank-1000-1.html",
+    "https://kvadrat24.ru/givecombank-1-1.html",
+    "https://kvadrat24.ru/givecombank-2-1.html",
+    "https://kvadrat24.ru/givecombank-4-1.html",
+    "https://kvadrat24.ru/givecombank-3-1.html",
+    "https://kvadrat24.ru/takecombank-1000-1.html",
+    "https://kvadrat24.ru/sellzagbank-1000-1.html",
+    "https://kvadrat24.ru/buyzagbank-1000-1.html",
+    "https://kvadrat24.ru/givezagbank-1000-1.html",
+    "https://kvadrat24.ru/takezagbank-1000-1.html",
+    "https://kvadrat24.ru/selllandbank-1-1.html",
+    "https://kvadrat24.ru/selllandbank-2-1.html",
+    "https://kvadrat24.ru/buylandbank-1000-1.html",
+    "https://kvadrat24.ru/givelandbank-1000-1.html",
+    "https://kvadrat24.ru/takelandbank-1000-1.html",
+    "https://kvadrat24.ru/sellgarbank-1000-1.html",
+    "https://kvadrat24.ru/buygarbank-1000-1.html",
+    "https://kvadrat24.ru/givegarbank-1000-1.html",
+    "https://kvadrat24.ru/takegarbank-1000-1.html",
+    "https://kvadrat54.ru/sellflatbank-50-1.html",
+    "https://kvadrat54.ru/sellflatbank-7-1.html",
+    "https://kvadrat54.ru/sellflatbank-9-1.html",
+    "https://kvadrat54.ru/sellflatbank-10-1.html",
+    "https://kvadrat54.ru/buyflatbank-1000-1.html",
+    "https://kvadrat54.ru/changeflatbank-1000-1.html",
+    "https://kvadrat54.ru/newflatbank-1000-1.html",
+    "https://kvadrat54.ru/giveflatbank-50-1.html",
+    "https://kvadrat54.ru/giveflatbank-7-1.html",
+    "https://kvadrat54.ru/giveflatbank-9-1.html",
+    "https://kvadrat54.ru/dayflatbank-1000-1.html",
+    "https://kvadrat54.ru/takeflatbank-1000-1.html",
+    "https://kvadrat54.ru/sellcombank-1-1.html",
+    "https://kvadrat54.ru/sellcombank-2-1.html",
+    "https://kvadrat54.ru/sellcombank-4-1.html",
+    "https://kvadrat54.ru/sellcombank-3-1.html",
+    "https://kvadrat54.ru/buycombank-1000-1.html",
+    "https://kvadrat54.ru/givecombank-1-1.html",
+    "https://kvadrat54.ru/givecombank-2-1.html",
+    "https://kvadrat54.ru/givecombank-4-1.html",
+    "https://kvadrat54.ru/givecombank-3-1.html",
+    "https://kvadrat54.ru/takecombank-1000-1.html",
+    "https://kvadrat54.ru/sellzagbank-1000-1.html",
+    "https://kvadrat54.ru/buyzagbank-1000-1.html",
+    "https://kvadrat54.ru/givezagbank-1000-1.html",
+    "https://kvadrat54.ru/takezagbank-1000-1.html",
+    "https://kvadrat54.ru/selllandbank-1-1.html",
+    "https://kvadrat54.ru/selllandbank-2-1.html",
+    "https://kvadrat54.ru/givelandbank-1000-1.html",
+    "https://kvadrat54.ru/sellgarbank-1000-1.html",
+    "https://kvadrat54.ru/buygarbank-1000-1.html",
+    "https://kvadrat54.ru/givegarbank-1000-1.html",
+    "https://kvadrat54.ru/takegarbank-1000-1.html",
+    "https://kvadrat64.ru/sellflatbank-50-1.html",
+    "https://kvadrat64.ru/sellflatbank-7-1.html",
+    "https://kvadrat64.ru/sellflatbank-9-1.html",
+    "https://kvadrat64.ru/sellflatbank-10-1.html",
+    "https://kvadrat64.ru/buyflatbank-1000-1.html",
+    "https://kvadrat64.ru/changeflatbank-1000-1.html",
+    "https://kvadrat64.ru/newflatbank-1000-1.html",
+    "https://kvadrat64.ru/giveflatbank-50-1.html",
+    "https://kvadrat64.ru/giveflatbank-7-1.html",
+    "https://kvadrat64.ru/giveflatbank-9-1.html",
+    "https://kvadrat64.ru/dayflatbank-1000-1.html",
+    "https://kvadrat64.ru/takeflatbank-1000-1.html",
+    "https://kvadrat64.ru/sellcombank-1-1.html",
+    "https://kvadrat64.ru/sellcombank-2-1.html",
+    "https://kvadrat64.ru/sellcombank-4-1.html",
+    "https://kvadrat64.ru/sellcombank-3-1.html",
+    "https://kvadrat64.ru/buycombank-1000-1.html",
+    "https://kvadrat64.ru/givecombank-1-1.html",
+    "https://kvadrat64.ru/givecombank-2-1.html",
+    "https://kvadrat64.ru/givecombank-4-1.html",
+    "https://kvadrat64.ru/givecombank-3-1.html",
+    "https://kvadrat64.ru/takecombank-1000-1.html",
+    "https://kvadrat64.ru/sellzagbank-1000-1.html",
+    "https://kvadrat64.ru/buyzagbank-1000-1.html",
+    "https://kvadrat64.ru/givezagbank-1000-1.html",
+    "https://kvadrat64.ru/takezagbank-1000-1.html",
+    "https://kvadrat64.ru/selllandbank-1-1.html",
+    "https://kvadrat64.ru/selllandbank-2-1.html",
+    "https://kvadrat64.ru/buylandbank-1000-1.html",
+    "https://kvadrat64.ru/givelandbank-1000-1.html",
+    "https://kvadrat64.ru/takelandbank-1000-1.html",
+    "https://kvadrat64.ru/sellgarbank-1000-1.html",
+    "https://kvadrat64.ru/buygarbank-1000-1.html",
+    "https://kvadrat64.ru/givegarbank-1000-1.html",
+    "https://kvadrat64.ru/takegarbank-1000-1.html",
+    "https://kvadrat66.ru/sellflatbank-50-1.html",
+    "https://kvadrat66.ru/sellflatbank-7-1.html",
+    "https://kvadrat66.ru/sellflatbank-9-1.html",
+    "https://kvadrat66.ru/sellflatbank-10-1.html",
+    "https://kvadrat66.ru/buyflatbank-1000-1.html",
+    "https://kvadrat66.ru/changeflatbank-1000-1.html",
+    "https://kvadrat66.ru/newflatbank-1000-1.html",
+    "https://kvadrat66.ru/giveflatbank-50-1.html",
+    "https://kvadrat66.ru/giveflatbank-7-1.html",
+    "https://kvadrat66.ru/giveflatbank-9-1.html",
+    "https://kvadrat66.ru/dayflatbank-1000-1.html",
+    "https://kvadrat66.ru/takeflatbank-1000-1.html",
+    "https://kvadrat66.ru/sellcombank-1-1.html",
+    "https://kvadrat66.ru/sellcombank-2-1.html",
+    "https://kvadrat66.ru/sellcombank-4-1.html",
+    "https://kvadrat66.ru/sellcombank-3-1.html",
+    "https://kvadrat66.ru/buycombank-1000-1.html",
+    "https://kvadrat66.ru/givecombank-1-1.html",
+    "https://kvadrat66.ru/givecombank-2-1.html",
+    "https://kvadrat66.ru/givecombank-4-1.html",
+    "https://kvadrat66.ru/givecombank-3-1.html",
+    "https://kvadrat66.ru/takecombank-1000-1.html",
+    "https://kvadrat66.ru/sellzagbank-1000-1.html",
+    "https://kvadrat66.ru/buyzagbank-1000-1.html",
+    "https://kvadrat66.ru/givezagbank-1000-1.html",
+    "https://kvadrat66.ru/takezagbank-1000-1.html",
+    "https://kvadrat66.ru/selllandbank-1-1.html",
+    "https://kvadrat66.ru/selllandbank-2-1.html",
+    "https://kvadrat66.ru/buylandbank-1000-1.html",
+    "https://kvadrat66.ru/givelandbank-1000-1.html",
+    "https://kvadrat66.ru/takelandbank-1000-1.html",
+    "https://kvadrat66.ru/sellgarbank-1000-1.html",
+    "https://kvadrat66.ru/buygarbank-1000-1.html",
+    "https://kvadrat66.ru/givegarbank-1000-1.html",
+    "https://kvadrat66.ru/takegarbank-1000-1.html",
+    "https://kvadrat72.ru/sellflatbank-50-1.html",
+    "https://kvadrat72.ru/sellflatbank-7-1.html",
+    "https://kvadrat72.ru/sellflatbank-9-1.html",
+    "https://kvadrat72.ru/sellflatbank-10-1.html",
+    "https://kvadrat72.ru/buyflatbank-1000-1.html",
+    "https://kvadrat72.ru/changeflatbank-1000-1.html",
+    "https://kvadrat72.ru/newflatbank-1000-1.html",
+    "https://kvadrat72.ru/giveflatbank-50-1.html",
+    "https://kvadrat72.ru/giveflatbank-7-1.html",
+    "https://kvadrat72.ru/giveflatbank-9-1.html",
+    "https://kvadrat72.ru/dayflatbank-1000-1.html",
+    "https://kvadrat72.ru/takeflatbank-1000-1.html",
+    "https://kvadrat72.ru/sellcombank-1-1.html",
+    "https://kvadrat72.ru/sellcombank-2-1.html",
+    "https://kvadrat72.ru/sellcombank-4-1.html",
+    "https://kvadrat72.ru/sellcombank-3-1.html",
+    "https://kvadrat72.ru/buycombank-1000-1.html",
+    "https://kvadrat72.ru/givecombank-1-1.html",
+    "https://kvadrat72.ru/givecombank-2-1.html",
+    "https://kvadrat72.ru/givecombank-4-1.html",
+    "https://kvadrat72.ru/givecombank-3-1.html",
+    "https://kvadrat72.ru/takecombank-1000-1.html",
+    "https://kvadrat72.ru/sellzagbank-1000-1.html",
+    "https://kvadrat72.ru/buyzagbank-1000-1.html",
+    "https://kvadrat72.ru/givezagbank-1000-1.html",
+    "https://kvadrat72.ru/takezagbank-1000-1.html",
+    "https://kvadrat72.ru/selllandbank-1-1.html",
+    "https://kvadrat72.ru/selllandbank-2-1.html",
+    "https://kvadrat72.ru/buylandbank-1000-1.html",
+    "https://kvadrat72.ru/givelandbank-1000-1.html",
+    "https://kvadrat72.ru/takelandbank-1000-1.html",
+    "https://kvadrat72.ru/sellgarbank-1000-1.html",
+    "https://kvadrat72.ru/buygarbank-1000-1.html",
+    "https://kvadrat72.ru/givegarbank-1000-1.html",
+    "https://kvadrat72.ru/takegarbank-1000-1.html",
+    "https://kvadrat74.ru/sellflatbank-50-1.html",
+    "https://kvadrat74.ru/sellflatbank-7-1.html",
+    "https://kvadrat74.ru/sellflatbank-9-1.html",
+    "https://kvadrat74.ru/sellflatbank-10-1.html",
+    "https://kvadrat74.ru/buyflatbank-1000-1.html",
+    "https://kvadrat74.ru/changeflatbank-1000-1.html",
+    "https://kvadrat74.ru/newflatbank-1000-1.html",
+    "https://kvadrat74.ru/giveflatbank-50-1.html",
+    "https://kvadrat74.ru/giveflatbank-7-1.html",
+    "https://kvadrat74.ru/giveflatbank-9-1.html",
+    "https://kvadrat74.ru/dayflatbank-1000-1.html",
+    "https://kvadrat74.ru/takeflatbank-1000-1.html",
+    "https://kvadrat74.ru/sellcombank-1-1.html",
+    "https://kvadrat74.ru/sellcombank-2-1.html",
+    "https://kvadrat74.ru/sellcombank-4-1.html",
+    "https://kvadrat74.ru/sellcombank-3-1.html",
+    "https://kvadrat74.ru/buycombank-1000-1.html",
+    "https://kvadrat74.ru/givecombank-1-1.html",
+    "https://kvadrat74.ru/givecombank-2-1.html",
+    "https://kvadrat74.ru/givecombank-4-1.html",
+    "https://kvadrat74.ru/givecombank-3-1.html",
+    "https://kvadrat74.ru/takecombank-1000-1.html",
+    "https://kvadrat74.ru/sellzagbank-1000-1.html",
+    "https://kvadrat74.ru/buyzagbank-1000-1.html",
+    "https://kvadrat74.ru/givezagbank-1000-1.html",
+    "https://kvadrat74.ru/takezagbank-1000-1.html",
+    "https://kvadrat74.ru/selllandbank-1-1.html",
+    "https://kvadrat74.ru/selllandbank-2-1.html",
+    "https://kvadrat74.ru/buylandbank-1000-1.html",
+    "https://kvadrat74.ru/givelandbank-1000-1.html",
+    "https://kvadrat74.ru/takelandbank-1000-1.html",
+    "https://kvadrat74.ru/sellgarbank-1000-1.html",
+    "https://kvadrat74.ru/buygarbank-1000-1.html",
+    "https://kvadrat74.ru/givegarbank-1000-1.html",
+    "https://kvadrat74.ru/takegarbank-1000-1.html",
+    "https://n002.ru/sellflatbank-50-1.html",
+    "https://n002.ru/sellflatbank-7-1.html",
+    "https://n002.ru/sellflatbank-9-1.html",
+    "https://n002.ru/sellflatbank-10-1.html",
+    "https://n002.ru/buyflatbank-1000-1.html",
+    "https://n002.ru/changeflatbank-1000-1.html",
+    "https://n002.ru/newflatbank-1000-1.html",
+    "https://n002.ru/giveflatbank-50-1.html",
+    "https://n002.ru/giveflatbank-7-1.html",
+    "https://n002.ru/giveflatbank-9-1.html",
+    "https://n002.ru/dayflatbank-1000-1.html",
+    "https://n002.ru/takeflatbank-1000-1.html",
+    "https://n002.ru/sellcombank-1-1.html",
+    "https://n002.ru/sellcombank-2-1.html",
+    "https://n002.ru/sellcombank-4-1.html",
+    "https://n002.ru/sellcombank-3-1.html",
+    "https://n002.ru/buycombank-1000-1.html",
+    "https://n002.ru/givecombank-1-1.html",
+    "https://n002.ru/givecombank-2-1.html",
+    "https://n002.ru/givecombank-4-1.html",
+    "https://n002.ru/givecombank-3-1.html",
+    "https://n002.ru/takecombank-1000-1.html",
+    "https://n002.ru/sellzagbank-1000-1.html",
+    "https://n002.ru/buyzagbank-1000-1.html",
+    "https://n002.ru/givezagbank-1000-1.html",
+    "https://n002.ru/takezagbank-1000-1.html",
+    "https://n002.ru/selllandbank-1-1.html",
+    "https://n002.ru/selllandbank-2-1.html",
+    "https://n002.ru/buylandbank-1000-1.html",
+    "https://n002.ru/givelandbank-1000-1.html",
+    "https://n002.ru/takelandbank-1000-1.html",
+    "https://n002.ru/sellgarbank-1000-1.html",
+    "https://n002.ru/buygarbank-1000-1.html",
+    "https://n002.ru/givegarbank-1000-1.html",
+    "https://n002.ru/takegarbank-1000-1.html",
+    "https://nd27.ru/sellflatbank-50-1.html",
+    "https://nd27.ru/sellflatbank-7-1.html",
+    "https://nd27.ru/sellflatbank-9-1.html",
+    "https://nd27.ru/sellflatbank-10-1.html",
+    "https://nd27.ru/buyflatbank-1000-1.html",
+    "https://nd27.ru/changeflatbank-1000-1.html",
+    "https://nd27.ru/newflatbank-1000-1.html",
+    "https://nd27.ru/giveflatbank-50-1.html",
+    "https://nd27.ru/giveflatbank-7-1.html",
+    "https://nd27.ru/giveflatbank-9-1.html",
+    "https://nd27.ru/dayflatbank-1000-1.html",
+    "https://nd27.ru/takeflatbank-1000-1.html",
+    "https://nd27.ru/sellcombank-1-1.html",
+    "https://nd27.ru/sellcombank-2-1.html",
+    "https://nd27.ru/sellcombank-4-1.html",
+    "https://nd27.ru/sellcombank-3-1.html",
+    "https://nd27.ru/buycombank-1000-1.html",
+    "https://nd27.ru/givecombank-1-1.html",
+    "https://nd27.ru/givecombank-2-1.html",
+    "https://nd27.ru/givecombank-4-1.html",
+    "https://nd27.ru/givecombank-3-1.html",
+    "https://nd27.ru/takecombank-1000-1.html",
+    "https://nd27.ru/sellzagbank-1000-1.html",
+    "https://nd27.ru/buyzagbank-1000-1.html",
+    "https://nd27.ru/givezagbank-1000-1.html",
+    "https://nd27.ru/selllandbank-1-1.html",
+    "https://nd27.ru/selllandbank-2-1.html",
+    "https://nd27.ru/buylandbank-1000-1.html",
+    "https://nd27.ru/givelandbank-1000-1.html",
+    "https://nd27.ru/sellgarbank-1000-1.html",
+    "https://nd27.ru/buygarbank-1000-1.html",
+    "https://nd27.ru/givegarbank-1000-1.html",
+    "https://nd27.ru/takegarbank-1000-1.html",
+    "https://n30.ru/sellflatbank-50-1.html",
+    "https://n30.ru/sellflatbank-7-1.html",
+    "https://n30.ru/sellflatbank-9-1.html",
+    "https://n30.ru/sellflatbank-10-1.html",
+    "https://n30.ru/buyflatbank-1000-1.html",
+    "https://n30.ru/changeflatbank-1000-1.html",
+    "https://n30.ru/newflatbank-1000-1.html",
+    "https://n30.ru/giveflatbank-50-1.html",
+    "https://n30.ru/giveflatbank-7-1.html",
+    "https://n30.ru/giveflatbank-9-1.html",
+    "https://n30.ru/dayflatbank-1000-1.html",
+    "https://n30.ru/takeflatbank-1000-1.html",
+    "https://n30.ru/sellcombank-1-1.html",
+    "https://n30.ru/sellcombank-2-1.html",
+    "https://n30.ru/sellcombank-4-1.html",
+    "https://n30.ru/sellcombank-3-1.html",
+    "https://n30.ru/buycombank-1000-1.html",
+    "https://n30.ru/givecombank-1-1.html",
+    "https://n30.ru/givecombank-2-1.html",
+    "https://n30.ru/givecombank-4-1.html",
+    "https://n30.ru/givecombank-3-1.html",
+    "https://n30.ru/takecombank-1000-1.html",
+    "https://n30.ru/sellzagbank-1000-1.html",
+    "https://n30.ru/buyzagbank-1000-1.html",
+    "https://n30.ru/givezagbank-1000-1.html",
+    "https://n30.ru/takezagbank-1000-1.html",
+    "https://n30.ru/selllandbank-1-1.html",
+    "https://n30.ru/selllandbank-2-1.html",
+    "https://n30.ru/buylandbank-1000-1.html",
+    "https://n30.ru/givelandbank-1000-1.html",
+    "https://n30.ru/takelandbank-1000-1.html",
+    "https://n30.ru/sellgarbank-1000-1.html",
+    "https://n30.ru/buygarbank-1000-1.html",
+    "https://n30.ru/givegarbank-1000-1.html",
+    "https://n30.ru/takegarbank-1000-1.html"
+  ],
+  "_segment": "",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "KVADRAT",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 256,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 256,
+    "DOWNLOAD_TIMEOUT": 60,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": false,
+    "AUTOTHROTTLE_START_DELAY": 1.0,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 256,
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_ENABLED": true,
+    "RETRY_TIMES": 100,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      303,
+      302,
+      301
+    ],
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": false,
+    "RANDOM_UA_TYPE": "random"
+  },
+  "crawling_settings": {
+    "global_crawling_type": "common",
+    "js": "//",
+    "rotate_useragents": true,
+    "allowed_domains": [],
+    "proxy_settings": {
+      "types": [
+        "https"
+      ],
+      "amount": 10000
+    }
+  },
+  "paginations": {
+    "methods": {
+      "crawling_type": "common",
+      "filter_duplicates": true
+    },
+    "paginations_by_xpath": {
+      "paginations_xpath": "",
+      "paginations_xpath_active": "",
+      "paginations_xpath_next": "(//div[@class='dphase']/following-sibling::a[@class='phase'][1])[1]"
+    }
+  },
+
+  "item_page": {
+    "_target_xpath": "//div[@class='tbase']//tr[@valign='top']//td[@class='tdec w600']//a[@class='site3']/@href",
+    "methods": {
+      "crawling_type": "common",
+      "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+      "filter_duplicates": true
+    },
+    "fields": {
+      "date_info": {
+        "type": "date",
+        "time": "now"
+      },
+      "price_currency": {
+        "type": "string",
+        "value": "RUB"
+      },
+      "title_name": {
+        "type": "string",
+        "xpath": "(//td[@class='hh']//text())[1]"
+      },
+      "address": {
+        "type": "list to string",
+        "xpath": "(//td[@class='hh']//text())[1]",
+        "regex": ",(.+)"
+      },
+      "date_created": {
+        "type": "date",
+        "xpath": "(//div[@class='tdate']//text())[1]",
+        "regex": "создано (.+)",
+        "time": "from string"
+      },
+      "date_updated": {
+        "type": "date",
+        "xpath": "(//div[@class='tdate']//text())[1]",
+        "regex": "обновлено (.+),",
+        "time": "from string"
+      },
+      "pric_total": {
+        "type": "float",
+        "xpath": "(//text()[contains(.,'Цена')]/following::span/text())[1]",
+        "regex": "(.+) руб"
+      },
+      "price_term": {
+        "type": "string",
+        "xpath": "(//text()[contains(.,'Цена')]/following::span/text())[1]",
+        "regex": " [А-Яа-я]+"
+      },
+      "rent_price_per_area": {
+        "type": "float",
+        "xpath": "//text()[contains(.,'Цена за')]",
+        "regex": ": (.+) рублей"
+      },
+      "description": {
+        "type": "list to string",
+        "xpath": "//text()[contains(.,'Описание')]/following::p/text()"
+      },
+      "seller_name": {
+        "type": "string",
+        "xpath": "//text()[contains(.,'Персона')]/following::span/text()"
+      },
+      "phone": {
+        "type": "phone",
+        "xpath": "//text()[contains(.,'Доп. контакт')]/following::span/text()"
+      },
+      "email": {
+        "type": "string",
+        "xpath": "(//text()[contains(.,'E-mail')]/following::a/text())[1]"
+      },
+      "is_parking": {
+        "type": "string",
+        "xpath": "(//text()[contains(.,'Парковка')]/following::span/text())[1]"
+      },
+      "security_type": {
+        "type": "string",
+        "xpath": "(//text()[contains(.,'Охрана')]/following::span/text())[1]"
+      },
+      "torg": {
+        "type": "string",
+        "xpath": "(//text()[contains(.,'Торг')]/following::span/text())[1]"
+      },
+      "layout_type": {
+        "type": "string",
+        "xpath": "(//text()[contains(.,'Планировка')]/following::span/text())[1]"
+      },
+      "purpose": {
+        "type": "string",
+        "xpath": "(//text()[contains(.,'Назначение')]/following::span/text())[1]"
+      },
+      "decoration_type": {
+        "type": "string",
+        "xpath": "(//text()[contains(.,'ремонта')]/following::span/text())[1]"
+      },
+      "address_city": {
+        "type": "string",
+        "xpath": "(//a[@class='black8']/../text())[3]",
+        "regex": "в (.+)"
+      },
+      "segment": {
+        "type": "string",
+        "xpath": "//a[@class='black8']/text()"
+      },
+      "operation": {
+        "type": "string",
+        "xpath": "(//a[@class='black8']/../text())[3]",
+        "regex": "Продажа|Аренда"
+      }
+    },
+    "tables": {
+      "table_1": {
+        "_keys_xpath": "//table//tr//td[@class='tddec']/text()",
+        "_vals_xpath": "//table//tr//td[@class='tddec']//span/text()",
+        "key_converter": {
+          "балкон": {
+            "name": "balcony",
+            "type": "string"
+          },
+          "вторичное_жилье": {
+            "name": "year_built",
+            "type": "float",
+            "regex": "(.+) год"
+          },
+          "домcтроение": {
+            "name": "wall_material",
+            "type": "string"
+          },
+          "жилая": {
+            "name": "area_living",
+            "type": "float",
+            "regex": "(.+) м"
+          },
+          "комнаты": {
+            "name": "layout_type",
+            "type": "string"
+          },
+          "кухня": {
+            "name": "kitchen_area",
+            "type": "float",
+            "regex": "(.+) м"
+          },
+          "лифт": {
+            "name": "is_elevator",
+            "type": "string"
+          },
+          "окна": {
+            "name": "vid",
+            "type": "string"
+          },
+          "площадь_общая": {
+            "name": "area_total",
+            "type": "float",
+            "regex": "(.+) м"
+          },
+          "санузел": {
+            "name": "is_wc",
+            "type": "string"
+          },
+          "собственность": {
+            "name": "none",
+            "type": "string"
+          },
+          "этажэтажей_в_доме": {
+            "name": [
+              "floor",
+              "floors_cnt"
+            ],
+            "type": [
+              "float",
+              "float"
+            ],
+            "regex": [
+              "этаж (.+)\/",
+              "\/(.+)"
+            ]
+          },
+          "высота_потолков": {
+            "name": "ceiling_height",
+            "type": "float",
+            "regex": "\\d*\\W?\\d+"
+          },
+          "мусоропровод": {
+            "name": "garbage_type",
+            "type": "string"
+          },
+          "планировка_квартиры": {
+            "name": "layout_type",
+            "type": "string"
+          },
+          "имеется": {
+            "name": "appliances",
+            "type": "string"
+          },
+          "мебель": {
+            "name": "furniture",
+            "type": "string"
+          },
+          "техническое_состояние": {
+            "name": "decoration_type",
+            "type": "string"
+          },
+          "коммуникации": {
+            "name": [
+              "heating_system_type",
+              "is_plumbing",
+              "is_sewage",
+              "is_electricity",
+              "is_gas"
+            ],
+            "type": [
+              "string",
+              "string",
+              "string",
+              "string",
+              "string"
+            ],
+            "regex": [
+              "отопление",
+              "водопровод",
+              "канализация",
+              "электричество",
+              "газ"
+            ]
+          },
+          "площадь_участка": {
+            "name": "land_area",
+            "type": "float",
+            "regex": "\\d*\\W?\\d+"
+          },
+          "этажей": {
+            "name": "floors_cnt",
+            "type": "string",
+            "regex": "\\d*\\W?\\d+"
+          },
+          "объект": {
+            "name": [
+              "type_building",
+              "class_object"
+            ],
+            "type": [
+              "string",
+              "string"
+            ],
+            "regex": [
+              "(.+)",
+              "класс (.+)\\)"
+            ]
+          },
+          "сдаваемая_площадь": {
+            "name": "area_total",
+            "type": "float",
+            "regex": "\\d*\\W?\\d+"
+          },
+          "тип_земли": {
+            "name": "land_category",
+            "type": "string"
+          },
+          "общая_площадь_объекта": {
+            "name": "total_area_object",
+            "type": "float",
+            "regex": "\\d*\\W?\\d+"
+          },
+          "этажиэтажей_в_строении": {
+            "name": "floors_cnt",
+            "type": "string",
+            "regex": "\\d*\\W?\\d+"
+          },
+          "сдаваемая_площадь_это_вся_площадь_объекта": {
+            "name": "none",
+            "type": "string"
+          },
+          "продаваемая_площадь": {
+            "name": "area_total",
+            "type": "float",
+            "regex": "\\d*\\W?\\d+"
+          },
+          "продаваемая_площадь_это_вся_площадь_объекта": {
+            "name": "none",
+            "type": "string"
+          }
+        }
+      },
+      "table_2": {
+        "_keys_xpath": "//text()[contains(.,'пара слов')]",
+        "_vals_xpath": "//table//tr//td[@class='tddec2']//p[@class='dinfo']/text()",
+        "key_converter": {
+          "еще_пара_слов": {
+            "name": "detail",
+            "type": "string"
+          }
+        }
+      },
+      "table_3": {
+        "_keys_xpath": "//text()[contains(.,'информация')]",
+        "_vals_xpath": "//text()[contains(.,'информация')]/../p",
+        "key_converter": {
+          "дополнительная_информация": {
+            "name": "detail",
+            "type": "string",
+            "regex": "dinfo\">(.+)"
+          }
+        }
+      }
+    },
+    "follow": {
+      "url_constructor": {
+        "url": "$base_url$/showphone.php?tip=1&id=$insert$",
+        "fields": {
+          "insert": {
+            "type": "string",
+            "xpath": "//link[@rel='alternate']/@href",
+            "regex": "\\d+(?=\\.html)"
+          }
+        }
+      },
+      "methods": {
+        "content_type": "json",
+        "crawling_type": "common"
+      },
+      "fields": {
+        "phone": {
+          "type": "phone",
+          "path": "text"
+        }
+      }
+    }
+  }
+}

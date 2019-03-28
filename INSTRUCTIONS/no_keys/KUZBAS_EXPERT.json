@@ -1,0 +1,148 @@
+{
+    "_task_id" : "KUZBASS_test_1",
+    "_start_urls" : [
+		"http://bkn42.ru/catalog/object/5729/"
+    ],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "42",
+    "_source": "KUZBASS",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 256,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 256,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 256,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+    "item_page" : {
+        "_target_xpath" : "//div[@class='tr']//a[@target='_blank']/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"currency" : {
+                "type" : "string",
+                "value" : "RUB"
+            },
+			"address_city" : {
+                "type" : "string",
+                "path": "//div[@class='right']//h2//text()"
+            },
+			"seller" : {
+				"type" : "string",
+				"value" : "Бюро коммерческой недвижимости Кузбасс-Эксперт Михаил Алексеевич "
+			},
+			"phone": {
+				"type" : "phone",
+				"value": "8-903-909-0237"
+			},
+			"price": {
+			    "type" : "list to string",
+                "path": "//table//td[@colspan='2']//span/text()",
+				"regex": "(\\d*\\W?\\d+\\W?\\d+) руб"
+			},
+			"detail": {
+			    "type" : "list to string",
+                "path": "//table//td[@colspan='2']//span/text()"
+			}
+        },
+		 "tables" : {
+			"table_1" : {
+                "_keys_xpath" : "//div[@class='right']//table//tbody//tr",
+                "_vals_xpath" : "//div[@class='right']//table//tbody//tr",
+				"key_regex": "<td>\\s*(.+)\\s*<\/td>\\s*<td",
+				"key_converter" : {
+					"адрес": {
+						"name" : "address",
+                        "type" : "string",
+						"regex": "<\/td>\\s*<td>(.+)<\/td>"
+					},
+					"код_объекта": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "<\/td>\\s*<td>(.+)<\/td>"
+					},
+					"название": {
+						"name" : "header",
+                        "type" : "string",
+						"regex": "<\/td>\\s*<td>(.+)<\/td>"
+					},
+					"площадь": {
+						"name" : "square",
+                        "type" : "string",
+						"regex": "<\/td>\\s*<td>(.+) м"
+					},
+					"просмотров": {
+						"name" : "none",
+                        "type" : "string",
+						"regex": "<\/td>\\s*<td>(.+)<\/td>"
+					},
+					"тип_объекта":{
+						"name" : "type_building",
+                        "type" : "string",
+						"regex": "<\/td>\\s*<td>(.+)<\/td>"
+					},
+					"тип_сделки": {
+						"name" : "operation",
+                        "type" : "string",
+						"regex": "<\/td>\\s*<td>(.+)<\/td>"
+					},
+					"цена_за_м2": {
+						"name" : "sale_land",
+                        "type" : "string",
+						"regex": "<\/td>\\s*<td>(.+) руб"
+					},
+					"цена_за_объект": {
+						"name" : "price",
+                        "type" : "string",
+						"regex": "<\/td>\\s*<td>(.+) руб"
+					}
+				}
+			}
+		}
+    }
+}

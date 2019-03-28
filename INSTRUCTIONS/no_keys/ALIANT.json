@@ -1,0 +1,232 @@
+{
+	"_comment" : "", 
+    "_task_id" : "ALIANT_test_1",
+    "_start_urls" : [
+		"https://aliant.pro/catalog/?category=57&dealtype=0&region=0&city=0&citydistrict=0&objecttype=0&area=0&search=",
+		"https://aliant.pro/catalog/?category=73&dealtype=0&region=0&city=0&citydistrict=0&objecttype=0&area=0&search=",
+		"https://aliant.pro/catalog/?category=775&dealtype=0&region=0&city=0&citydistrict=0&objecttype=0&area=0&search="
+    ],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "",
+    "_source": "ALIANT",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 256,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 256,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 256,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+    "item_page" : {
+        "_target_xpath" : "//a[@class='item']/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"currency" : {
+                "type" : "string",
+                "value" : "RUB"
+            },
+			"header" : {
+                "type" : "string",
+                "path": "//h1//text()"
+            },
+			"seller" : {
+				"type" : "string",
+				"path": "//div[@class='col l3 s12 contacts']//span//text()"
+			},
+			"email_seller": {
+				"type" : "string",
+				"path": "(//p//a/text())[2]"
+			},
+			"phone": {
+				"type" : "phone",
+				"path": "//p//a[@class='callLink']//text()"
+			},
+			"detail": {
+			    "type" : "list to string",
+                "path": "//div[@class='col l8 s12']//p//text()"
+			},
+
+			"longitude" :{
+				"type" : "float",
+				"path": "//div[@class='row itemDescription']/@data-coords",
+				"regex": ",(\\d*\\W?\\d+\\W?\\d+)"
+			},
+			"latitude" :{
+				"type" : "float",
+				"path": "//div[@class='row itemDescription']/@data-coords",
+				"regex": "(\\d*\\W?\\d+\\W?\\d+),"
+			},
+			"remont": {
+				"type" : "string",
+				"path": "//div[text()[contains(.,'Состояние')]]//span//text()"
+			},
+			"vhod": {
+				"type" : "string",
+				"path": "//div[text()[contains(.,'Отдельный')]]//span//text()"
+			},
+			"parking": {
+				"type" : "string",
+				"path": "//div[text()[contains(.,'Парковка')]]//span//text()"
+			},
+			"height": {
+				"type" : "string",
+				"path": "//div[text()[contains(.,'Высота')]]//span//text()"
+			},
+			"ventilation": {
+				"type" : "string",
+				"path": "//div[text()[contains(.,'Вентиляция')]]//span//text()"
+			},
+			"type_deal": {
+				"type" : "string",
+				"path": "//div[text()[contains(.,'Тип договора')]]//span//text()"
+			},
+			"remont": {
+				"type" : "string",
+				"path": "//div[text()[contains(.,'Состояние')]]//span//text()"
+			},
+			"security": {
+				"type" : "string",
+				"path": "//div[text()[contains(.,'Безопасность')]]//span//text()"
+			},
+			"nalog": {
+				"type" : "string",
+				"path": "//div[text()[contains(.,'Налоги')]]//span//text()"
+			},
+			"deposit": {
+				"type" : "string",
+				"path": "//div[text()[contains(.,'Предоплата')]]//span//text()"
+			},
+			"count_phone_lines":{
+				"type" : "string",
+				"path": "//li[text()[contains(.,'Телекоммуникации')]]//text()",
+				"regex": ": (.+)"
+			},
+			"parking":{
+				"type" : "string",
+				"path": "//li[text()[contains(.,'Парковка')]]//text()",
+				"regex": ": (.+)"
+			},
+			"count_parking":{
+				"type" : "string",
+				"path": "//li[text()[contains(.,'Парковка')]]//text()",
+				"regex": "\\d*\\W?\\d+"
+			},
+			"moschnost":{
+				"type" : "string",
+				"path": "//li[text()[contains(.,'мощность')]]//text()",
+				"regex": ": (.+)"
+			},
+			"height":{
+				"type" : "string",
+				"path": "//li[text()[contains(.,'Высота')]]//text()",
+				"regex": ": (.+)"
+			},
+			"vhod":{
+				"type" : "string",
+				"path": "//li[text()[contains(.,'вход')]]//text()",
+				"regex": ": (.+)"
+			},
+			"type_deal":{
+				"type" : "string",
+				"path": "//li[text()[contains(.,'Условия продажи')]]//text()",
+				"regex": ": (.+)"
+			},
+			"square":{
+				"type" : "string",
+				"path": "//li[text()[contains(.,'Площадь')]]//text()",
+				"regex": ": (.+)"
+			},
+			"condition":{
+				"type" : "string",
+				"path": "//li[text()[contains(.,'Кондиционирование')]]//text()",
+				"regex": ": (.+)"
+			}
+        },
+		 "tables" : {
+			"table_1" : {
+                "_keys_xpath" : "//div[@class='specification characteristics']//div/text()",
+                "_vals_xpath" : "//div[@class='specification characteristics']//div//span//text()",
+				"key_converter" : {
+				    "город": {
+						"name" : "address_city",
+                        "type" : "string"
+					},
+					"номер_дома": {
+						"name" : "address_number",
+                        "type" : "string"
+					},
+					"общая_площадь": {
+						"name" : "square",
+                        "type" : "string"
+					},
+					"район": {
+						"name" : "district",
+                        "type" : "string"
+					},
+					"тип_сделки":{
+						"name" : "operation",
+                        "type" : "string"
+					},
+					"улица": {
+						"name" : "address_street",
+                        "type" : "string"
+					},
+					"цена": {
+						"name" : "price",
+                        "type" : "string"
+					},
+					"этаж": {
+						"name" : "floor_room",
+                        "type" : "string"
+					}
+				}
+			}
+		}
+    }
+}

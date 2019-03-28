@@ -1,0 +1,1020 @@
+﻿{
+  "_task_id": "RAUI_test_1",
+  "_start_urls": [
+    "https://raui.ru/snyat-kvartiru/moskva?per_page=50",
+    "https://raui.ru/snyat-kvartiru/sankt-peterburg?per_page=50",
+    "https://raui.ru/snyat-kvartiru/sevastopol?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-adyigeya?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-altay?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-bashkortostan?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-buryatiya?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-dagestan?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-ingushetiya?per_page=50",
+    "https://raui.ru/snyat-kvartiru/kabardino-balkarskaya-respublika?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-kalmyikiya?per_page=50",
+    "https://raui.ru/snyat-kvartiru/karachaevo-cherkesskaya-respublika?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-kareliya?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-komi?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-kryim?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-mariy-el?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-mordoviya?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-saha-yakutiya?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-severnaya-osetiya?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-tatarstan?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-tyiva?per_page=50",
+    "https://raui.ru/snyat-kvartiru/udmurtskaya-respublika?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublika-hakasiya?per_page=50",
+    "https://raui.ru/snyat-kvartiru/chechenskaya-respublika?per_page=50",
+    "https://raui.ru/snyat-kvartiru/chuvashskaya-respublika?per_page=50",
+    "https://raui.ru/snyat-kvartiru/respublik%D0%B0-severnaya-osetiya-alaniya?per_page=50",
+    "https://raui.ru/snyat-kvartiru/altayskiy-kray?per_page=50",
+    "https://raui.ru/snyat-kvartiru/zabaykalskiy-kray?per_page=50",
+    "https://raui.ru/snyat-kvartiru/kamchatskiy-kray?per_page=50",
+    "https://raui.ru/snyat-kvartiru/krasnodarskiy-kray?per_page=50",
+    "https://raui.ru/snyat-kvartiru/krasnoyarskiy-kray?per_page=50",
+    "https://raui.ru/snyat-kvartiru/permskiy-kray?per_page=50",
+    "https://raui.ru/snyat-kvartiru/primorskiy-kray?per_page=50",
+    "https://raui.ru/snyat-kvartiru/stavropolskiy-kray?per_page=50",
+    "https://raui.ru/snyat-kvartiru/habarovskiy-kray?per_page=50",
+    "https://raui.ru/snyat-kvartiru/amurskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/arhangelskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/astrahanskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/belgorodskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/bryanskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/vladimirskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/volgogradskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/vologodskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/voronejskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/ivanovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/irkutskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/kaliningradskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/kalujskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/kemerovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/kirovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/kostromskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/kurganskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/kurskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/leningradskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/lipetskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/magadanskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/moskovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/murmanskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/nijegorodskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/novgorodskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/novosibirskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/omskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/orenburgskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/orlovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/penzenskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/pskovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/rostovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/ryazanskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/samarskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/saratovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/sahalinskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/sverdlovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/smolenskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/tambovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/tverskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/tomskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/tulskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/tyumenskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/ulyanovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/chelyabinskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/yaroslavskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/evreyskaya-avtonomnaya-oblast?per_page=50",
+    "https://raui.ru/snyat-kvartiru/nenetskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/snyat-kvartiru/hantyi-mansiyskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/snyat-kvartiru/chukotskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/snyat-kvartiru/yamalo-nenetskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/moskva?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/sankt-peterburg?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/sevastopol?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-adyigeya?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-altay?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-bashkortostan?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-buryatiya?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-dagestan?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-ingushetiya?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/kabardino-balkarskaya-respublika?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-kalmyikiya?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/karachaevo-cherkesskaya-respublika?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-kareliya?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-komi?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-kryim?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-mariy-el?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-mordoviya?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-saha-yakutiya?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-severnaya-osetiya?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-tatarstan?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-tyiva?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/udmurtskaya-respublika?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublika-hakasiya?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/chechenskaya-respublika?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/chuvashskaya-respublika?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/respublik%D0%B0-severnaya-osetiya-alaniya?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/altayskiy-kray?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/zabaykalskiy-kray?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/kamchatskiy-kray?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/krasnodarskiy-kray?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/krasnoyarskiy-kray?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/permskiy-kray?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/primorskiy-kray?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/stavropolskiy-kray?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/habarovskiy-kray?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/amurskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/arhangelskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/astrahanskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/belgorodskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/bryanskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/vladimirskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/volgogradskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/vologodskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/voronejskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/ivanovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/irkutskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/kaliningradskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/kalujskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/kemerovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/kirovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/kostromskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/kurganskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/kurskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/leningradskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/lipetskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/magadanskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/moskovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/murmanskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/nijegorodskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/novgorodskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/novosibirskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/omskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/orenburgskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/orlovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/penzenskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/pskovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/rostovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/ryazanskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/samarskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/saratovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/sahalinskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/sverdlovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/smolenskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/tambovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/tverskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/tomskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/tulskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/tyumenskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/ulyanovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/chelyabinskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/yaroslavskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/evreyskaya-avtonomnaya-oblast?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/nenetskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/hantyi-mansiyskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/chukotskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/snyat-dom-dacha-zemelnye_uchastki/yamalo-nenetskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/snyat-office-sklad/moskva?per_page=50",
+    "https://raui.ru/snyat-office-sklad/sankt-peterburg?per_page=50",
+    "https://raui.ru/snyat-office-sklad/sevastopol?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-adyigeya?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-altay?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-bashkortostan?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-buryatiya?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-dagestan?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-ingushetiya?per_page=50",
+    "https://raui.ru/snyat-office-sklad/kabardino-balkarskaya-respublika?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-kalmyikiya?per_page=50",
+    "https://raui.ru/snyat-office-sklad/karachaevo-cherkesskaya-respublika?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-kareliya?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-komi?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-kryim?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-mariy-el?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-mordoviya?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-saha-yakutiya?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-severnaya-osetiya?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-tatarstan?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-tyiva?per_page=50",
+    "https://raui.ru/snyat-office-sklad/udmurtskaya-respublika?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublika-hakasiya?per_page=50",
+    "https://raui.ru/snyat-office-sklad/chechenskaya-respublika?per_page=50",
+    "https://raui.ru/snyat-office-sklad/chuvashskaya-respublika?per_page=50",
+    "https://raui.ru/snyat-office-sklad/respublik%D0%B0-severnaya-osetiya-alaniya?per_page=50",
+    "https://raui.ru/snyat-office-sklad/altayskiy-kray?per_page=50",
+    "https://raui.ru/snyat-office-sklad/zabaykalskiy-kray?per_page=50",
+    "https://raui.ru/snyat-office-sklad/kamchatskiy-kray?per_page=50",
+    "https://raui.ru/snyat-office-sklad/krasnodarskiy-kray?per_page=50",
+    "https://raui.ru/snyat-office-sklad/krasnoyarskiy-kray?per_page=50",
+    "https://raui.ru/snyat-office-sklad/permskiy-kray?per_page=50",
+    "https://raui.ru/snyat-office-sklad/primorskiy-kray?per_page=50",
+    "https://raui.ru/snyat-office-sklad/stavropolskiy-kray?per_page=50",
+    "https://raui.ru/snyat-office-sklad/habarovskiy-kray?per_page=50",
+    "https://raui.ru/snyat-office-sklad/amurskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/arhangelskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/astrahanskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/belgorodskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/bryanskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/vladimirskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/volgogradskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/vologodskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/voronejskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/ivanovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/irkutskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/kaliningradskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/kalujskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/kemerovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/kirovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/kostromskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/kurganskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/kurskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/leningradskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/lipetskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/magadanskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/moskovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/murmanskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/nijegorodskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/novgorodskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/novosibirskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/omskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/orenburgskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/orlovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/penzenskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/pskovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/rostovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/ryazanskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/samarskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/saratovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/sahalinskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/sverdlovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/smolenskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/tambovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/tverskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/tomskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/tulskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/tyumenskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/ulyanovskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/chelyabinskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/yaroslavskaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/evreyskaya-avtonomnaya-oblast?per_page=50",
+    "https://raui.ru/snyat-office-sklad/nenetskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/snyat-office-sklad/hantyi-mansiyskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/snyat-office-sklad/chukotskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/snyat-office-sklad/yamalo-nenetskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/kupit-kvartiru/moskva?per_page=50",
+    "https://raui.ru/kupit-kvartiru/sankt-peterburg?per_page=50",
+    "https://raui.ru/kupit-kvartiru/sevastopol?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-adyigeya?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-altay?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-bashkortostan?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-buryatiya?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-dagestan?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-ingushetiya?per_page=50",
+    "https://raui.ru/kupit-kvartiru/kabardino-balkarskaya-respublika?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-kalmyikiya?per_page=50",
+    "https://raui.ru/kupit-kvartiru/karachaevo-cherkesskaya-respublika?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-kareliya?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-komi?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-kryim?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-mariy-el?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-mordoviya?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-saha-yakutiya?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-severnaya-osetiya?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-tatarstan?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-tyiva?per_page=50",
+    "https://raui.ru/kupit-kvartiru/udmurtskaya-respublika?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublika-hakasiya?per_page=50",
+    "https://raui.ru/kupit-kvartiru/chechenskaya-respublika?per_page=50",
+    "https://raui.ru/kupit-kvartiru/chuvashskaya-respublika?per_page=50",
+    "https://raui.ru/kupit-kvartiru/respublik%D0%B0-severnaya-osetiya-alaniya?per_page=50",
+    "https://raui.ru/kupit-kvartiru/altayskiy-kray?per_page=50",
+    "https://raui.ru/kupit-kvartiru/zabaykalskiy-kray?per_page=50",
+    "https://raui.ru/kupit-kvartiru/kamchatskiy-kray?per_page=50",
+    "https://raui.ru/kupit-kvartiru/krasnodarskiy-kray?per_page=50",
+    "https://raui.ru/kupit-kvartiru/krasnoyarskiy-kray?per_page=50",
+    "https://raui.ru/kupit-kvartiru/permskiy-kray?per_page=50",
+    "https://raui.ru/kupit-kvartiru/primorskiy-kray?per_page=50",
+    "https://raui.ru/kupit-kvartiru/stavropolskiy-kray?per_page=50",
+    "https://raui.ru/kupit-kvartiru/habarovskiy-kray?per_page=50",
+    "https://raui.ru/kupit-kvartiru/amurskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/arhangelskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/astrahanskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/belgorodskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/bryanskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/vladimirskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/volgogradskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/vologodskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/voronejskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/ivanovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/irkutskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/kaliningradskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/kalujskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/kemerovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/kirovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/kostromskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/kurganskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/kurskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/leningradskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/lipetskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/magadanskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/moskovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/murmanskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/nijegorodskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/novgorodskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/novosibirskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/omskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/orenburgskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/orlovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/penzenskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/pskovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/rostovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/ryazanskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/samarskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/saratovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/sahalinskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/sverdlovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/smolenskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/tambovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/tverskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/tomskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/tulskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/tyumenskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/ulyanovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/chelyabinskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/yaroslavskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/evreyskaya-avtonomnaya-oblast?per_page=50",
+    "https://raui.ru/kupit-kvartiru/nenetskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/kupit-kvartiru/hantyi-mansiyskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/kupit-kvartiru/chukotskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/kupit-kvartiru/yamalo-nenetskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/moskva?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/sankt-peterburg?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/sevastopol?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-adyigeya?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-altay?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-bashkortostan?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-buryatiya?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-dagestan?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-ingushetiya?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/kabardino-balkarskaya-respublika?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-kalmyikiya?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/karachaevo-cherkesskaya-respublika?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-kareliya?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-komi?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-kryim?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-mariy-el?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-mordoviya?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-saha-yakutiya?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-severnaya-osetiya?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-tatarstan?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-tyiva?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/udmurtskaya-respublika?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublika-hakasiya?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/chechenskaya-respublika?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/chuvashskaya-respublika?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/respublik%D0%B0-severnaya-osetiya-alaniya?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/altayskiy-kray?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/zabaykalskiy-kray?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/kamchatskiy-kray?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/krasnodarskiy-kray?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/krasnoyarskiy-kray?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/permskiy-kray?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/primorskiy-kray?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/stavropolskiy-kray?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/habarovskiy-kray?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/amurskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/arhangelskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/astrahanskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/belgorodskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/bryanskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/vladimirskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/volgogradskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/vologodskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/voronejskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/ivanovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/irkutskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/kaliningradskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/kalujskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/kemerovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/kirovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/kostromskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/kurganskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/kurskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/leningradskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/lipetskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/magadanskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/moskovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/murmanskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/nijegorodskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/novgorodskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/novosibirskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/omskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/orenburgskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/orlovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/penzenskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/pskovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/rostovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/ryazanskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/samarskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/saratovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/sahalinskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/sverdlovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/smolenskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/tambovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/tverskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/tomskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/tulskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/tyumenskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/ulyanovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/chelyabinskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/yaroslavskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/evreyskaya-avtonomnaya-oblast?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/nenetskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/hantyi-mansiyskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/chukotskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/kupit-dom-dacha-zemelnye_uchastki/yamalo-nenetskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/kupit-office-sklad/moskva?per_page=50",
+    "https://raui.ru/kupit-office-sklad/sankt-peterburg?per_page=50",
+    "https://raui.ru/kupit-office-sklad/sevastopol?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-adyigeya?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-altay?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-bashkortostan?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-buryatiya?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-dagestan?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-ingushetiya?per_page=50",
+    "https://raui.ru/kupit-office-sklad/kabardino-balkarskaya-respublika?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-kalmyikiya?per_page=50",
+    "https://raui.ru/kupit-office-sklad/karachaevo-cherkesskaya-respublika?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-kareliya?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-komi?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-kryim?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-mariy-el?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-mordoviya?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-saha-yakutiya?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-severnaya-osetiya?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-tatarstan?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-tyiva?per_page=50",
+    "https://raui.ru/kupit-office-sklad/udmurtskaya-respublika?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublika-hakasiya?per_page=50",
+    "https://raui.ru/kupit-office-sklad/chechenskaya-respublika?per_page=50",
+    "https://raui.ru/kupit-office-sklad/chuvashskaya-respublika?per_page=50",
+    "https://raui.ru/kupit-office-sklad/respublik%D0%B0-severnaya-osetiya-alaniya?per_page=50",
+    "https://raui.ru/kupit-office-sklad/altayskiy-kray?per_page=50",
+    "https://raui.ru/kupit-office-sklad/zabaykalskiy-kray?per_page=50",
+    "https://raui.ru/kupit-office-sklad/kamchatskiy-kray?per_page=50",
+    "https://raui.ru/kupit-office-sklad/krasnodarskiy-kray?per_page=50",
+    "https://raui.ru/kupit-office-sklad/krasnoyarskiy-kray?per_page=50",
+    "https://raui.ru/kupit-office-sklad/permskiy-kray?per_page=50",
+    "https://raui.ru/kupit-office-sklad/primorskiy-kray?per_page=50",
+    "https://raui.ru/kupit-office-sklad/stavropolskiy-kray?per_page=50",
+    "https://raui.ru/kupit-office-sklad/habarovskiy-kray?per_page=50",
+    "https://raui.ru/kupit-office-sklad/amurskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/arhangelskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/astrahanskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/belgorodskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/bryanskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/vladimirskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/volgogradskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/vologodskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/voronejskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/ivanovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/irkutskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/kaliningradskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/kalujskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/kemerovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/kirovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/kostromskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/kurganskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/kurskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/leningradskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/lipetskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/magadanskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/moskovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/murmanskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/nijegorodskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/novgorodskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/novosibirskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/omskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/orenburgskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/orlovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/penzenskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/pskovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/rostovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/ryazanskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/samarskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/saratovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/sahalinskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/sverdlovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/smolenskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/tambovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/tverskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/tomskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/tulskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/tyumenskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/ulyanovskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/chelyabinskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/yaroslavskaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/evreyskaya-avtonomnaya-oblast?per_page=50",
+    "https://raui.ru/kupit-office-sklad/nenetskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/kupit-office-sklad/hantyi-mansiyskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/kupit-office-sklad/chukotskiy-avtonomnyiy-okrug?per_page=50",
+    "https://raui.ru/kupit-office-sklad/yamalo-nenetskiy-avtonomnyiy-okrug?per_page=50"
+  ],
+  "_segment": "",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "RAUI",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 1024,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
+    "DOWNLOAD_TIMEOUT": 60,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": false,
+    "AUTOTHROTTLE_START_DELAY": 1.0,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_ENABLED": true,
+    "RETRY_TIMES": 20,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      303,
+      302,
+      301
+    ],
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": true,
+    "COOKIES_ENABLED": true,
+    "RANDOM_UA_TYPE": "random"
+  },
+  "methods": {
+    "crawling_type": "common",
+    "filter_duplicates": true,
+    "allowed_domains": [],
+    "proxy_settings": {
+      "types": [
+        "https"
+      ]
+    }
+  },
+  "crawl_tree": [
+    {"pagination_urls":{"path": "//div[@class='pagging']/ul/li/a[@class='pagging__link active']/parent::*/following-sibling::li[1]/a/@href"},
+    "item_urls": {"path": "//div[@class='searchrezults-item']//a[contains(text(),'Подробнее')]/@href"}}
+  ],
+  "item_page": {
+    "fields": {
+      "federal_subject": {
+        "type": "string",
+        "path": "//div[@class='breadcrumbs']/div/a[2]/text()"
+      },	  
+      "segment": {
+        "type": "string",
+        "path": "//span[@class='searchrezults-item-info-header__value']/text()",
+        "regex": "Квартир|Офис|Склад|Коммерч|Гараж|Участ|Дом|Бизн|Свободн|Торгов"
+      },
+	  "addit_comm_condition": {
+        "type": "string",
+        "path": "//div[@class='item__priceinfo']/text()"
+      },
+      "operation": {
+        "type": "string",
+        "path": "//div[@class='item-block row']/div[@class='item__info']/text()",
+        "regex": "продаж|аренд"
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now"
+      },
+      "date_created": {
+        "type": "date",
+        "path": "//div[@class='item__data']//text()",
+        "time": "from string"
+      },
+      "title_name": {
+        "type": "string",
+        "path": "//h1[@class='item__address']//text()"
+      },
+      "address": {
+        "type": "string",
+        "path": "//h1[@class='item__address']//text()",
+        "regex": ".(?=[А-Я]).+"
+      },
+      "description": {
+        "type": "list to string",
+        "path": "//div[@class='item-text']//text()"
+      },
+      "source_longitude": {
+        "type": "float",
+        "path": "//div[@class='item-mapblock-map']//@data-croods",
+        "regex": ",(\\d*\\W?\\d+\\W?\\d+)"
+      },
+      "source_latitude": {
+        "type": "float",
+        "path": "//div[@class='item-mapblock-map']//@data-croods",
+        "regex": "(\\d*\\W?\\d+\\W?\\d+),"
+      },
+      "price_total": {
+        "type": "float",
+        "path": "//div[@class='item__price']//text()",
+        "regex": "\\d*\\W?\\d+"
+      },
+      "price_currency": {
+        "type": "list to string",
+        "path": "//div[@class='item__price']//text()|//div[@class='item__price']/i/@class",
+        "regex": "\\$|rub"
+      },
+      "price_term": {
+        "type": "string",
+        "path": "//div[@class='item__price']//text()",
+        "regex": "в мес|в год"
+      },
+      "rent_price_per_area": {
+        "type": "float",
+        "path": "//div[@class='item__price']/following-sibling::div[@class='item__number']/text()[1]",
+        "regex": "\\d*\\W?\\d+"
+      },
+      "metro_station": {
+        "type": "string",
+        "path": "(//div[@class='item__metro']/text())[1]",
+        "regex": "(.+), "
+      },
+      "metro_minutes": {
+        "type": "string",
+        "path": "(//div[@class='item__metro']/text())[1]",
+        "regex": ", (.+)"
+      },
+      "company_name": {
+        "type": "list to string",
+        "path": "//div[@class='seller-info__text']//text()",
+        "regex": ".+(?=Имя:)"
+      },
+      "seller_name": {
+        "type": "list to string",
+        "path": "//div[@class='seller-info__text']//text()",
+        "regex": "(?<=Имя:).+"
+      }
+    },
+    "tables": {
+      "table_1": {
+        "_keys_path": "//div[@class='item-block row']//tr",
+        "_vals_path": "//div[@class='item-block row']//tr",
+        "key_regex": "td>(.+):",
+        "key_converter": {
+          "балкон": {
+            "name": "is_balcony",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "высота_потолков": {
+            "name": "ceiling_height",
+            "type": "float",
+            "regex": "<\/td>\\s*<td>(.+) м"
+          },
+          "грузовых_лифтов": {
+            "name": "is_cargo_elevator",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "жилая_площадь": {
+            "name": "area_living",
+            "type": "float",
+            "regex": "<\/td>\\s*<td>(.+) м"
+          },
+          "лоджия": {
+            "name": "is_balcony",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "мусоропровод": {
+            "name": "garbage_type",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "общая_площадь": {
+            "name": "area_total",
+            "type": "float",
+            "regex": "<\/td>\\s*<td>(.+) м"
+          },
+          "окна": {
+            "name": "is_view",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "пассажирских_лифтов": {
+            "name": "lift_cnt",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "площадь_кухни": {
+            "name": "kitchen_area",
+            "type": "float",
+            "regex": "<\/td>\\s*<td>(.+) м"
+          },
+          "раздельных_санузлов": {
+            "name": "is_wc",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "ремонт": {
+            "name": "decoration_type",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "совмещенных_санузлов": {
+            "name": "is_wc",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "тип_дома": {
+            "name": "building_type",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "этаж": {
+            "name": [
+              "floor",
+              "floors_cnt"
+            ],
+            "type": [
+              "float",
+              "float"
+            ],
+            "regex": [
+              ">(\\d*\\W?\\d+) \/ ",
+              " \/ (\\d*\\W?\\d+)<"
+            ]
+          },
+          "площадь_комнат": {
+            "name": "area_room",
+            "type": "float",
+            "regex": "<\/td>\\s*<td>(.+) м"
+          },
+          "площадь_комнаты": {
+            "name": "area_room",
+            "type": "float",
+            "regex": "<tr><td>Площадь комнаты:</td><td>2 м<sup>2</sup></td></tr>"
+          },
+          "баня": {
+            "name": "is_bathhouse",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "бассейн": {
+            "name": "is_swimming_pool",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "водопровод": {
+            "name": "is_plumbing",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "газовые_сети": {
+            "name": "is_gas",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "год_постройки": {
+            "name": "year_built",
+            "type": "float",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "канализация": {
+            "name": "is_sewage",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(\\d+)<\/td>"
+          },
+          "категория_земель": {
+            "name": "land_category",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "количество_спален": {
+            "name": "none",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "мебель_в_комнатах": {
+            "name": "is_furniture",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "название_коттеджного_посёлка": {
+            "name": "property_name",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "отопление": {
+            "name": "is_heating",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "площадь": {
+            "name": [
+              "area_total",
+              "square_dimension"
+            ],
+            "type": [
+              "float",
+              "string"
+            ],
+            "regex": [
+              "<\/td>\\s*<td>(\\d*\\W?\\d+)",
+              "</td>\\s*<td>\\d*\\W?\\d+(\\D+)<"
+            ]
+          },
+          "площадь_участка": {
+            "name": [
+              "land_area",
+              "area_land_unit"
+            ],
+            "type": [
+              "float",
+              "string"
+            ],
+            "regex": [
+              "<\/td>\\s*<td>(\\d*\\W?\\d+)",
+              "([а-я]+).</td></tr>"
+            ]
+          },
+          "санузел": {
+            "name": "is_wc",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "электроснабжение": {
+            "name": "is_electricity",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "этажей_в_доме": {
+            "name": "floors_cnt",
+            "type": "float",
+            "regex": "<\/td>\\s*<td>(\\d+)<\/td>"
+          },
+          "водоснабжение": {
+            "name": "is_plumbing",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "вход": {
+            "name": "is_entrance",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "газ": {
+            "name": "is_gas",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "интернет": {
+            "name": "is_internet",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "категория": {
+            "name": "none",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "лифт": {
+            "name": "is_elevator",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "охрана": {
+            "name": "security_type",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "парковка": {
+            "name": "is_parking",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "состояние": {
+            "name": "decoration_type",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "электричество": {
+            "name": "is_electricity",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "доп_линии": {
+            "name": "none",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "мебель": {
+            "name": "is_furniture",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "можно_частями_от": {
+            "name": "none",
+            "type": "float",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "корпус": {
+            "name": "address_korpus",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "название": {
+            "name": "property_name",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          }
+        }
+      },
+      "table_2": {
+        "_keys_path": "//div[@class='item-options-column']//text()",
+        "_vals_path": "//div[@class='item-options-column']//text()",
+        "key_converter": {
+          "интернет": {
+            "name": "is_internet",
+            "type": "string"
+          },
+          "кухонная_мебель": {
+            "name": "is_kitchen_furniture",
+            "type": "string"
+          },
+          "мебель": {
+            "name": "is_furniture",
+            "type": "string"
+          },
+          "стиральная_машина": {
+            "name": "is_washer",
+            "type": "string"
+          },
+          "телевизор": {
+            "name": "is_tv",
+            "type": "string"
+          },
+          "телефон": {
+            "name": "is_phone",
+            "type": "string"
+          },
+          "холодильник": {
+            "name": "is_fridge",
+            "type": "string"
+          },
+          "можно_с_детьми": {
+            "name": "none",
+            "type": "float"
+          },
+          "можно_с_животными": {
+            "name": "none",
+            "type": "float"
+          },
+          "баня": {
+            "name": "is_bathhouse",
+            "type": "string"
+          },
+          "бассейн": {
+            "name": "is_swimming_pool",
+            "type": "string"
+          },
+          "мебель_в_комнатах": {
+            "name": "is_furniture",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "follow": [
+       {"methods": {
+          "crawling_type": "post",
+          "content_type": "json",
+          "filter_duplicates": false,
+          "proxy_settings": {"save": true}},
+        "url": "https://raui.ru/ajax/item/contact",
+        "post_params": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "path": "//div[@class=' contactstabs']/@data-id"
+             }
+           }
+         },
+        "fields": {
+          "phone": {
+            "type": "phone",
+            "path": "contacts.phones"
+        }
+      },
+         "headers": {"x-requested-with": "XMLHttpRequest"}
+    }
+  ]
+  }
+}

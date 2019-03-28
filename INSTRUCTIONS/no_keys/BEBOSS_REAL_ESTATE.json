@@ -1,0 +1,271 @@
+{
+	"_task_id": "BEBOSS",
+	"_start_urls": [
+		"https://www.beboss.ru/kn/msk/2901771"
+	],
+	"_segment": "",
+	"_operation": "",
+	"_federal_subject": "",
+	"_source": "BEBOSS",
+	"global_settings": {
+		"CONCURRENT_REQUESTS": 512,
+		"CONCURRENT_REQUESTS_PER_DOMAIN": 512,
+		"DOWNLOAD_TIMEOUT": 60,
+		"SPLASH_URL": "http://0.0.0.0:8050",
+		"LOG_LEVEL": "INFO",
+		"AUTOTHROTTLE_ENABLED": false,
+		"AUTOTHROTTLE_START_DELAY": 1.0,
+		"AUTOTHROTTLE_MAX_DELAY": 60,
+		"AUTOTHROTTLE_TARGET_CONCURRENCY": 512,
+		"HTTPERROR_ALLOWED_CODES": [],
+		"RETRY_ENABLED": true,
+		"RETRY_TIMES": 100,
+		"RETRY_HTTP_CODES": [
+			500,
+			503,
+			504,
+			400,
+			403,
+			408,
+			429,
+			505,
+			404,
+			303,
+			302,
+			301
+		],
+		"ROBOTSTXT_ENABLED": false,
+		"ROBOTSTXT_OBEY": false,
+		"REDIRECT_ENABLED": false,
+		"COOKIES_ENABLED": false,
+		"RANDOM_UA_TYPE": "random"
+	},
+	"crawling_settings": {
+		"global_crawling_type": "common",
+		"js": "//",
+		"rotate_useragents": true,
+		"allowed_domains": [],
+		"proxy_settings": {
+			"types": [
+				"https"
+			],
+			"amount": 10000
+		}
+	},
+	"paginations": {
+		"methods": {
+			"crawling_type": "common",
+			"filter_duplicates": true
+		},
+		"paginations_by_url": {
+			"replace_pattern": [
+				["https://www.beboss.ru/kn/ru_office_rent?price_type=m&price_period=m&page=",1],
+				["https://www.beboss.ru/kn/ru_office_sell?price_type=m&price_period=m&page=",1],
+
+				["https://www.beboss.ru/kn/ru_retail_rent?price_type=m&price_period=m&page=",1],
+				["https://www.beboss.ru/kn/ru_retail_sell?price_type=m&price_period=m&page=",1],
+
+				["https://www.beboss.ru/kn/ru_stock_rent?price_type=m&price_period=m&page=",1],
+				["https://www.beboss.ru/kn/ru_stock_sell?price_type=m&price_period=m&page=",1],
+
+				["https://www.beboss.ru/kn/ru_industry_rent?price_type=m&price_period=m&page=",1],
+				["https://www.beboss.ru/kn/ru_industry_sell?price_type=m&price_period=m&page=",1],
+
+				["https://www.beboss.ru/kn/ru_spec_rent?price_type=m&price_period=m&page=",1],
+				["https://www.beboss.ru/kn/ru_spec_sell?price_type=m&price_period=m&page=",1],
+
+				["https://www.beboss.ru/kn/ru_land_rent?price_type=m&price_period=m&page=",1],
+				["https://www.beboss.ru/kn/ru_land_sell?price_type=m&price_period=m&page=",1]
+			],
+			"amount": 1200
+		}
+	},	"item_page": {
+		"_target_xpath": "//a[@class='obj__center-title glob-link']/@href",
+		"methods": {
+			"crawling_type": "common",
+			"js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+			"filter_duplicates": true
+		},
+		"fields": {
+			"date_info": {
+				"type": "date",
+				"time": "now"
+			},
+			"date_updated": {
+				"type": "date",
+				"path": "//span[@class='kn-type-object__date']/text()",
+				"time": "from string",
+				"regex": "(?<=Обновлено).+(?=ID)"
+			},
+			"name": {
+				"type": "string",
+				"path": "//h1[@class='franchise-header__h1']/text()"
+			},
+			"operation": {
+				"type": "string",
+				"path": "//span[@class='kn-type-new  kn-type-new_green']/text()",
+				"operations": [
+					"lower"
+				]
+			},
+			"description": {
+				"type": "list to string",
+				"path": "//p[@itemprop='description']//text()|//h2[contains(text(),'территории')]/following-sibling::p//text()"
+			},
+			"area": {
+				"type": "float",
+				"path": "//p[@class='kn-obj-title b-franchise-hide-mobile']/text()",
+				"regex": "(?<=дь:)\\d*\\W?\\d+"
+			},
+			"area_units": {
+				"type": "string",
+				"path": "//p[@class='kn-obj-title b-franchise-hide-mobile']/text()",
+				"regex": "[\\w+]+$"
+			},
+			"price": {
+				"type": "float",
+				"path": "//p[@class='kn-obj-info b-franchise-hide-mobile']/text()",
+				"regex": "\\d*\\W?\\d+"
+			},
+			"price_currency": {
+				"type": "string",
+				"path": "//p[@class='kn-obj-info b-franchise-hide-mobile']/text()",
+				"regex": "руб|usd"
+			},
+			"price_term": {
+				"type": "string",
+				"path": "//p[@class='kn-obj-info b-franchise-hide-mobile']/text()",
+				"regex": "[\\w+]+$"
+			},
+			"price_per_m": {
+				"type": "float",
+				"path": "//p[@class='kn-obj-info b-franchise-hide-mobile']/text()[2]",
+				"regex": "\\d*\\W?\\d+"
+			},
+			"seller_name": {
+				"type": "string",
+				"path": "//p[@class='franchise-person__name']/text()"
+			},
+			"seller_company": {
+				"type": "string",
+				"path": "//p[@class='kn-company-short__text']/a/text()"
+			},
+			"address": {
+				"type": "string",
+				"path": "//a[@class='openmap action-link']/text()"
+			},
+			"latitude": {
+				"type": "float",
+				"path": "//input[@id='lat']/@value"
+			},
+			"longitude": {
+				"type": "float",
+				"path": "//input[@id='lng']/@value"
+			},
+			"metro": {
+				"type": "string",
+				"path": "(//img[contains(@src,'metro')]/following-sibling::text())[1]"
+			},
+			"metro_distance": {
+				"type": "string",
+				"path": "(//img[contains(@src,'metro')]/following-sibling::span/text())[1]"
+			},
+			"phone": {
+				"type": "list",
+				"value": []
+			}
+		},
+		"tables": {
+			"_first": {
+				"_keys_xpath": "//dl[@class='object-property clearfix']/dt/text()",
+				"_vals_xpath": "//dl[@class='object-property clearfix']/dt/following-sibling::dd[1]/text()[normalize-space()]",
+				"key_converter": {
+						"порядок_оплаты": {
+							"name": "pay_term",
+							"type": "string"
+						},
+						"район": {
+							"name": "address_district",
+							"type": "string"
+						},
+						"система_отопления": {
+							"name": "is_heating",
+							"type": "string"
+						},
+						"в_стоимость_аренды_входит": {
+							"name": "payment_included",
+							"type": "string"
+						},
+						"выделенная_энергетическая_мощность": {
+							"name": "is_electricity",
+							"type": "string"
+						},
+						"высота_потолков_м": {
+							"name": "ceiling_height",
+							"type": "float"
+						},
+						"высота_потолков": {
+							"name": "ceiling_height",
+							"type": "float",
+							"regex": "\\d*\\W?\\d+"
+						},
+						"дополнительные_параметры_аренды": {
+							"name": "rent_options",
+							"type": "string"
+						},
+						"оборудование": {
+							"name": "is_equipment",
+							"type": "string"
+						},
+						"парковка_для_грузовых_авто": {
+							"name": "is_parking",
+							"type": "string"
+						},
+						"административный_округ": {
+							"name": "address_ao",
+							"type": "string"
+						},
+						"безопасность": {
+							"name": "is_security",
+							"type": "string"
+						},
+						"вентиляция_и_кондиционирование": {
+							"name": "is_conditioning",
+							"type": "string"
+						},
+						"имеется_парковка": {
+							"name": "is_parking",
+							"type": "string"
+						},
+						"объекты_инфраструктуры_в_здании": {
+							"name": "is_infrastructure",
+							"type": "string"
+						},
+						"ремонт_помещения": {
+							"name": "is_design",
+							"type": "string"
+						},
+						"система_пожаротушения": {
+							"name": "is_safety",
+							"type": "string"
+						},
+						"этаж_расположения_помещения": {
+							"name": "floor",
+							"type": "float",
+							"regex": "\\d*\\W?\\d+"
+						},
+						"введено_в_эксплуатацию_в": {
+							"name": "year_built",
+							"type": "float",
+							"regex": "\\d*\\W?\\d+"
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+

@@ -1,0 +1,311 @@
+{
+    "_task_id" : "NNN_DOMA_24",
+    "_start_urls" : [
+		"https://www.dk24.ru/estate/id-11/",
+		"https://www.dk24.ru/estate/id-5/",
+		"https://www.dk24.ru/estate/id-6/",
+		"https://www.dk24.ru/estate/id-7/",
+		"https://www.dk24.ru/estate/id-8/",
+		"https://www.dk24.ru/estate/id-18/",
+		"https://www.dk24.ru/estate/id-19/",
+		"https://www.dk24.ru/estate/id-20/",
+		"https://www.dk24.ru/estate/id-14/",
+		"https://www.dk24.ru/estate/id-45/",
+		"https://www.dk24.ru/estate/id-47/",
+		"https://www.dk24.ru/estate/id-51/",
+		"https://www.dk24.ru/estate/id-32/",
+		"https://www.dk24.ru/estate/id-33/",
+		"https://www.dk24.ru/estate/id-90/",
+		"https://www.dk24.ru/estate/id-35/",
+		"https://www.dk24.ru/estate/id-25/",
+		"https://www.dk24.ru/estate/id-26/",
+		"https://www.dk24.ru/estate/id-27/",
+		"https://www.dk24.ru/estate/id-28/",
+		"https://www.dk24.ru/estate/id-29/",
+		"https://www.dk24.ru/estate/id-46/"
+	],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "24",
+    "_source": "DOMA24",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 1024,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 1024,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 1024,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+	"paginations" : {
+        "methods" : {
+            "crawling_type" : "common",
+            "filter_duplicates" : true
+        },
+        "paginations_by_xpath": {
+            "paginations_xpath": "//ul[@class='pagination']",
+            "paginations_xpath_active": "//ul[@class='pagination']//li[@class='active']",
+            "paginations_xpath_next" : "//ul[@class='pagination']//li[@class='active']/following-sibling::li[1]/a/@href"
+        }
+   },
+    "item_page" : {
+        "_target_xpath" : "//div[@class='catalog-item']/a/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"name" : {
+                "type" : "string",
+                "path": "//div[@class='mobile-search-wrapp']//h1//text()"
+            },					
+			"description" : {
+				"type" : "list to string",
+				"path": "//div[@class='card-about-text']/text()"
+			},
+			"seller_name" : {
+				"type" : "string",
+				"path": "//div[@class='card-c-name']//b//text()"
+			},
+			"seller_type":{
+				"type" : "string",
+				"path": "//div[@class='card-c-name']/text()[normalize-space()]"
+			},
+			"phone" : {
+				"type" : "phone",
+				"regex": "[+0-9]*",
+				"path": "//span[@class='card-c-phone-numb']/text()"
+			},
+			"price": {
+				"type" : "float",
+				"path": "//span[@class='card-price']//text()",
+				"regex": "\\d*\\W?\\d+"
+			},
+			"price_currency": {
+				"type" : "string",
+				"value": "руб"
+			},
+			"price_per_m": {
+				"type" : "float",
+				"path": "//span[@class='card-size-price']/text()",
+				"regex": "\\d*\\W?\\d+"
+			},
+			"area_total": {
+				"type" : "float",
+				"path": "//span[@class='card-size-m']/text()",
+				"regex": "\\d*\\W?\\d+"
+			},
+			"segment": {
+				"type" : "string",
+				"path": "//li[@class='active']/a/text()[normalize-space()]"
+			},
+			"operation": {
+				"type" : "string",
+				"path": "//li[@class='active']//ancestor::ul[@class='aside-nav-items']/preceding-sibling::span/text()"
+			}
+        },
+		 "tables" : {
+			"table_1" : {
+                "_keys_xpath" : "//div[@class='card-param-table']//tr/td[1]/text()",
+                "_vals_xpath" : "//div[@class='card-param-table']//tr/td[2]/text()",
+				"key_converter" : {
+					"балкон": {
+						"name": "balcony", 
+						"type" : "string"
+					},
+					"дом_no": {
+						"name": "address_number", 
+						"type" : "string"
+					},
+					"допинформация": {
+						"name": "none", 
+						"type" : "string"
+					},
+					"жилая_площадь_квм": {
+						"name": "area_living",
+						"type" : "float",
+						"regex": "^\\d*\\W?\\d+"
+					},
+					"кухонная_плита": {
+						"name": "none", 
+						"type" : "string"
+					},
+					"лоджия": {
+						"name": "is_balcony",
+						"type" : "string"
+					},
+					"ориентир": {
+						"name": "none", 
+						"type" : "string"
+					},
+					"планировка": {
+						"name": "flor_paln",
+						"type" : "string"
+					},
+					"площадь_кухни_квм": {
+						"name": "area_kitchen",
+						"type" : "float",
+						"regex": "^\\d*\\W?\\d+"
+					},
+					"район_красноярска_или_город": {
+						"name": "address_district",
+						"type" : "string"
+					},
+					"санузел": {
+						"name": "is_wc",
+						"type" : "string"
+					},
+					"телефон_в_квартире": {
+						"name": "is_phone",
+						"type" : "string"
+					},
+					"тип_дома_материал_стен": {
+						"name": "building_materials",
+						"type" : "string"
+					},
+					"улица": {
+						"name": "address_street", 
+						"type" : "string"
+					},
+					"этаж": {
+						"name": "floor",
+						"type" : "float",
+						"regex" : "^\\d+"
+					},
+					"этажей_в_доме": {
+						"name": "floors",
+						"type" : "float",
+						"regex" : "^\\d+"
+					},
+					"дата_сдачи": {
+						"name": "none", 
+						"type" : "string"
+					},
+					"отделка": {
+						"name": "is_design",
+						"type" : "string"
+					},
+					"адрес_садобщ_тп": {
+						"name": "address", 
+						"type" : "string"
+					},
+					"водоснабжение": {
+						"name": "is_plumbing",
+						"type" : "string"
+
+					},
+					"доступность_для_атранта": {
+						"name": "access", 
+						"type" : "string"
+					},
+					"кадастровый_no_участка": {
+						"name": "cadastre_number",
+						"type" : "string"
+					},
+					"ограда_участка": {
+						"name": "is_fence",
+						"type" : "string"
+					},
+					"ориентир_наспункт": {
+						"name": "none", 
+						"type" : "string"
+					},
+					"район_гкрасноярска_или_ккрая": {
+						"name": "address", 
+						"type" : "string"
+					},
+					"состояние_участка": {
+						"name": "land_condition",
+						"type" : "string"
+					},
+					"электроснабжение": {
+						"name": "is_electricity",
+						"type" : "string"
+					},
+					"водопровод": {
+						"name": "is_plumbing",
+						"type" : "string"
+					},
+					"канализация": {
+						"name": "is_sewage",
+						"type" : "string"
+					},
+					"материал_стен": {
+						"name": "walls_material",
+						"type" : "string"
+					},
+					"отопление": {
+						"name": "is_heating",
+						"type" : "string"
+					},
+					"район_гкрасноярска_или_другое": {
+						"name": "address_district",
+						"type" : "string"
+					},
+					"ссылка_на_карту": {
+						"name": "none", 
+						"type" : "string"
+					},
+					"уровни": {
+						"name": "none", 
+						"type" : "string"
+					},
+					"этажи": {
+						"name": "floors",
+						"type" : "string"
+					},
+					"sучастка_сот": {
+						"name": ["area_land_unit","area_land"],
+						"type" : ["string","float"],
+						"value": ["сот"],
+						"regex": [".+","^\\d*\\W?\\d+"]
+
+					}
+				}
+			}
+		}
+    }
+}
+
+

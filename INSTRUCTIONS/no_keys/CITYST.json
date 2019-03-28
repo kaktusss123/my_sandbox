@@ -1,0 +1,185 @@
+{
+    "_task_id" : "CSTAR_test_1",
+    "_start_urls" : [
+		"http://moskva_realty.citystar.ru/realty/prodazha-komm-nedvizhimosti/prodam-komm-nedv-mikrorayon-pervomayskiy-9869034.html"
+    ],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "",
+    "_source": "CSTAR",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 256,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 256,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 256,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+    "item_page" : {
+        "_target_xpath" : "//table[@class='table']//td[@class='address']/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"currency" : {
+                "type" : "string",
+                "value" : "RUB"
+            },
+			"header" : {
+                "type" : "string",
+                "path": "//div[@class='adv-title']//h1//text()"
+            },
+			"detail": {
+			    "type" : "string",
+                "path": "//td[@class='note']/text()"
+			},
+			"date_created" : {
+                "type" : "date",
+                "path": "(//div[@class='date']//text())[2]",
+				"time" : "from string"
+            },		
+			"date_updated" : {
+                "type" : "date",
+                "path": "(//div[@class='date']//text())[4]",
+				"time" : "from string"
+            },			
+			"seller" : {
+				"type" : "string",
+				"path": "//div[@class='seller']//div[@class='name']//text()"
+			},
+			"email_seller":{
+				"type" : "string",
+				"path": "//span[contains(.,'email')]/parent::div/text()"
+			},
+			"phone" : {
+				"type" : "phone",
+				"path": "//span[contains(.,'тел')]/parent::div/text()"
+			},
+			"price": {
+				"type" : "string",
+				"path": "//span[@class='price']/text()"
+			},
+			"sale_land": {
+				"type" : "string",
+				"path": "//span[@class='colored-text-1']//strong/text()"
+			},
+			"longitude" :{
+				"type" : "float",
+				"path": "//script[text()[contains(.,'AdvMap')]]//text()",
+				"regex": "longitude: (.+), latitude"
+			},
+			"latitude" :{
+				"type" : "float",
+				"path": "//script[text()[contains(.,'AdvMap')]]//text()",
+				"regex": "latitude: (.+), request:"
+			}
+        },
+		 "tables" : {
+			"table_2" : {
+                "_keys_xpath" : "//div[@class='adv-main-data']//tr",
+                "_vals_xpath" : "//div[@class='adv-main-data']//tr",
+				"key_regex": "field-title\">(.+)<\/td>\\s*<td",
+				"key_converter" : {
+					"адрес":  {
+						"name": "address",
+						"type" : "string",
+						"regex": "field\">(.+)<\/td>"
+					},
+					"колво_комнат":  {
+						"name": "count_room",
+						"type" : "string",
+						"regex": "field\">(.+)<\/td>"
+					},
+					"площадь":  {
+						"name": ["square_flat","square_life","square_kitchen"],
+						"type" : ["float","float","float"],
+						"regex": ["общая<\/span>\\s*(\\d*\\W?\\d+) м","жилая<\/span>\\s*(\\d*\\W?\\d+) м","кухни<\/span>\\s*(\\d*\\W?\\d+) м"]
+					},
+					"район":  {
+						"name": "district",
+						"type" : "string",
+						"regex": "field\">(.+)<\/td>"
+					},
+					"цена":  {
+						"name": "none",
+						"type" : "string",
+						"regex": "field\">(.+)<\/td>"
+					},
+					"этаж":  {
+						"name": "floor_room",
+						"type" : "string",
+						"regex": "field\">\\s*(.+)<span"
+					},
+					"этажность_дома":  {
+						"name": "floor_building",
+						"type" : "string",
+						"regex": "field\">(.+)<\/td>"
+					},
+					"планировка": {
+						"name": "plan",
+						"type" : "string",
+						"regex": "field\">(.+)<\/td>"
+					},
+					"состояние_квартиры": {
+						"name": "remont",
+						"type" : "string",
+						"regex": "field\">(.+)<\/td>"
+					},
+					"вид_недвижимости": {
+						"name": "segment",
+						"type" : "string",
+						"regex": "field\">(.+)<\/td>"
+					},
+					"площадь_помещения": {
+						"name": "square",
+						"type" : "string",
+						"regex": "field\">(.+)<\/td>"
+					}
+				}
+			}
+		}
+    }
+}

@@ -1,0 +1,160 @@
+{
+    "_task_id" : "KAZANN_test_1",
+    "_start_urls" : [
+		"https://kazned.ru/note/kazan_arenda_ofisy_27m_385871"
+    ],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "16",
+    "_source": "KAZANN",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 256,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 256,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 256,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+    "item_page" : {
+        "_target_xpath" : "//div[@class='note ']/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"currency" : {
+                "type" : "string",
+                "value" : "RUB"
+            },
+			"header" : {
+                "type" : "string",
+                "path": "//h1[@class='section-title']/text()"
+            },			
+			"detail" : {
+				"type" : "string",
+				"path": "//div[@id='noteDescription']/text()"
+			},
+			"date_created" : {
+                "type" : "date",
+                "path": "//div[@class='update-info']//text()",
+				"regex" : "Обновлено (.+)",
+				"time" : "from string"
+            },
+			"date_updated" : {
+                "type" : "date",
+                "path": "//div[@class='update-info']//text()",
+				"regex" : "Обновлено (.+)",
+				"time" : "from string"
+            },
+			"price" :{
+				"type" : "list to string",
+				"path": "(//span[@class='money-amount']/text())[1]"
+			},
+			"latitude" :{
+				"type" : "float",
+				"path": "//script[text()[contains(.,' yaMapPoint')]]//text()",
+				"regex": "yaMapPoint = {\\s*\"lat\": \"(.+)\","
+			},
+			"longitude" :{
+				"type" : "float",
+				"path": "//script[text()[contains(.,' yaMapPoint')]]//text()",
+				"regex": "\"lng\": \"(.+)\",\\s*\"icon"
+			},
+			"phone": {
+				"type" : "phone",
+				"path": "//div[@id='myModal']//div[@class='modal-header']"
+			}
+        },
+		
+		 "tables" : {
+			"table_1" : {
+		        "_keys_xpath" : "//div[@class='col-xs-24 col-sm-24 col-md-10 pull-right']//div[@class='row']//div[@class='col-xs-8 key']",
+                "_vals_xpath" : "//div[@class='col-xs-24 col-sm-24 col-md-10 pull-right']//div[@class='row']//div[@class='col-xs-16 val']",
+				"key_regex" : "^.+(?=:)",
+				"key_converter" : {
+					"div_classcolxs8_keybкомнат": {
+						"name": "count_rooms",
+						"type" : "float",
+						"regex" : ">\\s*(\\d*\\W?\\d+)-к"
+					},
+					"div_classcolxs8_keybматериал": {
+						"name": "material",
+						"type" : "string"
+					},
+					"div_classcolxs8_keybобъект": {
+						"name": "segment",
+						"type" : "string"
+					},
+					"div_classcolxs8_keybплощадь": {
+						"name": ["square_flat","square_area"],
+						"type" : ["float","float"],
+						"regex": [">\\s*(\\d*\\W?\\d+)\/",">\\s*(\\d*\\W?\\d+) кв"]
+					},
+					"div_classcolxs8_keybтип": {
+						"name": "none",
+						"type" : "string"
+					},
+					"div_classcolxs8_keybэтажность": {
+						"name": ["floor_room","floor_building"],
+						"type" : ["float","float"],
+						"regex": [">(\\d*)\/","\/(.+) эт"]
+					},
+					"bадрес": {
+						"name": "address",
+						"type" : "string",
+						"regex" : ">(.+)<"
+					},
+					 "div_classcolxs8_keybплощадь_участка": {
+						"name": "square_land",
+						"type" : "float",
+						"regex": ">\\s*(\\d*\\W?\\d+) сот"
+					}
+				}
+			}
+		}
+    }
+}
+
+

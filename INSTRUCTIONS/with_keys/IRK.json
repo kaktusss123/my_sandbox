@@ -1,0 +1,207 @@
+{
+    "_task_id" : "IRK_test_1",
+    "_start_urls" : [
+		"http://realty.irk.ru/rent/22353/"
+    ],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "38",
+    "_source": "IRK",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 256,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 256,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 256,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 100,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "crawling_settings" : {
+        "global_crawling_type" : "common",
+        "js": "//",
+        "rotate_useragents" : true,
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ],
+            "amount": 10000
+        }
+    },
+	
+    "paginations": {
+        "methods": {
+            "crawling_type": "common",
+            "filter_duplicates": true
+        },
+        "paginations_by_url": {
+            "replace_pattern": [
+                ["http://realty.irk.ru/build/order_by/promo/order/asc/pageno/", 1],
+                ["http://realty.irk.ru/second/date/all/order_by/promo/order/asc/pageno/", 1],
+                ["http://realty.irk.ru/comm/date/all/order_by/promo/order/asc/pageno/", 1],
+                ["http://realty.irk.ru/cottage_all/date/all/order_by/promo/order/asc/pageno/", 1],
+                ["http://realty.irk.ru/zem/date/all/order_by/promo/order/asc/pageno/", 1]
+            ],
+            "amount": 60
+        }
+    },
+	
+    "item_page" : {
+        "_target_xpath" : "//tr//td[@class='tcell field_promo']//a/@href",
+        "methods" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"currency" : {
+                "type" : "string",
+                "value" : "RUB"
+            },			
+			"description": {
+			    "type" : "list to string",
+                "xpath" : "//div[@class='default_div']/text()"
+			},
+			"date_created": {
+			    "type" : "date",
+                "xpath" : "(//td[@class='wrapping-td']//div//p/text())[1]",
+				"time" : "from string",
+				"regex": "Дата размещения: (.+)"
+			},
+			"date_updated": {
+			    "type" : "date",
+                "xpath" : "(//td[@class='wrapping-td']//div//p/text())[1]",
+				"time" : "from string",
+				"regex": "Обновлено: (.+)"
+			},
+			"title_name" : {
+                "type" : "list to string",
+                "xpath" : "//h1//text()",
+				"regex": "[а-яА-Яй0-9,.-]+"
+            },
+			"seller_name" : {
+				"type" : "string",
+				"xpath": "//span[@id='seller_info_full']//b//text()"
+			},
+			"phone": {
+				"type" : "phone",
+				"xpath": "//p//span[@class='info-seller']//text()"
+			},
+			"email": {
+				"type" : "string",
+				"xpath": "//a[contains(@href, 'mailto')]//span//text()"
+			},
+			"operation": {
+				"type" : "string",
+				"xpath": "//p[contains(.,'Сделка')]//..//..//td[@bgcolor='#ffffff']//p//text()"
+			},
+			"address":{
+				"type" : "string",
+				"xpath": "//p[contains(.,'Адрес')]//..//..//td[@bgcolor='#ffffff']//p//text()"
+			},
+			"puprose":{
+				"type" : "string",
+				"xpath": "//p[contains(.,'Назначение')]//..//..//td[@bgcolor='#ffffff']//p//text()"
+			},
+			"area_total":{
+				"type" : "float",
+				"xpath": "//p[contains(.,'Площадь')]//..//..//td[@bgcolor='#ffffff']//p//text()",
+				"regex": "\\d*\\W?\\d+"
+			},
+			"price_total":{
+				"type" : "list to string",
+				"xpath": "//p[contains(.,'Цена')]//..//..//td[@bgcolor='#ffffff']//p//text()",
+				"regex": "(.+) т.р. "
+			},
+			"rooms_cnt": {
+				"type" : "float",
+				"xpath": "//p[contains(.,'комнат')]//..//..//td[@bgcolor='#ffffff']//p//text()"
+			},
+			"floor": {
+				"type" : "float",
+				"xpath": "//p[contains(.,'Этаж')]//..//..//td[@bgcolor='#ffffff']//p//text()"
+			},
+			"floors_cnt": {
+				"type" : "float",
+				"xpath": "//p[contains(.,'Этажность')]//..//..//td[@bgcolor='#ffffff']//p//text()"
+			},
+			"area_living": {
+				"type" : "float",
+				"xpath": "//p[contains(.,'Жилая площадь')]//..//..//td[@bgcolor='#ffffff']//p//text()",
+				"regex": "\\d*\\W?\\d+"
+			},
+			"kitchen_area": {
+				"type" : "float",
+				"xpath": "//p[contains(.,'Площадь кухни')]//..//..//td[@bgcolor='#ffffff']//p//text()",
+				"regex": "\\d*\\W?\\d+"
+			},
+			"land_area": {
+				"type" : "float",
+				"xpath": "//p[contains(.,'Площадь участка')]//..//..//td[@bgcolor='#ffffff']//p//text()",
+				"regex": "\\d*\\W?\\d+"
+			},
+			"building_type": {
+				"type" : "string",
+				"xpath": "//p[contains(.,'Тип')]//..//..//td[@bgcolor='#ffffff']//p//text()"
+			},
+			"wall_material": {
+				"type" : "string",
+				"xpath": "//p[contains(.,'Материал')]//..//..//td[@bgcolor='#ffffff']//p//text()"
+			},
+			"layout_type": {
+				"type" : "string",
+				"xpath": "//p[contains(.,'Планировка')]//..//..//td[@bgcolor='#ffffff']//p//text()"
+			},
+			"is_bathroom": {
+				"type" : "string",
+				"xpath": "//p[contains(.,'Санузел')]//..//..//td[@bgcolor='#ffffff']//p//text()"
+			},
+			"is_balcony": {
+				"type" : "string",
+				"xpath": "//p[contains(.,'Балкон')]//..//..//td[@bgcolor='#ffffff']//p//text()"
+			},
+			"land_category": {
+				"type" : "string",
+				"xpath": "//p[contains(.,'использование')]//..//..//td[@bgcolor='#ffffff']//p//text()"
+			},
+			"source_longitude" :{
+				"type" : "float",
+				"xpath": "//a[@class='YMaps-logo-link']/@href",
+				"regex" : "ll=(\\d*\\W?\\d+),"
+			},
+			"source_latitude" :{
+				"type" : "float",
+				"xpath": "//a[@class='YMaps-logo-link']/@href",
+				"regex": ",(\\d*\\W?\\d+)&amp;z"
+			}
+		}
+    }
+}
