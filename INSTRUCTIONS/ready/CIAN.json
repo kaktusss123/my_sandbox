@@ -67,6 +67,12 @@
                 "type" : "date",
                 "time" : "now"
             },
+            
+            "federal_subject" : {
+                "type" : "string",
+                "path" : "//address[@class='a10a3f92e9--address--140Ec']/a[1]/text()"
+				
+            },
 			"price_total" : {
                 "type" : "float",
                 "path" : "//span[@itemprop='price']/@content[normalize-space()]",
