@@ -1844,7 +1844,7 @@
       302,
       303
     ],
-    "RETRY_TIMES": 100,
+    "RETRY_TIMES": 20,
     "ROBOTSTXT_ENABLED": false,
     "ROBOTSTXT_OBEY": false,
     "REDIRECT_ENABLED": false,
