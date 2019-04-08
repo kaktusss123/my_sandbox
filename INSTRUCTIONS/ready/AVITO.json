@@ -60,6 +60,11 @@
         "type": "string",
         "path": "//meta[@itemprop='addressLocality']/@content"
       },
+      "federal_subject": {
+        "type": "string",
+        "path": "//select[@id='region']/option[2]/text()"
+      },
+
 	"purpose" : {
         "type": "string",
         "path": "//div[@class='breadcrumbs js-breadcrumbs ']/a[last()]/text()"
