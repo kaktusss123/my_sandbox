@@ -2038,11 +2038,6 @@
 			"url": "https://ru.ners.ru/ajax/?module=notes_get_phone",
 
 
-
-
-			"url": "https://ru.ners.ru/ajax/?module=notes_get_phone",
-
-
 			"methods": {
 				"proxy_settings": {
 					"save_proxy": true
