@@ -1988,7 +1988,7 @@
 				}
 			}
 		},
-		"follow": [{
+			"follow": [{
 
 			"url_constructor": {"add_to_query": [{
 				"notes_id": {
@@ -1998,15 +1998,45 @@
 				"user_id": {
 					"path": "//button[@id='get_phone']/@data-u"
 				}
-			}, {
+			}, 
+
+				{
+				"db_importer_id": {
+						"value": "1"
+				}
+			}, 
+
+
+
+
+			{
 				"stat_id": {
 					"path": "//body/@data-stat-id"
 				}
-			}, {
+			},
+
+			{
+				"is_my_notes": {
+						"value": "1"
+				}
+			}, 
+
+
+			{
+				"app_alias": {
+						"value": "ru"
+				}
+			}, 
+			 {
 				"json": {
 					"value": "1"
 				}
 			}]},
+
+
+
+			"url": "https://ru.ners.ru/ajax/?module=notes_get_phone",
+
 
 
 
