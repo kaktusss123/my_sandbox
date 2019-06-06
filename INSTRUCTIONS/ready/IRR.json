@@ -1,7 +1,7 @@
-﻿{
-  "_task_id": "NNN_IRR_COMMERCIAL_SALE",
-  "_start_urls": [
-  "https://yaroslavskaya-obl.irr.ru/real-estate/out-of-town/houses/dom-advert640031733.html",
+{
+        "_task_id": "NNN_IRR_CONNERCIAL_SALE_",
+        "_start_urls": [
+          "https://yaroslavskaya-obl.irr.ru/real-estate/out-of-town/houses/dom-advert640031733.html",
   "https://adygeya-resp.irr.ru/real-estate/apartments-sale/studio/",
   "https://adygeya-resp.irr.ru/real-estate/apartments-sale/one-rooms/",
   "https://adygeya-resp.irr.ru/real-estate/apartments-sale/two-rooms/",
