@@ -1,0 +1,401 @@
+{
+    "_task_id": "NNN_AYAX",
+    "_start_urls": [
+        "https://www.ayax.ru/kvartiry/",
+        "https://www.ayax.ru/kupit-dom-v-krasnodare/",
+        "https://www.ayax.ru/uchastki-izhs/",
+        "https://www.ayax.ru/dachnye-uchastki/",
+        "https://www.ayax.ru/kupit-ofis-v-krasnodare/",
+        "https://www.ayax.ru/sklady/",
+        "https://www.ayax.ru/biznes/",
+        "https://www.ayax.ru/torgovye-ploshadi/",
+        "https://www.ayax.ru/uchastki-kommertsiya/",
+        "https://www.ayax.ru/gostinitsy/",
+        "https://www.ayax.ru/prodazha-sto-krasnodar/",
+        "https://www.ayax.ru/garazhi/",
+        "https://www.ayax.ru/snyat-kvartiru/",
+        "https://www.ayax.ru/snyat-dom/"
+    ],
+    "_segment": "",
+    "_operation": "",
+    "_federal_subject": "",
+    "_source": "AYAX",
+    "global_settings": {
+        "CONCURRENT_REQUESTS": 724,
+        "SPLASH_URL": "http://0.0.0.0:8050",
+        "LOG_LEVEL": "INFO",
+        "AUTOTHROTTLE_ENABLED": true,
+        "AUTOTHROTTLE_START_DELAY": 1.0,
+        "AUTOTHROTTLE_MAX_DELAY": 5.0,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY": 724,
+        "CONCURRENT_REQUESTS_PER_DOMAIN": 724,
+        "RETRY_ENABLED": true,
+        "RETRY_HTTP_CODES": [500, 503, 504, 400, 403, 408, 429, 505, 404, 303, 302, 307, 410, 451],
+        "HTTPERROR_ALLOWED_CODES": [],
+        "RETRY_TIMES": 10,
+        "ROBOTSTXT_ENABLED": false,
+        "ROBOTSTXT_OBEY": false,
+        "REDIRECT_ENABLED": false,
+        "COOKIES_ENABLED": false,
+        "RANDOM_UA_TYPE": "random",
+        "DOWNLOAD_TIMEOUT": 60.0
+    },
+  "methods": {
+            "crawling_type": "common",
+            "allowed_domains": [],
+            "proxy_settings": {
+                "types": [
+                    "https"
+                ],
+                "amount": 10000,
+                "save": false
+            }
+        },
+        "crawl_tree": [
+            {
+                "pagination_urls": {
+                    "path": "//span[@class='pager_item pager_item-s']/following-sibling::a[1]/@href"
+                },
+                "item_urls": {
+                    "path": "//div[@class = 'flex elem_row']/a/@href"
+                }
+            }
+        ],
+    "item_page": {
+        "methods": {
+            "crawling_type": "common",
+            "filter_duplicates": false
+            
+        },
+        "fields": {
+            "date_info": {
+                "type": "date",
+                "time": "now"
+            },
+            "source_latitude": {
+                "type": "float",
+                "path": "//div[@class='map object__map']/@data-lat"
+            },
+            "source_longitude": {
+                "type": "float",
+                "path": "//div[@class='map object__map']/@data-lon"
+            },
+            "price_total": {
+                "path": "//div[@class='object__price']//span[@itemprop='price']/text()[1]",
+                "type": "float",
+                "regex": "\\d+.*\\d+"
+            },
+			"rent_price_per_area": {
+                "path": "(//div[@class='object__params']//span[@class='object__params-item_value']/text())[1]",
+                "type": "float",
+                "regex": "\\d+.*\\d+"
+            },
+            "description": {
+                "type": "list to string",
+                "path": "//div[@itemprop='description']/p/text()"
+            },
+			
+            "price_currency": {
+                "type": "string",
+                "value": "RUB"
+            },
+            "seller_name": {
+                "type": "string",
+                "path": "//div[@class='employee__info_link']/text()"
+            },
+            "company_name": {
+                "type": "string",
+                "path": "//a[@class='employee__department_link employee__department_link-a']/text()"
+            },
+            "phone": {
+                "type": "phone",
+                "path": "//a[@class='employee__info_phone employee__info_phone-speech']/text()"
+            },
+			"title_name": {
+                "type": "string",
+                "path": "//h1/text()"
+            },
+			"operation": {
+			  "type": "string",
+                "path": "//div[@itemprop='description']/p/text()"
+				
+			},
+				"address": {
+			  "type": "string",
+                "path": "//div[div[@class='object__other-property_name' and contains(string(), 'Адрес')]]/div[@class='object__other-property_value']/text()"
+				
+			},
+			"segment": {
+			  "type": "list to string",
+                "path": "//div[@class='in breadcrumb']//div//span//text()",
+				"regex": "Торговые площади|Офисы|Склады|Квартиры|Дома|Земельные участки|Гостиницы|коммерческая земля"
+			}
+			
+        },
+        "tables": {
+            "table_1": {
+                "_keys_path": "//div[@class='object__other-property_name']/text()",
+                "_vals_path": "//div[@class = 'object__other-property_value']/text()",
+                "key_converter": {
+                    "населенный_пункт": {
+                        "name": "address_city",
+                        "type": "string"
+                    },
+
+					"год_сдачи": {
+                        "name": "year_built",
+                        "type": "string"
+                    },
+                   
+                    "длина": {
+                        "name": "plot_lenght",
+                        "type": "float"
+                    },
+                    "ширина": {
+                        "name": "plot_lenght",
+                        "type": "float"
+                    },
+                    "фасад_м": {
+                        "name": "facade_windows",
+                        "type": "float"
+                    },
+                    "площадь_участка_сотки": {
+                        "name": "plot_area",
+                        "type": "float"
+                    },
+                    "район": {
+                        "name": "intown_district",
+                        "type": "string"
+                    },
+                    "тип_участка": {
+                        "name": "land_category",
+                        "type": "string"
+                    },
+                    "водоснабжение": {
+                        "name": "is_plumbing",
+                        "type": "string"
+                    },
+                    "въезд": {
+                        "name": "is_entrance",
+                        "type": "string"
+                    },
+                    "газоснабжение": {
+                        "name": "is_gas",
+                        "type": "string"
+                    },
+                    "забор": {
+                        "name": "is_fence",
+                        "type": "string"
+                    },
+                    "канализация": {
+                        "name": "is_sewage",
+                        "type": "string"
+                    },
+                    "электроснабжение": {
+                        "name": "is_electricity",
+                        "type": "string"
+                    },
+                    "балкон": {
+                        "name": "is_balcony",
+                        "type": "string"
+                    },
+                    "горячая_вода": {
+                        "name": "hot_ws_type",
+                        "type": "string"
+                    },
+                    "жилой_фонд": {
+                        "name": "building_type",
+                        "type": "string"
+                    },
+                    "комнаты": {
+                        "name": "is_rooms",
+                        "type": "string"
+                    },
+                    "лифт": {
+                        "name": "is_elevator",
+                        "type": "string"
+                    },
+                    "материал_стен": {
+                        "name": "wall_material",
+                        "type": "string"
+                    },
+                    "окна": {
+                        "name": "type_windows",
+                        "type": "string"
+                    },
+                    "отопление": {
+                        "name": "heating_system_type",
+                        "type": "string"
+                    },
+                    "пол": {
+                        "name": "floor_material",
+                        "type": "string"
+                    },
+                    "ремонт": {
+                        "name": "decoration_type",
+                        "type": "string"
+                    },
+                    "санузел": {
+                        "name": "is_wc",
+                        "type": "string"
+                    },
+                    "свидетельство": {
+                        "name": "nan",
+                        "value": ""
+                    },
+                    "тип_жилья": {
+                        "name": "type_of_build",
+                        "type": "string"
+                    },
+                    "потолок": {
+                        "name": "ceiling_height",
+                        "type": "float"
+                    },
+                    "высота_потолка": {
+                        "name": "ceiling_height",
+                        "type": "float"
+                    },
+                    "категория": {
+                        "name": "purpose",
+                        "type": "string"
+                    },
+                    "парковка": {
+                        "name": "parking_cnt",
+                        "type": "string"
+                    },
+                    "площадь_м": {
+                        "name": "none",
+                        "type": "string"
+                    },
+                    "телефон": {
+                        "name": "is_phone",
+                        "type": "string"
+                    },
+                    "длина_м": {
+                        "name": "lenght",
+                        "type": "float"
+                    },
+                    "крыша": {
+                        "name": "roof_material",
+                        "type": "string"
+                    },
+                    "подвал": {
+                        "name": "is_basement",
+                        "type": "string"
+                    },
+                    "ширина_м": {
+                        "name": "width",
+                        "type": "float"
+                    },
+                    "бытовая_техника": {
+                        "name": "is_appliences",
+                        "type": "string"
+                    },
+                    "газ": {
+                        "name": "is_gas",
+                        "type": "string"
+                    },
+                    "гараж": {
+                        "name": "is_garage",
+                        "type": "string"
+                    },
+                    "двор": {
+                        "name": "is_courtyard",
+                        "type": "string"
+                    },
+                    "колво_комнат": {
+                        "name": "rooms_cnt",
+                        "type": "string"
+                    },
+                    "материал": {
+                        "name": "wall_material",
+                        "type": "string"
+                    },
+                    "покрытие": {
+                        "name": "roof_material",
+                        "type": "string"
+                    },
+                    "удобства": {
+                        "name": "misc",
+                        "type": "string"
+                    },
+                    "этажность": {
+                        "name": "floors_cnt",
+                        "type": "float"
+                    }
+                }
+            },
+            "base_params" : {
+                "_keys_path": "//div[@class='object__base-property_value']/text()",
+                "_vals_path": "//div[@class='object__base-property_name']/text()",
+                "key_regex" : "[^\\d+]+",
+                "key_converter": {
+                    "площадь_участка_сотки": {
+                        "name": "land_area",
+                        "type": "float"
+                    },
+                    "тип_участка": {
+                        "name": "land_category",
+                        "type": "string"
+                    },
+                    "фасад_м": {
+                        "name": "facede_lenght",
+                        "type": "float"
+                    },
+                    "длина": {
+                        "name": "plot_lenght",
+                        "type": "float"
+                    },
+                    "ширина": {
+                        "name": "plot_width",
+                        "type": "float"
+                    },
+                    "колво_комнат": {
+                        "name": "rooms_cnt",
+                        "type": "float",
+                        "regex": "\\d*\\W?\\d+"
+                    },
+                    "площадь_общая_м": {
+                        "name": "area_total",
+                        "type": "float",
+                        "regex": "\\d*\\W?\\d+"
+                    },
+                    "площадь_жилая_м": {
+                        "name": "area_living",
+                        "type": "float",
+                        "regex": "\\d*\\W?\\d+"
+                    },
+                    "площадь_кухни_м": {
+                        "name": "kitchen_area",
+                        "type": "float",
+                        "regex": "\\d*\\W?\\d+"
+                    },
+                    "этаж_из": {
+                        "name": "floor",
+                        "type": "float",
+                        "regex": "\\d*\\W?\\d+"
+                    },
+                    "площадь_м": {
+                        "name": "area_total",
+                        "type": "float",
+                        "regex": "\\d*\\W?\\d+"
+                    },
+                    "категория": {
+                        "name": "purpose",
+                        "type": "string"
+                    },
+                    "площадь_участка_сот": {
+                        "name": "land_arae",
+                        "type": "float"
+                    },
+                    "тип_владения": {
+                        "name": "offer_type",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
+
+
