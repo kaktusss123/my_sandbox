@@ -25748,7 +25748,7 @@
         "DOWNLOAD_FAIL_ON_DATALOSS": true,
         "RANDOM_UA_TYPE": "random",
         "DOWNLOAD_TIMEOUT": 60,
-        "CLOSESPIDER_ITEMCOUNT": 10000,
+        "CLOSESPIDER_ITEMCOUNT": 0,
         "CLOSESPIDER_ERRORCOUNT": 0
     },
     "methods": {
