@@ -1,0 +1,162 @@
+{
+        "_comment": "был мусорный ключ tables в item_page без указания path + увеличено количество потоков",
+        "_task_id": "0000-0005-0258&T0118&1_DEBUG_2",
+        "_start_urls": [
+            "https://www.advecs.com/catalog/commercial/"
+        ],
+        "_segment": "Коммерческая Недвижимость",
+        "_operation": "",
+        "_federal_subject": "",
+        "_source": "http://www.advecs.com",
+        "project_id": "metaspider",
+        "spider_id": "metacrawler",
+        "global_settings": {
+            "CONCURRENT_REQUESTS": 1024,
+            "SPLASH_URL": "http://0.0.0.0:8050",
+            "LOG_LEVEL": "INFO",
+            "AUTOTHROTTLE_ENABLED": false,
+            "AUTOTHROTTLE_START_DELAY": 1,
+            "AUTOTHROTTLE_MAX_DELAY": 60,
+            "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+            "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
+            "RETRY_ENABLED": true,
+            "RETRY_HTTP_CODES": [
+                500,
+                503,
+                502,
+                504,
+                400,
+                403,
+                408,
+                429,
+                505,
+                303,
+                302,
+                301,
+                404,
+                307,
+                410,
+                502,
+                451
+            ],
+            "HTTPERROR_ALLOWED_CODES": [],
+            "RETRY_TIMES": 20,
+            "ROBOTSTXT_ENABLED": false,
+            "ROBOTSTXT_OBEY": false,
+            "REDIRECT_ENABLED": false,
+            "COOKIES_ENABLED": false,
+            "DOWNLOAD_FAIL_ON_DATALOSS": false,
+            "RANDOM_UA_TYPE": "random",
+            "DOWNLOAD_TIMEOUT": 60,
+            "CLOSESPIDER_ITEMCOUNT": 0,
+            "CLOSESPIDER_ERRORCOUNT": 0
+        },
+        "methods": {
+            "crawling_type": "common",
+            "allowed_domains": [],
+            "proxy_settings": {
+                "types": [
+                    "https"
+                ],
+                "amount": 10000,
+                "save": false
+            }
+        },
+        "crawl_tree": [
+            {
+                "pagination_urls": {
+                    "path": "(//div[@class = 'pages']/span/following-sibling::a[1]/@href)[1]"
+                },
+                "item_urls": {
+                    "path": "//td[@class = 'first']//@href"
+                }
+            }
+        ],
+        "item_page": {
+            "fields": {
+                "source_latitude": {
+                    "type": "float",
+                    "path": "//script[contains(., 'LAT')]",
+                    "regex": "(?<=LAT\":\")([^;]*)(?=\",\"LNG)",
+                    "operations": []
+                },
+                "address": {
+                    "type": "list to string",
+                    "path": "//span[@class ='title indentright']//text()",
+                    "operations": []
+                },
+                "purpose": {
+                    "type": "string",
+                    "path": "//div[contains(@id, 'offer')]/h3/text()",
+                    "operations": []
+                },
+                "source_longitude": {
+                    "type": "float",
+                    "path": "//script[contains(., 'LAT')]",
+                    "regex": "(?<=LNG\":\")([^;]*)(?=\",\"ZOOM)",
+                    "operations": []
+                },
+                "area_total": {
+                    "type": "float",
+                    "path": "(//div[@class = 'area']/text())[1]",
+                    "regex": "\\d+[\\,\\.]{0,1}\\d{1,100}(?= м)",
+                    "operations": []
+                },
+                "floors_cnt": {
+                    "type": "string",
+                    "path": "(//div[@class = 'area']/text())[2]",
+                    "regex": "(?<=\\/)\\d+",
+                    "operations": []
+                },
+                "date_info": {
+                    "type": "date",
+                    "time": "now",
+                    "operations": []
+                },
+                "operation": {
+                    "type": "string",
+                    "path": "//div[contains(@id, 'offer')]/h1/text()",
+                    "operations": []
+                },
+                "date_created": {
+                    "type": "date",
+                    "path": "(//td[@id = 'right']/div[@align ='right']/text())[1]",
+                    "time": "from string",
+                    "regex": "(?<=введена )([^;]*)(?=\\,)",
+                    "operations": []
+                },
+                "title_name": {
+                    "type": "list to string",
+                    "path": "//span[@class ='title indentright']//text()",
+                    "operations": []
+                },
+                "price_total": {
+                    "type": "list to string",
+                    "path": "//div[@class ='price']//text()",
+                    "regex": "\\d+",
+                    "operations": []
+                },
+                "federal_subject": {
+                    "type": "string",
+                    "value": "Санкт-Петербург г.",
+                    "operations": []
+                },
+                "description": {
+                    "type": "list to string",
+                    "path": "//div[@class = 'discharged2 serif']/text()",
+                    "operations": []
+                },
+                "address_city": {
+                    "type": "string",
+                    "path": "//div[@class = 'currentCity']",
+                    "operations": []
+                },
+                "floor": {
+                    "type": "string",
+                    "path": "(//div[@class = 'area']/text())[2]",
+                    "regex": "(?<=Этаж: )\\d+(?=\\/)",
+                    "operations": []
+                }
+            }
+        }
+    }
