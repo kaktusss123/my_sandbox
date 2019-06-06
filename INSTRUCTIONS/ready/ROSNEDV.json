@@ -1,0 +1,552 @@
+{       "_comment":"добавлен 418 ответ, увеличено количество потоков",
+       "_task_id":"0000-0005-0270&T0118&1_DEBUG_6",
+        "_start_urls": [
+            "https://www.rosnedv.ru/adygeya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/adygeya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/altay/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/altay/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/altayskiy/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/altayskiy/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/amurskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/amurskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/arhangelskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/arhangelskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/astrahanskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/astrahanskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/bashkortostan/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/bashkortostan/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/belgorodskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/belgorodskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/bryanskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/bryanskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/buryatiya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/buryatiya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/chelyabinskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/chelyabinskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/chuvashskaya_respublika__/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/chuvashskaya_respublika__/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/dagestan/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/dagestan/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/evreyskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/evreyskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/habarovskiy/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/habarovskiy/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/hakasiya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/hakasiya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/hanty_mansiyskiy_avtonomnyy_okrug___yugra/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/hanty_mansiyskiy_avtonomnyy_okrug___yugra/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/ingushetiya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/ingushetiya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/irkutskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/irkutskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/ivanovskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/ivanovskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/kabardino_balkarskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/kabardino_balkarskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/kaliningradskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/kaliningradskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/kalmykiya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/kalmykiya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/kaluzhskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/kaluzhskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/kamchatskiy/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/kamchatskiy/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/karachaevo_cherkesskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/karachaevo_cherkesskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/kareliya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/kareliya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/kemerovskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/kemerovskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/kirovskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/kirovskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/komi/dachi/",
+            "https://www.rosnedv.ru/komi/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/komi/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/kostromskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/kostromskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/krasnodarskiy/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/krasnodarskiy/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/krasnoyarskiy/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/krasnoyarskiy/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/krym/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/krym/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/kurganskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/kurganskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/kurskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/kurskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/leningradskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/leningradskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/lipeckaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/lipeckaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/magadanskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/magadanskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/mariy_el/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/mariy_el/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/mordoviya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/mordoviya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/moskovskaya_obl/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/moskovskaya_obl/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/moskva/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/moskva/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/murmanskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/murmanskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/neneckiy/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/neneckiy/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/nizhegorodskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/nizhegorodskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/novgorodskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/novgorodskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/novosibirskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/novosibirskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/omskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/omskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/orenburgskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/orenburgskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/orlovskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/orlovskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/penzenskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/penzenskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/permskiy/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/permskiy/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/primorskiy/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/primorskiy/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/pskovskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/pskovskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/rostovskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/rostovskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/ryazanskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/ryazanskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/saha_yakutiya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/saha_yakutiya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/sahalinskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/sahalinskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/samarskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/samarskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/saratovskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/saratovskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/severnaya_osetiya___alaniya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/severnaya_osetiya___alaniya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/smolenskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/smolenskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/spb_region/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/spb_region/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/stavropolskiy/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/stavropolskiy/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/sverdlovskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/sverdlovskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/tambovskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/tambovskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/tatarstan/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/tatarstan/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/tomskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/tomskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/tulskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/tulskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/tverskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/tverskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/tyumenskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/tyumenskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/tyva/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/tyva/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/udmurtskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/udmurtskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/ulyanovskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/ulyanovskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/vladimirskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/vladimirskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/volgogradskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/volgogradskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/vologodskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/vologodskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/voronezhskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/voronezhskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/yamalo_neneckiy/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/yamalo_neneckiy/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/yaroslavskaya/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/yaroslavskaya/kommercheskaya_nedvijimost/?realty[deal]=1",
+            "https://www.rosnedv.ru/zabaykalskiy/kommercheskaya_nedvijimost/?realty[deal]=0",
+            "https://www.rosnedv.ru/zabaykalskiy/kommercheskaya_nedvijimost/?realty[deal]=1"
+        ],
+        "_segment": "Коммерческая Недвижимость",
+        "_operation": "",
+        "_federal_subject": "",
+        "_source": "http://www.rosnedv.ru",
+        "project_id": "metaspider",
+        "spider_id": "metacrawler",
+        "global_settings": {
+            "CONCURRENT_REQUESTS": 2048,
+            "SPLASH_URL": "http://0.0.0.0:8050",
+            "LOG_LEVEL": "INFO",
+            "AUTOTHROTTLE_ENABLED": false,
+            "AUTOTHROTTLE_START_DELAY": 1,
+            "AUTOTHROTTLE_MAX_DELAY": 60,
+            "AUTOTHROTTLE_TARGET_CONCURRENCY": 2048,
+            "CONCURRENT_REQUESTS_PER_DOMAIN": 2048,
+            "RETRY_ENABLED": true,
+            "RETRY_HTTP_CODES": [
+                500,
+                503,
+                504,
+                400,
+                403,
+                408,
+                429,
+                505,
+                404,
+                502,
+                307,
+                410,
+                451,
+                418,
+                303
+            ],
+            "HTTPERROR_ALLOWED_CODES": [],
+            "RETRY_TIMES": 30,
+            "ROBOTSTXT_ENABLED": false,
+            "ROBOTSTXT_OBEY": false,
+            "REDIRECT_ENABLED": false,
+            "COOKIES_ENABLED": false,
+            "DOWNLOAD_FAIL_ON_DATALOSS": false,
+            "RANDOM_UA_TYPE": "random",
+            "DOWNLOAD_TIMEOUT": 60,
+            "CLOSESPIDER_ITEMCOUNT": 0,
+            "CLOSESPIDER_ERRORCOUNT": 0
+        },
+        "methods": {
+            "crawling_type": "common",
+            "allowed_domains": [],
+            "proxy_settings": {
+                "types": [
+                    "https"
+                ],
+                "amount": 10000,
+                "save": false
+            }
+        },
+        "crawl_tree": [
+            {
+                "pagination_urls": {
+                    "path": "//div[@class = 'more-box']/a/@href"
+                },
+                "item_urls": {
+                    "path": "//div[@class = 'catalog-box']/a/@href"
+                }
+            }
+        ],
+        "item_page": {
+            "fields": {
+                "segment": {
+                    "type": "string",
+                    "path": "//div[@class='breadcrumbs-box']/a[2]/text()[normalize-space()]",
+                    "operations": [
+                        "lower"
+                    ]
+                },
+                "phone": {
+                    "type": "phone",
+                    "path": "//div[@class='item-specialist']//div[@class='spec-phone']//a/text()",
+                    "operations": []
+                },
+                "source_latitude": {
+                    "type": "float",
+                    "path": "//script[contains(text(),'JSON.parse')]/text()",
+                    "regex": "lat\":(.+)\\}",
+                    "operations": []
+                },
+                "price_currency": {
+                    "type": "string",
+                    "value": "RUB",
+                    "operations": []
+                },
+                "address": {
+                    "type": "string",
+                    "path": "//h1[@class='item-page-title']//small//text()",
+                    "operations": []
+                },
+                "source_longitude": {
+                    "type": "float",
+                    "path": "//script[contains(text(),'JSON.parse')]/text()",
+                    "regex": "lng\":(.+),",
+                    "operations": []
+                },
+                "seller_name": {
+                    "type": "string",
+                    "path": "//div[@class='item-specialist']//div[@class='spec-name']//text()",
+                    "operations": []
+                },
+                "seller_type": {
+                    "type": "string",
+                    "path": "//div[@class='item-specialist']//div[@class='spec-info']//text()",
+                    "operations": []
+                },
+                "date_info": {
+                    "type": "date",
+                    "time": "now",
+                    "operations": []
+                },
+                "operation": {
+                    "type": "string",
+                    "path": "//div[@class='breadcrumbs-box']/span/text()",
+                    "regex": "Продажа|Аренда",
+                    "operations": [
+                        "lower"
+                    ]
+                },
+                "title_name": {
+                    "type": "string",
+                    "path": "//h1[@class='item-page-title']//text()",
+                    "operations": []
+                },
+                "date_created": {
+                    "type": "date",
+                    "path": "(//div[@class='info-status']//text())[1]",
+                    "time": "from string",
+                    "regex": "Добавлено (.+)",
+                    "operations": []
+                },
+                "price_total": {
+                    "type": "float",
+                    "path": "//div[@itemprop='price']/text()[normalize-space()]",
+                    "regex": "[0-9\\. ]+",
+                    "operations": []
+                },
+                "federal_subject": {
+                    "type": "string",
+                    "path": "//h1[@class='item-page-title']//small//text()",
+                    "operations": []
+                },
+                "date_updated": {
+                    "type": "date",
+                    "path": "(//div[@class='info-status']//text())[2]",
+                    "time": "from string",
+                    "regex": "Обновлено (.+)",
+                    "operations": []
+                },
+                "description": {
+                    "type": "list to string",
+                    "path": "//div[@class='desc-wrap']/text()",
+                    "operations": []
+                }
+            },
+            "tables": {
+                "table_1": {
+                    "_keys_path": "//div[@class='info-wrap']//div[@class='info-title']//text()",
+                    "_vals_path": "//div[@class='info-wrap']//div[@class='info-val']/text()",
+                    "key_converter": {
+                        "микрорайон": {
+                            "type": "string",
+                            "name": "reference_point"
+                        },
+                        "этаж": {
+                            "type": [
+                                "float",
+                                "float"
+                            ],
+                            "name": [
+                                "floor",
+                                "floors_cnt"
+                            ],
+                            "regex": [
+                                "^\\d+",
+                                "\\d+$"
+                            ]
+                        },
+                        "тип": {
+                            "type": "string",
+                            "name": "purpose"
+                        },
+                        "площадь": {
+                            "type": [
+                                "float",
+                                "string"
+                            ],
+                            "name": [
+                                "area_total",
+                                "area_unit"
+                            ],
+                            "regex": [
+                                "\\d*\\W?\\d+",
+                                "[А-Яа-я]+"
+                            ]
+                        },
+                        "район": {
+                            "type": "string",
+                            "name": "intown_district"
+                        },
+                        "площадь_участка": {
+                            "type": [
+                                "float",
+                                "string"
+                            ],
+                            "name": [
+                                "land_area",
+                                "area_land_unit"
+                            ],
+                            "regex": [
+                                "\\d*\\W?\\d+",
+                                "[А-Яа-я]+"
+                            ]
+                        },
+                        "комнат": {
+                            "type": "float",
+                            "name": "rooms_cnt",
+                            "regex": "\\d+"
+                        },
+                        "ориентир": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "None"
+                        },
+                        "период": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "None"
+                        }
+                    }
+                },
+                "table_2": {
+                    "_keys_path": "//div[@class='item-desc-box']//div[@class='tbl-wrap']//th//text()",
+                    "_vals_path": "//div[@class='item-desc-box']//div[@class='tbl-wrap']//td/text()",
+                    "key_converter": {
+                        "время_до_метро_пешком": {
+                            "type": "string",
+                            "name": "metro_minutes"
+                        },
+                        "этаж": {
+                            "type": "string",
+                            "name": "floor"
+                        },
+                        "телефон": {
+                            "type": "string",
+                            "name": "is_phone"
+                        },
+                        "материал_стен": {
+                            "type": "string",
+                            "name": "wall_material"
+                        },
+                        "расстояние_по_шоссе_до_мкад": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "шоссе_москвы": {
+                            "type": "string",
+                            "name": "nearest_highway"
+                        },
+                        "время_до_метро_на_транспорте": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "газ": {
+                            "type": "string",
+                            "name": "is_gas"
+                        },
+                        "отдельный_вход": {
+                            "type": "string",
+                            "name": "private_entrance"
+                        },
+                        "комиссия": {
+                            "type": "float",
+                            "name": "agent_fee",
+                            "regex": "\\d*\\W?\\d+"
+                        },
+                        "отопление": {
+                            "type": "string",
+                            "name": "heating_system_type"
+                        },
+                        "населённый_пункт": {
+                            "type": "string",
+                            "name": "address_city"
+                        },
+                        "год_постройки": {
+                            "type": "float",
+                            "name": "year_built",
+                            "regex": "\\d+"
+                        },
+                        "интернет": {
+                            "type": "string",
+                            "name": "is_internet"
+                        },
+                        "мебель": {
+                            "type": "string",
+                            "name": "is_furniture"
+                        },
+                        "водоснабжение": {
+                            "type": "string",
+                            "name": "is_plumbing"
+                        },
+                        "адрес": {
+                            "type": "string",
+                            "name": "street_name"
+                        },
+                        "площадь_общая": {
+                            "type": [
+                                "float",
+                                "string"
+                            ],
+                            "name": [
+                                "area_total",
+                                "area_unit"
+                            ],
+                            "regex": [
+                                "\\d*\\W?\\d+",
+                                "[А-Яа-я]"
+                            ]
+                        },
+                        "площадь_кухни": {
+                            "type": "float",
+                            "name": "kitchen_area",
+                            "regex": "\\d*\\W?\\d+"
+                        },
+                        "мебель_на_кухне": {
+                            "type": "string",
+                            "name": "furniture_kitchen"
+                        },
+                        "микрорайон": {
+                            "type": "string",
+                            "name": "reference_point"
+                        },
+                        "площадь_жилая": {
+                            "type": "float",
+                            "name": "area_living",
+                            "regex": "\\d*\\W?\\d+"
+                        },
+                        "комнат": {
+                            "type": "float",
+                            "name": "rooms_cnt",
+                            "regex": "\\d+"
+                        },
+                        "метро": {
+                            "type": "string",
+                            "name": "metro_station"
+                        },
+                        "балкон": {
+                            "type": "string",
+                            "name": "is_balcony"
+                        },
+                        "ремонт": {
+                            "type": "string",
+                            "name": "decoration_type"
+                        },
+                        "дом": {
+                            "type": "string",
+                            "name": "house_number"
+                        },
+                        "электричество": {
+                            "type": "string",
+                            "name": "is_electricity"
+                        },
+                        "район": {
+                            "type": "string",
+                            "name": "intown_district"
+                        },
+                        "предоплата": {
+                            "type": "string",
+                            "name": "is_pre_pay"
+                        }
+                    }
+                }
+            }
+        }
+    }
