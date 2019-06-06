@@ -1,7 +1,7 @@
-﻿{  "_comment":"обновить у Антона",
-    "_task_id": "TORGI",
+﻿{  "_task_id": "TORGI",
     "_start_urls": [
-        "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=2&publishDateFrom=20190101T0000&publishDateTo=20190601T0000"
+        "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=2&publishDateFrom=20190501T0000",
+        "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=1&publishDateFrom=20190501T0000"
     ],
     "_segment": "test",
     "_operation": "test",
@@ -13,8 +13,8 @@
         "SPLASH_URL": "http://0.0.0.0:8050",
         "LOG_LEVEL": "DEBUG",
         "AUTOTHROTTLE_ENABLED": true,
-        "AUTOTHROTTLE_START_DELAY": 1.0,
-        "AUTOTHROTTLE_MAX_DELAY": 120,
+        "AUTOTHROTTLE_START_DELAY": 10.0,
+        "AUTOTHROTTLE_MAX_DELAY": 60,
         "AUTOTHROTTLE_TARGET_CONCURRENCY": 512,
         "HTTPERROR_ALLOWED_CODES": [],
         "CONCURRENT_REQUESTS_PER_DOMAIN": 512,
@@ -36,7 +36,7 @@
         "ROBOTSTXT_ENABLED": false,
         "ROBOTSTXT_OBEY": false,
         "REDIRECT_ENABLED": true,
-        "COOKIES_ENABLED": true,
+        "COOKIES_ENABLED": false,
         "RANDOM_UA_TYPE": "random"
     },
     "methods": {
@@ -52,7 +52,7 @@
     },
 
     "crawl_tree": [{
-    "item_urls": {"path": "concat('https://', substring-after(string(//d:odDetailedHref), '://'))"}}
+    "item_urls": {"path": "//d:odDetailedHref/text()"}}
   ],
     "item_page": {
         "fields": {
