@@ -1,0 +1,804 @@
+{
+  "_comment": "увеличено количество потоков до 1024, уменьшено количество повторных запросов, ОБНОВИЛАСЬ ВЕРСТКА САЙТА - передалано, нужно допроверить на большем количестве предложений ",
+  "_task_id": "0000-0005-0265&T0118&1_DEBUG_13",
+  "_start_urls": [
+    "https://realty.yandex.ru/adygeya/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/adygeya/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/adygeya/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/adygeya/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/adygeya/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/altay/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/altay/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/altay/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/altay/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/altay/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/altayskiy_kray/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/altayskiy_kray/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/altayskiy_kray/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/altayskiy_kray/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/altayskiy_kray/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/amurskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/amurskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/amurskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/amurskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/amurskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/arhangelskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/arhangelskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/arhangelskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/arhangelskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/arhangelskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/astrahanskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/astrahanskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/astrahanskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/astrahanskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/astrahanskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/bashkortostan/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/bashkortostan/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/bashkortostan/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/bashkortostan/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/bashkortostan/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/belgorodskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/belgorodskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/belgorodskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/belgorodskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/belgorodskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/bryanskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/bryanskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/bryanskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/bryanskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/bryanskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/buryatiya/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/buryatiya/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/buryatiya/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/buryatiya/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/buryatiya/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/chechenskaya_respublika/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/chechenskaya_respublika/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/chechenskaya_respublika/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/chechenskaya_respublika/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/chechenskaya_respublika/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/chelyabinskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/chelyabinskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/chelyabinskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/chelyabinskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/chelyabinskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/chukotskiy_ao/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/chukotskiy_ao/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/chukotskiy_ao/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/chukotskiy_ao/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/chukotskiy_ao/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/chuvashskiya/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/chuvashskiya/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/chuvashskiya/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/chuvashskiya/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/chuvashskiya/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/dagestan/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/dagestan/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/dagestan/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/dagestan/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/dagestan/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/evreyskaya_ao/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/evreyskaya_ao/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/evreyskaya_ao/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/evreyskaya_ao/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/evreyskaya_ao/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/habarovskiy_kray/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/habarovskiy_kray/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/habarovskiy_kray/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/habarovskiy_kray/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/habarovskiy_kray/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/hakasiya/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/hakasiya/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/hakasiya/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/hakasiya/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/hakasiya/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/ingushetiya/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/ingushetiya/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/ingushetiya/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/ingushetiya/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/ingushetiya/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/irkutskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/irkutskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/irkutskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/irkutskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/irkutskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/ivanovskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/ivanovskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/ivanovskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/ivanovskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/ivanovskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/kabardino-balkariya/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kabardino-balkariya/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kabardino-balkariya/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kabardino-balkariya/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kabardino-balkariya/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/kaliningradskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kaliningradskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kaliningradskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kaliningradskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kaliningradskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/kalmykiya/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kalmykiya/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kalmykiya/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kalmykiya/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kalmykiya/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/kaluzhskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kaluzhskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kaluzhskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kaluzhskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kaluzhskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/kamchatskiy_kray/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kamchatskiy_kray/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kamchatskiy_kray/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kamchatskiy_kray/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kamchatskiy_kray/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/karachaevo-cherkesiya/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/karachaevo-cherkesiya/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/karachaevo-cherkesiya/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/karachaevo-cherkesiya/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/karachaevo-cherkesiya/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/kareliya/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kareliya/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kareliya/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kareliya/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kareliya/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/kemerovskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kemerovskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kemerovskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kemerovskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kemerovskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/kirovskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kirovskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kirovskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kirovskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kirovskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/komi/kupit/dom/",
+    "https://realty.yandex.ru/komi/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/komi/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/komi/snyat/dom/",
+    "https://realty.yandex.ru/komi/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/komi/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/komi/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/kostromskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kostromskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kostromskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kostromskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kostromskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/krasnodarskiy_kray/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/krasnodarskiy_kray/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/krasnodarskiy_kray/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/krasnodarskiy_kray/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/krasnodarskiy_kray/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/krasnoyarskiy_kray/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/krasnoyarskiy_kray/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/krasnoyarskiy_kray/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/krasnoyarskiy_kray/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/krasnoyarskiy_kray/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/krym/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/krym/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/krym/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/krym/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/krym/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/kurganskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kurganskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kurganskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kurganskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kurganskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/kurskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kurskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kurskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/kurskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/kurskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/lipetskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/lipetskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/lipetskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/lipetskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/lipetskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/magadanskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/magadanskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/magadanskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/magadanskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/magadanskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/mariy_el/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/mariy_el/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/mariy_el/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/mariy_el/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/mariy_el/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/mordoviya/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/mordoviya/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/mordoviya/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/mordoviya/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/mordoviya/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/moskva_i_moskovskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/moskva_i_moskovskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/moskva_i_moskovskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/moskva_i_moskovskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/moskva_i_moskovskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/murmanskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/murmanskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/murmanskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/murmanskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/murmanskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/nizhegorodskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/nizhegorodskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/nizhegorodskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/nizhegorodskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/nizhegorodskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/novgorodskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/novgorodskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/novgorodskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/novgorodskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/novgorodskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/novosibirskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/novosibirskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/novosibirskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/novosibirskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/novosibirskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/omskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/omskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/omskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/omskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/omskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/orenburgskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/orenburgskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/orenburgskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/orenburgskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/orenburgskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/orlovskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/orlovskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/orlovskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/orlovskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/orlovskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/penzenskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/penzenskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/penzenskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/penzenskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/penzenskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/permskiy_kray/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/permskiy_kray/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/permskiy_kray/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/permskiy_kray/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/permskiy_kray/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/primorskiy_kray/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/primorskiy_kray/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/primorskiy_kray/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/primorskiy_kray/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/primorskiy_kray/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/pskovskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/pskovskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/pskovskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/pskovskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/pskovskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/rostovskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/rostovskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/rostovskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/rostovskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/rostovskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/ryazanskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/ryazanskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/ryazanskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/ryazanskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/ryazanskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/saha_yakutiya/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/saha_yakutiya/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/saha_yakutiya/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/saha_yakutiya/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/saha_yakutiya/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/sahalinskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/sahalinskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/sahalinskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/sahalinskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/sahalinskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/samarskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/samarskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/samarskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/samarskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/samarskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/sankt-peterburg_i_leningradskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/sankt-peterburg_i_leningradskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/sankt-peterburg_i_leningradskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/sankt-peterburg_i_leningradskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/sankt-peterburg_i_leningradskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/saratovskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/saratovskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/saratovskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/saratovskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/saratovskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/sevastopol/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/sevastopol/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/sevastopol/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/sevastopol/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/sevastopol/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/severnaya_osetiya/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/severnaya_osetiya/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/severnaya_osetiya/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/severnaya_osetiya/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/severnaya_osetiya/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/smolenskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/smolenskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/smolenskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/smolenskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/smolenskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/stavropolskiy_kray/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/stavropolskiy_kray/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/stavropolskiy_kray/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/stavropolskiy_kray/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/stavropolskiy_kray/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/sverdlovskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/sverdlovskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/sverdlovskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/sverdlovskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/sverdlovskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/tambovskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/tambovskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/tambovskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/tambovskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/tambovskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/tatarstan/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/tatarstan/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/tatarstan/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/tatarstan/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/tatarstan/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/tomskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/tomskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/tomskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/tomskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/tomskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/tulskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/tulskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/tulskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/tulskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/tulskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/tverskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/tverskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/tverskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/tverskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/tverskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/tyumenskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/tyumenskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/tyumenskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/tyumenskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/tyumenskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/tyva/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/tyva/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/tyva/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/tyva/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/tyva/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/udmurtiya/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/udmurtiya/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/udmurtiya/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/udmurtiya/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/udmurtiya/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/ulyanovskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/ulyanovskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/ulyanovskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/ulyanovskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/ulyanovskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/vladimirskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/vladimirskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/vladimirskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/vladimirskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/vladimirskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/volgogradskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/volgogradskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/volgogradskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/volgogradskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/volgogradskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/vologodskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/vologodskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/vologodskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/vologodskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/vologodskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/voronezhskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/voronezhskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/voronezhskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/voronezhskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/voronezhskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/yaroslavskaya_oblast/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/yaroslavskaya_oblast/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/yaroslavskaya_oblast/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/yaroslavskaya_oblast/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/yaroslavskaya_oblast/snyat/kommercheskaya-nedvizhimost/sklad/",
+    "https://realty.yandex.ru/zabaykalskiy_kray/kupit/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/zabaykalskiy_kray/kupit/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/zabaykalskiy_kray/snyat/kommercheskaya-nedvizhimost/?commercialType=FREE_PURPOSE&commercialType=RETAIL",
+    "https://realty.yandex.ru/zabaykalskiy_kray/snyat/kommercheskaya-nedvizhimost/ofis/",
+    "https://realty.yandex.ru/zabaykalskiy_kray/snyat/kommercheskaya-nedvizhimost/sklad/"
+  ],
+  "_segment": "Коммерческая Недвижимость",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "https://realty.yandex.ru",
+  "project_id": "metaspider",
+  "spider_id": "metacrawler",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 1024,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": false,
+    "AUTOTHROTTLE_START_DELAY": 1,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
+    "RETRY_ENABLED": true,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      303,
+      302,
+      301,
+      307,
+      410,
+      451
+    ],
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_TIMES": 20,
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": true,
+    "DOWNLOAD_FAIL_ON_DATALOSS": false,
+    "RANDOM_UA_TYPE": "random",
+    "DOWNLOAD_TIMEOUT": 60,
+    "CLOSESPIDER_ITEMCOUNT": 0,
+    "CLOSESPIDER_ERRORCOUNT": 0
+  },
+  "methods": {
+    "crawling_type": "common",
+    "allowed_domains": [],
+    "proxy_settings": {
+      "types": [
+        "https"
+      ],
+      "amount": 10000,
+      "save": false
+    }
+  },
+  "crawl_tree": [
+    {
+      "pagination_urls": {
+        "url_constructor": {},
+        "repeat": false
+      },
+      "item_urls": {
+        "path": "//a[@class='Link Link_js_inited Link_size_m Link_theme_islands SerpItemLink OffersSerpItem__link']/@href"
+      }
+    }
+  ],
+  "item_page": {
+    "fields": {
+      "segment": {
+        "type": "list to string",
+        "path": "//ol[contains(@class,'Breadcrumbs')]//a//text()",
+        "regex": "Коммерческая|Загородная|Квартир|Комн|Гараж",
+        "operations": []
+      },
+      "operation": {
+        "type": "list to string",
+        "path": "//ol[contains(@class,'Breadcrumbs')]//a//text()",
+        "regex": "Аренда|Продажа",
+        "operations": []
+      },
+      "title_name": {
+        "type": "list to string",
+        "path": "//h1//text()",
+        "operations": []
+      },
+      "price_term": {
+        "type": "list to string",
+        "path": "//h3[contains(@class,'__price')]//span[2]/text()[normalize-space()]",
+        "regex": "[А-Яа-я ]+",
+        "operations": []
+      },
+      "price_currency": {
+        "type": "string",
+        "path": "//h3[contains(@class,'__price')]//span[1]/text()[normalize-space()]",
+        "regex": "|$|rur|rub|RUR|RUB|usd|USD|EUR|eur|€",
+        "operations": []
+      },
+      "price_total": {
+        "type": "float",
+        "path": "(//span[@class='price']/text()[normalize-space()])[1]",
+        "regex": "[0-9 ]+",
+        "operations": []
+      },
+      "metro_minutes": {
+        "type": "string",
+        "path": "(//span[contains(@class,'MetroWithTime__distance OfferHeaderLocation__station-distance')]//text())[1]",
+        "operations": []
+      },
+      "metro_station": {
+        "type": "string",
+        "path": "(//span[contains(@class,'Metro')]//text())[1]",
+        "operations": []
+      },
+      "source_latitude": {
+        "type": "float",
+        "path": "//div[contains(@style,'map&ll')][1]/@style",
+        "regex": "\\d*\\W?\\d+(?=&z)",
+        "operations": []
+      },
+      "source_longitude": {
+        "type": "float",
+        "path": "//div[contains(@style,'map&ll')][1]/@style",
+        "regex": "(?<==)\\d*\\W?\\d+(?=%)",
+        "operations": []
+      },
+      "address": {
+        "type": "string",
+        "path": "//div[contains(@class,'Header__address')]/text()",
+        "operations": []
+      },
+      "federal_subject": {
+        "type": "string",
+        "path": "(//ol[contains(@class,'Breadcrumbs')]//a//text())[1]",
+        "operations": []
+      },
+      "purpose": {
+        "type": "list to string",
+        "path": "//ol[contains(@class,'Breadcrumbs')]//a//text()",
+        "regex": "Квартира|Офис|Склад|свободного назначения|Торговое|Производственное|Гостиница|Гараж, машиноместо, бокс|Дом",
+        "operations": []
+      },
+      "seller_name": {
+        "type": "string",
+        "path": "(//div[@class='AuthorBadge__name']//text())[1]",
+        "operations": []
+      },
+      "seller_type": {
+        "type": "string",
+        "path": "(//div[@class='AuthorBadge__category']//text())[1]",
+        "operations": []
+      },
+      "addit_comm_condition": {
+        "type": "string",
+        "path": "//p[@class='OfferBaseInfo__text-info']//text()",
+        "operations": []
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now",
+        "operations": []
+      },
+      "date_created": {
+        "type": "date",
+        "path": "//div[@class='OfferHeader__meta-info OfferHeader__meta-info_capitalize']//text()",
+        "time": "from string",
+        "regex": ".+(?=\\()",
+        "operations": []
+      },
+      "date_updated": {
+        "type": "date",
+        "path": "//div[@class='OfferHeader__meta-info OfferHeader__meta-info_capitalize']//text()",
+        "time": "from string",
+        "regex": "(?<=обновлено).+(?=\\))",
+        "operations": []
+      },
+      "description": {
+        "type": "list to string",
+        "path": "//meta[@name='description']/@content",
+        "operations": []
+      },
+      "object_class": {
+        "type": "string",
+        "path": "//h1//div[contains(@title,'Класс')]/text()",
+        "operations": []
+      },
+      "area_total": {
+        "type": "float",
+        "path": "//h1//text()",
+        "regex": "(?<=,)\\d*\\W?\\d+",
+        "operations": []
+      }
+    },
+    "follow": [
+      {
+        "url_constructor": {
+          "insert": {
+            "realty.yandex.ru": {
+              "type": "string",
+              "value": "m.realty.yandex.ru"
+            }
+          }
+        },
+        "methods": {
+          "crawling_type": "common",
+          "filter_duplicates": false
+        },
+        "fields": {
+          "phone": {
+            "type": "phone",
+            "path": "//a[contains(@class,'phone_float_yes')]/@href"
+          }
+        },
+        "tables": {
+          "table_1": {
+            "_keys_path": "//td[contains(@class,'specs__item-left')]/text()",
+            "_vals_path": "//td[contains(@class,'specs__item-right')]/text()",
+            "key_converter": {
+              "лифт": {
+                "type": "string",
+                "name": "is_elevator"
+              },
+              "этаж": {
+                "type": "float",
+                "name": "floor",
+                "regex": "^\\d+"
+              },
+              "возможность_выбрать_оператора_связи": {
+                "type": "string",
+                "name": "none"
+              },
+              "охрана": {
+                "type": "string",
+                "name": "security_type"
+              },
+              "жилая": {
+                "type": "float",
+                "name": "living_area",
+                "regex": "^\\d*\\W?\\d+"
+              },
+              "высота_потолков": {
+                "type": "float",
+                "name": "ceiling_height",
+                "regex": "^\\d*\\W?\\d+"
+              },
+              "класс_бизнесцентра": {
+                "type": "string",
+                "name": "object_class"
+              },
+              "серия_здания": {
+                "type": "string",
+                "name": "building_series"
+              },
+              "площадь_участка": {
+                "type": [
+                  "float",
+                  "string"
+                ],
+                "name": [
+                  "land_area",
+                  "land_area_unit"
+                ],
+                "regex": [
+                  "^\\d*\\W?\\d+",
+                  "[А-Яа-я ]+"
+                ]
+              },
+              "газ": {
+                "type": "string",
+                "name": "is_gas"
+              },
+              "пожарная_сигнализация": {
+                "type": "string",
+                "name": "firefighting"
+              },
+              "состояние": {
+                "type": "string",
+                "name": "decoration_type"
+              },
+              "отопление": {
+                "type": "string",
+                "name": "heating_system_type"
+              },
+              "заведение_питания_в_здании": {
+                "type": "string",
+                "name": "food"
+              },
+              "интернет": {
+                "type": "string",
+                "name": "is_internet"
+              },
+              "мебель": {
+                "type": "string",
+                "name": "is_furniture"
+              },
+              "доступ_на_объект_247": {
+                "type": "string",
+                "name": "none"
+              },
+              "общая_площадь": {
+                "type": "float",
+                "name": "area_total",
+                "regex": "^\\d*\\W?\\d+"
+              },
+              "тип_окон": {
+                "type": "string",
+                "name": "type_windows"
+              },
+              "кухня": {
+                "type": "float",
+                "name": "kitchen_area",
+                "regex": "^\\d*\\W?\\d+"
+              },
+              "мест_на_парковке": {
+                "type": "string",
+                "name": "parking_cnt"
+              },
+              "пропускная_система": {
+                "type": "string",
+                "name": "access"
+              },
+              "количество_этажей": {
+                "type": "string",
+                "name": "floors_max"
+              },
+              "возможность_добавить_телефонные_линии": {
+                "type": "string",
+                "name": "none"
+              },
+              "канализация": {
+                "type": "string",
+                "name": "is_sewage"
+              },
+              "мусоропровод": {
+                "type": "string",
+                "name": "garbage_type"
+              },
+              "вентиляция": {
+                "type": "string",
+                "name": "ventilation_system"
+              },
+              "название_бизнесцентра": {
+                "type": "string",
+                "name": "none"
+              },
+              "кондиционер": {
+                "type": "string",
+                "name": "is_conditioning"
+              },
+              "количество_телефонных_линий": {
+                "type": "string",
+                "name": "count_phone_lines"
+              },
+              "электроснабжение": {
+                "type": "string",
+                "name": "is_electricity"
+              },
+              "количество_комнат": {
+                "type": "string",
+                "name": "rooms_count"
+              },
+              "тип_здания": {
+                "type": "string",
+                "name": "wall_material"
+              },
+              "отделка": {
+                "type": "string",
+                "name": "decoration_type"
+              },
+              "вид_из_окон": {
+                "type": "string",
+                "name": "vid"
+              },
+              "вход": {
+                "type": "string",
+                "name": "private_entrance"
+              },
+              "охраняемая_парковка": {
+                "type": "string",
+                "name": "parking_security"
+              },
+              "сигнализация": {
+                "type": "string",
+                "name": "none"
+              },
+              "водопровод": {
+                "type": "string",
+                "name": "is_plumbing"
+              }
+            }
+          }
+        }
+      }
+    ]
+
+  }
+}
