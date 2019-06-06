@@ -1,0 +1,399 @@
+ {      "_comment":"исправлен метод follow (надо протестить отработчик капчи), обавлен город региона, дообавлен период платежа и размерность платежа",
+        "_task_id": "0000-0005-0274&T0118&1_DEBUG_999999",
+        "_start_urls": [
+            "https://www.farpost.ru/adygeya-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/adygeya-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/altai-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/altai-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/altaiskii-krai/realty/rent_business_realty/",
+            "https://www.farpost.ru/altaiskii-krai/realty/sell_business_realty/",
+            "https://www.farpost.ru/amurskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/amurskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/arkhangelskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/arkhangelskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/astrakhanskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/astrakhanskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/bashkortostan-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/bashkortostan-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/belgorodskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/belgorodskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/bryanskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/bryanskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/buryatiya-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/buryatiya-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/chechenskaya-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/chechenskaya-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/chelyabinskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/chelyabinskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/chukotskii-ao/realty/rent_business_realty/",
+            "https://www.farpost.ru/chukotskii-ao/realty/sell_business_realty/",
+            "https://www.farpost.ru/chuvashskaya-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/chuvashskaya-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/dagestan-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/dagestan-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/evreiskaya-aobl/realty/rent_business_realty/",
+            "https://www.farpost.ru/evreiskaya-aobl/realty/sell_business_realty/",
+            "https://www.farpost.ru/ingushetiya-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/ingushetiya-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/irkutskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/irkutskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/ivanovskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/ivanovskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/kabardino-balkarskaya-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/kabardino-balkarskaya-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/kaliningradskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/kaliningradskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/kalmykiya-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/kalmykiya-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/kaluzhskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/kaluzhskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/kamchatskii-krai/realty/rent_business_realty/",
+            "https://www.farpost.ru/kamchatskii-krai/realty/sell_business_realty/",
+            "https://www.farpost.ru/karachaevo-cherkesskaya-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/karachaevo-cherkesskaya-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/kareliya-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/kareliya-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/kemerovskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/kemerovskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/khabarovskii-krai/realty/rent_business_realty/",
+            "https://www.farpost.ru/khabarovskii-krai/realty/sell_business_realty/",
+            "https://www.farpost.ru/khakasiya-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/khakasiya-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/khanty-mansiiskii-ao-yugra-ao/realty/rent_business_realty/",
+            "https://www.farpost.ru/khanty-mansiiskii-ao-yugra-ao/realty/sell_business_realty/",
+            "https://www.farpost.ru/kirovskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/kirovskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/komi-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/komi-resp/realty/rent-apartment/",
+            "https://www.farpost.ru/komi-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/kostromskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/kostromskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/krasnodarskii-krai/realty/rent_business_realty/",
+            "https://www.farpost.ru/krasnodarskii-krai/realty/sell_business_realty/",
+            "https://www.farpost.ru/krasnoyarskii-krai/realty/rent_business_realty/",
+            "https://www.farpost.ru/krasnoyarskii-krai/realty/sell_business_realty/",
+            "https://www.farpost.ru/krym/realty/rent_business_realty/",
+            "https://www.farpost.ru/krym/realty/sell_business_realty/",
+            "https://www.farpost.ru/kurganskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/kurganskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/kurskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/kurskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/leningradskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/leningradskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/lipetskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/lipetskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/magadanskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/magadanskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/marii-el-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/marii-el-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/mordoviya-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/mordoviya-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/moskovskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/moskovskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/moskva/moskovskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/moskva/moskovskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/moskva/realty/rent_business_realty/",
+            "https://www.farpost.ru/moskva/realty/sell_business_realty/",
+            "https://www.farpost.ru/murmanskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/murmanskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/nenetskii-ao/realty/rent_business_realty/",
+            "https://www.farpost.ru/nenetskii-ao/realty/sell_business_realty/",
+            "https://www.farpost.ru/nizhegorodskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/nizhegorodskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/novgorodskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/novgorodskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/novosibirskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/novosibirskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/omskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/omskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/orenburgskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/orenburgskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/orlovskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/orlovskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/penzenskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/penzenskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/permskii-krai/realty/rent_business_realty/",
+            "https://www.farpost.ru/permskii-krai/realty/sell_business_realty/",
+            "https://www.farpost.ru/primorskii-krai/realty/rent_business_realty/",
+            "https://www.farpost.ru/primorskii-krai/realty/sell_business_realty/",
+            "https://www.farpost.ru/pskovskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/pskovskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/rostovskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/rostovskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/ryazanskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/ryazanskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/sakhalinskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/sakhalinskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/sakha-yakutiya-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/sakha-yakutiya-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/samarskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/samarskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/sankt-peterburg/realty/rent_business_realty/",
+            "https://www.farpost.ru/sankt-peterburg/realty/sell_business_realty/",
+            "https://www.farpost.ru/saratovskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/saratovskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/severnaya-osetiya-alaniya-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/severnaya-osetiya-alaniya-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/smolenskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/smolenskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/stavropolskii-krai/realty/rent_business_realty/",
+            "https://www.farpost.ru/stavropolskii-krai/realty/sell_business_realty/",
+            "https://www.farpost.ru/sverdlovskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/sverdlovskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/tambovskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/tambovskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/tatarstan-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/tatarstan-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/tomskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/tomskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/tulskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/tulskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/tverskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/tverskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/tyumenskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/tyumenskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/tyva-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/tyva-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/udmurtskaya-resp/realty/rent_business_realty/",
+            "https://www.farpost.ru/udmurtskaya-resp/realty/sell_business_realty/",
+            "https://www.farpost.ru/ulyanovskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/ulyanovskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/vladimirskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/vladimirskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/volgogradskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/volgogradskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/vologodskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/vologodskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/voronezhskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/voronezhskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/yamalo-nenetskii-ao/realty/rent_business_realty/",
+            "https://www.farpost.ru/yamalo-nenetskii-ao/realty/sell_business_realty/",
+            "https://www.farpost.ru/yaroslavskaya-obl/realty/rent_business_realty/",
+            "https://www.farpost.ru/yaroslavskaya-obl/realty/sell_business_realty/",
+            "https://www.farpost.ru/zabaikalskii-krai/realty/rent_business_realty/",
+            "https://www.farpost.ru/zabaikalskii-krai/realty/sell_business_realty/"
+        ],
+        "_segment": "Коммерческая Недвижимость",
+        "_operation": "",
+        "_federal_subject": "",
+        "_source": "http://www.farpost.ru",
+        "project_id": "metaspider",
+        "spider_id": "metacrawler",
+        "global_settings": {
+            "CONCURRENT_REQUESTS": 1024,
+            "SPLASH_URL": "http://0.0.0.0:8050",
+            "LOG_LEVEL": "INFO",
+            "AUTOTHROTTLE_ENABLED": false,
+            "AUTOTHROTTLE_START_DELAY": 1,
+            "AUTOTHROTTLE_MAX_DELAY": 60,
+            "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+            "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
+            "RETRY_ENABLED": true,
+            "RETRY_HTTP_CODES": [
+                500,
+                503,
+                504,
+                400,
+                403,
+                408,
+                429,
+                505,
+                404,
+                303,
+                302,
+                301,
+                307,
+                410,
+                451
+            ],
+            "HTTPERROR_ALLOWED_CODES": [],
+            "RETRY_TIMES": 20,
+            "ROBOTSTXT_ENABLED": false,
+            "ROBOTSTXT_OBEY": false,
+            "REDIRECT_ENABLED": false,
+            "COOKIES_ENABLED": true,
+            "DOWNLOAD_FAIL_ON_DATALOSS": false,
+            "RANDOM_UA_TYPE": "random",
+            "DOWNLOAD_TIMEOUT": 60,
+            "CLOSESPIDER_ITEMCOUNT": 0,
+            "CLOSESPIDER_ERRORCOUNT": 0
+        },
+        "methods": {
+            "crawling_type": "common",
+            "allowed_domains": [],
+            "proxy_settings": {
+                "types": [
+                    "https"
+                ],
+                "amount": 10000,
+                "save": false
+            }
+        },
+        "crawl_tree": [
+            {
+                "pagination_urls": {
+                    "url_constructor": {},
+                    "repeat": false
+                },
+                "item_urls": {
+                    "path": "//a[@class = 'bulletinLink auto-shy']/@href",
+                    "methods": {
+                        "save_cookies":true
+                    }
+                }
+            }
+        ],
+        "item_page": {
+            "fields": {
+                "address": {
+                    "type": "string",
+                    "path": "(//span[@itemprop = 'name']/text())[last()]",
+                    "operations": []
+                },
+                "federal_subject":{
+                    "type":"string",
+                    "path":"//div[@class='popButton cityPop']/text()"
+                },
+                "detail": {
+                    "type": "list to string",
+                    "path": "//p[@class='inplace mod__label_up_down auto-shy']/text()",
+                    "regex": "[а-яА-Яй0-9,.-]+",
+                    "operations": []
+                },
+                "purpose": {
+                    "type": "string",
+                    "path": "(//span[@data-field = 'flatType']/text())[1]",
+                    "regex": "\\w+",
+                    "operations": []
+                },
+                "area_total": {
+                    "type": "float",
+                    "path": "(//span[@data-field = 'areaTotal']/text())[1]",
+                    "regex": "\\d+",
+                    "operations": []
+                },
+                "seller_name": {
+                    "type": "list to string",
+                    "path": "//div[@class='seller-info']//span//a/text()",
+                    "operations": []
+                },
+                "agent_fee": {
+                    "type": "float",
+                    "path": "(//span[@class='viewbull-summary-price__notice']/text())[1]",
+                    "regex": "\\d*\\W?\\d+",
+                    "operations": []
+                },
+                "date_info": {
+                    "type": "date",
+                    "time": "now",
+                    "operations": []
+                },
+                "date_created": {
+                    "type": "date",
+                    "path": "//span[@class='viewbull-header__actuality']/text()",
+                    "time": "from string",
+                    "operations": []
+                },
+                "title_name": {
+                    "type": "list to string",
+                    "path": "//h1[@class='subject viewbull-field__container']//span[@class='inplace auto-shy']//text()",
+                    "operations": []
+                },
+                "price_total": {
+                    "type": "float",
+                    "path": "(//span[@itemprop='price']/text())[1]",
+                    "operations": []
+                },
+                "appliances": {
+                    "type": "list to string",
+                    "path": "//td[@class='bulletinCell']//p[@data-field='realtyFurnitureAndHousehold']/text()",
+                    "operations": []
+                },
+                "description": {
+                    "type": "list to string",
+                    "path": "//p[@data-field='realtyFeature']/text()",
+                    "regex": "[а-яА-Яй0-9,.-]+",
+                    "operations": []
+                },
+                "currency": {
+                    "type": "string",
+                    "path": "(//span[@class='viewbull-summary-price__value']//i[contains(@class,'currency')]/text())[1]",
+                    "operations": []
+                },
+                "address_city": {
+                    "type": "string",
+                    "path": "//div[@class='popButton cityPop']/text()",
+                    "operations": []
+                },
+                "price_term":{
+                    "type":"string",
+                    "path":"//span[@class='viewbull-summary-price__quantity']/text()"
+                }
+            },
+            "follow": [
+                {
+                    "url_constructor": {
+                        "add_to_query": [
+                            {
+                                "paid": {
+                                    "type": "string",
+                                    "value": "1"
+                                }
+                            },
+                            {
+                                "ajax": {
+                                    "type": "string",
+                                    "value": "1"
+                                }
+                            }
+                        ],
+                        "insert": {
+                            "place_to_insert": {
+                                "type": "string",
+                                "path": "(//div[@id = 'fieldsetView']/@bulletinid)[1]"
+                            }
+                        }
+                    },
+                    "fields": {
+                        "phone": {
+                            "type": "phone",
+                            "path": "(//span[@class='phone']/text())"
+                        }
+                    },
+                    "headers": {
+                        "accept-language": {
+                            "type": "string",
+                            "value": "en-US,en;q=0.9"
+                        },
+                        "accept": {
+                            "type": "string",
+                            "value": "*/*"
+                        },
+                        "accept-encoding": {
+                            "type": "string",
+                            "value": "gzip, deflate, br"
+                        },
+                        "x-requested-with": {
+                            "type": "string",
+                            "value": "XMLHttpRequest"
+                        }
+                    },
+                    "methods": {
+                        "crawling_type": "common",
+                        "save_cookies":true,
+                        "content_type": "html",
+                        "filter_duplicates": false,
+                        "allowed_domains": [],
+                        "proxy_settings": {
+                            "types": [
+                                "https"
+                            ],
+                            "amount": 10000,
+                            "save": true
+                        }
+                    },
+                    "url": "https://www.farpost.ru/bulletin/place_to_insert/ajax_contacts"
+                }
+            ]
+        }
+    }
