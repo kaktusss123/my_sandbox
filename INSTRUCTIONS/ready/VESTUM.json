@@ -1,0 +1,460 @@
+{
+    "_task_id": "VESTUM",
+    "_start_urls": [
+                   "https://www.vestum.ru/продажа-коммерческой-недвижимости/",
+            "https://anapa.vestum.ru/продажа-коммерческой-недвижимости/",
+            "https://gelendzhik.vestum.ru/продажа-коммерческой-недвижимости/",
+            "https://ekaterinburg.vestum.ru/продажа-коммерческой-недвижимости/",
+            "https://krasnodar.vestum.ru/продажа-коммерческой-недвижимости/",
+            "https://nn.vestum.ru/продажа-коммерческой-недвижимости/",
+            "https://novorossiysk.vestum.ru/продажа-коммерческой-недвижимости/",
+            "https://nsk.vestum.ru/продажа-коммерческой-недвижимости/",
+            "https://rostov.vestum.ru/продажа-коммерческой-недвижимости/",
+"https://omsk.vestum.ru/продажа-коммерческой-недвижимости/",
+
+            "https://www.vestum.ru/купить-квартиру/",
+            "https://anapa.vestum.ru/купить-квартиру/",
+            "https://gelendzhik.vestum.ru/купить-квартиру/",
+            "https://ekaterinburg.vestum.ru/купить-квартиру/",
+            "https://krasnodar.vestum.ru/купить-квартиру/",
+            "https://nn.vestum.ru/купить-квартиру/",
+            "https://novorossiysk.vestum.ru/купить-квартиру/",
+            "https://nsk.vestum.ru/купить-квартиру/",
+            "https://rostov.vestum.ru/купить-квартиру/",
+"https://omsk.vestum.ru/купить-квартиру/",
+
+"https://www.vestum.ru/купить-дом/",
+            "https://anapa.vestum.ru/купить-дом/",
+            "https://gelendzhik.vestum.ru/купить-дом/",
+            "https://ekaterinburg.vestum.ru/купить-дом/",
+            "https://krasnodar.vestum.ru/купить-дом/",
+            "https://nn.vestum.ru/купить-дом/",
+            "https://novorossiysk.vestum.ru/купить-дом/",
+            "https://nsk.vestum.ru/купить-дом/",
+            "https://rostov.vestum.ru/купить-дом/",
+"https://omsk.vestum.ru/купить-дом/",
+
+"https://www.vestum.ru/купить-земельный-участок/",
+            "https://anapa.vestum.ru/купить-земельный-участок/",
+            "https://gelendzhik.vestum.ru/купить-земельный-участок/",
+            "https://ekaterinburg.vestum.ru/купить-земельный-участок/",
+            "https://krasnodar.vestum.ru/купить-земельный-участок/",
+            "https://nn.vestum.ru/купить-земельный-участок/",
+            "https://novorossiysk.vestum.ru/купить-земельный-участок/",
+            "https://nsk.vestum.ru/купить-земельный-участок/",
+            "https://rostov.vestum.ru/купить-земельный-участок/",
+"https://omsk.vestum.ru/купить-земельный-участок/",
+
+"https://www.vestum.ru/купить-гараж/",
+            "https://anapa.vestum.ru/купить-гараж/",
+            "https://gelendzhik.vestum.ru/купить-гараж/",
+            "https://ekaterinburg.vestum.ru/купить-гараж/",
+            "https://krasnodar.vestum.ru/купить-гараж/",
+            "https://nn.vestum.ru/купить-гараж/",
+            "https://novorossiysk.vestum.ru/купить-гараж/",
+            "https://nsk.vestum.ru/купить-гараж/",
+            "https://rostov.vestum.ru/купить-гараж/",
+"https://omsk.vestum.ru/купить-гараж/",
+
+"https://www.vestum.ru/снять-квартиру/",
+            "https://anapa.vestum.ru/снять-квартиру/",
+            "https://gelendzhik.vestum.ru/снять-квартиру/",
+            "https://ekaterinburg.vestum.ru/снять-квартиру/",
+            "https://krasnodar.vestum.ru/снять-квартиру/",
+            "https://nn.vestum.ru/снять-квартиру/",
+            "https://novorossiysk.vestum.ru/снять-квартиру/",
+            "https://nsk.vestum.ru/снять-квартиру/",
+            "https://rostov.vestum.ru/снять-квартиру/",
+"https://omsk.vestum.ru/снять-квартиру/",
+
+"https://www.vestum.ru/снять-дом/",
+            "https://anapa.vestum.ru/снять-дом/",
+            "https://gelendzhik.vestum.ru/снять-дом/",
+            "https://ekaterinburg.vestum.ru/снять-дом/",
+            "https://krasnodar.vestum.ru/снять-дом/",
+            "https://nn.vestum.ru/снять-дом/",
+            "https://novorossiysk.vestum.ru/снять-дом/",
+            "https://nsk.vestum.ru/снять-дом/",
+            "https://rostov.vestum.ru/снять-дом/",
+"https://omsk.vestum.ru/снять-дом/",
+
+"https://www.vestum.ru/аренда-коммерческой-недвижимости/",
+            "https://anapa.vestum.ru/аренда-коммерческой-недвижимости/",
+            "https://gelendzhik.vestum.ru/аренда-коммерческой-недвижимости/",
+            "https://ekaterinburg.vestum.ru/аренда-коммерческой-недвижимости/",
+            "https://krasnodar.vestum.ru/аренда-коммерческой-недвижимости/",
+            "https://nn.vestum.ru/аренда-коммерческой-недвижимости/",
+            "https://novorossiysk.vestum.ru/аренда-коммерческой-недвижимости/",
+            "https://nsk.vestum.ru/аренда-коммерческой-недвижимости/",
+            "https://rostov.vestum.ru/аренда-коммерческой-недвижимости/",
+"https://omsk.vestum.ru/аренда-коммерческой-недвижимости/"
+
+    ],
+    "_segment": "Коммерческая недвижимость",
+    "_operation": "",
+    "_federal_subject": "",
+    "_source": "VESTUM",
+    "global_settings": {
+        "CONCURRENT_REQUESTS": 512,
+        "SPLASH_URL": "http://0.0.0.0:8050",
+        "LOG_LEVEL": "INFO",
+        "AUTOTHROTTLE_ENABLED": true,
+        "AUTOTHROTTLE_START_DELAY": 1.0,
+        "AUTOTHROTTLE_MAX_DELAY": 5.0,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY": 512,
+        "CONCURRENT_REQUESTS_PER_DOMAIN": 512,
+        "RETRY_ENABLED": true,
+        "RETRY_HTTP_CODES": [500, 503, 504, 400, 403, 408, 429, 505, 404, 303, 302, 307, 410, 451],
+        "HTTPERROR_ALLOWED_CODES": [],
+        "RETRY_TIMES": 10,
+        "ROBOTSTXT_ENABLED": false,
+        "ROBOTSTXT_OBEY": false,
+        "REDIRECT_ENABLED": false,
+        "COOKIES_ENABLED": false,
+        "RANDOM_UA_TYPE": "random",
+        "DOWNLOAD_TIMEOUT": 60.0
+    },
+
+
+
+
+
+
+
+
+  "methods": {
+		"crawling_type": "common",
+		"allowed_domains": [],
+		"proxy_settings": {
+			"types": [
+				"https"
+			]
+		}
+	},
+	"crawl_tree": [{
+		"pagination_urls": {
+			"url_constructor": {
+				"generator": {
+					"page": {
+						"path": "//div[@class = 'catalog-counter']/text()",
+						"per_page": 20
+					}
+				}
+			},
+			"repeat": false
+		},
+		"item_urls": {
+			"path": "//a[contains(@itemprop, 'url')]/@href"
+		}
+	}],
+
+
+    "item_page": {
+        "methods": {
+            "crawling_type": "common",
+            "filter_duplicates": false,
+            "js": ""
+        },
+        "fields": {
+            "date_info": {
+                "type": "date",
+                "time": "now"
+            },
+			"title_name": {
+                "type": "string",
+                "path": "//h1[@itemprop='name']/text()"
+            },
+			"rooms_cnt": {
+                "type": "string",
+                "path": "//h1[@itemprop='name']/text()",
+				"regex": "\\d(?=-комн)|Студия|Комната|Апартамент"
+            },
+			"address": {
+                "type": "list to string",
+                "path": "//span[@class='address-link']/text()|//span[@class='address-link']/a/text()"
+            },
+			"intown_district": {
+                "type": "string",
+                "path": "(//span[@class='address-link']/text()|//span[@class='address-link']/a/text())[2]",
+				"regex": "(.+) район"
+			},
+			"operation": {
+                "type": "string",
+                "path": "(//span[@itemprop='itemListElement']//span[@itemprop='name']/text())[2]",
+				"regex": "Продажа|Купить|Снять|Аренда"
+			},
+			"seller_name": {
+                "type": "string",
+                "path": "//a[@class='seller-name']/text()|//span[@class='seller-name2']/text()"
+            },
+			"company_name": {
+                "type": "string",
+                "path": "//div[@class='seller-parent an']/span/text()|//div[@class='seller-parent an']/a/text()"
+            },
+			"phone": {
+                "type": "phone",
+                "path": "(//div[@class='button-like phone btn_call']/@data-phone)[1]"
+            },
+			"price_total": {
+                "type": "float",
+                "path": "(//span[@class='price-main']/text())[1]|(//div[@class='price-main'])[1]/text()"
+            },
+			"rent_price_per_area": {
+                "type": "float",
+                "path": "(//span[@class='price-metre']/text())[1]"
+            },
+			"price_term": {
+                "type": "string",
+                "path": "(//div[@class='price-main'])[1]/span/text()"
+            },
+			"description": {
+                "type": "list to string",
+                "path": "//div[@class='content-info']/text()|//details[@class='preview content-info']//text()"
+            },
+			"source_latitude":{
+				"type": "float",
+				"path":"//div[@id='map']/@data-center",
+				"regex": "^\\d+\\W?\\d+"
+			},
+			"source_longitude":{
+				"type": "float",
+				"path":"//div[@id='map']/@data-center",
+				"regex": "\\d+\\W?\\d+$"
+			}
+        },
+        "tables": {
+            "table_1": {
+                "_keys_path": "//td[@class='param']/text()|//td[@class='param sub_area']/text()",
+                "_vals_path": "//td[@class='value']/text()|//td[@class='value']/*/text()",
+                "key_converter": {
+					"актуально" : {
+                            "name" : "date_updated",
+                            "type" : "date",
+                            "time" : "from string"
+                        },
+					"безопасность" : {
+                            "name" : "in_save_object",
+                            "type" : "string"
+                        },
+					"вид_на_море" : {
+                            "name" : "is_view",
+                            "type" : "string"
+                        },
+					"всего_квартир" : {
+                            "name" : "cnt_apartments",
+                            "type" : "float"
+                        },
+					"класс" : {
+                            "name" : "object_class",
+                            "type" : "string"
+                        },
+					"лифт" : {
+                            "name" : "is_elevator",
+                            "type" : "string"
+                        },
+					"отделка" : {
+                            "name" : "decoration_type",
+                            "type" : "string"
+                        },
+					"парковка" : {
+                            "name" : "is_parking",
+                            "type" : "string"
+                        },
+					"плита" : {
+                            "name" : "is_owen",
+                            "type" : "string"
+                        },
+					"площадь_квартир" : {
+                            "name" : "apart_area_total",
+                            "type" : "string"
+                        },
+					"площадь_общая" : {
+                            "name" : "area_total",
+                            "type" : "float",
+							"regex" : "^\\d*\\W?\\d+"
+                        },
+					"просмотров" : {
+                            "name" : "none",
+                            "type" : "string",
+							"regex" : ""
+                        },
+					"размещено" : {
+                            "name" : "date_created",
+                            "type" : "date",
+                            "time" : "from string"
+                        },
+					"расстояние_до_моря" : {
+                            "name" : ["distance_sea","distance_sea_unit"],
+                            "type" : ["float", "string"],
+							"regex": ["\\d*\\W?\\d+","[А-Яа-я]+"]
+                        },
+					"санузел" : {
+                            "name" : "is_wc",
+                            "type" : "string"
+                        },
+					"состояние" : {
+                            "name" : "is_condition",
+                            "type" : "string"
+                        },
+					"срок_сдачи" : {
+                            "name" : "year_built",
+                            "type" : "float",
+							"regex": "\\d*\\W?\\d+"
+                        },
+					"статус" : {
+                            "name" : "segment",
+                            "type" : "string"
+                        },
+					"тип_здания" : {
+                            "name" : "building_type",
+                            "type" : "string"
+                        },
+					"этаж" : {
+                            "name" : ["floor", "floors_cnt"],
+                            "type" : ["float", "float"],
+							"regex" : ["^\\d+","^\\d+$"]
+                        },
+					"этажей" : {
+                            "name" : "floors_cnt",
+                            "type" : "float"
+                        },
+					"высота_потолков" : {
+                            "name" : "ceiling_height",
+                            "type" : "float",
+							"regex": "\\d*\\W?\\d+"
+                        },
+					"лоджия" : {
+                            "name" : "is_balcony",
+                            "type" : "string"
+                        },
+					"застройщик" : {
+                            "name" : "developer_name",
+                            "type" : "string"
+                        },
+					"класс_1" : {
+                            "name" : "none",
+                            "type" : "string"
+                        },
+					"класс_2" : {
+                            "name" : "none",
+                            "type" : "string"
+                        },
+					"жилая" : {
+                            "name" : "area_living",
+                            "type" : "float",
+							"regex": "^\\d*\\W?\\d+"
+                        },
+					"сейсмостойкость" : {
+                            "name" : "nan",
+                            "type" : "string",
+							"value": " "
+                        },
+					"балкон" : {
+                            "name" : "is_balcony",
+                            "type" : "string"
+                        },
+					"кухня" : {
+                            "name" : "kitchen_area",
+                            "type" : "float",
+							"regex": "^\\d*\\W?\\d+"
+                        },
+					"планировка" : {
+                            "name" : "layout_type",
+                            "type" : "string"
+                        },
+					"электричество" : {
+                            "name" : "is_electricity",
+                            "type" : "string"
+                        },
+					"целевое_назначение" : {
+                            "name" : "purpose",
+                            "type" : "string"
+                        },
+					"площадь_участка" : {
+                            "name" : ["land_area","area_land_unit"],
+                            "type" : ["float","string"],
+							"regex": ["^\\d*\\W?\\d+", "сот|га|гектар|соток|метров|километров"]
+                        },
+					"общая_площадь_дома" : {
+                            "name" : "area_total",
+                            "type" : "float",
+							"regex": "^\\d*\\W?\\d+"
+                        },
+					"водоснабжение" : {
+                            "name" : "is_plumbing",
+                            "type" : "string"
+                        },
+					"газ" : {
+                            "name" : "is_gas",
+                            "type" : "string"
+                        },
+					"год_постройки" : {
+                            "name" : "year_built",
+                            "type" : "float"
+                        },
+					"канализация" : {
+                            "name" : "is_sewage",
+                            "type" : "float"
+                        },
+					"всего_коттеджей" : {
+                            "name" : "nan",
+                            "value" : " "
+                        },
+					"генподрядчик" : {
+                            "name" : "nan",
+                            "value" : " "
+                        },
+					"площадь_коттеджей" : {
+                            "name" : "nan",
+                            "value" : " "
+                        },
+					"вид_права" : {
+                            "name" : "owner_type",
+                            "type" : "string"
+                        },
+					"общая_площадь" : {
+                            "name" : "area_total",
+                            "type" : "float",
+							"regex": "^\\d*\\W?\\d+"
+                        },
+					"интернет" : {
+                            "name" : "is_internet",
+                            "type" : "string"
+                        },
+					"комнат__номеров" : {
+                            "name" : "rooms_cnt",
+                            "type" : "float",
+							"regex": "^\\d*\\W?\\d+"
+                        },
+					"право_на_землю" : {
+                            "name" : "land_ownership",
+                            "type" : "string"
+                        },
+					"телефон" : {
+                            "name" : "is_phone",
+                            "type" : "string"
+                        },
+					"разрешительные_документы" : {
+                            "name" : "is_documents",
+                            "type" : "string"
+                        },
+					"бассейн":  {
+						"name": "is_swimming_pool",
+						"type" : "string"
+						},
+					"отопление":  {
+						"name": "heating_system_type",
+						"type" : "string"
+						},
+					"баня__сауна":  {
+						"name": "is_bathhouse",
+						"type" : "string"
+						}
+					}
+                }
+            }
+        }
+    }
+
+
+
