@@ -1,4 +1,4 @@
-﻿{
+﻿{  "_comment":"обновить у Антона",
     "_task_id": "TORGI",
     "_start_urls": [
         "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=2&publishDateFrom=20190101T0000&publishDateTo=20190601T0000"
