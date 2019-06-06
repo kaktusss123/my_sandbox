@@ -635,7 +635,9 @@
                 505,
                 303,
                 302,
-                301
+                301,
+                404,
+                407
             ],
             "HTTPERROR_ALLOWED_CODES": [],
             "RETRY_TIMES": 40,
