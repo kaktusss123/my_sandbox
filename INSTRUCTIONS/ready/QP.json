@@ -1,0 +1,448 @@
+{
+        "_task_id": "0000-0005-0279&T0118&1_DEBUG_2",
+        "_start_urls": [
+            "https://adygeya.qp.ru/realty/prodau_kommercheskaja",
+            "https://adygeya.qp.ru/realty/sdau_kommercheskaja",
+            "https://aksha.qp.ru/realty/prodau_kommercheskaja",
+            "https://aksha.qp.ru/realty/sdau_kommercheskaja",
+            "https://altaj.qp.ru/realty/prodau_kommercheskaja",
+            "https://altaj.qp.ru/realty/sdau_kommercheskaja",
+            "https://altajskij.qp.ru/realty/prodau_kommercheskaja",
+            "https://altajskij.qp.ru/realty/sdau_kommercheskaja",
+            "https://amurskaya-oblast.qp.ru/realty/prodau_kommercheskaja",
+            "https://amurskaya-oblast.qp.ru/realty/sdau_kommercheskaja",
+            "https://arhangelskaya-oblast.qp.ru/realty/prodau_kommercheskaja",
+            "https://arhangelskaya-oblast.qp.ru/realty/sdau_kommercheskaja",
+            "https://astrahanskaya-oblast.qp.ru/realty/prodau_kommercheskaja",
+            "https://astrahanskaya-oblast.qp.ru/realty/sdau_kommercheskaja",
+            "https://bashkortostan.qp.ru/realty/prodau_kommercheskaja",
+            "https://bashkortostan.qp.ru/realty/sdau_kommercheskaja",
+            "https://belgorodskaya-oblast.qp.ru/realty/prodau_kommercheskaja",
+            "https://belgorodskaya-oblast.qp.ru/realty/sdau_kommercheskaja",
+            "https://bryanskaya-oblast.qp.ru/realty/prodau_kommercheskaja",
+            "https://bryanskaya-oblast.qp.ru/realty/sdau_kommercheskaja",
+            "https://buryatiya.qp.ru/realty/prodau_kommercheskaja",
+            "https://buryatiya.qp.ru/realty/sdau_kommercheskaja",
+            "https://chechenskaya-respublika.qp.ru/realty/prodau_kommercheskaja",
+            "https://chechenskaya-respublika.qp.ru/realty/sdau_kommercheskaja",
+            "https://chelyabinskaya-oblast.qp.ru/realty/prodau_kommercheskaja",
+            "https://chelyabinskaya-oblast.qp.ru/realty/sdau_kommercheskaja",
+            "https://chukotskij.qp.ru/realty/prodau_kommercheskaja",
+            "https://chukotskij.qp.ru/realty/sdau_kommercheskaja",
+            "https://chuvashskaya-respublika.qp.ru/realty/prodau_kommercheskaja",
+            "https://chuvashskaya-respublika.qp.ru/realty/sdau_kommercheskaja",
+            "https://dagestan.qp.ru/realty/prodau_kommercheskaja",
+            "https://dagestan.qp.ru/realty/sdau_kommercheskaja",
+            "https://evrejskaya.qp.ru/realty/prodau_kommercheskaja",
+            "https://evrejskaya.qp.ru/realty/sdau_kommercheskaja",
+            "https://ingushetiya.qp.ru/realty/prodau_kommercheskaja",
+            "https://ingushetiya.qp.ru/realty/sdau_kommercheskaja",
+            "https://irkutskaya-oblast.qp.ru/realty/prodau_kommercheskaja",
+            "https://irkutskaya-oblast.qp.ru/realty/sdau_kommercheskaja",
+            "https://ivanovskaya-oblast.qp.ru/realty/prodau_kommercheskaja",
+            "https://ivanovskaya-oblast.qp.ru/realty/sdau_kommercheskaja",
+            "https://izmalkovo.qp.ru/realty/prodau_kommercheskaja",
+            "https://izmalkovo.qp.ru/realty/sdau_kommercheskaja"
+        ],
+        "_segment": "Коммерческая Недвижимость",
+        "_operation": "",
+        "_federal_subject": "",
+        "_source": "http://vologda.qp.ru",
+        "project_id": "metaspider",
+        "spider_id": "metacrawler",
+        "global_settings": {
+            "CONCURRENT_REQUESTS": 512,
+            "SPLASH_URL": "http://0.0.0.0:8050",
+            "LOG_LEVEL": "INFO",
+            "AUTOTHROTTLE_ENABLED": true,
+            "AUTOTHROTTLE_START_DELAY": 1,
+            "AUTOTHROTTLE_MAX_DELAY": 60,
+            "AUTOTHROTTLE_TARGET_CONCURRENCY": 512,
+            "CONCURRENT_REQUESTS_PER_DOMAIN": 512,
+            "RETRY_ENABLED": true,
+            "RETRY_HTTP_CODES": [
+                500,
+                503,
+                504,
+                400,
+                403,
+                408,
+                429,
+                505,
+                404,
+                303,
+                307,
+                410,
+                451
+            ],
+            "HTTPERROR_ALLOWED_CODES": [],
+            "RETRY_TIMES": 30,
+            "ROBOTSTXT_ENABLED": false,
+            "ROBOTSTXT_OBEY": false,
+            "REDIRECT_ENABLED": true,
+            "COOKIES_ENABLED": true,
+            "DOWNLOAD_FAIL_ON_DATALOSS": true,
+            "RANDOM_UA_TYPE": "random",
+            "DOWNLOAD_TIMEOUT": 60,
+            "CLOSESPIDER_ITEMCOUNT": 0,
+            "CLOSESPIDER_ERRORCOUNT": 0
+        },
+        "methods": {
+            "crawling_type": "common",
+            "allowed_domains": [],
+            "proxy_settings": {
+                "types": [
+                    "https"
+                ],
+                "amount": 10000,
+                "save": false
+            },
+            "save_cookies": true
+        },
+        "crawl_tree": [
+            {
+                "pagination_urls": {
+                    "path": "(//li[@class='active page-item']/following-sibling::li[1]/a/@href)[1]",
+                    "methods": {
+                        "crawling_type": "common",
+                        "allowed_domains": [],
+                        "proxy_settings": {
+                            "types": [
+                                "https"
+                            ],
+                            "amount": 10000,
+                            "save": true
+                        },
+                        "save_cookies": true
+                    }
+                },
+                "item_urls": {
+                    "path": "//article[contains(@class,'adoc-item')]/a/@href",
+                    "methods": {
+                        "crawling_type": "common",
+                        "allowed_domains": [],
+                        "proxy_settings": {
+                            "types": [
+                                "https"
+                            ],
+                            "amount": 10000,
+                            "save": false
+                        },
+                        "save_cookies": true
+                    }
+                }
+            }
+        ],
+        "item_page": {
+            "fields": {
+                "segment": {
+                    "type": "string",
+                    "path": "//li[@class='breadcrumb-item'][3]/a/text()",
+                    "operations": []
+                },
+                "price_term": {
+                    "type": "string",
+                    "path": "//div[@class='btn-group price-dropdown js-dropdown-openhover']//button[@type='button']/text()[normalize-space()][2]",
+                    "operations": []
+                },
+                "phone": {
+                    "type": "phone",
+                    "path": "//div[@class='manger-info--phone']//text()",
+                    "operations": []
+                },
+                "source_latitude": {
+                    "type": "string",
+                    "path": "//div[@class='map hidden-print']//@data-placemark",
+                    "regex": "\\[(.+),",
+                    "operations": []
+                },
+                "price_currency": {
+                    "type": "string",
+                    "value": "RUB",
+                    "operations": []
+                },
+                "source_longitude": {
+                    "type": "string",
+                    "path": "//div[@class='map hidden-print']//@data-placemark",
+                    "regex": ",(.+)\\]",
+                    "operations": []
+                },
+                "seller_name": {
+                    "type": "string",
+                    "path": "(//div[@class='contacts-table']//div[@class='contact-row-data']//div)[1]/text()",
+                    "operations": []
+                },
+                "date_info": {
+                    "type": "date",
+                    "time": "now",
+                    "operations": []
+                },
+                "operation": {
+                    "type": "string",
+                    "path": "//li[@class='breadcrumb-item'][3]/a/text()",
+                    "operations": []
+                },
+                "date_created": {
+                    "type": "date",
+                    "path": "//div[@class='date-view d-inline-block mt-1 hidden-print']//span[@title='Дата публикации']/text()[normalize-space()]",
+                    "time": "from string",
+                    "operations": []
+                },
+                "title_name": {
+                    "type": "string",
+                    "path": "//h1[@class='h1-responsive']//text()",
+                    "operations": []
+                },
+                "email": {
+                    "type": "string",
+                    "path": "//div[@class='contacts-table']//div[@class='contact-row-data']//a[@class='link-black']/text()",
+                    "operations": []
+                },
+                "price_total": {
+                    "type": "float",
+                    "path": "//div[@class='btn-group price-dropdown js-dropdown-openhover']//button[@type='button']/text()[normalize-space()]",
+                    "regex": "\\d*",
+                    "operations": []
+                },
+                "federal_subject": {
+                    "type": "string",
+                    "path": "//a[@class='nav-link btn-region float-left jsc-region-selector']/text()",
+                    "operations": []
+                },
+                "description": {
+                    "type": "list to string",
+                    "path": "//p[@class='paragraph']/text()",
+                    "operations": []
+                }
+            },
+            "tables": {
+                "table_1": {
+                    "_keys_path": "//div[@class='params']//div[@class='control-label']/span/text()",
+                    "_vals_path": "//div[@class='control-label']/following-sibling::div/text()[normalize-space()]|//div[@class='control-label']/following-sibling::div/a/text()[normalize-space()]|//div[@class='control-label']/following-sibling::div/p[1]",
+                    "key_converter": {
+                        "условия": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "тип_дома": {
+                            "type": "string",
+                            "name": "wall_material"
+                        },
+                        "арендодатель": {
+                            "type": "string",
+                            "name": "company_name"
+                        },
+                        "этаж": {
+                            "type": "float",
+                            "name": "floor",
+                            "regex": "^\\d+"
+                        },
+                        "регион": {
+                            "type": "string",
+                            "name": "reference_point"
+                        },
+                        "доп_оплата": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "объект": {
+                            "type": "string",
+                            "name": "building_type"
+                        },
+                        "планировка": {
+                            "type": "string",
+                            "name": "layout_type"
+                        },
+                        "площадь_комнаты": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "площадь_участка": {
+                            "type": [
+                                "float",
+                                "string"
+                            ],
+                            "name": [
+                                "land_area",
+                                "area_land_unit"
+                            ],
+                            "regex": [
+                                "\\d*\\W?\\d+",
+                                "[А-Яа-я]+"
+                            ]
+                        },
+                        "номер_дома": {
+                            "type": "string",
+                            "name": "house_number"
+                        },
+                        "назначение": {
+                            "type": "string",
+                            "name": "purpose"
+                        },
+                        "состояние": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "этажность_дома": {
+                            "type": "float",
+                            "name": "floors_cnt",
+                            "regex": "^\\d+"
+                        },
+                        "жилая_площадь": {
+                            "type": "float",
+                            "name": "area_living",
+                            "regex": "\\d*\\W?\\d+"
+                        },
+                        "район_города": {
+                            "type": "string",
+                            "name": "intown_district"
+                        },
+                        "использование": {
+                            "type": "string",
+                            "name": "purpose"
+                        },
+                        "населённый_пункт": {
+                            "type": "string",
+                            "name": "address_city"
+                        },
+                        "год_постройки_дома": {
+                            "type": "float",
+                            "name": "year_built",
+                            "regex": "^\\d*"
+                        },
+                        "этажность": {
+                            "type": "float",
+                            "name": "floors_cnt",
+                            "regex": "^\\d+"
+                        },
+                        "улица": {
+                            "type": "string",
+                            "name": "street_name"
+                        },
+                        "корпус": {
+                            "type": "string",
+                            "name": "address_korpus"
+                        },
+                        "общая_площадь": {
+                            "type": "float",
+                            "name": "area_total",
+                            "regex": "\\d*\\W?\\d+"
+                        },
+                        "срок_аренды": {
+                            "type": "string",
+                            "name": "rent_term"
+                        },
+                        "площадь_кухни": {
+                            "type": "float",
+                            "name": "kitchen_area",
+                            "regex": "\\d*\\W?\\d+"
+                        },
+                        "информация_о_доме": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "в_квартире": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "продавец": {
+                            "type": "string",
+                            "name": "seller_type"
+                        },
+                        "дополнительно": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "площадь": {
+                            "type": [
+                                "float",
+                                "string"
+                            ],
+                            "name": [
+                                "area_total",
+                                "area_unit"
+                            ],
+                            "regex": [
+                                "\\d*\\W?\\d+",
+                                "[А-Яа-я]+"
+                            ]
+                        },
+                        "количество_комнат": {
+                            "type": "float",
+                            "name": "rooms_cnt",
+                            "regex": "\\d*\\W?\\d+"
+                        },
+                        "санузел": {
+                            "type": "string",
+                            "name": "is_wc"
+                        },
+                        "ремонт": {
+                            "type": "string",
+                            "name": "decoration_type"
+                        },
+                        "балкон": {
+                            "type": "string",
+                            "name": "is_balcony"
+                        },
+                        "балкон__лоджия": {
+                            "type": "string",
+                            "name": "is_balcony"
+                        },
+                        "станция_метро": {
+                            "type": "string",
+                            "name": "metro_station"
+                        },
+                        "категория_земель": {
+                            "type": "string",
+                            "name": "land_category"
+                        },
+                        "минут_до_метро": {
+                            "type": "string",
+                            "name": "metro_minutes"
+                        }
+                    }
+                }
+            },
+            "follow": [
+                {
+                    "url_constructor": {
+                        "add_to_query": [
+                            {
+                                "id": {
+                                    "type": "string",
+                                    "path": "//input[@name='AdvertId']/@value"
+                                }
+                            },
+                            {
+                                "datatype": {
+                                    "type": "string",
+                                    "value": "json"
+                                }
+                            }
+                        ]
+                    },
+                    "fields": {
+                        "phone": {
+                            "type": "phone",
+                            "path": "phones"
+                        }
+                    },
+                    "methods": {
+                        "crawling_type": "common",
+                        "content_type": "json",
+                        "filter_duplicates": false,
+                        "allowed_domains": [],
+                        "proxy_settings": {
+                            "types": [
+                                "https"
+                            ],
+                            "amount": 10000,
+                            "save": true
+                        },
+                        "save_cookies": true
+                    },
+                    "url": "https://qp.ru/viewadvert/ShowPhones"
+                }
+            ]
+        }
+    }
