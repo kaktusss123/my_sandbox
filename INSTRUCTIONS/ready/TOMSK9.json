@@ -1,0 +1,143 @@
+{
+	"_task_id": "Tomsk9",
+	"_start_urls": ["https://www.tomsk.ru09.ru/realty/?type=1&otype=3",
+		"https://www.tomsk.ru09.ru/realty/?type=2&otype=3"
+	],
+	"_segment": "",
+	"_operation": "",
+	"_federal_subject": "Томская область",
+	"_source": "moyareklama.ru",
+	"global_settings": {
+		"CONCURRENT_REQUESTS": 256,
+		"DOWNLOAD_TIMEOUT": 60,
+		"SPLASH_URL": "http://0.0.0.0:8050",
+		"LOG_LEVEL": "INFO",
+		"AUTOTHROTTLE_ENABLED": false,
+		"AUTOTHROTTLE_START_DELAY": 1.0,
+		"AUTOTHROTTLE_MAX_DELAY": 60,
+		"AUTOTHROTTLE_TARGET_CONCURRENCY": 256,
+		"HTTPERROR_ALLOWED_CODES": [],
+		"CONCURRENT_REQUESTS_PER_DOMAIN": 256,
+		"RETRY_ENABLED": true,
+		"RETRY_HTTP_CODES": [
+			500,
+			503,
+			502,
+			504,
+			400,
+			403,
+			408,
+			429,
+			505,
+			303,
+			302,
+			301,
+            404,
+            307,
+            410,
+            502,
+            451
+		],
+		"RETRY_TIMES": 20,
+		"ROBOTSTXT_ENABLED": false,
+		"ROBOTSTXT_OBEY": false,
+		"REDIRECT_ENABLED": false,
+		"COOKIES_ENABLED": false,
+		"RANDOM_UA_TYPE": "random"
+	},
+
+	"methods": {
+		"crawling_type": "common",
+		"allowed_domains": [],
+		"proxy_settings": {
+			"types": [
+				"https"
+			]
+		}
+	},
+	"crawl_tree": [
+           {
+               "pagination_urls": {
+                       "path":"//span[@class = 'current']/following-sibling::a[1]/@href"
+               },
+               "item_urls": {
+                       "path": "//a[@class = 'visited_ads']/@href"
+               }
+           }],
+"item_page": {
+		"fields": {
+			"federal_subject": {
+				"type": "string",
+				"value": "Томская обл"
+			},
+
+			"title_name": {
+				"type": "string",
+				"path": "(//td[@class ='tableh1']/h3/text())[1]"
+			},
+			"date_info": {
+				"type": "date",
+				"time": "now"
+			},
+			"date_created": {
+				"type": "date",
+				"path": "//td[contains(., 'публиковано')]/following-sibling::td/@tooltip",
+				"time": "from string"
+
+			},
+
+			"description": {
+				"type": "list to string",
+				"path": "//td[@style  = 'padding-top:8px;']/text()"
+			},
+			"phone": {
+				"type": "phone",
+				"path": "(//td[contains(., 'Телефон')]/following-sibling::td/text())[3]"
+
+			},
+			"floor": {
+				"type": "string",
+				"path": "//th[contains(., 'Этаж/этажность')]/following-sibling::td/text()",
+				"regex": "\\S+(?=\/)"
+			},
+			"floors_cnt": {
+				"type": "string",
+				"path": "//th[contains(., 'Этажность')]/following-sibling::td/text()",
+				"regex": "(?<=\/)\\d+"
+			},
+			"price_total": {
+				"type": "float",
+				"path": "(//div[@class  = 'realty_detail_price inline']/text())[1]",
+				"regex": "\\d+"
+			},
+			"area_total": {
+						"type": "float",
+						"regex": "\\d+[\\,\\.]{0,1}\\d{1,100}(?= кв.м)",
+						"path": "//th[contains(., 'лощадь')]/following-sibling::td//text()"
+			},
+			"address": {
+						"type": "string",
+						"path": "(//a[@tooltip = 'Показать на карте']/text())[1]"
+			},
+			"operation": {
+				"type": "string",
+				"path": "(//td[@class ='tableh1']/h3/text())[1]"
+			},
+			"wall_material": {
+				"type": "string",
+				"path": "//th[contains(., 'Материал')]/following-sibling::td/text()"
+			},
+			"seller_name": {
+				"type": "string",
+				"path": "//td[contains(., 'лицо')]/following-sibling::td/text()"
+
+			},
+			"purpose": {
+				"type": "string",
+				"path": "//th[contains(., 'объект')]/following-sibling::td/text()"
+			}
+		}
+				}
+			}
+
+
