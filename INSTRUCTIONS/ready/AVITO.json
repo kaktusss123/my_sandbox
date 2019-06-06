@@ -25997,6 +25997,11 @@
                         "path": "//a[contains(@href,'tel:')]/@href"
                     }
                 },
+                "headers": {
+                    "User-Agent": {
+                        "type": "string", "value": "false"
+                    }
+                },
                 "methods": {
                     "crawling_type": "common",
                     "filter_duplicates": false,
