@@ -1235,7 +1235,9 @@
       303,
       307,
       410,
-      451
+      451,
+      407,
+      502
     ],
     "HTTPERROR_ALLOWED_CODES": [],
     "RETRY_TIMES": 30,
@@ -1243,7 +1245,7 @@
     "ROBOTSTXT_OBEY": false,
     "REDIRECT_ENABLED": true,
     "COOKIES_ENABLED": true,
-    "DOWNLOAD_FAIL_ON_DATALOSS": true,
+    "DOWNLOAD_FAIL_ON_DATALOSS": false,
     "RANDOM_UA_TYPE": "random",
     "DOWNLOAD_TIMEOUT": 60,
     "CLOSESPIDER_ITEMCOUNT": 0,
