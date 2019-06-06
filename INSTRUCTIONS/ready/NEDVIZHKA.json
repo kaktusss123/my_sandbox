@@ -705,7 +705,8 @@
                 410,
                 451,
                 407,
-                434
+                434,
+                401
             ],
             "HTTPERROR_ALLOWED_CODES": [],
             "RETRY_TIMES": 20,
