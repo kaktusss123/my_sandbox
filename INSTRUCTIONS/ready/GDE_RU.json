@@ -148,7 +148,7 @@
         "crawl_tree": [
             {
                 "pagination_urls": {
-                    "path": "//li[@class='page active']/following-sibling::li[1]/a/@href",
+                    "path": "//li[@class='page active']/following-sibling::li[@class='page'][1]/a/@href",
                     "methods": {
                         "crawling_type": "common",
                         "allowed_domains": [],
@@ -255,7 +255,7 @@
                     "fields": {
                         "phone": {
                             "type": "phone",
-                            "path":"//a[@class='tel']/@href"
+                            "path": "//a[@class='tel']/@href"
                         }
                     },
                     "headers": {
