@@ -11,7 +11,7 @@
         "CONCURRENT_REQUESTS": 200,
         "DOWNLOAD_TIMEOUT": 600,
         "SPLASH_URL": "http://0.0.0.0:8050",
-        "LOG_LEVEL": "DEBUG",
+        "LOG_LEVEL": "INFO",
         "AUTOTHROTTLE_ENABLED": false,
         "AUTOTHROTTLE_START_DELAY": 1.0,
         "AUTOTHROTTLE_MAX_DELAY": 60,
