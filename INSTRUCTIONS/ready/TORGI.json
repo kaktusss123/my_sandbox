@@ -30,7 +30,9 @@
             505,
             404,
             302,
-            303
+            303,
+            502,
+            407
         ],
         "RETRY_TIMES": 100,
         "ROBOTSTXT_ENABLED": false,
