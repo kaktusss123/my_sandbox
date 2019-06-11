@@ -228,7 +228,7 @@
                 "save": false
             },
             "save_cookies": true,
-            "filter_duplicates": true,
+            "filter_duplicates": true
         },
         "crawl_tree": [
             {
