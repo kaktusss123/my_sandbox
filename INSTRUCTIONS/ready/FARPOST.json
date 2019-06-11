@@ -227,7 +227,8 @@
                 "amount": 10000,
                 "save": false
             },
-            "save_cookies": true
+            "save_cookies": true,
+            "filter_duplicates": true,
         },
         "crawl_tree": [
             {
