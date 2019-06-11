@@ -1,7 +1,4 @@
 {
-    "_id": ObjectID("5cff7e536a8903002e9f7c49"),
-    "time": ISODate("2019-06-11T10:11:31.719Z"),
-    "task": {
         "_task_id": "QP_DEBUG_30",
         "_start_urls": [
             "https://bryanskaya-oblast.qp.ru/realty/prodau_kommercheskaja",
