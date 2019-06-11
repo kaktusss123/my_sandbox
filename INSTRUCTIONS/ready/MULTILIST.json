@@ -1,5 +1,5 @@
-{
-        "_task_id": "0000-0005-0283&T0118&1_DEBUG_71",
+ {       "_comment":"устранен небезопасный переход на след страницу",
+        "_task_id": "0000-0005-0283&T0118&1_DEBUG_81",
         "_start_urls": [
             "https://multilisting.su/ao-chukotskiy/for-rent-commerce",
             "https://multilisting.su/ao-chukotskiy/sale-commerce",
@@ -236,7 +236,7 @@
         "crawl_tree": [
             {
                 "pagination_urls": {
-                    "path": "(//li[@class = 'disabled'])[1]/following-sibling::li[1]/a/@href"
+                    "path": "//li[@class = 'disabled'][last()]/following-sibling::li[1]/a/@href"
                 },
                 "item_urls": {
                     "path": "//a[@class = 'header_adv_short']/@href"
