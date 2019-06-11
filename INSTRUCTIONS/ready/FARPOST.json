@@ -1,5 +1,4 @@
- {      "_comment":"исправлен метод follow (надо протестить отработчик капчи), обавлен город региона, дообавлен период платежа и размерность платежа",
-        "_task_id": "0000-0005-0274&T0118&1_DEBUG_999999",
+{ "_task_id": "0000-0005-0274&T0118&1_DEBUG_999889",
         "_start_urls": [
             "https://www.farpost.ru/adygeya-resp/realty/rent_business_realty/",
             "https://www.farpost.ru/adygeya-resp/realty/sell_business_realty/",
@@ -210,7 +209,7 @@
             "RETRY_TIMES": 20,
             "ROBOTSTXT_ENABLED": false,
             "ROBOTSTXT_OBEY": false,
-            "REDIRECT_ENABLED": false,
+            "REDIRECT_ENABLED": true,
             "COOKIES_ENABLED": true,
             "DOWNLOAD_FAIL_ON_DATALOSS": false,
             "RANDOM_UA_TYPE": "random",
@@ -227,19 +226,16 @@
                 ],
                 "amount": 10000,
                 "save": false
-            }
+            },
+            "save_cookies": true
         },
         "crawl_tree": [
             {
                 "pagination_urls": {
-                    "url_constructor": {},
-                    "repeat": false
+                    "path": "//link[@rel='next'][//div[@class='filtersStatus']]/@href"
                 },
                 "item_urls": {
-                    "path": "//a[@class = 'bulletinLink auto-shy']/@href",
-                    "methods": {
-                        "save_cookies":true
-                    }
+                    "path": "//a[@class = 'bulletinLink auto-shy']/@href"
                 }
             }
         ],
@@ -250,9 +246,10 @@
                     "path": "(//span[@itemprop = 'name']/text())[last()]",
                     "operations": []
                 },
-                "federal_subject":{
-                    "type":"string",
-                    "path":"//div[@class='popButton cityPop']/text()"
+                "federal_subject": {
+                    "type": "string",
+                    "path": "//div[@class='popButton cityPop']/text()",
+                    "operations": []
                 },
                 "detail": {
                     "type": "list to string",
@@ -325,9 +322,10 @@
                     "path": "//div[@class='popButton cityPop']/text()",
                     "operations": []
                 },
-                "price_term":{
-                    "type":"string",
-                    "path":"//span[@class='viewbull-summary-price__quantity']/text()"
+                "price_term": {
+                    "type": "string",
+                    "path": "//span[@class='viewbull-summary-price__quantity']/text()",
+                    "operations": []
                 }
             },
             "follow": [
@@ -380,7 +378,6 @@
                     },
                     "methods": {
                         "crawling_type": "common",
-                        "save_cookies":true,
                         "content_type": "html",
                         "filter_duplicates": false,
                         "allowed_domains": [],
@@ -390,7 +387,8 @@
                             ],
                             "amount": 10000,
                             "save": true
-                        }
+                        },
+                        "save_cookies": true
                     },
                     "url": "https://www.farpost.ru/bulletin/place_to_insert/ajax_contacts"
                 }
