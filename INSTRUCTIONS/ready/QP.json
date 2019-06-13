@@ -1,14 +1,14 @@
 {
-        "_task_id": "QP_DEBUG_30",
+        "_task_id": "QP_COOKIES_3",
         "_start_urls": [
             "https://bryanskaya-oblast.qp.ru/realty/prodau_kommercheskaja",
             "https://bryanskaya-oblast.qp.ru/realty/sdau_kommercheskaja",
             "https://bryanskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
             "https://bryanskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
-            "https://qp.ru/realty/prodau_kommercheskaja",
-            "https://qp.ru/realty/sdau_kommercheskaja",
-            "https://qp.ru/realty/prodau_zemelnye-uchastki",
-            "https://qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://moskva.qp.ru/realty/prodau_kommercheskaja",
+            "https://moskva.qp.ru/realty/sdau_kommercheskaja",
+            "https://moskva.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://moskva.qp.ru/realty/sdau_zemelnye-uchastki",
             "https://leningradskaya-oblast.qp.ru/realty/prodau_kommercheskaja",
             "https://leningradskaya-oblast.qp.ru/realty/sdau_kommercheskaja",
             "https://leningradskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
@@ -345,14 +345,14 @@
         "project_id": "metaspider",
         "spider_id": "metacrawler",
         "global_settings": {
-            "CONCURRENT_REQUESTS": 256,
+            "CONCURRENT_REQUESTS": 1024,
             "SPLASH_URL": "http://0.0.0.0:8050",
             "LOG_LEVEL": "INFO",
             "AUTOTHROTTLE_ENABLED": true,
-            "AUTOTHROTTLE_START_DELAY": 5,
+            "AUTOTHROTTLE_START_DELAY": 1,
             "AUTOTHROTTLE_MAX_DELAY": 60,
-            "AUTOTHROTTLE_TARGET_CONCURRENCY": 256,
-            "CONCURRENT_REQUESTS_PER_DOMAIN": 256,
+            "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+            "CONCURRENT_REQUESTS_PER_DOMAIN": 512,
             "RETRY_ENABLED": true,
             "RETRY_HTTP_CODES": [
                 500,
@@ -385,6 +385,7 @@
         },
         "methods": {
             "crawling_type": "common",
+            "filter_duplicates": true,
             "allowed_domains": [],
             "proxy_settings": {
                 "types": [
@@ -393,8 +394,7 @@
                 "amount": 10000,
                 "save": false
             },
-            "save_cookies": true,
-            "filter_duplicates": true
+            "save_cookies": true
         },
         "crawl_tree": [
             {
