@@ -25852,7 +25852,7 @@
             },
             "date_created": {
                 "type": "date",
-                "path": "//div[@class='title-info-metadata-item']/text()",
+                "path": "//div[@class='title-info-metadata-item-redesign']/text()",
                 "time": "from string",
                 "regex": "размещено(.+)",
                 "operations": []
