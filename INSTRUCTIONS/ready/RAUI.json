@@ -1,4 +1,4 @@
-﻿{
+﻿﻿{
   "_task_id": "RAUI_test_1",
   "_start_urls": [
     "https://raui.ru/snyat-kvartiru/moskva?per_page=50",
@@ -1013,7 +1013,7 @@
             "path": "contacts.phones"
         }
       },
-         "headers": {"x-requested-with": "XMLHttpRequest"}
+         "headers": {"x-requested-with": {"type": "string", "value": "XMLHttpRequest"}}
     }
   ]
   }
