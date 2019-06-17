@@ -1,7 +1,6 @@
-﻿{
-  "_task_id": "XXXX_MOVE_COMMERCIAL_MO",
+﻿﻿{
+  "_task_id": "XXXX_DEBUG_JUNE_17",
   "_start_urls": [
-    "https://move.ru/objects/moskovskaya_oblast_gorod_mytischi_gorodskoy_okrug_mytischi_rayon_shosse_volkovskoe_d_39_6818085539/",
     "https://move.ru/arenda_domov/?limit=100",
     "https://move.ru/arenda_garazhey/?limit=100",
     "https://move.ru/arenda_kommercheskoy_nedvizhimosti/arenda_gostinic/?limit=100",
@@ -1862,16 +1861,7 @@
     }
   },
   "crawl_tree": [
-    {"pagination_urls":
-      {"url_constructor": {
-        "generator": {
-          "page": {
-            "path": "string(//p[@class='hidden-max-600'])",
-            "per_page": 100
-          }
-        }
-      },
-      "repeat": false},
+    {"pagination_urls":{"path":"//li[contains(@class, 'list-item active')][1]/following-sibling::li/a/@href"}},
     "item_urls": {"path": "(//div[@class='enshrined-items'])[1]/following-sibling::div/div[@class='search-item__header']/a/@href"}}
   ],
   "item_page": {
