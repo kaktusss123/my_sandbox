@@ -1,5 +1,5 @@
-﻿﻿{
-  "_task_id": "XXXX_DEBUG_JUNE_17",
+﻿{
+  "_task_id": "XXXX_DEBUG_JUNE_17_1",
   "_start_urls": [
     "https://move.ru/arenda_domov/?limit=100",
     "https://move.ru/arenda_garazhey/?limit=100",
@@ -22,7 +22,6 @@
     "https://move.ru/kommercheskaya_nedvijimost/prodazha_proizvodstvennih_pomescheniy/?limit=100",
     "https://move.ru/kommercheskaya_nedvijimost/prodazha_skladov/?limit=100",
     "https://move.ru/prodazha_domov/?limit=100",
-
     "https://move.ru/moskovskaya_oblast/arenda_domov/?limit=100",
     "https://move.ru/moskovskaya_oblast/arenda_garazhey/?limit=100",
     "https://move.ru/moskovskaya_oblast/arenda_kommercheskoy_nedvizhimosti/arenda_gostinic/?limit=100",
@@ -44,7 +43,6 @@
     "https://move.ru/moskovskaya_oblast/kommercheskaya_nedvijimost/prodazha_proizvodstvennih_pomescheniy/?limit=100",
     "https://move.ru/moskovskaya_oblast/kommercheskaya_nedvijimost/prodazha_skladov/?limit=100",
     "https://move.ru/moskovskaya_oblast/prodazha_domov/?limit=100",
-
     "https://spb.move.ru/arenda_domov/?limit=100",
     "https://spb.move.ru/arenda_garazhey/?limit=100",
     "https://spb.move.ru/arenda_kommercheskoy_nedvizhimosti/arenda_gostinic/?limit=100",
@@ -66,7 +64,6 @@
     "https://spb.move.ru/kommercheskaya_nedvijimost/prodazha_proizvodstvennih_pomescheniy/?limit=100",
     "https://spb.move.ru/kommercheskaya_nedvijimost/prodazha_skladov/?limit=100",
     "https://spb.move.ru/prodazha_domov/?limit=100",
-
     "https://spb.move.ru/leningradskaya_oblast/arenda_domov/?limit=100",
     "https://spb.move.ru/leningradskaya_oblast/arenda_garazhey/?limit=100",
     "https://spb.move.ru/leningradskaya_oblast/arenda_kommercheskoy_nedvizhimosti/arenda_gostinic/?limit=100",
@@ -88,7 +85,6 @@
     "https://spb.move.ru/leningradskaya_oblast/kommercheskaya_nedvijimost/prodazha_proizvodstvennih_pomescheniy/?limit=100",
     "https://spb.move.ru/leningradskaya_oblast/kommercheskaya_nedvijimost/prodazha_skladov/?limit=100",
     "https://spb.move.ru/leningradskaya_oblast/prodazha_domov/?limit=100",
-
     "https://adygeya.move.ru/arenda_domov/?limit=100",
     "https://adygeya.move.ru/arenda_garazhey/?limit=100",
     "https://adygeya.move.ru/arenda_kommercheskoy_nedvizhimosti/arenda_gostinic/?limit=100",
@@ -404,7 +400,6 @@
     "https://dagestan.move.ru/kommercheskaya_nedvijimost/prodazha_proizvodstvennih_pomescheniy/?limit=100",
     "https://dagestan.move.ru/kommercheskaya_nedvijimost/prodazha_skladov/?limit=100",
     "https://dagestan.move.ru/prodazha_domov/?limit=100",
-
     "https://habarovsk.move.ru/arenda_domov/?limit=100",
     "https://habarovsk.move.ru/arenda_garazhey/?limit=100",
     "https://habarovsk.move.ru/arenda_kommercheskoy_nedvizhimosti/arenda_gostinic/?limit=100",
@@ -1861,22 +1856,28 @@
     }
   },
   "crawl_tree": [
-    {"pagination_urls":{"path":"//li[contains(@class, 'list-item active')][1]/following-sibling::li/a/@href"}},
-    "item_urls": {"path": "(//div[@class='enshrined-items'])[1]/following-sibling::div/div[@class='search-item__header']/a/@href"}}
+    {
+      "pagination_urls": {
+        "path": "//li[contains(@class, 'list-item active')][1]/following-sibling::li/a/@href"
+      },
+      "item_urls": {
+        "path": "(//div[@class='enshrined-items'])[1]/following-sibling::div/div[@class='search-item__header']/a/@href"
+      }
+    }
   ],
   "item_page": {
     "fields": {
-	   "district_name": {
+      "district_name": {
         "type": "string",
         "path": "(//a[@class='geo-block__geo-info_link']/text())[1]",
-		"regex": "(.+) р-н"
+        "regex": "(.+) р-н"
       },
-	  "address_city" :{
+      "address_city": {
         "type": "string",
         "path": "(//a[@class='geo-block__geo-info_link']/text())[1]",
-		"regex": "г. (.+)"
+        "regex": "г. (.+)"
       },
-	  "reference_point" :{
+      "reference_point": {
         "type": "string",
         "path": "(//li[@class='geo-block__block-distance_property geo-block__block-distance_poi']//span/text())[1]"
       },
@@ -1952,7 +1953,7 @@
         "type": "string",
         "path": "(//div[@class='block-user__agency']/text())[1]"
       },
-	  "title_name": {
+      "title_name": {
         "type": "list to string",
         "path": "//h1//span/text()"
       }
@@ -2206,27 +2207,31 @@
       }
     },
     "follow": [
-       {"methods": {
+      {
+        "methods": {
           "crawling_type": "post",
           "content_type": "json",
           "filter_duplicates": false,
-          "proxy_settings": {"save": true}},
+          "proxy_settings": {
+            "save": true
+          }
+        },
         "url": "https://move.ru/ajax/itemsV3/getPhone/",
         "post_params": {
           "fields": {
             "item_id": {
               "type": "string",
               "path": "(//div[contains(@class,'phone_number_button-block')]/a/@data-item-id)[1]"
-             }
-           }
-         },
+            }
+          }
+        },
         "fields": {
           "phone": {
             "type": "phone",
             "path": "data.phones"
+          }
         }
       }
-    }
-  ]
+    ]
   }
 }
