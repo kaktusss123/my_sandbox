@@ -49,7 +49,16 @@
         }
     },
 	"crawl_tree": [
-    {"pagination_urls": {"path": "//li[contains(@class, 'list-item--active')]/following-sibling::li[1]/a/@href"},
+    {"pagination_urls":
+      {"url_constructor": {
+        "generator": {
+          "page": {
+            "path": "string(//*[contains(@class,'totalOffers')])",
+            "per_page": 25
+          }
+        }
+      },
+      "repeat": false},
     "item_urls": {"path": "//*[contains(@class,'offer-container')]//a[contains(@class,'header')]/@href"}}
   ],
     "item_page" : {
@@ -64,10 +73,15 @@
                 "path" : "//address[@class='a10a3f92e9--address--140Ec']/a[1]/text()"
 
             },
+			"area_total": {
+				"type": "float",
+				"path": "//div[text()='Площадь']/preceding-sibling::div/text()",
+				"regex": "(\\d+)(?= м)"
+			},
 			"price_total" : {
                 "type" : "float",
-                "path" : "//span[@itemprop='price']/@content[normalize-space()]",
-				"regex": "\\d*"
+                "path" : "//div[text()='Цена']/following-sibling::div/text()[last()]",
+				"regex": "[\\d ]+"
             },
 			"price_term" : {
                 "type" : "string",
@@ -182,10 +196,6 @@
             "wall_material": {
               "type": "string",
               "path": "//div[text()='Материалы стен']/following-sibling::div/text()"
-            },
-            "heat_warehouse": {
-              "type": "string",
-              "path": "//div[contains(@class, 'heating')]/text()"
             }
         },
 		 "tables" : {
@@ -416,10 +426,6 @@
 					},
 					"тип_здания":{
 						"name": "building_type",
-						"type" : "string"
-					},
-					"общая_площадь":{
-						"name": "area_total",
 						"type" : "string"
 					},
 					"юридический_адрес":{
