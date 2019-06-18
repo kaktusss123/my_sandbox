@@ -1,0 +1,544 @@
+{
+    "_task_id" : "CIANUSHKA_HAKASYA_1",
+    "_start_urls" : ["https://www.cian.ru/snyat-ofis/"],
+    "_segment" : "",
+    "_operation" : "",
+    "_federal_subject" : "",
+    "_source": "CIAN",
+    "global_settings" : {
+        "CONCURRENT_REQUESTS" : 1024,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 1024,
+        "DOWNLOAD_TIMEOUT" : 60,
+        "SPLASH_URL" : "http://0.0.0.0:8050",
+        "LOG_LEVEL" : "INFO",
+        "AUTOTHROTTLE_ENABLED" : false,
+        "AUTOTHROTTLE_START_DELAY" : 1.0,
+        "AUTOTHROTTLE_MAX_DELAY" : 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 1024,
+        "HTTPERROR_ALLOWED_CODES" : [],
+        "RETRY_ENABLED" : true,
+        "RETRY_TIMES" : 30,
+        "RETRY_HTTP_CODES" : [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            505,
+            404,
+            303,
+            302,
+			301,
+			511
+        ],
+        "ROBOTSTXT_ENABLED" : false,
+        "ROBOTSTXT_OBEY" : false,
+        "REDIRECT_ENABLED" : false,
+        "COOKIES_ENABLED" : false,
+        "RANDOM_UA_TYPE" : "random"
+    },
+    "methods" : {
+        "crawling_type" : "common",
+        "allowed_domains" : [],
+        "proxy_settings" : {
+            "types" : [
+                "https"
+            ]
+        }
+    },
+	"crawl_tree": [
+    {"pagination_urls":
+      {"url_constructor": {
+        "generator": {
+          "page": {
+            "path": "string(//*[contains(@class,'totalOffers')])",
+            "per_page": 25
+          }
+        }
+      },
+      "repeat": false},
+    "item_urls": {"path": "//*[contains(@class,'offer-container')]//a[contains(@class,'header')]/@href"}}
+  ],
+    "item_page" : {
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+
+            "federal_subject" : {
+                "type" : "string",
+                "path" : "//address[@class='a10a3f92e9--address--140Ec']/a[1]/text()"
+
+            },
+			"price_total" : {
+                "type" : "float",
+                "path" : "//span[@itemprop='price']/@content[normalize-space()]",
+				"regex": "\\d*"
+            },
+			"price_term" : {
+                "type" : "string",
+                "path" : "//*[@itemprop='price']/@content[normalize-space()]",
+				"regex": "мес|год|ден "
+            },
+			"price_currency" : {
+                "type" : "string",
+                "path" : "//*[@itemprop='priceCurrency']/@content[normalize-space()]",
+				"regex": ".+"
+            },
+			"rent_price_per_area" : {
+                "type" : "float",
+                "path" : "//div[contains(@class,'price_per_meter')]/text()[normalize-space()]",
+				"regex": "^\\d*\\W?\\d+"
+            },
+			"price_per_m_term" : {
+                "type" : "string",
+                "path" : "//div[contains(@class,'price_per_meter')]/text()[normalize-space()]",
+				"regex": "мес|год|ден"
+            },
+			"title_name" : {
+                "type" : "string",
+                "path" : "//h1[@class='a10a3f92e9--title--2Widg']/text()"
+            },
+            "address" : {
+                "type" : "list to string",
+                "path" : "//address[@class='a10a3f92e9--address--140Ec']//text()",
+				"regex" : "(.+)На"
+            },
+			"metro_station": {
+                "type" : "string",
+                "path" : "(//a[@class='a10a3f92e9--underground_link--AzxRC']/text())[1]"
+			},
+			"metro_minutes": {
+                "type" : "string",
+                "path" : "(//span[@class='a10a3f92e9--underground_time--1fKft']//text())[4]"
+			},
+			"description" : {
+				"type" : "list to string",
+				"path": "//p[@class='a10a3f92e9--description-text--1_Lup']//text()"
+			},
+			"seller" : {
+				"type" : "string",
+				"path": "//h2[@class='a10a3f92e9--title--2gUWg']/text()"
+			},
+			"seller_name" : {
+				"type" : "string",
+				"path": "//a[contains(@class,'--name--')]/text()"
+			},
+			"seller_type" : {
+				"type" : "string",
+				"path": "//span[@class='a10a3f92e9--tag--14rPx a10a3f92e9--tag--JwTf_ a10a3f92e9--tag-pro--2M2Is']/@title"
+			},
+			"phone" : {
+				"type" : "phone",
+				"path": "//div[@class='a10a3f92e9--print_phones--Y-NKh']//text()"
+			},
+			"date_created" : {
+                "type" : "date",
+                "path" : "//div[@class='a10a3f92e9--container--3nJ0d']/text()",
+                "time" : "from string"
+            },
+			"source_longitude" :{
+				"type" : "float",
+				"path": "//script[text()[contains(.,'coordinate')]]/text()",
+				"regex": "(?<=\"lng\":)(\\d+\\W?\\d+\\W?\\d+)"
+			},
+			"source_latitude" :{
+				"type" : "float",
+				"path": "//script[text()[contains(.,'coordinate')]]/text()",
+				"regex": "(?<=\"lat\":)(\\d+\\W?\\d+\\W?\\d+)"
+			},
+			"segment" :{
+				"type" : "string",
+				"path": "//div[contains(@class,'breadcrumbs')]/span[3]/a/span/text()"
+			},
+			"address_city" :{
+				"type" : "string",
+				"path": "//div[contains(@class,'breadcrumbs')]/span[1]/a/span/text()",
+				"regex": "Недвижимость в (.+)"
+			},
+			"refence_point": {
+				"type" : "string",
+				"path": "//div[@class='a10a3f92e9--container--1nBq8']//a/text()"
+			},
+			"operation" :{
+				"type" : "string",
+				"path": "//div[contains(@class,'breadcrumbs')]/span[3]/a/span/text()",
+				"regex": "Аренда|Продажа"
+			},
+			"addit_comm_condition":{
+				"type": "string",
+				"path": "//p[@class='a10a3f92e9--description--2xRVn']/text()"
+			},
+            "floors_cnt": {
+              "type": "float",
+              "path": "substring-after(string(//div[text()='Этаж']/preceding-sibling::div/text()), 'из ')"
+            },
+            "ventilation_system": {
+              "type": "string",
+              "path": "//div[contains(@class, 'ventilation')]/text()"
+            },
+            "conditioning_type": {
+              "type": "string",
+              "path": "//div[contains(@class, 'condition')]/text()"
+            },
+            "firefighting": {
+              "type": "string",
+              "path": "//div[contains(@class, 'extinguishing')]/text()"
+            },
+            "wall_material": {
+              "type": "string",
+              "path": "//div[text()='Материалы стен']/following-sibling::div/text()"
+            },
+            "heat_warehouse": {
+              "type": "string",
+              "path": "//div[contains(@class, 'heating')]/text()"
+            }
+        },
+		 "tables" : {
+            "descr" : {
+                "_keys_path" : "//div[contains(@class,'--info-block--')]//div[contains(@class,'--info-title--')]/text()",
+                "_vals_path" : "//div[contains(@class,'--info-block--')]//div[contains(@class,'--info-text--')]/text()",
+				"key_converter" : {
+					"площадь":{
+                        "name" : ["area_object", "area_unit"],
+                        "type" : ["float","string"],
+						"regex": ["^\\d*\\W?\\d+\\W?\\d+", "[А-Яа-я]+"]
+                    },
+					"этаж":{
+                        "name" : "floor",
+                        "type" : "float",
+						"regex": "^\\d*"
+                    },
+					"помещение":{
+                        "name" : "is_vacant",
+                        "type" : "string"
+                    },
+					"класс":{
+                        "name" : "object_class",
+                        "type" : "string"
+                    }
+				}
+			},
+			"conditions" : {
+                "_keys_path" : "//div[contains(@class,'--group')]//div[contains(@class,'name')]/text()",
+                "_vals_path" : "//div[contains(@class,'--group')]//div[contains(@class,'value')]/text()",
+				"key_converter" : {
+					"цена":{
+                        "name" : "none",
+                        "type" : "float",
+						"regex": ""
+                    },
+					"ставка":{
+						"name":"none",
+						"type" : "float"
+						},
+					"налог":{
+						"name": "none",
+						"type" : "string"
+					},
+					"тип_сделки": {
+						"name": "operation",
+						"type" : "string"
+					},
+					"бонус_агенту" : {
+						"name": "agent_fee",
+						"type" : "float"
+					},
+					"арендные_каникулы": {
+						"name": "rent_holidays",
+						"type" : "string"
+					},
+					"комиссия_от_клиента": {
+						"name": "none",
+						"type" : "float"
+					},
+					"коммунальные_платежи": {
+						"name": "none",
+						"type" : "float"
+					},
+					"минимальный_срок_аренды": {
+						"name": "none",
+						"type" : "float"
+					},
+					"обеспечительный_платеж": {
+						"name": "none",
+						"type" : "float"
+					},
+					"предоплата": {
+						"name": "is_pre_pay",
+						"type" : "string"
+					},
+					"срок_аренды": {
+						"name": "none",
+						"type" : "float"
+					},
+					"стоимость_парковки": {
+						"name": "none",
+						"type" : "float"
+					},
+					"тип_аренды": {
+						"name": "operatoin",
+						"type" : "string"
+					},
+					"эксплуатационные_расходы": {
+						"name": "operating_costs",
+						"type" : "string"
+					},
+					"юридический_адрес": {
+						"name": "address_legal",
+						"type" : "string"
+					}
+				}
+			},
+			"conditions_2" : {
+                "_keys_path" : "//ul[contains(@class,'--list--')]//span[contains(@class,'name')]/text()",
+                "_vals_path" : "//ul[contains(@class,'--list--')]//span[contains(@class,'value')]/text()",
+				"key_converter" : {
+					"номер_налоговой":{
+						"name": "none",
+						"type" : "float"
+					},
+				   "юридический_адрес":{
+						"name": "address_legal",
+						"type" : "string"
+					},
+					"планировка":{
+						"name": "layout_type",
+						"type" : "string"
+					},
+					"вход":{
+						"name": "is_entrance",
+						"type" : "string"
+					},
+					"состояние":{
+						"name": "decoration_type",
+						"type" : "string"
+					},
+					"мебель":{
+						"name": "is_furniture",
+						"type" : "float"
+					},
+				    "количество_мокрых_точек":{
+						"name": "is_wc_count",
+						"type" : "float"
+					},
+					"мощность_квт":{
+						"name": "electricity_power",
+						"type" : "string"
+					},
+					"доступ":{
+						"name": "is_access",
+						"type" : "string"
+					},
+					"парковка":{
+						"name": "is_parking",
+						"type" : "string"
+					},
+					"количество_мест":{
+						"name": "parking_lots",
+						"type" : "float"
+					},
+					"стоимость":	{
+						"name": "parking_price",
+						"type" : "float"
+					},
+					"высота_потолков": {
+						"name": "ceiling_height",
+						"type" : "float",
+						"regex": "^\\d*\\W?\\d+"
+					},
+					"тип_жилья": {
+						"name": "housing_type",
+						"type" : "string"
+					},
+					"количество_комнат": {
+						"name": "rooms_cnt",
+						"type" : "float"
+					},
+					"площадь_комнат": {
+						"name": "area_living",
+						"type" : "float"
+					},
+					"этаж": {
+						"name": "floor",
+						"type" : "float",
+						"regex": "^\\d+"
+					},
+					"этажей_в_доме": {
+						"name": "floors_cnt",
+						"type" : "float",
+						"regex": "^\\d+"
+					},
+					"год_постройки": {
+						"name": "year_built",
+						"type" : "float",
+						"regex": "^\\d+"
+					},
+					"тип_дома": {
+						"name": "building_materials",
+						"type" : "string"
+					},
+					"совмещённый_санузел": {
+						"name": "none",
+						"type" : "string"
+					},
+					"ремонт": {
+						"name": "decoration_type",
+						"type" : "string"
+					},
+					"вид_из_окон": {
+						"name": "is_view",
+						"type" : "string"
+					},
+					"участок": {
+						"name": "land_area",
+						"type" : "float",
+						"regex": "^\\d*\\W?\\d+"
+					},
+					"статус_участка": {
+						"name": "land_status",
+						"type" : "string"
+					},
+					"площадь_участка": {
+						"name": "land_area",
+						"type" : "float",
+						"regex": "^\\d*\\W?\\d+"
+					},
+					"статус": {
+						"name": "segment",
+						"type" : "string"
+					},
+					"ванная_комната":{
+						"name": "none",
+						"type" : "string"
+					},
+					"категория_здания":{
+						"name": "building_category",
+						"type" : "string"
+					},
+					"материал_пола":{
+						"name": "floor_material",
+						"type" : "string"
+					},
+					"тип_здания":{
+						"name": "building_type",
+						"type" : "string"
+					},
+					"общая_площадь":{
+						"name": "area_total",
+						"type" : "string"
+					},
+					"юридический_адрес":{
+						"name": "is_legal_address",
+						"type" : "string"
+					}
+				}
+			},
+			"table_5" : {
+                "_keys_path" : "//ul[@class='a10a3f92e9--container--L-EIV']//li/text()",
+                "_vals_path" : "//ul[@class='a10a3f92e9--container--L-EIV']//li/text()",
+				"key_converter" : {
+				    "пассажирский_лифт": {
+						"name": "is_elevator",
+						"type" : "string"
+					},
+					"лоджия": {
+						"name": "is_balcony",
+						"type" : "string"
+					},
+					"балкон": {
+						"name": "is_balcony",
+						"type" : "string"
+					},
+					"телефон": {
+						"name": "is_phone",
+						"type" : "string"
+					},
+					"паркинг": {
+						"name": "is_parking",
+						"type" : "string"
+					},
+					"мусоропровод": {
+						"name": "is_garbage_flute",
+						"type" : "string"
+					},
+					"отопление": {
+						"name": "heating_system_type",
+						"type" : "string"
+					},
+					"электричество": {
+						"name": "is_electricity",
+						"type" : "string"
+					},
+					"водоснабжение": {
+						"name": "is_plumbing",
+						"type" : "string"
+					},
+					"санузел_в_доме": {
+						"name": "is_wc",
+						"type" : "string"
+					},
+					"канализация": {
+						"name": "is_sewage",
+						"type" : "string"
+					},
+					"охрана": {
+						"name": "security_type",
+						"type" : "string"
+					},
+					"газ":{
+						"name": "is_gas",
+						"type" : "string"
+					},
+					"грузовой_лифт": {
+						"name": "is_elevator_cargo",
+						"type" : "string"
+					},
+					"ванна": {
+						"name": "none",
+						"type" : "float"
+					},
+					"душевая_кабина": {
+						"name": "none",
+						"type" : "float"
+					},
+					"интернет": {
+						"name": "is_internet",
+						"type" : "string"
+					},
+					"кондиционер": {
+						"name": "is_air_conditioning",
+						"type" : "string"
+					},
+					"мебель_в_комнатах": {
+						"name": "is_furniture",
+						"type" : "string"
+					},
+					"мебель_на_кухне": {
+						"name": "is_furniture_kitchen",
+						"type" : "string"
+					},
+					"посудомоечная_машина": {
+						"name": "none",
+						"type" : "float"
+					},
+					"стиральная_машина": {
+						"name": "none",
+						"type" : "float"
+					},
+					"телевизор": {
+						"name": "is_tv",
+						"type" : "string"
+					},
+					"холодильник": {
+						"name": "is_fridge",
+						"type" : "string"
+					}
+				}
+			}
+		}
+    }
+}
