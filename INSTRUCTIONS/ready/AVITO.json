@@ -25852,7 +25852,7 @@
             },
             "date_created": {
                 "type": "date",
-                "path": "//div[@class='title-info-metadata-item-redesign']/text()",
+                "path": "//div[@class='title-info-metadata-item']/text()",
                 "time": "from string",
                 "regex": "размещено(.+)",
                 "operations": []
@@ -25898,6 +25898,85 @@
                     "назначение_участка": {
                         "type": "string",
                         "name": "purpose"
+                    }
+                }
+            },
+            "land": {
+                "_keys_path": "//div[@class='item-params']/span/span/text()",
+                "_vals_path": "//div[@class='item-params']/span/text()",
+                "key_converter": {
+                    "отдельный_вход": {
+                        "type": "string",
+                        "name": "private_entrance"
+                    },
+                    "площадь": {
+                        "type": "float",
+                        "name": "area_total",
+                        "regex": "(\\d*.\\d*).\\w+"
+                    },
+                    "расстояние_до_города": {
+                        "type": "float",
+                        "name": "from_the_town"
+                    },
+                    "класс_здания": {
+                        "type": "string",
+                        "name": "object_class"
+                    },
+                    "назначение_участка": {
+                        "type": "string",
+                        "name": "purpose"
+                    }
+                }
+            },
+            "table_flats": {
+                "_keys_path": "//span[@class='item-params-label']/text()",
+                "_vals_path": "//li[@class='item-params-list-item']/text()[normalize-space()]",
+                "key_converter": {
+                    "этаж": {
+                        "type": "float",
+                        "name": "floor",
+                        "regex": "^\\d+"
+                    },
+                    "официальный_застройщик": {
+                        "type": "string",
+                        "name": "developer_name"
+                    },
+                    "количество_комнат": {
+                        "type": "string",
+                        "name": "rooms_cnt"
+                    },
+                    "жилая_площадь": {
+                        "type": "float",
+                        "name": "area_living",
+                        "regex": "^\\d+\\W?\\d*"
+                    },
+                    "этажей_в_доме": {
+                        "type": "float",
+                        "name": "floors_max",
+                        "regex": "^\\d+"
+                    },
+                    "площадь_кухни": {
+                        "type": "float",
+                        "name": "kitchen_area",
+                        "regex": "^\\d+\\W?\\d*"
+                    },
+                    "общая_площадь": {
+                        "type": [
+                            "float",
+                            "string"
+                        ],
+                        "name": [
+                            "area_total",
+                            "area_total_unit"
+                        ],
+                        "regex": [
+                            "^\\d+\\W?\\d*",
+                            "[А-Яа-я]+"
+                        ]
+                    },
+                    "тип_дома": {
+                        "type": "string",
+                        "name": "wall_material"
                     }
                 }
             }
