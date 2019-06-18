@@ -49,16 +49,7 @@
         }
     },
 	"crawl_tree": [
-    {"pagination_urls":
-      {"url_constructor": {
-        "generator": {
-          "page": {
-            "path": "string(//*[contains(@class,'totalOffers')])",
-            "per_page": 25
-          }
-        }
-      },
-      "repeat": false},
+    {"pagination_urls": {"path": "//li[contains(@class, 'list-item--active')]/following-sibling::li[1]/a/@href"},
     "item_urls": {"path": "//*[contains(@class,'offer-container')]//a[contains(@class,'header')]/@href"}}
   ],
     "item_page" : {
