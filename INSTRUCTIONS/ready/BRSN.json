@@ -228,7 +228,7 @@
                 "purpose": {
                     "type": "string",
                     "path": "//a[@class='object-address-link'][2]/following-sibling::p",
-                    "regex": "используется как (.+)",
+                    "regex": "(?<=используется как )(.*)(?=,)",
                     "operations": []
                 }
             }
