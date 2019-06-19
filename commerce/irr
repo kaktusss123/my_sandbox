@@ -3366,33 +3366,12 @@
             }
         },
   "crawl_tree": [
-    {"pagination_urls":{"url_generator": {
-        "generator": {
-          "start": {
-            "value": 2
-          },
-          "end": {
-            "type": "int",
-            "path": "substring-after(string(//div[@class='listingStats']), 'из')",
-            "operations": [{"convert": "float"}, {"floor_div": 30}, {"add": 1}]
-          }
-        },
-        "url_constructor":
-          {"add_to_query": [
-            {"page": {"value": "generator_value"}}
-          ]
-          }
-
-      },
-        "repeat": false},
+    {"pagination_urls":{"path": "//li[contains(@class, 'pagination__pagesItem_active')]/following-sibling::li[1]/a/@href"},
 
     "item_urls": {"path": "//div[@class='listing js-productGrid ']//div[@class='listing__itemTitleWrapper']/a/@href"}}
   ],
 
-		"federal_subject": {
-                    "type": "string",
-                    "path" : "normalize-space(//a[contains(@class, 'btnRegion')]/text())"
-				},
+
 
 
         "item_page": {
@@ -3401,6 +3380,10 @@
                     "type": "date",
                     "time": "now"
                 },
+                "federal_subject": {
+                    "type": "string",
+                    "path" : "normalize-space(//a[contains(@class, 'btnRegion')]/text())"
+				},
                 "currency": {
                     "type": "string",
                     "path": "//meta[@itemprop='priceCurrency']/@content"
