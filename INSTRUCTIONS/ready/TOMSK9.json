@@ -93,9 +93,8 @@
         "regex": "\\S+(?=\/)"
       },
       "floors_cnt": {
-        "type": "float",
-        "path": "//th[contains(., 'Этажность') and not(contains(., 'Этаж/'))]/following-sibling::td/text()",
-        "regex": "(?<=\/)\\d+"
+        "type": "string",
+        "path": "//th[contains(., 'Этажность') and not(contains(., 'Этаж/'))]/following-sibling::td/text()"
       },
       "price_total": {
         "type": "float",
@@ -129,12 +128,12 @@
       },
       "address_city": {
         "type": "string",
-        "value": "Томская обл"
+        "value": "Томск"
       },
       "area_total": {
         "type": "float",
         "path": "//th[contains(., 'Общая площадь')]/following-sibling::td/b/text()",
-        "regex": "(.*)(?= к)"
+        "regex": "(.*)(?=\\s)"
       }
     }
   }
