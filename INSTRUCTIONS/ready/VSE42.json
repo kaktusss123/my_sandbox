@@ -91,7 +91,7 @@
                 },
                 "title_name": {
                     "type": "string",
-                    "path": "//h1[@class = 'title']",
+                    "path": "//h1[@class = 'title']/text()",
                     "operations": []
                 },
                 "date_info": {
@@ -123,9 +123,15 @@
                 },
                 "address": {
                     "type": "string",
-                    "path": "//h1[@class = 'title']",
+                    "path": "//span[@class='beforeheader']/text()",
                     "operations": []
                 },
+                "address_city": {
+                    "type": "string",
+                    "path": "//h1[@class = 'title']/text()",
+                    "regex": "(?<=недвижимость )(.*)",
+                    "operations": []
+                },               
                 "source_longitude": {
                     "type": "float",
                     "path": "//div[@class = 'block map ']//img/@src",
@@ -142,7 +148,15 @@
                     "type": "string",
                     "path": "(//div[@class = 'section']/div[contains(., 'Назначение')]//div[@class = 'value grid_3 omega']/text())[2]",
                     "operations": []
-                }
+                },
+                "date_created": {
+                  "type": "date",
+                  "path": "//span[@class='afterheader']/span[1]/text()",
+                  "time": "from string",
+                  "regex": "(?<=: )(.*)",
+                  "operations": []
+                 }
+
             },
             "follow": [
                 {
