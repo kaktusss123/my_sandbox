@@ -1,25 +1,6 @@
 {
         "_task_id": "NNN_IRR_CONNERCIAL_SALE_",
         "_start_urls": [
-          "https://yaroslavskaya-obl.irr.ru/real-estate/out-of-town/houses/dom-advert640031733.html",
-  "https://adygeya-resp.irr.ru/real-estate/apartments-sale/studio/",
-  "https://adygeya-resp.irr.ru/real-estate/apartments-sale/one-rooms/",
-  "https://adygeya-resp.irr.ru/real-estate/apartments-sale/two-rooms/",
-  "https://adygeya-resp.irr.ru/real-estate/apartments-sale/three-rooms/",
-  "https://adygeya-resp.irr.ru/real-estate/apartments-sale/",
-  "https://adygeya-resp.irr.ru/real-estate/apartments-sale/multiroom/",
-  "https://adygeya-resp.irr.ru/real-estate/rooms-sale/",
-  "https://adygeya-resp.irr.ru/real-estate/apartments-sale/secondary/",
-  "https://adygeya-resp.irr.ru/real-estate/apartments-sale/new/",
-  "https://adygeya-resp.irr.ru/real-estate/apartments-sale/new/sdan/",
-  "https://adygeya-resp.irr.ru/real-estate/rent/studio/",
-  "https://adygeya-resp.irr.ru/real-estate/rent/one-rooms/",
-  "https://adygeya-resp.irr.ru/real-estate/rent/two-rooms/",
-  "https://adygeya-resp.irr.ru/real-estate/rent/three-rooms/",
-  "https://adygeya-resp.irr.ru/real-estate/rent/multiroom/",
-  "https://adygeya-resp.irr.ru/real-estate/rent/",
-  "https://adygeya-resp.irr.ru/real-estate/rooms-rent/",
-  "https://adygeya-resp.irr.ru/real-estate/out-of-town-rent/houses/",
   "https://adygeya-resp.irr.ru/real-estate/commercial-sale/offices/",
   "https://adygeya-resp.irr.ru/real-estate/commercial-sale/production-warehouses/",
   "https://adygeya-resp.irr.ru/real-estate/commercial-sale/houses/",
@@ -3382,15 +3363,15 @@
                 },
                 "federal_subject": {
                     "type": "string",
-                    "path" : "normalize-space(//a[contains(@class, 'btnRegion')]/text())"
-				},
+                    "value" : ""
+                },
                 "currency": {
                     "type": "string",
                     "path": "//meta[@itemprop='priceCurrency']/@content"
                 },
                 "title_name": {
                     "type": "string",
-                    "path": "//div[@class='productPage__wrapperTitle js-wrapperTitle']/h1/text()"
+                    "path": "//title/text()"
                 },
                 "address": {
                     "type": "string",
@@ -3446,16 +3427,16 @@
                     "path" : "//div[@class='productPage__fee']/text()",
                     "regex" : "\\d*\\W?\\D+$"
                 },
-				"segment": {
+                "segment": {
                     "type": "string",
                     "path" : "//ul[@class='breadcrumbs__list js-breadcrumbsNav']//li[4]//span/text()"
-				},
+                },
 
-				"operation": {
+                "operation": {
                     "type": "string",
                     "path" : "//ul[@class='breadcrumbs__list js-breadcrumbsNav']//li[3]//span/text()",
-					"regex" : "Продажа|Аренда"
-				}
+                    "regex" : "Продажа|Аренда"
+                }
             },
             "tables": {
                 "table_1": {
