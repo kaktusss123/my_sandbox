@@ -1,5 +1,5 @@
 {
-        "_task_id": "0001-0148-0001&T0118&1",
+        "_task_id": "333",
         "_start_urls": [
             "https://adygeya.move.ru/arenda_kommercheskoy_nedvizhimosti/arenda_gostinic/?limit=100",
             "https://adygeya.move.ru/arenda_kommercheskoy_nedvizhimosti/arenda_nezhilih_zdaniy/?limit=100",
@@ -1379,7 +1379,6 @@
             "https://yuzhno-sahalinsk.move.ru/kommercheskaya_nedvijimost/prodazha_proizvodstvennih_pomescheniy/?limit=100",
             "https://yuzhno-sahalinsk.move.ru/kommercheskaya_nedvijimost/prodazha_skladov/?limit=100"
         ],
-        "sitemap_urls" = ["https://kaluga.move.ru/robots.txt", "https://tver.move.ru/robots.txt", "https://tyumen.move.ru/robots.txt", "https://kareliya.move.ru/robots.txt", "https://ak.move.ru/robots.txt", "https://kurgan.move.ru/robots.txt", "https://osetiya.move.ru/robots.txt", "https://krasnodar.move.ru/robots.txt", "https://vologda.move.ru/robots.txt", "https://tula.move.ru/robots.txt", "https://ivanovo.move.ru/robots.txt", "https://omsk.move.ru/robots.txt", "https://pskov.move.ru/robots.txt", "https://kchr.move.ru/robots.txt", "https://birobidzhan.move.ru/robots.txt", "https://sevastopol.move.ru/robots.txt", "https://penza.move.ru/robots.txt", "https://saha.move.ru/robots.txt", "https://magadan.move.ru/robots.txt", "https://kbr.move.ru/robots.txt", "https://arhangelsk.move.ru/robots.txt", "https://kalmykiya.move.ru/robots.txt", "https://kemerov.move.ru/robots.txt", "https://krim.move.ru/robots.txt", "https://astrahan.move.ru/robots.txt", "https://hmao.move.ru/robots.txt", "https://bryansk.move.ru/robots.txt", "https://move.ru/robots.txt", "https://ufa.move.ru/robots.txt", "https://ulan-ude.move.ru/robots.txt", "https://spb.move.ru/robots.txt", "https://murmansk.move.ru/robots.txt", "https://stavropol.move.ru/robots.txt", "https://ryazan.move.ru/robots.txt", "https://chita.move.ru/robots.txt", "https://ulyanovsk.move.ru/robots.txt", "https://samara.move.ru/robots.txt", "https://sverdlovsk.move.ru/robots.txt", "https://tambov.move.ru/robots.txt", "https://chuvashia.move.ru/robots.txt", "https://krasnoyarsk.move.ru/robots.txt", "https://voronezh.move.ru/robots.txt", "https://kursk.move.ru/robots.txt", "https://nn.move.ru/robots.txt", "https://vladivostok.move.ru/robots.txt", "https://yaroslavl.move.ru/robots.txt", "https://volgograd.move.ru/robots.txt", "https://lipetsk.move.ru/robots.txt", "https://vnovgorod.move.ru/robots.txt", "https://orel.move.ru/robots.txt", "https://tatarstan.move.ru/robots.txt", "https://chelyabinsk.move.ru/robots.txt", "https://adygeya.move.ru/robots.txt", "https://chechenskaya.move.ru/robots.txt", "https://rnd.move.ru/robots.txt", "https://ra.move.ru/robots.txt", "https://kamchatka.move.ru/robots.txt", "https://smolensk.move.ru/robots.txt", "https://habarovsk.move.ru/robots.txt", "https://hakasiya.move.ru/robots.txt", "https://dagestan.move.ru/robots.txt", "https://vladimir.move.ru/robots.txt", "https://kostroma.move.ru/robots.txt", "https://komi.move.ru/robots.txt", "https://marijel.move.ru/robots.txt", "https://amursk.move.ru/robots.txt", "https://kaliningrad.move.ru/robots.txt", "https://kirov.move.ru/robots.txt", "https://orenburg.move.ru/robots.txt", "https://perm.move.ru/robots.txt", "https://saratov.move.ru/robots.txt", "https://salehard.move.ru/robots.txt", "https://novosibirsk.move.ru/robots.txt", "https://tomsk.move.ru/robots.txt", "https://tyva.move.ru/robots.txt", "https://udmurtia.move.ru/robots.txt", "https://irkutsk.move.ru/robots.txt", "https://belgorod.move.ru/robots.txt", "https://yuzhno-sahalinsk.move.ru/robots.txt", "https://mordoviya.move.ru/robots.txt"],
         "_segment": "Коммерческая Недвижимость",
         "_operation": "",
         "_federal_subject": "",
@@ -1448,6 +1447,29 @@
                 }
             }
         ],
+        "sitemap_urls": {
+            "start": ["https://kaluga.move.ru/robots.txt", "https://tver.move.ru/robots.txt", "https://tyumen.move.ru/robots.txt", "https://kareliya.move.ru/robots.txt", "https://ak.move.ru/robots.txt", "https://kurgan.move.ru/robots.txt", "https://osetiya.move.ru/robots.txt", "https://krasnodar.move.ru/robots.txt", "https://vologda.move.ru/robots.txt", "https://tula.move.ru/robots.txt", "https://ivanovo.move.ru/robots.txt", "https://omsk.move.ru/robots.txt", "https://pskov.move.ru/robots.txt", "https://kchr.move.ru/robots.txt", "https://birobidzhan.move.ru/robots.txt", "https://sevastopol.move.ru/robots.txt", "https://penza.move.ru/robots.txt", "https://saha.move.ru/robots.txt", "https://magadan.move.ru/robots.txt", "https://kbr.move.ru/robots.txt", "https://arhangelsk.move.ru/robots.txt", "https://kalmykiya.move.ru/robots.txt", "https://kemerov.move.ru/robots.txt", "https://krim.move.ru/robots.txt", "https://astrahan.move.ru/robots.txt", "https://hmao.move.ru/robots.txt", "https://bryansk.move.ru/robots.txt", "https://move.ru/robots.txt", "https://ufa.move.ru/robots.txt", "https://ulan-ude.move.ru/robots.txt", "https://spb.move.ru/robots.txt", "https://murmansk.move.ru/robots.txt", "https://stavropol.move.ru/robots.txt", "https://ryazan.move.ru/robots.txt", "https://chita.move.ru/robots.txt", "https://ulyanovsk.move.ru/robots.txt", "https://samara.move.ru/robots.txt", "https://sverdlovsk.move.ru/robots.txt", "https://tambov.move.ru/robots.txt", "https://chuvashia.move.ru/robots.txt", "https://krasnoyarsk.move.ru/robots.txt", "https://voronezh.move.ru/robots.txt", "https://kursk.move.ru/robots.txt", "https://nn.move.ru/robots.txt", "https://vladivostok.move.ru/robots.txt", "https://yaroslavl.move.ru/robots.txt", "https://volgograd.move.ru/robots.txt", "https://lipetsk.move.ru/robots.txt", "https://vnovgorod.move.ru/robots.txt", "https://orel.move.ru/robots.txt", "https://tatarstan.move.ru/robots.txt", "https://chelyabinsk.move.ru/robots.txt", "https://adygeya.move.ru/robots.txt", "https://chechenskaya.move.ru/robots.txt", "https://rnd.move.ru/robots.txt", "https://ra.move.ru/robots.txt", "https://kamchatka.move.ru/robots.txt", "https://smolensk.move.ru/robots.txt", "https://habarovsk.move.ru/robots.txt", "https://hakasiya.move.ru/robots.txt", "https://dagestan.move.ru/robots.txt", "https://vladimir.move.ru/robots.txt", "https://kostroma.move.ru/robots.txt", "https://komi.move.ru/robots.txt", "https://marijel.move.ru/robots.txt", "https://amursk.move.ru/robots.txt", "https://kaliningrad.move.ru/robots.txt", "https://kirov.move.ru/robots.txt", "https://orenburg.move.ru/robots.txt", "https://perm.move.ru/robots.txt", "https://saratov.move.ru/robots.txt", "https://salehard.move.ru/robots.txt", "https://novosibirsk.move.ru/robots.txt", "https://tomsk.move.ru/robots.txt", "https://tyva.move.ru/robots.txt", "https://udmurtia.move.ru/robots.txt", "https://irkutsk.move.ru/robots.txt", "https://belgorod.move.ru/robots.txt", "https://yuzhno-sahalinsk.move.ru/robots.txt", "https://mordoviya.move.ru/robots.txt"],
+            "type": "robots",
+            "target": "robots",
+            "crawl_tree": {
+                "robots": {
+                    "targets": {
+                        "sitemap": {"type": "sitemap","filters": ["index_objects"]}
+                    }
+                },
+                "sitemap": {
+                    "targets": {
+                        "sitemap_2": {"type": "sitemap","filters": ["/kommercheskaya_nedvijimost/"]}
+                    }
+                },
+                "sitemap_2": {
+                    "targets": {
+                        "item": {"type": "item"}
+                    }
+                },
+                "item": {}
+            }
+        },
         "item_page": {
             "fields": {
                 "segment": {
