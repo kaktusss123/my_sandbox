@@ -1,4 +1,4 @@
-﻿{
+﻿﻿{
   "_task_id": "XXX_REALTYMAG",
   "_start_urls": [
     "https://www.realtymag.ru/moskva/kvartira/prodazha/",
@@ -3280,7 +3280,7 @@
     }
   },
   "crawl_tree": [
-      {"pagination_urls": {"path": "//li[@class='new-pager__navigation-next']/a/@href"}
+      {"pagination_urls": {"path": "//li[contains(@class,'page current')]/following-sibling::li[1]/a/@href"}
       ,
            "item_urls": {"path": "//a[@class='offer__details-link']/@href"}}
   ],
