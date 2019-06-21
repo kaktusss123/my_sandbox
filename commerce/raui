@@ -656,14 +656,14 @@
           "fields": {
             "id": {
               "type": "string",
-              "path": "//div[@class=' contactstabs']/@data-id"
+              "path": "string(//div[@class=' contactstabs']/@data-id)"
              }
            }
          },
         "fields": {
           "phone": {
             "type": "phone",
-            "path": "contacts.phones"
+            "path": "contacts.phone"
         }
       },
          "headers": {"x-requested-with": {"type": "string", "value": "XMLHttpRequest"}}
