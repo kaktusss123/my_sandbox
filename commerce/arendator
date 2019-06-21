@@ -1,10 +1,6 @@
 {
     "_task_id": "NNN_AYAX",
     "_start_urls": [
-        "https://www.ayax.ru/kvartiry/",
-        "https://www.ayax.ru/kupit-dom-v-krasnodare/",
-        "https://www.ayax.ru/uchastki-izhs/",
-        "https://www.ayax.ru/dachnye-uchastki/",
         "https://www.ayax.ru/kupit-ofis-v-krasnodare/",
         "https://www.ayax.ru/sklady/",
         "https://www.ayax.ru/biznes/",
@@ -13,8 +9,6 @@
         "https://www.ayax.ru/gostinitsy/",
         "https://www.ayax.ru/prodazha-sto-krasnodar/",
         "https://www.ayax.ru/garazhi/",
-        "https://www.ayax.ru/snyat-kvartiru/",
-        "https://www.ayax.ru/snyat-dom/"
     ],
     "_segment": "",
     "_operation": "",
