@@ -1,0 +1,673 @@
+{
+  "_task_id": "RAUI_test_1",
+  "_start_urls": ["https://raui.ru/snyat-office-sklad/moskva?per_page=50",
+ "https://raui.ru/snyat-office-sklad/sankt-peterburg?per_page=50",
+ "https://raui.ru/snyat-office-sklad/sevastopol?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-adyigeya?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-altay?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-bashkortostan?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-buryatiya?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-dagestan?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-ingushetiya?per_page=50",
+ "https://raui.ru/snyat-office-sklad/kabardino-balkarskaya-respublika?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-kalmyikiya?per_page=50",
+ "https://raui.ru/snyat-office-sklad/karachaevo-cherkesskaya-respublika?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-kareliya?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-komi?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-kryim?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-mariy-el?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-mordoviya?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-saha-yakutiya?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-severnaya-osetiya?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-tatarstan?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-tyiva?per_page=50",
+ "https://raui.ru/snyat-office-sklad/udmurtskaya-respublika?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublika-hakasiya?per_page=50",
+ "https://raui.ru/snyat-office-sklad/chechenskaya-respublika?per_page=50",
+ "https://raui.ru/snyat-office-sklad/chuvashskaya-respublika?per_page=50",
+ "https://raui.ru/snyat-office-sklad/respublik%D0%B0-severnaya-osetiya-alaniya?per_page=50",
+ "https://raui.ru/snyat-office-sklad/altayskiy-kray?per_page=50",
+ "https://raui.ru/snyat-office-sklad/zabaykalskiy-kray?per_page=50",
+ "https://raui.ru/snyat-office-sklad/kamchatskiy-kray?per_page=50",
+ "https://raui.ru/snyat-office-sklad/krasnodarskiy-kray?per_page=50",
+ "https://raui.ru/snyat-office-sklad/krasnoyarskiy-kray?per_page=50",
+ "https://raui.ru/snyat-office-sklad/permskiy-kray?per_page=50",
+ "https://raui.ru/snyat-office-sklad/primorskiy-kray?per_page=50",
+ "https://raui.ru/snyat-office-sklad/stavropolskiy-kray?per_page=50",
+ "https://raui.ru/snyat-office-sklad/habarovskiy-kray?per_page=50",
+ "https://raui.ru/snyat-office-sklad/amurskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/arhangelskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/astrahanskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/belgorodskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/bryanskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/vladimirskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/volgogradskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/vologodskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/voronejskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/ivanovskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/irkutskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/kaliningradskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/kalujskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/kemerovskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/kirovskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/kostromskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/kurganskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/kurskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/leningradskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/lipetskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/magadanskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/moskovskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/murmanskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/nijegorodskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/novgorodskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/novosibirskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/omskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/orenburgskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/orlovskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/penzenskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/pskovskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/rostovskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/ryazanskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/samarskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/saratovskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/sahalinskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/sverdlovskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/smolenskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/tambovskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/tverskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/tomskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/tulskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/tyumenskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/ulyanovskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/chelyabinskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/yaroslavskaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/evreyskaya-avtonomnaya-oblast?per_page=50",
+ "https://raui.ru/snyat-office-sklad/nenetskiy-avtonomnyiy-okrug?per_page=50",
+ "https://raui.ru/snyat-office-sklad/hantyi-mansiyskiy-avtonomnyiy-okrug?per_page=50",
+ "https://raui.ru/snyat-office-sklad/chukotskiy-avtonomnyiy-okrug?per_page=50",
+ "https://raui.ru/snyat-office-sklad/yamalo-nenetskiy-avtonomnyiy-okrug?per_page=50",
+ "https://raui.ru/kupit-office-sklad/moskva?per_page=50",
+ "https://raui.ru/kupit-office-sklad/sankt-peterburg?per_page=50",
+ "https://raui.ru/kupit-office-sklad/sevastopol?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-adyigeya?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-altay?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-bashkortostan?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-buryatiya?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-dagestan?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-ingushetiya?per_page=50",
+ "https://raui.ru/kupit-office-sklad/kabardino-balkarskaya-respublika?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-kalmyikiya?per_page=50",
+ "https://raui.ru/kupit-office-sklad/karachaevo-cherkesskaya-respublika?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-kareliya?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-komi?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-kryim?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-mariy-el?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-mordoviya?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-saha-yakutiya?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-severnaya-osetiya?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-tatarstan?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-tyiva?per_page=50",
+ "https://raui.ru/kupit-office-sklad/udmurtskaya-respublika?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublika-hakasiya?per_page=50",
+ "https://raui.ru/kupit-office-sklad/chechenskaya-respublika?per_page=50",
+ "https://raui.ru/kupit-office-sklad/chuvashskaya-respublika?per_page=50",
+ "https://raui.ru/kupit-office-sklad/respublik%D0%B0-severnaya-osetiya-alaniya?per_page=50",
+ "https://raui.ru/kupit-office-sklad/altayskiy-kray?per_page=50",
+ "https://raui.ru/kupit-office-sklad/zabaykalskiy-kray?per_page=50",
+ "https://raui.ru/kupit-office-sklad/kamchatskiy-kray?per_page=50",
+ "https://raui.ru/kupit-office-sklad/krasnodarskiy-kray?per_page=50",
+ "https://raui.ru/kupit-office-sklad/krasnoyarskiy-kray?per_page=50",
+ "https://raui.ru/kupit-office-sklad/permskiy-kray?per_page=50",
+ "https://raui.ru/kupit-office-sklad/primorskiy-kray?per_page=50",
+ "https://raui.ru/kupit-office-sklad/stavropolskiy-kray?per_page=50",
+ "https://raui.ru/kupit-office-sklad/habarovskiy-kray?per_page=50",
+ "https://raui.ru/kupit-office-sklad/amurskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/arhangelskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/astrahanskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/belgorodskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/bryanskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/vladimirskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/volgogradskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/vologodskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/voronejskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/ivanovskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/irkutskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/kaliningradskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/kalujskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/kemerovskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/kirovskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/kostromskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/kurganskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/kurskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/leningradskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/lipetskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/magadanskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/moskovskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/murmanskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/nijegorodskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/novgorodskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/novosibirskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/omskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/orenburgskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/orlovskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/penzenskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/pskovskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/rostovskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/ryazanskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/samarskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/saratovskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/sahalinskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/sverdlovskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/smolenskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/tambovskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/tverskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/tomskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/tulskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/tyumenskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/ulyanovskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/chelyabinskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/yaroslavskaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/evreyskaya-avtonomnaya-oblast?per_page=50",
+ "https://raui.ru/kupit-office-sklad/nenetskiy-avtonomnyiy-okrug?per_page=50",
+ "https://raui.ru/kupit-office-sklad/hantyi-mansiyskiy-avtonomnyiy-okrug?per_page=50",
+ "https://raui.ru/kupit-office-sklad/chukotskiy-avtonomnyiy-okrug?per_page=50",
+ "https://raui.ru/kupit-office-sklad/yamalo-nenetskiy-avtonomnyiy-okrug?per_page=50"],
+  "_segment": "",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "RAUI",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 1024,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
+    "DOWNLOAD_TIMEOUT": 60,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": false,
+    "AUTOTHROTTLE_START_DELAY": 1.0,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_ENABLED": true,
+    "RETRY_TIMES": 20,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      303,
+      302,
+      301
+    ],
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": true,
+    "COOKIES_ENABLED": true,
+    "RANDOM_UA_TYPE": "random"
+  },
+  "methods": {
+    "crawling_type": "common",
+    "filter_duplicates": true,
+    "allowed_domains": [],
+    "proxy_settings": {
+      "types": [
+        "https"
+      ]
+    }
+  },
+  "crawl_tree": [
+    {"pagination_urls":{"path": "//div[@class='pagging']/ul/li/a[@class='pagging__link active']/parent::*/following-sibling::li[1]/a/@href"},
+    "item_urls": {"path": "//div[@class='searchrezults-item']//a[contains(text(),'Подробнее')]/@href"}}
+  ],
+  "item_page": {
+    "fields": {
+      "federal_subject": {
+        "type": "string",
+        "path": "//div[@class='breadcrumbs']/div/a[2]/text()"
+      },
+      "segment": {
+        "type": "string",
+        "path": "//span[@class='searchrezults-item-info-header__value']/text()",
+        "regex": "Квартир|Офис|Склад|Коммерч|Гараж|Участ|Дом|Бизн|Свободн|Торгов"
+      },
+	  "addit_comm_condition": {
+        "type": "string",
+        "path": "//div[@class='item__priceinfo']/text()"
+      },
+      "operation": {
+        "type": "string",
+        "path": "concat(substring('Аренда', 1 div boolean(//div[@class='item__info'][contains(text(), ' срок')])), substring('Продажа', 1 div boolean(//div[@class='item__info'][contains(text(), 'продаж')])))"
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now"
+      },
+      "date_created": {
+        "type": "date",
+        "path": "//div[@class='item__data']//text()",
+        "time": "from string"
+      },
+      "title_name": {
+        "type": "string",
+        "path": "//h1[@class='item__address']//text()"
+      },
+      "address": {
+        "type": "string",
+        "path": "//h1[@class='item__address']//text()",
+        "regex": ".(?=[А-Я]).+"
+      },
+      "description": {
+        "type": "list to string",
+        "path": "//div[@class='item-text']//text()"
+      },
+      "source_longitude": {
+        "type": "float",
+        "path": "//div[@class='item-mapblock-map']//@data-croods",
+        "regex": ",(\\d*\\W?\\d+\\W?\\d+)"
+      },
+      "source_latitude": {
+        "type": "float",
+        "path": "//div[@class='item-mapblock-map']//@data-croods",
+        "regex": "(\\d*\\W?\\d+\\W?\\d+),"
+      },
+      "price_total": {
+        "type": "float",
+        "path": "//div[@class='item__price']//text()",
+        "regex": "\\d*\\W?\\d+"
+      },
+      "price_currency": {
+        "type": "list to string",
+        "path": "//div[@class='item__price']//text()|//div[@class='item__price']/i/@class",
+        "regex": "\\$|rub"
+      },
+      "price_term": {
+        "type": "string",
+        "path": "//div[@class='item__price']//text()",
+        "regex": "в мес|в год"
+      },
+      "rent_price_per_area": {
+        "type": "float",
+        "path": "//div[@class='item__price']/following-sibling::div[@class='item__number']/text()[1]",
+        "regex": "\\d*\\W?\\d+"
+      },
+      "metro_station": {
+        "type": "string",
+        "path": "(//div[@class='item__metro']/text())[1]",
+        "regex": "(.+), "
+      },
+      "metro_minutes": {
+        "type": "string",
+        "path": "(//div[@class='item__metro']/text())[1]",
+        "regex": "(?<=, ).*?(?= \\()"
+      },
+      "company_name": {
+        "type": "list to string",
+        "path": "//div[@class='seller-info__text']//text()",
+        "regex": ".+(?=Имя:)"
+      },
+      "seller_name": {
+        "type": "list to string",
+        "path": "//div[@class='seller-info__text']//text()",
+        "regex": "(?<=Имя:).+"
+      }
+    },
+    "tables": {
+      "table_1": {
+        "_keys_path": "//div[@class='item-block row']//tr",
+        "_vals_path": "//div[@class='item-block row']//tr",
+        "key_regex": "td>(.+):",
+        "key_converter": {
+          "балкон": {
+            "name": "is_balcony",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "высота_потолков": {
+            "name": "ceiling_height",
+            "type": "float",
+            "regex": "<\/td>\\s*<td>(.+) м"
+          },
+          "грузовых_лифтов": {
+            "name": "is_cargo_elevator",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "жилая_площадь": {
+            "name": "area_living",
+            "type": "float",
+            "regex": "<\/td>\\s*<td>(.+) м"
+          },
+          "лоджия": {
+            "name": "is_balcony",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "мусоропровод": {
+            "name": "garbage_type",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "общая_площадь": {
+            "name": "area_total",
+            "type": "float",
+            "regex": "<\/td>\\s*<td>(.+) м"
+          },
+          "окна": {
+            "name": "is_view",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "пассажирских_лифтов": {
+            "name": "lift_cnt",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "площадь_кухни": {
+            "name": "kitchen_area",
+            "type": "float",
+            "regex": "<\/td>\\s*<td>(.+) м"
+          },
+          "раздельных_санузлов": {
+            "name": "is_wc",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "ремонт": {
+            "name": "decoration_type",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "совмещенных_санузлов": {
+            "name": "is_wc",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "тип_дома": {
+            "name": "building_type",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "этаж": {
+            "name": [
+              "floor",
+              "floors_cnt"
+            ],
+            "type": [
+              "float",
+              "float"
+            ],
+            "regex": [
+              ">(\\d*\\W?\\d+) \/ ",
+              " \/ (\\d*\\W?\\d+)<"
+            ]
+          },
+          "площадь_комнат": {
+            "name": "area_room",
+            "type": "float",
+            "regex": "<\/td>\\s*<td>(.+) м"
+          },
+          "площадь_комнаты": {
+            "name": "area_room",
+            "type": "float",
+            "regex": "<tr><td>Площадь комнаты:</td><td>2 м<sup>2</sup></td></tr>"
+          },
+          "баня": {
+            "name": "is_bathhouse",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "бассейн": {
+            "name": "is_swimming_pool",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "водопровод": {
+            "name": "is_plumbing",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "газовые_сети": {
+            "name": "is_gas",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "год_постройки": {
+            "name": "year_built",
+            "type": "float",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "канализация": {
+            "name": "is_sewage",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(\\d+)<\/td>"
+          },
+          "категория_земель": {
+            "name": "land_category",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "количество_спален": {
+            "name": "none",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "мебель_в_комнатах": {
+            "name": "is_furniture",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "название_коттеджного_посёлка": {
+            "name": "property_name",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "отопление": {
+            "name": "is_heating",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "площадь": {
+            "name": [
+              "area_total",
+              "square_dimension"
+            ],
+            "type": [
+              "float",
+              "string"
+            ],
+            "regex": [
+              "<\/td>\\s*<td>(\\d*\\W?\\d+)",
+              "</td>\\s*<td>\\d*\\W?\\d+(\\D+)<"
+            ]
+          },
+          "площадь_участка": {
+            "name": [
+              "land_area",
+              "area_land_unit"
+            ],
+            "type": [
+              "float",
+              "string"
+            ],
+            "regex": [
+              "<\/td>\\s*<td>(\\d*\\W?\\d+)",
+              "([а-я]+).</td></tr>"
+            ]
+          },
+          "санузел": {
+            "name": "is_wc",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "электроснабжение": {
+            "name": "is_electricity",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "этажей_в_доме": {
+            "name": "floors_cnt",
+            "type": "float",
+            "regex": "<\/td>\\s*<td>(\\d+)<\/td>"
+          },
+          "водоснабжение": {
+            "name": "is_plumbing",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "вход": {
+            "name": "is_entrance",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "газ": {
+            "name": "is_gas",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "интернет": {
+            "name": "is_internet",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "категория": {
+            "name": "none",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "лифт": {
+            "name": "is_elevator",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "охрана": {
+            "name": "security_type",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "парковка": {
+            "name": "is_parking",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "состояние": {
+            "name": "decoration_type",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "электричество": {
+            "name": "is_electricity",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "доп_линии": {
+            "name": "none",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "мебель": {
+            "name": "is_furniture",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "можно_частями_от": {
+            "name": "none",
+            "type": "float",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "корпус": {
+            "name": "address_korpus",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          },
+          "название": {
+            "name": "property_name",
+            "type": "string",
+            "regex": "<\/td>\\s*<td>(.+)<\/td>"
+          }
+        }
+      },
+      "table_2": {
+        "_keys_path": "//div[@class='item-options-column']//text()",
+        "_vals_path": "//div[@class='item-options-column']//text()",
+        "key_converter": {
+          "интернет": {
+            "name": "is_internet",
+            "type": "string"
+          },
+          "кухонная_мебель": {
+            "name": "is_kitchen_furniture",
+            "type": "string"
+          },
+          "мебель": {
+            "name": "is_furniture",
+            "type": "string"
+          },
+          "стиральная_машина": {
+            "name": "is_washer",
+            "type": "string"
+          },
+          "телевизор": {
+            "name": "is_tv",
+            "type": "string"
+          },
+          "телефон": {
+            "name": "is_phone",
+            "type": "string"
+          },
+          "холодильник": {
+            "name": "is_fridge",
+            "type": "string"
+          },
+          "можно_с_детьми": {
+            "name": "none",
+            "type": "float"
+          },
+          "можно_с_животными": {
+            "name": "none",
+            "type": "float"
+          },
+          "баня": {
+            "name": "is_bathhouse",
+            "type": "string"
+          },
+          "бассейн": {
+            "name": "is_swimming_pool",
+            "type": "string"
+          },
+          "мебель_в_комнатах": {
+            "name": "is_furniture",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "follow": [
+       {"methods": {
+          "crawling_type": "post",
+          "content_type": "json",
+          "filter_duplicates": false,
+          "proxy_settings": {"save": true}},
+        "url": "https://raui.ru/ajax/item/contact",
+        "post_params": {
+          "fields": {
+            "id": {
+              "type": "string",
+              "path": "//div[@class=' contactstabs']/@data-id"
+             }
+           }
+         },
+        "fields": {
+          "phone": {
+            "type": "phone",
+            "path": "contacts.phones"
+        }
+      },
+         "headers": {"x-requested-with": {"type": "string", "value": "XMLHttpRequest"}}
+    }
+  ]
+  }
+}
