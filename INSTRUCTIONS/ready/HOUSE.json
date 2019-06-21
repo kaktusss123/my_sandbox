@@ -1,0 +1,344 @@
+{
+    "_task_id" : "NNN_HOUSE_RU_1",
+    "_start_urls" : [
+		"https://kalugahouse.ru/catalog/trade/prodazha/",
+        "https://kalugahouse.ru/catalog/trade/arenda/",
+        "https://kalugahouse.ru/catalog/appartments/kvartiry_pod_kommertsiju/",
+        "https://kalugahouse.ru/catalog/offices/prodazha/",
+        "https://kalugahouse.ru/catalog/offices/arenda/",
+        "https://kalugahouse.ru/catalog/production/prodazha/",
+        "https://kalugahouse.ru/catalog/production/arenda/",
+        "https://kalugahouse.ru/catalog/biznes/prodazha_gotovogo_biznesa/",
+        "https://kalugahouse.ru/catalog/Garazhi/Prodazha/",
+        "https://kalugahouse.ru/catalog/Garazhi/Arenda_predlozhenie/",
+
+        "http://tulahouse.ru/catalog/trade/prodazha/",
+        "http://tulahouse.ru/catalog/trade/arenda/",
+        "http://tulahouse.ru/catalog/appartments/kvartiry_pod_kommertsiju/",
+        "http://tulahouse.ru/catalog/offices/prodazha/",
+        "http://tulahouse.ru/catalog/offices/arenda/",
+        "http://tulahouse.ru/catalog/production/prodazha/",
+        "http://tulahouse.ru/catalog/production/arenda/",
+        "http://tulahouse.ru/catalog/biznes/prodazha_gotovogo_biznesa/",
+        "http://tulahouse.ru/catalog/Garazhi/Prodazha/",
+        "http://tulahouse.ru/catalog/Garazhi/Arenda_predlozhenie/",
+
+        "http://vladimirhouse.ru/catalog/trade/prodazha/",
+        "http://vladimirhouse.ru/catalog/trade/arenda/",
+        "http://vladimirhouse.ru/catalog/appartments/kvartiry_pod_kommertsiju/",
+        "http://vladimirhouse.ru/catalog/offices/prodazha/",
+        "http://vladimirhouse.ru/catalog/offices/arenda/",
+        "http://vladimirhouse.ru/catalog/production/prodazha/",
+        "http://vladimirhouse.ru/catalog/production/arenda/",
+        "http://vladimirhouse.ru/catalog/biznes/prodazha_gotovogo_biznesa/",
+        "http://vladimirhouse.ru/catalog/Garazhi/Prodazha/",
+        "http://vladimirhouse.ru/catalog/Garazhi/Arenda_predlozhenie/"
+
+    ],"_segment": "Коммерческая недвижимость",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "house.ru",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 512,
+    "DOWNLOAD_TIMEOUT": 60,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": true,
+    "AUTOTHROTTLE_START_DELAY": 1.0,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 512,
+    "HTTPERROR_ALLOWED_CODES": [],
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 256,
+    "RETRY_ENABLED": true,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      301,
+      302,
+      303
+    ],
+    "RETRY_TIMES": 20,
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": false,
+    "RANDOM_UA_TYPE": "random"
+  },
+  "methods": {
+    "crawling_type": "common",
+    "filter_duplicates": true,
+    "allowed_domains": [],
+    "proxy_settings": {
+      "types": [
+        "https"
+      ]
+    }
+  },
+  "crawl_tree": [
+    {
+      "pagination_urls": {
+        "path": "//span[contains(@class, 'active')][1]/following-sibling::span[1]/a/@href"
+      },
+      "item_urls": {
+        "path": "//div[@class='item-info']/h2/a/@href"
+      }
+    }
+  ],
+    "item_page" : {
+        "_comment" : {
+            "crawling_type" : "common",
+            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
+            "filter_duplicates" : true
+        },
+        "fields" : {
+            "date_info" : {
+                "type" : "date",
+                "time" : "now"
+            },
+			"date_created" : {
+                "type" : "date",
+                "path": "//div[@class='item-properties-extra']/div/p[contains(text(),'Размещено')]/text()",
+				"regex" : "(?<=:).+",
+				"time" : "from string"
+            },
+			"date_updated" : {
+                "type" : "date",
+                "path": "//div[@class='item-properties-extra']/div/p[contains(text(),'Обновлено')]/text()",
+				"regex" : "(?<=:).+",
+				"time" : "from string"
+            },
+			"description" : {
+				"type" : "list to string",
+				"path": "//p[@class='item-description']/text()"
+			},
+			"price" : {
+                "type" : "float",
+				"path": "//td[@class='title-price']/div/text()",
+				"regex" : "\\d+|\\s|\\.|\\,"
+            },
+			"price_currency" : {
+                "type" : "string",
+				"path": "//td[@class='title-price']/div/text()",
+                "regex" : "[А-Яа-я]+"
+            },
+			"phone": {
+				"type" : "phone",
+				"path": "//td[@class='properties-phone']/div/text()"
+			},
+			"title_name" : {
+                "type" : "string",
+                "path": "//div[@class='item']/h1/text()"
+            },
+			"source_latitude" : {
+                "type" : "float",
+                "path": "//script[contains(text(),'myMap')]/text()",
+				"regex" : "(?<=center: \\[)\\d*\\W?\\d+"
+            },
+			"source_longitude" : {
+                "type" : "float",
+                "path": "//script[contains(text(),'myMap')]/text()",
+				"regex" : "\\d*\\W?\\d+(?=\\],\\n)"
+            },
+            "address": {
+                "type": "string",
+                "path":   "//div[@class='item']/h1/text()",
+                "regex" : "(?<=,).+"
+            },
+            "operation": {
+                "type": "string",
+                "path":   "//div[@id='nav']/a/@title",
+                "regex" : "Аренда|Продажа"
+            },
+            "segment_subtype": {
+                "type": "list to string",
+                "path": "//div[@id='nav']/a/@title",
+                "regex" : "Производств|Торговые площади|Квартиры под коммерцию|Офисы|Гаражи"
+            }
+        },
+		 "tables" : {
+			"table_1" : {
+		        "_keys_path" : "//table[@class='properties']//td[@class='title']/text()",
+                "_vals_path" : "//table[@class='properties']//td[@class='title']/following-sibling::td/text()|//table[@class='properties']//td[@class='title']/following-sibling::td/a/text()",
+				"key_converter" : {
+					"комнат": {
+						"name": "room_count",
+						"type" : "float",
+						"regex": "\\d+"
+					},
+					"общая_площадь": {
+						"name": "area_total",
+						"type" : "float",
+						"regex" : "\\d*\\W?\\d+"
+					},
+					"жилая_площадь": {
+						"name": "area_living",
+						"type" : "float",
+						"regex" : "\\d*\\W?\\d+"
+					},
+					"площадь_кухни": {
+						"name": "area_kitchen",
+						"type" : "float",
+						"regex" : "\\d*\\W?\\d+"
+					},
+					"площадь_участка": {
+						"name": ["area_land", "area_land_unit"],
+						"type" : ["float","string"],
+						"regex" : ["\\d*\\W?\\d+","[А-Яа-я]+"]
+					},
+					"площадь": {
+						"name": ["area", "area_unit"],
+						"type" : ["float","string"],
+						"regex" : ["\\d*\\W?\\d+","[А-Яа-я\\.]+"]
+					},
+					"компания": {
+						"name": "seller_company",
+						"type" : "string"
+					},
+					"контактное_лицо": {
+						"name": "seller_name",
+						"type" : "string"
+					},
+					"адрес": {
+						"name": "address",
+						"type" : "string"
+					},
+					"тип_дома": {
+						"name": "building_construction",
+						"type" : "string"
+					},
+					"этаж": {
+						"name": ["floor", "floor_count"],
+						"type" : ["float", "float"],
+						"regex" : ["^\\d+(?=/|$)", "(?<=/)\\d+"]
+					},
+					"балкон_лоджия": {
+						"name": "balcony",
+						"type" : "string"
+					},
+					"планировка": {
+						"name": "floorplan",
+						"type" : "string"
+					},
+					"тип": {
+						"name": "sale_type",
+						"type" : "string"
+					},
+					"район": {
+						"name": "address_district",
+						"type" : "string"
+					},
+					"бытовая_техника": {
+						"name": "is_appliences",
+						"type" : "string"
+					},
+					"мебель": {
+						"name": "is_furniture",
+						"type" : "string"
+					},
+					"холодильник": {
+						"name": "is_freezer",
+						"type" : "string"
+					},
+					"дата_добавления": {
+						"name": "date_created",
+						"type" : "date"
+					},
+					"населенный_пункт": {
+						"name": "address_city",
+						"type" : "string"
+					},
+					"улица_деревня": {
+						"name": "address_city",
+						"type" : "string"
+					},
+					"деревня_или_улица": {
+						"name": "address_city",
+						"type" : "string"
+					},
+					"страна": {
+						"name": "address_country",
+						"type" : "string"
+					},
+					"коммуникации": {
+						"name": "is_communications",
+						"type" : "string"
+					},
+					"этажей": {
+						"name": "floors_count",
+						"type" : "float"
+					},
+					"удалённость": {
+						"name": ["distance", "distance_unit"],
+						"type" : ["float", "string"],
+						"regex" : ["\\d*\\W?\\d+", "[А-Яа-я]+"]
+					},
+					"парковка": {
+						"name": "is_parking",
+						"type" : "string"
+					},
+					"офисная_мебель": {
+						"name": "is_furniture",
+						"type" : "string"
+					},
+					"для_этого_офиса": {
+						"name": "nil",
+						"value" : ""
+					},
+					"оборот_за_последние_6_месяцев": {
+						"name": ["revenue_six", "revenue_unit"],
+						"type" : ["float", "string"],
+						"regex" : ["\\d*\\W?\\d+", "[А-Яа-я]+"]
+					},
+					"объем_кредитов_если_есть": {
+						"name": "mortage",
+						"type" : "string"
+					},
+					"год_основания": {
+						"name": "year_found",
+						"type" : "float"
+					},
+					"форма_собственности": {
+						"name": "property_type",
+						"type" : "string"
+					},
+					"число_работников": {
+						"name": "employees_count",
+						"type" : "float"
+					},
+					"подвал": {
+						"name": "is_basement",
+						"type" : "string"
+					},
+					"размеры": {
+						"name": "dimensions",
+						"type" : "string"
+					},
+					"кухня_площадь": {
+						"name": "area_kitchen",
+						"type" : "float",
+						"regex": "\\d*\\W?\\d+"
+					},
+					"номер_дома": {
+						"name": "house_number",
+						"type" : "string"
+					},
+					"улица": {
+						"name": "address_street",
+						"type" : "string"
+					},
+					"всего_этажей": {
+						"name": "floor_count",
+						"type" : "float"
+					}
+				}
+				}
+			}
+		}
+    }
