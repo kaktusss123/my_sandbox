@@ -152,7 +152,7 @@
                 "regex" : "(?<=,).+"
             },
             "operation": {
-                "type": "string",
+                "type": "list to string",
                 "path":   "//div[@id='nav']/a/@title",
                 "regex" : "Аренда|Продажа"
             },
