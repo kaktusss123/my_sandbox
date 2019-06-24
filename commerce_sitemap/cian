@@ -32,7 +32,9 @@
             302,
 			301,
 			511,
-            407
+            407,
+            307,
+            502
         ],
         "ROBOTSTXT_ENABLED" : false,
         "ROBOTSTXT_OBEY" : false,
