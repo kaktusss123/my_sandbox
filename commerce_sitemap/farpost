@@ -431,7 +431,7 @@
             "fields": {
                 "address": {
                     "type": "string",
-                    "path": "//span[@data-field = 'street-district']/a/text()[1]",
+                    "path": "//div[text()= 'Адрес']/following-sibling::div//a/text()",
                     "operations": []
                 },
                 "federal_subject": {
