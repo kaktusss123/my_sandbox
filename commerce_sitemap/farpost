@@ -431,7 +431,7 @@
             "fields": {
                 "address": {
                     "type": "string",
-                    "path": "(//span[@itemprop = 'name']/text())[last()]",
+                    "path": "//span[@data-field = 'street-district']/a/text()[1]",
                     "operations": []
                 },
                 "federal_subject": {
@@ -439,7 +439,12 @@
                     "path": "//div[@class='popButton cityPop']/text()",
                     "operations": []
                 },
-                "detail": {
+                "sub_segment": {
+                    "type": "string",
+                    "path": "//div[@id='breadcrumbs']//a[last()]/preceding-sibling::a[1]/span/text()",
+                    "operations": []
+                },
+                "description": {
                     "type": "list to string",
                     "path": "//p[@class='inplace mod__label_up_down auto-shy']/text()",
                     "regex": "[а-яА-Яй0-9,.-]+",
@@ -492,12 +497,6 @@
                 "appliances": {
                     "type": "list to string",
                     "path": "//td[@class='bulletinCell']//p[@data-field='realtyFurnitureAndHousehold']/text()",
-                    "operations": []
-                },
-                "description": {
-                    "type": "list to string",
-                    "path": "//p[@data-field='realtyFeature']/text()",
-                    "regex": "[а-яА-Яй0-9,.-]+",
                     "operations": []
                 },
                 "currency": {
