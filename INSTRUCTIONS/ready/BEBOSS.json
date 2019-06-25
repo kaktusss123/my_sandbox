@@ -1408,7 +1408,7 @@
 			},
 			"object_class": {
 				"type": "string",
-				"path": "//dl[@class = 'object-property clearfix']/dt[contains(.,'Класс')]/following-sibling::dd[1]/text()",
+				"path": "//dl[@class = 'object-property clearfix']/dt[contains(.,'Класс')]/following-sibling::dd[1]/text()"
 			}
 
 		}
