@@ -491,7 +491,7 @@
                 },
                 "price_total": {
                     "type": "float",
-                    "path": "(//span[@itemprop='price']/text())[1]",
+                    "path": "(//span[@itemprop='price']/span/text() | //span[@itemprop='price']/text())[1]",
                     "operations": []
                 },
                 "appliances": {
