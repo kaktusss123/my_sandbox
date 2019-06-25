@@ -1,0 +1,1325 @@
+{       "_comment":"Увеличено количество потоков, не все стартовые ссылки отрабатывают корректно (в старртовых https://vld.gdeetotdom.ru/vladimirskaya-oblast/rent-office/ на сайте https://vladimir.gdeetotdom.ru/snyat-ofis-vladimirskaya-oblast/ - кау временная мера добавлено разрешение редиретка и включены cookies ",
+        "_comment":"отлажена работа с пагинацией",
+        "_comment":"отлажено получение телефона",
+        "_task_id": "0000-0005-0273&T0118&1_DEBUG_6",
+        "_start_urls": [
+            "https://adg.gdeetotdom.ru/adygeya-republic/buy-building/",
+            "https://adg.gdeetotdom.ru/adygeya-republic/buy-commercial-land/",
+            "https://adg.gdeetotdom.ru/adygeya-republic/buy-free-use/",
+            "https://adg.gdeetotdom.ru/adygeya-republic/buy-office/",
+            "https://adg.gdeetotdom.ru/adygeya-republic/buy-warehouse/",
+            "https://adg.gdeetotdom.ru/adygeya-republic/rent-commercial-land/",
+            "https://adg.gdeetotdom.ru/adygeya-republic/rent-office/",
+            "https://altay.gdeetotdom.ru/altay-republic/buy-building/",
+            "https://altay.gdeetotdom.ru/altay-republic/buy-commercial-land/",
+            "https://altay.gdeetotdom.ru/altay-republic/buy-free-use/",
+            "https://altay.gdeetotdom.ru/altay-republic/buy-office/",
+            "https://altay.gdeetotdom.ru/altay-republic/buy-warehouse/",
+            "https://altay.gdeetotdom.ru/altay-republic/rent-commercial-land/",
+            "https://altay.gdeetotdom.ru/altay-republic/rent-office/",
+            "https://altayskiy.gdeetotdom.ru/altayskiy-kray/buy-building/",
+            "https://altayskiy.gdeetotdom.ru/altayskiy-kray/buy-commercial-land/",
+            "https://altayskiy.gdeetotdom.ru/altayskiy-kray/buy-free-use/",
+            "https://altayskiy.gdeetotdom.ru/altayskiy-kray/buy-office/",
+            "https://altayskiy.gdeetotdom.ru/altayskiy-kray/buy-warehouse/",
+            "https://altayskiy.gdeetotdom.ru/altayskiy-kray/rent-commercial-land/",
+            "https://altayskiy.gdeetotdom.ru/altayskiy-kray/rent-office/",
+            "https://amur.gdeetotdom.ru/amurskaya-oblast/buy-building/",
+            "https://amur.gdeetotdom.ru/amurskaya-oblast/buy-commercial-land/",
+            "https://amur.gdeetotdom.ru/amurskaya-oblast/buy-free-use/",
+            "https://amur.gdeetotdom.ru/amurskaya-oblast/buy-office/",
+            "https://amur.gdeetotdom.ru/amurskaya-oblast/buy-warehouse/",
+            "https://amur.gdeetotdom.ru/amurskaya-oblast/rent-commercial-land/",
+            "https://amur.gdeetotdom.ru/amurskaya-oblast/rent-office/",
+            "https://arhangelsk.gdeetotdom.ru/arkhangelskaya-oblast/buy-building/",
+            "https://arhangelsk.gdeetotdom.ru/arkhangelskaya-oblast/buy-commercial-land/",
+            "https://arhangelsk.gdeetotdom.ru/arkhangelskaya-oblast/buy-free-use/",
+            "https://arhangelsk.gdeetotdom.ru/arkhangelskaya-oblast/buy-office/",
+            "https://arhangelsk.gdeetotdom.ru/arkhangelskaya-oblast/buy-warehouse/",
+            "https://arhangelsk.gdeetotdom.ru/arkhangelskaya-oblast/rent-commercial-land/",
+            "https://arhangelsk.gdeetotdom.ru/arkhangelskaya-oblast/rent-office/",
+            "https://astrahan.gdeetotdom.ru/astrakhanskaya-oblast/buy-building/",
+            "https://astrahan.gdeetotdom.ru/astrakhanskaya-oblast/buy-commercial-land/",
+            "https://astrahan.gdeetotdom.ru/astrakhanskaya-oblast/buy-free-use/",
+            "https://astrahan.gdeetotdom.ru/astrakhanskaya-oblast/buy-office/",
+            "https://astrahan.gdeetotdom.ru/astrakhanskaya-oblast/buy-warehouse/",
+            "https://astrahan.gdeetotdom.ru/astrakhanskaya-oblast/rent-commercial-land/",
+            "https://astrahan.gdeetotdom.ru/astrakhanskaya-oblast/rent-office/",
+            "https://blg.gdeetotdom.ru/belgorodskaya-oblast/buy-building/",
+            "https://blg.gdeetotdom.ru/belgorodskaya-oblast/buy-commercial-land/",
+            "https://blg.gdeetotdom.ru/belgorodskaya-oblast/buy-free-use/",
+            "https://blg.gdeetotdom.ru/belgorodskaya-oblast/buy-office/",
+            "https://blg.gdeetotdom.ru/belgorodskaya-oblast/buy-warehouse/",
+            "https://blg.gdeetotdom.ru/belgorodskaya-oblast/rent-commercial-land/",
+            "https://blg.gdeetotdom.ru/belgorodskaya-oblast/rent-office/",
+            "https://brn.gdeetotdom.ru/bryanskaya-oblast/buy-building/",
+            "https://brn.gdeetotdom.ru/bryanskaya-oblast/buy-commercial-land/",
+            "https://brn.gdeetotdom.ru/bryanskaya-oblast/buy-free-use/",
+            "https://brn.gdeetotdom.ru/bryanskaya-oblast/buy-office/",
+            "https://brn.gdeetotdom.ru/bryanskaya-oblast/buy-warehouse/",
+            "https://brn.gdeetotdom.ru/bryanskaya-oblast/rent-commercial-land/",
+            "https://brn.gdeetotdom.ru/bryanskaya-oblast/rent-office/",
+            "https://bsh.gdeetotdom.ru/bashkortostan-republic/buy-building/",
+            "https://bsh.gdeetotdom.ru/bashkortostan-republic/buy-commercial-land/",
+            "https://bsh.gdeetotdom.ru/bashkortostan-republic/buy-free-use/",
+            "https://bsh.gdeetotdom.ru/bashkortostan-republic/buy-office/",
+            "https://bsh.gdeetotdom.ru/bashkortostan-republic/buy-warehouse/",
+            "https://bsh.gdeetotdom.ru/bashkortostan-republic/rent-commercial-land/",
+            "https://bsh.gdeetotdom.ru/bashkortostan-republic/rent-office/",
+            "https://buryatiya.gdeetotdom.ru/buryatiya-republic/buy-building/",
+            "https://buryatiya.gdeetotdom.ru/buryatiya-republic/buy-commercial-land/",
+            "https://buryatiya.gdeetotdom.ru/buryatiya-republic/buy-free-use/",
+            "https://buryatiya.gdeetotdom.ru/buryatiya-republic/buy-office/",
+            "https://buryatiya.gdeetotdom.ru/buryatiya-republic/buy-warehouse/",
+            "https://buryatiya.gdeetotdom.ru/buryatiya-republic/rent-commercial-land/",
+            "https://buryatiya.gdeetotdom.ru/buryatiya-republic/rent-office/",
+            "https://chechenskaya.gdeetotdom.ru/chechenskaya-republic/buy-building/",
+            "https://chechenskaya.gdeetotdom.ru/chechenskaya-republic/buy-commercial-land/",
+            "https://chechenskaya.gdeetotdom.ru/chechenskaya-republic/buy-free-use/",
+            "https://chechenskaya.gdeetotdom.ru/chechenskaya-republic/buy-office/",
+            "https://chechenskaya.gdeetotdom.ru/chechenskaya-republic/buy-warehouse/",
+            "https://chechenskaya.gdeetotdom.ru/chechenskaya-republic/rent-commercial-land/",
+            "https://chechenskaya.gdeetotdom.ru/chechenskaya-republic/rent-office/",
+            "https://chelyabinsk.gdeetotdom.ru/chelyabinskaya-oblast/buy-building/",
+            "https://chelyabinsk.gdeetotdom.ru/chelyabinskaya-oblast/buy-commercial-land/",
+            "https://chelyabinsk.gdeetotdom.ru/chelyabinskaya-oblast/buy-free-use/",
+            "https://chelyabinsk.gdeetotdom.ru/chelyabinskaya-oblast/buy-office/",
+            "https://chelyabinsk.gdeetotdom.ru/chelyabinskaya-oblast/buy-warehouse/",
+            "https://chelyabinsk.gdeetotdom.ru/chelyabinskaya-oblast/rent-commercial-land/",
+            "https://chelyabinsk.gdeetotdom.ru/chelyabinskaya-oblast/rent-office/",
+            "https://chukotka.gdeetotdom.ru/chukotskiy-avtonomnyj-okrug/buy-building/",
+            "https://chukotka.gdeetotdom.ru/chukotskiy-avtonomnyj-okrug/buy-commercial-land/",
+            "https://chukotka.gdeetotdom.ru/chukotskiy-avtonomnyj-okrug/buy-free-use/",
+            "https://chukotka.gdeetotdom.ru/chukotskiy-avtonomnyj-okrug/buy-office/",
+            "https://chukotka.gdeetotdom.ru/chukotskiy-avtonomnyj-okrug/buy-warehouse/",
+            "https://chukotka.gdeetotdom.ru/chukotskiy-avtonomnyj-okrug/rent-commercial-land/",
+            "https://chukotka.gdeetotdom.ru/chukotskiy-avtonomnyj-okrug/rent-office/",
+            "https://cuv.gdeetotdom.ru/chuvashskaya-republic/buy-building/",
+            "https://cuv.gdeetotdom.ru/chuvashskaya-republic/buy-commercial-land/",
+            "https://cuv.gdeetotdom.ru/chuvashskaya-republic/buy-free-use/",
+            "https://cuv.gdeetotdom.ru/chuvashskaya-republic/buy-office/",
+            "https://cuv.gdeetotdom.ru/chuvashskaya-republic/buy-warehouse/",
+            "https://cuv.gdeetotdom.ru/chuvashskaya-republic/rent-commercial-land/",
+            "https://cuv.gdeetotdom.ru/chuvashskaya-republic/rent-office/",
+            "https://dagestan.gdeetotdom.ru/dagestan-republic/buy-building/",
+            "https://dagestan.gdeetotdom.ru/dagestan-republic/buy-commercial-land/",
+            "https://dagestan.gdeetotdom.ru/dagestan-republic/buy-free-use/",
+            "https://dagestan.gdeetotdom.ru/dagestan-republic/buy-office/",
+            "https://dagestan.gdeetotdom.ru/dagestan-republic/buy-warehouse/",
+            "https://dagestan.gdeetotdom.ru/dagestan-republic/rent-commercial-land/",
+            "https://dagestan.gdeetotdom.ru/dagestan-republic/rent-office/",
+            "https://eao.gdeetotdom.ru/evreyskaya-avtonomnaya-oblast/buy-building/",
+            "https://eao.gdeetotdom.ru/evreyskaya-avtonomnaya-oblast/buy-commercial-land/",
+            "https://eao.gdeetotdom.ru/evreyskaya-avtonomnaya-oblast/buy-free-use/",
+            "https://eao.gdeetotdom.ru/evreyskaya-avtonomnaya-oblast/buy-office/",
+            "https://eao.gdeetotdom.ru/evreyskaya-avtonomnaya-oblast/buy-warehouse/",
+            "https://eao.gdeetotdom.ru/evreyskaya-avtonomnaya-oblast/rent-commercial-land/",
+            "https://eao.gdeetotdom.ru/evreyskaya-avtonomnaya-oblast/rent-office/",
+            "https://habarovsk.gdeetotdom.ru/khabarovskiy-kray/buy-building/",
+            "https://habarovsk.gdeetotdom.ru/khabarovskiy-kray/buy-commercial-land/",
+            "https://habarovsk.gdeetotdom.ru/khabarovskiy-kray/buy-free-use/",
+            "https://habarovsk.gdeetotdom.ru/khabarovskiy-kray/buy-office/",
+            "https://habarovsk.gdeetotdom.ru/khabarovskiy-kray/buy-warehouse/",
+            "https://habarovsk.gdeetotdom.ru/khabarovskiy-kray/rent-commercial-land/",
+            "https://habarovsk.gdeetotdom.ru/khabarovskiy-kray/rent-office/",
+            "https://hakasiya.gdeetotdom.ru/khakasiya-republic/buy-building/",
+            "https://hakasiya.gdeetotdom.ru/khakasiya-republic/buy-commercial-land/",
+            "https://hakasiya.gdeetotdom.ru/khakasiya-republic/buy-free-use/",
+            "https://hakasiya.gdeetotdom.ru/khakasiya-republic/buy-office/",
+            "https://hakasiya.gdeetotdom.ru/khakasiya-republic/buy-warehouse/",
+            "https://hakasiya.gdeetotdom.ru/khakasiya-republic/rent-commercial-land/",
+            "https://hakasiya.gdeetotdom.ru/khakasiya-republic/rent-office/",
+            "https://hmao.gdeetotdom.ru/khanty-mansiyskiy-avtonomnyj-okrug/buy-building/",
+            "https://hmao.gdeetotdom.ru/khanty-mansiyskiy-avtonomnyj-okrug/buy-commercial-land/",
+            "https://hmao.gdeetotdom.ru/khanty-mansiyskiy-avtonomnyj-okrug/buy-free-use/",
+            "https://hmao.gdeetotdom.ru/khanty-mansiyskiy-avtonomnyj-okrug/buy-office/",
+            "https://hmao.gdeetotdom.ru/khanty-mansiyskiy-avtonomnyj-okrug/buy-warehouse/",
+            "https://hmao.gdeetotdom.ru/khanty-mansiyskiy-avtonomnyj-okrug/rent-commercial-land/",
+            "https://hmao.gdeetotdom.ru/khanty-mansiyskiy-avtonomnyj-okrug/rent-office/",
+            "https://ingushetia.gdeetotdom.ru/ingushetiya-republic/buy-building/",
+            "https://ingushetia.gdeetotdom.ru/ingushetiya-republic/buy-commercial-land/",
+            "https://ingushetia.gdeetotdom.ru/ingushetiya-republic/buy-free-use/",
+            "https://ingushetia.gdeetotdom.ru/ingushetiya-republic/buy-office/",
+            "https://ingushetia.gdeetotdom.ru/ingushetiya-republic/buy-warehouse/",
+            "https://ingushetia.gdeetotdom.ru/ingushetiya-republic/rent-commercial-land/",
+            "https://ingushetia.gdeetotdom.ru/ingushetiya-republic/rent-office/",
+            "https://irkutsk.gdeetotdom.ru/irkutskaya-oblast/buy-building/",
+            "https://irkutsk.gdeetotdom.ru/irkutskaya-oblast/buy-commercial-land/",
+            "https://irkutsk.gdeetotdom.ru/irkutskaya-oblast/buy-free-use/",
+            "https://irkutsk.gdeetotdom.ru/irkutskaya-oblast/buy-office/",
+            "https://irkutsk.gdeetotdom.ru/irkutskaya-oblast/buy-warehouse/",
+            "https://irkutsk.gdeetotdom.ru/irkutskaya-oblast/rent-commercial-land/",
+            "https://irkutsk.gdeetotdom.ru/irkutskaya-oblast/rent-office/",
+            "https://ivn.gdeetotdom.ru/ivanovskaya-oblast/buy-building/",
+            "https://ivn.gdeetotdom.ru/ivanovskaya-oblast/buy-commercial-land/",
+            "https://ivn.gdeetotdom.ru/ivanovskaya-oblast/buy-free-use/",
+            "https://ivn.gdeetotdom.ru/ivanovskaya-oblast/buy-office/",
+            "https://ivn.gdeetotdom.ru/ivanovskaya-oblast/buy-warehouse/",
+            "https://ivn.gdeetotdom.ru/ivanovskaya-oblast/rent-commercial-land/",
+            "https://ivn.gdeetotdom.ru/ivanovskaya-oblast/rent-office/",
+            "https://kaliningrad.gdeetotdom.ru/kaliningradskaya-oblast/buy-building/",
+            "https://kaliningrad.gdeetotdom.ru/kaliningradskaya-oblast/buy-commercial-land/",
+            "https://kaliningrad.gdeetotdom.ru/kaliningradskaya-oblast/buy-free-use/",
+            "https://kaliningrad.gdeetotdom.ru/kaliningradskaya-oblast/buy-office/",
+            "https://kaliningrad.gdeetotdom.ru/kaliningradskaya-oblast/buy-warehouse/",
+            "https://kaliningrad.gdeetotdom.ru/kaliningradskaya-oblast/rent-commercial-land/",
+            "https://kaliningrad.gdeetotdom.ru/kaliningradskaya-oblast/rent-office/",
+            "https://kalmykiya.gdeetotdom.ru/kalmykiya-republic/buy-building/",
+            "https://kalmykiya.gdeetotdom.ru/kalmykiya-republic/buy-commercial-land/",
+            "https://kalmykiya.gdeetotdom.ru/kalmykiya-republic/buy-free-use/",
+            "https://kalmykiya.gdeetotdom.ru/kalmykiya-republic/buy-office/",
+            "https://kalmykiya.gdeetotdom.ru/kalmykiya-republic/buy-warehouse/",
+            "https://kalmykiya.gdeetotdom.ru/kalmykiya-republic/rent-commercial-land/",
+            "https://kalmykiya.gdeetotdom.ru/kalmykiya-republic/rent-office/",
+            "https://kamchatka.gdeetotdom.ru/kamchatskiy-kray/buy-building/",
+            "https://kamchatka.gdeetotdom.ru/kamchatskiy-kray/buy-commercial-land/",
+            "https://kamchatka.gdeetotdom.ru/kamchatskiy-kray/buy-free-use/",
+            "https://kamchatka.gdeetotdom.ru/kamchatskiy-kray/buy-office/",
+            "https://kamchatka.gdeetotdom.ru/kamchatskiy-kray/buy-warehouse/",
+            "https://kamchatka.gdeetotdom.ru/kamchatskiy-kray/rent-commercial-land/",
+            "https://kamchatka.gdeetotdom.ru/kamchatskiy-kray/rent-office/",
+            "https://kareliya.gdeetotdom.ru/kareliya-republic/buy-building/",
+            "https://kareliya.gdeetotdom.ru/kareliya-republic/buy-commercial-land/",
+            "https://kareliya.gdeetotdom.ru/kareliya-republic/buy-free-use/",
+            "https://kareliya.gdeetotdom.ru/kareliya-republic/buy-office/",
+            "https://kareliya.gdeetotdom.ru/kareliya-republic/buy-warehouse/",
+            "https://kareliya.gdeetotdom.ru/kareliya-republic/rent-commercial-land/",
+            "https://kareliya.gdeetotdom.ru/kareliya-republic/rent-office/",
+            "https://kbr.gdeetotdom.ru/kabardino-balkarskaya-republic/buy-building/",
+            "https://kbr.gdeetotdom.ru/kabardino-balkarskaya-republic/buy-commercial-land/",
+            "https://kbr.gdeetotdom.ru/kabardino-balkarskaya-republic/buy-free-use/",
+            "https://kbr.gdeetotdom.ru/kabardino-balkarskaya-republic/buy-office/",
+            "https://kbr.gdeetotdom.ru/kabardino-balkarskaya-republic/buy-warehouse/",
+            "https://kbr.gdeetotdom.ru/kabardino-balkarskaya-republic/rent-commercial-land/",
+            "https://kbr.gdeetotdom.ru/kabardino-balkarskaya-republic/rent-office/",
+            "https://kemerovo.gdeetotdom.ru/kemerovskaya-oblast/buy-building/",
+            "https://kemerovo.gdeetotdom.ru/kemerovskaya-oblast/buy-commercial-land/",
+            "https://kemerovo.gdeetotdom.ru/kemerovskaya-oblast/buy-free-use/",
+            "https://kemerovo.gdeetotdom.ru/kemerovskaya-oblast/buy-office/",
+            "https://kemerovo.gdeetotdom.ru/kemerovskaya-oblast/buy-warehouse/",
+            "https://kemerovo.gdeetotdom.ru/kemerovskaya-oblast/rent-commercial-land/",
+            "https://kemerovo.gdeetotdom.ru/kemerovskaya-oblast/rent-office/",
+            "https://kirov.gdeetotdom.ru/kirovskaya-oblast/buy-building/",
+            "https://kirov.gdeetotdom.ru/kirovskaya-oblast/buy-commercial-land/",
+            "https://kirov.gdeetotdom.ru/kirovskaya-oblast/buy-free-use/",
+            "https://kirov.gdeetotdom.ru/kirovskaya-oblast/buy-office/",
+            "https://kirov.gdeetotdom.ru/kirovskaya-oblast/buy-warehouse/",
+            "https://kirov.gdeetotdom.ru/kirovskaya-oblast/rent-commercial-land/",
+            "https://kirov.gdeetotdom.ru/kirovskaya-oblast/rent-office/",
+            "https://klj.gdeetotdom.ru/kaluzhskaya-oblast/buy-building/",
+            "https://klj.gdeetotdom.ru/kaluzhskaya-oblast/buy-commercial-land/",
+            "https://klj.gdeetotdom.ru/kaluzhskaya-oblast/buy-free-use/",
+            "https://klj.gdeetotdom.ru/kaluzhskaya-oblast/buy-office/",
+            "https://klj.gdeetotdom.ru/kaluzhskaya-oblast/buy-warehouse/",
+            "https://klj.gdeetotdom.ru/kaluzhskaya-oblast/rent-commercial-land/",
+            "https://klj.gdeetotdom.ru/kaluzhskaya-oblast/rent-office/",
+            "https://komi.gdeetotdom.ru/komi-republic/buy-building/",
+            "https://komi.gdeetotdom.ru/komi-republic/buy-commercial-land/",
+            "https://komi.gdeetotdom.ru/komi-republic/buy-free-use/",
+            "https://komi.gdeetotdom.ru/komi-republic/buy-house/",
+            "https://komi.gdeetotdom.ru/komi-republic/buy-office/",
+            "https://komi.gdeetotdom.ru/komi-republic/buy-room/",
+            "https://komi.gdeetotdom.ru/komi-republic/buy-townhouse/",
+            "https://komi.gdeetotdom.ru/komi-republic/buy-warehouse/",
+            "https://komi.gdeetotdom.ru/komi-republic/rent-building/",
+            "https://komi.gdeetotdom.ru/komi-republic/rent-commercial-land/",
+            "https://komi.gdeetotdom.ru/komi-republic/rent-free-use/",
+            "https://komi.gdeetotdom.ru/komi-republic/rent-house/",
+            "https://komi.gdeetotdom.ru/komi-republic/rent-office/",
+            "https://komi.gdeetotdom.ru/komi-republic/rent-room/",
+            "https://komi.gdeetotdom.ru/komi-republic/rent-townhouse/",
+            "https://komi.gdeetotdom.ru/komi-republic/rent-warehouse/",
+            "https://krasnoyarsk.gdeetotdom.ru/krasnoyarskiy-kray/buy-building/",
+            "https://krasnoyarsk.gdeetotdom.ru/krasnoyarskiy-kray/buy-commercial-land/",
+            "https://krasnoyarsk.gdeetotdom.ru/krasnoyarskiy-kray/buy-free-use/",
+            "https://krasnoyarsk.gdeetotdom.ru/krasnoyarskiy-kray/buy-office/",
+            "https://krasnoyarsk.gdeetotdom.ru/krasnoyarskiy-kray/buy-warehouse/",
+            "https://krasnoyarsk.gdeetotdom.ru/krasnoyarskiy-kray/rent-commercial-land/",
+            "https://krasnoyarsk.gdeetotdom.ru/krasnoyarskiy-kray/rent-office/",
+            "https://krch.gdeetotdom.ru/karachayevo-cherkesskaya-republic/buy-building/",
+            "https://krch.gdeetotdom.ru/karachayevo-cherkesskaya-republic/buy-commercial-land/",
+            "https://krch.gdeetotdom.ru/karachayevo-cherkesskaya-republic/buy-free-use/",
+            "https://krch.gdeetotdom.ru/karachayevo-cherkesskaya-republic/buy-office/",
+            "https://krch.gdeetotdom.ru/karachayevo-cherkesskaya-republic/buy-warehouse/",
+            "https://krch.gdeetotdom.ru/karachayevo-cherkesskaya-republic/rent-commercial-land/",
+            "https://krch.gdeetotdom.ru/karachayevo-cherkesskaya-republic/rent-office/",
+            "https://krd.gdeetotdom.ru/krasnodarskiy-kray/buy-building/",
+            "https://krd.gdeetotdom.ru/krasnodarskiy-kray/buy-commercial-land/",
+            "https://krd.gdeetotdom.ru/krasnodarskiy-kray/buy-free-use/",
+            "https://krd.gdeetotdom.ru/krasnodarskiy-kray/buy-office/",
+            "https://krd.gdeetotdom.ru/krasnodarskiy-kray/buy-warehouse/",
+            "https://krd.gdeetotdom.ru/krasnodarskiy-kray/rent-commercial-land/",
+            "https://krd.gdeetotdom.ru/krasnodarskiy-kray/rent-office/",
+            "https://krym.gdeetotdom.ru/krym-republic/buy-building/",
+            "https://krym.gdeetotdom.ru/krym-republic/buy-commercial-land/",
+            "https://krym.gdeetotdom.ru/krym-republic/buy-free-use/",
+            "https://krym.gdeetotdom.ru/krym-republic/buy-office/",
+            "https://krym.gdeetotdom.ru/krym-republic/buy-warehouse/",
+            "https://krym.gdeetotdom.ru/krym-republic/rent-commercial-land/",
+            "https://krym.gdeetotdom.ru/krym-republic/rent-office/",
+            "https://kst.gdeetotdom.ru/kostromskaya-oblast/buy-building/",
+            "https://kst.gdeetotdom.ru/kostromskaya-oblast/buy-commercial-land/",
+            "https://kst.gdeetotdom.ru/kostromskaya-oblast/buy-free-use/",
+            "https://kst.gdeetotdom.ru/kostromskaya-oblast/buy-office/",
+            "https://kst.gdeetotdom.ru/kostromskaya-oblast/buy-warehouse/",
+            "https://kst.gdeetotdom.ru/kostromskaya-oblast/rent-commercial-land/",
+            "https://kst.gdeetotdom.ru/kostromskaya-oblast/rent-office/",
+            "https://kur.gdeetotdom.ru/kurskaya-oblast/buy-building/",
+            "https://kur.gdeetotdom.ru/kurskaya-oblast/buy-commercial-land/",
+            "https://kur.gdeetotdom.ru/kurskaya-oblast/buy-free-use/",
+            "https://kur.gdeetotdom.ru/kurskaya-oblast/buy-office/",
+            "https://kur.gdeetotdom.ru/kurskaya-oblast/buy-warehouse/",
+            "https://kur.gdeetotdom.ru/kurskaya-oblast/rent-commercial-land/",
+            "https://kur.gdeetotdom.ru/kurskaya-oblast/rent-office/",
+            "https://kurgan.gdeetotdom.ru/kurganskaya-oblast/buy-building/",
+            "https://kurgan.gdeetotdom.ru/kurganskaya-oblast/buy-commercial-land/",
+            "https://kurgan.gdeetotdom.ru/kurganskaya-oblast/buy-free-use/",
+            "https://kurgan.gdeetotdom.ru/kurganskaya-oblast/buy-office/",
+            "https://kurgan.gdeetotdom.ru/kurganskaya-oblast/buy-warehouse/",
+            "https://kurgan.gdeetotdom.ru/kurganskaya-oblast/rent-commercial-land/",
+            "https://kurgan.gdeetotdom.ru/kurganskaya-oblast/rent-office/",
+            "https://lipetsk.gdeetotdom.ru/lipetskaya-oblast/buy-building/",
+            "https://lipetsk.gdeetotdom.ru/lipetskaya-oblast/buy-commercial-land/",
+            "https://lipetsk.gdeetotdom.ru/lipetskaya-oblast/buy-free-use/",
+            "https://lipetsk.gdeetotdom.ru/lipetskaya-oblast/buy-office/",
+            "https://lipetsk.gdeetotdom.ru/lipetskaya-oblast/buy-warehouse/",
+            "https://lipetsk.gdeetotdom.ru/lipetskaya-oblast/rent-commercial-land/",
+            "https://lipetsk.gdeetotdom.ru/lipetskaya-oblast/rent-office/",
+            "https://magadan.gdeetotdom.ru/magadanskaya-oblast/buy-building/",
+            "https://magadan.gdeetotdom.ru/magadanskaya-oblast/buy-commercial-land/",
+            "https://magadan.gdeetotdom.ru/magadanskaya-oblast/buy-free-use/",
+            "https://magadan.gdeetotdom.ru/magadanskaya-oblast/buy-office/",
+            "https://magadan.gdeetotdom.ru/magadanskaya-oblast/buy-warehouse/",
+            "https://magadan.gdeetotdom.ru/magadanskaya-oblast/rent-commercial-land/",
+            "https://magadan.gdeetotdom.ru/magadanskaya-oblast/rent-office/",
+            "https://mariyel.gdeetotdom.ru/mariy-el-republic/buy-building/",
+            "https://mariyel.gdeetotdom.ru/mariy-el-republic/buy-commercial-land/",
+            "https://mariyel.gdeetotdom.ru/mariy-el-republic/buy-free-use/",
+            "https://mariyel.gdeetotdom.ru/mariy-el-republic/buy-office/",
+            "https://mariyel.gdeetotdom.ru/mariy-el-republic/buy-warehouse/",
+            "https://mariyel.gdeetotdom.ru/mariy-el-republic/rent-commercial-land/",
+            "https://mariyel.gdeetotdom.ru/mariy-el-republic/rent-office/",
+            "https://mordoviya.gdeetotdom.ru/mordoviya-republic/buy-building/",
+            "https://mordoviya.gdeetotdom.ru/mordoviya-republic/buy-commercial-land/",
+            "https://mordoviya.gdeetotdom.ru/mordoviya-republic/buy-free-use/",
+            "https://mordoviya.gdeetotdom.ru/mordoviya-republic/buy-office/",
+            "https://mordoviya.gdeetotdom.ru/mordoviya-republic/buy-warehouse/",
+            "https://mordoviya.gdeetotdom.ru/mordoviya-republic/rent-commercial-land/",
+            "https://mordoviya.gdeetotdom.ru/mordoviya-republic/rent-office/",
+            "https://murmansk.gdeetotdom.ru/murmanskaya-oblast/buy-building/",
+            "https://murmansk.gdeetotdom.ru/murmanskaya-oblast/buy-commercial-land/",
+            "https://murmansk.gdeetotdom.ru/murmanskaya-oblast/buy-free-use/",
+            "https://murmansk.gdeetotdom.ru/murmanskaya-oblast/buy-office/",
+            "https://murmansk.gdeetotdom.ru/murmanskaya-oblast/buy-warehouse/",
+            "https://murmansk.gdeetotdom.ru/murmanskaya-oblast/rent-commercial-land/",
+            "https://murmansk.gdeetotdom.ru/murmanskaya-oblast/rent-office/",
+            "https://neneskij.gdeetotdom.ru/nenetskiy-avtonomnyj-okrug/buy-building/",
+            "https://neneskij.gdeetotdom.ru/nenetskiy-avtonomnyj-okrug/buy-commercial-land/",
+            "https://neneskij.gdeetotdom.ru/nenetskiy-avtonomnyj-okrug/buy-free-use/",
+            "https://neneskij.gdeetotdom.ru/nenetskiy-avtonomnyj-okrug/buy-office/",
+            "https://neneskij.gdeetotdom.ru/nenetskiy-avtonomnyj-okrug/buy-warehouse/",
+            "https://neneskij.gdeetotdom.ru/nenetskiy-avtonomnyj-okrug/rent-commercial-land/",
+            "https://neneskij.gdeetotdom.ru/nenetskiy-avtonomnyj-okrug/rent-office/",
+            "https://nng.gdeetotdom.ru/nizhegorodskaya-oblast/buy-building/",
+            "https://nng.gdeetotdom.ru/nizhegorodskaya-oblast/buy-commercial-land/",
+            "https://nng.gdeetotdom.ru/nizhegorodskaya-oblast/buy-free-use/",
+            "https://nng.gdeetotdom.ru/nizhegorodskaya-oblast/buy-office/",
+            "https://nng.gdeetotdom.ru/nizhegorodskaya-oblast/buy-warehouse/",
+            "https://nng.gdeetotdom.ru/nizhegorodskaya-oblast/rent-commercial-land/",
+            "https://nng.gdeetotdom.ru/nizhegorodskaya-oblast/rent-office/",
+            "https://novgorod.gdeetotdom.ru/novgorodskaya-oblast/buy-building/",
+            "https://novgorod.gdeetotdom.ru/novgorodskaya-oblast/buy-commercial-land/",
+            "https://novgorod.gdeetotdom.ru/novgorodskaya-oblast/buy-free-use/",
+            "https://novgorod.gdeetotdom.ru/novgorodskaya-oblast/buy-office/",
+            "https://novgorod.gdeetotdom.ru/novgorodskaya-oblast/buy-warehouse/",
+            "https://novgorod.gdeetotdom.ru/novgorodskaya-oblast/rent-commercial-land/",
+            "https://novgorod.gdeetotdom.ru/novgorodskaya-oblast/rent-office/",
+            "https://nsk.gdeetotdom.ru/novosibirskaya-oblast/buy-building/",
+            "https://nsk.gdeetotdom.ru/novosibirskaya-oblast/buy-commercial-land/",
+            "https://nsk.gdeetotdom.ru/novosibirskaya-oblast/buy-free-use/",
+            "https://nsk.gdeetotdom.ru/novosibirskaya-oblast/buy-office/",
+            "https://nsk.gdeetotdom.ru/novosibirskaya-oblast/buy-warehouse/",
+            "https://nsk.gdeetotdom.ru/novosibirskaya-oblast/rent-commercial-land/",
+            "https://nsk.gdeetotdom.ru/novosibirskaya-oblast/rent-office/",
+            "https://omsk.gdeetotdom.ru/omskaya-oblast/buy-building/",
+            "https://omsk.gdeetotdom.ru/omskaya-oblast/buy-commercial-land/",
+            "https://omsk.gdeetotdom.ru/omskaya-oblast/buy-free-use/",
+            "https://omsk.gdeetotdom.ru/omskaya-oblast/buy-office/",
+            "https://omsk.gdeetotdom.ru/omskaya-oblast/buy-warehouse/",
+            "https://omsk.gdeetotdom.ru/omskaya-oblast/rent-commercial-land/",
+            "https://omsk.gdeetotdom.ru/omskaya-oblast/rent-office/",
+            "https://orel.gdeetotdom.ru/orlovskaya-oblast/buy-building/",
+            "https://orel.gdeetotdom.ru/orlovskaya-oblast/buy-commercial-land/",
+            "https://orel.gdeetotdom.ru/orlovskaya-oblast/buy-free-use/",
+            "https://orel.gdeetotdom.ru/orlovskaya-oblast/buy-office/",
+            "https://orel.gdeetotdom.ru/orlovskaya-oblast/buy-warehouse/",
+            "https://orel.gdeetotdom.ru/orlovskaya-oblast/rent-commercial-land/",
+            "https://orel.gdeetotdom.ru/orlovskaya-oblast/rent-office/",
+            "https://orenburg.gdeetotdom.ru/orenburgskaya-oblast/buy-building/",
+            "https://orenburg.gdeetotdom.ru/orenburgskaya-oblast/buy-commercial-land/",
+            "https://orenburg.gdeetotdom.ru/orenburgskaya-oblast/buy-free-use/",
+            "https://orenburg.gdeetotdom.ru/orenburgskaya-oblast/buy-office/",
+            "https://orenburg.gdeetotdom.ru/orenburgskaya-oblast/buy-warehouse/",
+            "https://orenburg.gdeetotdom.ru/orenburgskaya-oblast/rent-commercial-land/",
+            "https://orenburg.gdeetotdom.ru/orenburgskaya-oblast/rent-office/",
+            "https://osetiya.gdeetotdom.ru/severnaya-osetiya-republic/buy-building/",
+            "https://osetiya.gdeetotdom.ru/severnaya-osetiya-republic/buy-commercial-land/",
+            "https://osetiya.gdeetotdom.ru/severnaya-osetiya-republic/buy-free-use/",
+            "https://osetiya.gdeetotdom.ru/severnaya-osetiya-republic/buy-office/",
+            "https://osetiya.gdeetotdom.ru/severnaya-osetiya-republic/buy-warehouse/",
+            "https://osetiya.gdeetotdom.ru/severnaya-osetiya-republic/rent-commercial-land/",
+            "https://osetiya.gdeetotdom.ru/severnaya-osetiya-republic/rent-office/",
+            "https://penza.gdeetotdom.ru/penzenskaya-oblast/buy-building/",
+            "https://penza.gdeetotdom.ru/penzenskaya-oblast/buy-commercial-land/",
+            "https://penza.gdeetotdom.ru/penzenskaya-oblast/buy-free-use/",
+            "https://penza.gdeetotdom.ru/penzenskaya-oblast/buy-office/",
+            "https://penza.gdeetotdom.ru/penzenskaya-oblast/buy-warehouse/",
+            "https://penza.gdeetotdom.ru/penzenskaya-oblast/rent-commercial-land/",
+            "https://penza.gdeetotdom.ru/penzenskaya-oblast/rent-office/",
+            "https://perm.gdeetotdom.ru/permskiy-kray/buy-building/",
+            "https://perm.gdeetotdom.ru/permskiy-kray/buy-commercial-land/",
+            "https://perm.gdeetotdom.ru/permskiy-kray/buy-free-use/",
+            "https://perm.gdeetotdom.ru/permskiy-kray/buy-office/",
+            "https://perm.gdeetotdom.ru/permskiy-kray/buy-warehouse/",
+            "https://perm.gdeetotdom.ru/permskiy-kray/rent-commercial-land/",
+            "https://perm.gdeetotdom.ru/permskiy-kray/rent-office/",
+            "https://primorskiy.gdeetotdom.ru/primorskiy-kray/buy-building/",
+            "https://primorskiy.gdeetotdom.ru/primorskiy-kray/buy-commercial-land/",
+            "https://primorskiy.gdeetotdom.ru/primorskiy-kray/buy-free-use/",
+            "https://primorskiy.gdeetotdom.ru/primorskiy-kray/buy-office/",
+            "https://primorskiy.gdeetotdom.ru/primorskiy-kray/buy-warehouse/",
+            "https://primorskiy.gdeetotdom.ru/primorskiy-kray/rent-commercial-land/",
+            "https://primorskiy.gdeetotdom.ru/primorskiy-kray/rent-office/",
+            "https://pskov.gdeetotdom.ru/pskovskaya-oblast/buy-building/",
+            "https://pskov.gdeetotdom.ru/pskovskaya-oblast/buy-commercial-land/",
+            "https://pskov.gdeetotdom.ru/pskovskaya-oblast/buy-free-use/",
+            "https://pskov.gdeetotdom.ru/pskovskaya-oblast/buy-office/",
+            "https://pskov.gdeetotdom.ru/pskovskaya-oblast/buy-warehouse/",
+            "https://pskov.gdeetotdom.ru/pskovskaya-oblast/rent-commercial-land/",
+            "https://pskov.gdeetotdom.ru/pskovskaya-oblast/rent-office/",
+            "https://rst.gdeetotdom.ru/rostovskaya-oblast/buy-building/",
+            "https://rst.gdeetotdom.ru/rostovskaya-oblast/buy-commercial-land/",
+            "https://rst.gdeetotdom.ru/rostovskaya-oblast/buy-free-use/",
+            "https://rst.gdeetotdom.ru/rostovskaya-oblast/buy-office/",
+            "https://rst.gdeetotdom.ru/rostovskaya-oblast/buy-warehouse/",
+            "https://rst.gdeetotdom.ru/rostovskaya-oblast/rent-commercial-land/",
+            "https://rst.gdeetotdom.ru/rostovskaya-oblast/rent-office/",
+            "https://ryazan.gdeetotdom.ru/ryazanskaya-oblast/buy-building/",
+            "https://ryazan.gdeetotdom.ru/ryazanskaya-oblast/buy-commercial-land/",
+            "https://ryazan.gdeetotdom.ru/ryazanskaya-oblast/buy-free-use/",
+            "https://ryazan.gdeetotdom.ru/ryazanskaya-oblast/buy-office/",
+            "https://ryazan.gdeetotdom.ru/ryazanskaya-oblast/buy-warehouse/",
+            "https://ryazan.gdeetotdom.ru/ryazanskaya-oblast/rent-commercial-land/",
+            "https://ryazan.gdeetotdom.ru/ryazanskaya-oblast/rent-office/",
+            "https://saha.gdeetotdom.ru/yakutiya-republic/buy-building/",
+            "https://saha.gdeetotdom.ru/yakutiya-republic/buy-commercial-land/",
+            "https://saha.gdeetotdom.ru/yakutiya-republic/buy-free-use/",
+            "https://saha.gdeetotdom.ru/yakutiya-republic/buy-office/",
+            "https://saha.gdeetotdom.ru/yakutiya-republic/buy-warehouse/",
+            "https://saha.gdeetotdom.ru/yakutiya-republic/rent-commercial-land/",
+            "https://saha.gdeetotdom.ru/yakutiya-republic/rent-office/",
+            "https://sahalin.gdeetotdom.ru/sakhalinskaya-oblast/buy-building/",
+            "https://sahalin.gdeetotdom.ru/sakhalinskaya-oblast/buy-commercial-land/",
+            "https://sahalin.gdeetotdom.ru/sakhalinskaya-oblast/buy-free-use/",
+            "https://sahalin.gdeetotdom.ru/sakhalinskaya-oblast/buy-office/",
+            "https://sahalin.gdeetotdom.ru/sakhalinskaya-oblast/buy-warehouse/",
+            "https://sahalin.gdeetotdom.ru/sakhalinskaya-oblast/rent-commercial-land/",
+            "https://sahalin.gdeetotdom.ru/sakhalinskaya-oblast/rent-office/",
+            "https://sevastopol.gdeetotdom.ru/sevastopol/buy-building/",
+            "https://sevastopol.gdeetotdom.ru/sevastopol/buy-commercial-land/",
+            "https://sevastopol.gdeetotdom.ru/sevastopol/buy-free-use/",
+            "https://sevastopol.gdeetotdom.ru/sevastopol/buy-office/",
+            "https://sevastopol.gdeetotdom.ru/sevastopol/buy-warehouse/",
+            "https://sevastopol.gdeetotdom.ru/sevastopol/rent-commercial-land/",
+            "https://sevastopol.gdeetotdom.ru/sevastopol/rent-office/",
+            "https://sml.gdeetotdom.ru/smolenskaya-oblast/buy-building/",
+            "https://sml.gdeetotdom.ru/smolenskaya-oblast/buy-commercial-land/",
+            "https://sml.gdeetotdom.ru/smolenskaya-oblast/buy-free-use/",
+            "https://sml.gdeetotdom.ru/smolenskaya-oblast/buy-office/",
+            "https://sml.gdeetotdom.ru/smolenskaya-oblast/buy-warehouse/",
+            "https://sml.gdeetotdom.ru/smolenskaya-oblast/rent-commercial-land/",
+            "https://sml.gdeetotdom.ru/smolenskaya-oblast/rent-office/",
+            "https://smr.gdeetotdom.ru/samarskaya-oblast/buy-building/",
+            "https://smr.gdeetotdom.ru/samarskaya-oblast/buy-commercial-land/",
+            "https://smr.gdeetotdom.ru/samarskaya-oblast/buy-free-use/",
+            "https://smr.gdeetotdom.ru/samarskaya-oblast/buy-office/",
+            "https://smr.gdeetotdom.ru/samarskaya-oblast/buy-warehouse/",
+            "https://smr.gdeetotdom.ru/samarskaya-oblast/rent-commercial-land/",
+            "https://smr.gdeetotdom.ru/samarskaya-oblast/rent-office/",
+            "https://spb.gdeetotdom.ru/len/buy-building/",
+            "https://spb.gdeetotdom.ru/len/buy-commercial-land/",
+            "https://spb.gdeetotdom.ru/len/buy-office/",
+            "https://spb.gdeetotdom.ru/len/buy-retail/",
+            "https://spb.gdeetotdom.ru/len/buy-warehouse/",
+            "https://spb.gdeetotdom.ru/len/rent-commercial-land/",
+            "https://spb.gdeetotdom.ru/len/rent-office/",
+            "https://spb.gdeetotdom.ru/st-peterburg/buy-building/",
+            "https://spb.gdeetotdom.ru/st-peterburg/buy-commercial-land/",
+            "https://spb.gdeetotdom.ru/st-peterburg/buy-office/",
+            "https://spb.gdeetotdom.ru/st-peterburg/buy-retail/",
+            "https://spb.gdeetotdom.ru/st-peterburg/buy-warehouse/",
+            "https://spb.gdeetotdom.ru/st-peterburg/rent-commercial-land/",
+            "https://spb.gdeetotdom.ru/st-peterburg/rent-office/",
+            "https://srt.gdeetotdom.ru/saratovskaya-oblast/buy-building/",
+            "https://srt.gdeetotdom.ru/saratovskaya-oblast/buy-commercial-land/",
+            "https://srt.gdeetotdom.ru/saratovskaya-oblast/buy-free-use/",
+            "https://srt.gdeetotdom.ru/saratovskaya-oblast/buy-office/",
+            "https://srt.gdeetotdom.ru/saratovskaya-oblast/buy-warehouse/",
+            "https://srt.gdeetotdom.ru/saratovskaya-oblast/rent-commercial-land/",
+            "https://srt.gdeetotdom.ru/saratovskaya-oblast/rent-office/",
+            "https://stv.gdeetotdom.ru/stavropolskiy-kray/buy-building/",
+            "https://stv.gdeetotdom.ru/stavropolskiy-kray/buy-commercial-land/",
+            "https://stv.gdeetotdom.ru/stavropolskiy-kray/buy-free-use/",
+            "https://stv.gdeetotdom.ru/stavropolskiy-kray/buy-office/",
+            "https://stv.gdeetotdom.ru/stavropolskiy-kray/buy-warehouse/",
+            "https://stv.gdeetotdom.ru/stavropolskiy-kray/rent-commercial-land/",
+            "https://stv.gdeetotdom.ru/stavropolskiy-kray/rent-office/",
+            "https://sverdlovsk.gdeetotdom.ru/sverdlovskaya-oblast/buy-building/",
+            "https://sverdlovsk.gdeetotdom.ru/sverdlovskaya-oblast/buy-commercial-land/",
+            "https://sverdlovsk.gdeetotdom.ru/sverdlovskaya-oblast/buy-free-use/",
+            "https://sverdlovsk.gdeetotdom.ru/sverdlovskaya-oblast/buy-office/",
+            "https://sverdlovsk.gdeetotdom.ru/sverdlovskaya-oblast/buy-warehouse/",
+            "https://sverdlovsk.gdeetotdom.ru/sverdlovskaya-oblast/rent-commercial-land/",
+            "https://sverdlovsk.gdeetotdom.ru/sverdlovskaya-oblast/rent-office/",
+            "https://tambov.gdeetotdom.ru/tambovskaya-oblast/buy-building/",
+            "https://tambov.gdeetotdom.ru/tambovskaya-oblast/buy-commercial-land/",
+            "https://tambov.gdeetotdom.ru/tambovskaya-oblast/buy-free-use/",
+            "https://tambov.gdeetotdom.ru/tambovskaya-oblast/buy-office/",
+            "https://tambov.gdeetotdom.ru/tambovskaya-oblast/buy-warehouse/",
+            "https://tambov.gdeetotdom.ru/tambovskaya-oblast/rent-commercial-land/",
+            "https://tambov.gdeetotdom.ru/tambovskaya-oblast/rent-office/",
+            "https://tatarstan.gdeetotdom.ru/tatarstan-republic/buy-building/",
+            "https://tatarstan.gdeetotdom.ru/tatarstan-republic/buy-commercial-land/",
+            "https://tatarstan.gdeetotdom.ru/tatarstan-republic/buy-free-use/",
+            "https://tatarstan.gdeetotdom.ru/tatarstan-republic/buy-office/",
+            "https://tatarstan.gdeetotdom.ru/tatarstan-republic/buy-warehouse/",
+            "https://tatarstan.gdeetotdom.ru/tatarstan-republic/rent-commercial-land/",
+            "https://tatarstan.gdeetotdom.ru/tatarstan-republic/rent-office/",
+            "https://tmn.gdeetotdom.ru/tyumenskaya-oblast/buy-building/",
+            "https://tmn.gdeetotdom.ru/tyumenskaya-oblast/buy-commercial-land/",
+            "https://tmn.gdeetotdom.ru/tyumenskaya-oblast/buy-free-use/",
+            "https://tmn.gdeetotdom.ru/tyumenskaya-oblast/buy-office/",
+            "https://tmn.gdeetotdom.ru/tyumenskaya-oblast/buy-warehouse/",
+            "https://tmn.gdeetotdom.ru/tyumenskaya-oblast/rent-commercial-land/",
+            "https://tmn.gdeetotdom.ru/tyumenskaya-oblast/rent-office/",
+            "https://tomsk.gdeetotdom.ru/tomskaya-oblast/buy-building/",
+            "https://tomsk.gdeetotdom.ru/tomskaya-oblast/buy-commercial-land/",
+            "https://tomsk.gdeetotdom.ru/tomskaya-oblast/buy-free-use/",
+            "https://tomsk.gdeetotdom.ru/tomskaya-oblast/buy-office/",
+            "https://tomsk.gdeetotdom.ru/tomskaya-oblast/buy-warehouse/",
+            "https://tomsk.gdeetotdom.ru/tomskaya-oblast/rent-commercial-land/",
+            "https://tomsk.gdeetotdom.ru/tomskaya-oblast/rent-office/",
+            "https://tul.gdeetotdom.ru/tulskaya-oblast/buy-building/",
+            "https://tul.gdeetotdom.ru/tulskaya-oblast/buy-commercial-land/",
+            "https://tul.gdeetotdom.ru/tulskaya-oblast/buy-free-use/",
+            "https://tul.gdeetotdom.ru/tulskaya-oblast/buy-office/",
+            "https://tul.gdeetotdom.ru/tulskaya-oblast/buy-warehouse/",
+            "https://tul.gdeetotdom.ru/tulskaya-oblast/rent-commercial-land/",
+            "https://tul.gdeetotdom.ru/tulskaya-oblast/rent-office/",
+            "https://tvr.gdeetotdom.ru/tverskaya-oblast/buy-building/",
+            "https://tvr.gdeetotdom.ru/tverskaya-oblast/buy-commercial-land/",
+            "https://tvr.gdeetotdom.ru/tverskaya-oblast/buy-free-use/",
+            "https://tvr.gdeetotdom.ru/tverskaya-oblast/buy-office/",
+            "https://tvr.gdeetotdom.ru/tverskaya-oblast/buy-warehouse/",
+            "https://tvr.gdeetotdom.ru/tverskaya-oblast/rent-commercial-land/",
+            "https://tvr.gdeetotdom.ru/tverskaya-oblast/rent-office/",
+            "https://tyva.gdeetotdom.ru/tyva-republic/buy-building/",
+            "https://tyva.gdeetotdom.ru/tyva-republic/buy-commercial-land/",
+            "https://tyva.gdeetotdom.ru/tyva-republic/buy-free-use/",
+            "https://tyva.gdeetotdom.ru/tyva-republic/buy-office/",
+            "https://tyva.gdeetotdom.ru/tyva-republic/buy-warehouse/",
+            "https://tyva.gdeetotdom.ru/tyva-republic/rent-commercial-land/",
+            "https://tyva.gdeetotdom.ru/tyva-republic/rent-office/",
+            "https://udmurtia.gdeetotdom.ru/udmurtskaya-republic/buy-building/",
+            "https://udmurtia.gdeetotdom.ru/udmurtskaya-republic/buy-commercial-land/",
+            "https://udmurtia.gdeetotdom.ru/udmurtskaya-republic/buy-free-use/",
+            "https://udmurtia.gdeetotdom.ru/udmurtskaya-republic/buy-office/",
+            "https://udmurtia.gdeetotdom.ru/udmurtskaya-republic/buy-warehouse/",
+            "https://udmurtia.gdeetotdom.ru/udmurtskaya-republic/rent-commercial-land/",
+            "https://udmurtia.gdeetotdom.ru/udmurtskaya-republic/rent-office/",
+            "https://ulyanovsk.gdeetotdom.ru/ulyanovskaya-oblast/buy-building/",
+            "https://ulyanovsk.gdeetotdom.ru/ulyanovskaya-oblast/buy-commercial-land/",
+            "https://ulyanovsk.gdeetotdom.ru/ulyanovskaya-oblast/buy-free-use/",
+            "https://ulyanovsk.gdeetotdom.ru/ulyanovskaya-oblast/buy-office/",
+            "https://ulyanovsk.gdeetotdom.ru/ulyanovskaya-oblast/buy-warehouse/",
+            "https://ulyanovsk.gdeetotdom.ru/ulyanovskaya-oblast/rent-commercial-land/",
+            "https://ulyanovsk.gdeetotdom.ru/ulyanovskaya-oblast/rent-office/",
+            "https://vld.gdeetotdom.ru/vladimirskaya-oblast/buy-building/",
+            "https://vld.gdeetotdom.ru/vladimirskaya-oblast/buy-commercial-land/",
+            "https://vld.gdeetotdom.ru/vladimirskaya-oblast/buy-free-use/",
+            "https://vld.gdeetotdom.ru/vladimirskaya-oblast/buy-office/",
+            "https://vld.gdeetotdom.ru/vladimirskaya-oblast/buy-warehouse/",
+            "https://vld.gdeetotdom.ru/vladimirskaya-oblast/rent-commercial-land/",
+            "https://vld.gdeetotdom.ru/vladimirskaya-oblast/rent-office/",
+            "https://volgograd.gdeetotdom.ru/volgogradskaya-oblast/buy-building/",
+            "https://volgograd.gdeetotdom.ru/volgogradskaya-oblast/buy-commercial-land/",
+            "https://volgograd.gdeetotdom.ru/volgogradskaya-oblast/buy-free-use/",
+            "https://volgograd.gdeetotdom.ru/volgogradskaya-oblast/buy-office/",
+            "https://volgograd.gdeetotdom.ru/volgogradskaya-oblast/buy-warehouse/",
+            "https://volgograd.gdeetotdom.ru/volgogradskaya-oblast/rent-commercial-land/",
+            "https://volgograd.gdeetotdom.ru/volgogradskaya-oblast/rent-office/",
+            "https://vologda.gdeetotdom.ru/vologodskaya-oblast/buy-building/",
+            "https://vologda.gdeetotdom.ru/vologodskaya-oblast/buy-commercial-land/",
+            "https://vologda.gdeetotdom.ru/vologodskaya-oblast/buy-free-use/",
+            "https://vologda.gdeetotdom.ru/vologodskaya-oblast/buy-office/",
+            "https://vologda.gdeetotdom.ru/vologodskaya-oblast/buy-warehouse/",
+            "https://vologda.gdeetotdom.ru/vologodskaya-oblast/rent-commercial-land/",
+            "https://vologda.gdeetotdom.ru/vologodskaya-oblast/rent-office/",
+            "https://voronezh.gdeetotdom.ru/voronezhskaya-oblast/buy-building/",
+            "https://voronezh.gdeetotdom.ru/voronezhskaya-oblast/buy-commercial-land/",
+            "https://voronezh.gdeetotdom.ru/voronezhskaya-oblast/buy-free-use/",
+            "https://voronezh.gdeetotdom.ru/voronezhskaya-oblast/buy-office/",
+            "https://voronezh.gdeetotdom.ru/voronezhskaya-oblast/buy-warehouse/",
+            "https://voronezh.gdeetotdom.ru/voronezhskaya-oblast/rent-commercial-land/",
+            "https://voronezh.gdeetotdom.ru/voronezhskaya-oblast/rent-office/",
+            "https://www.gdeetotdom.ru/mo/buy-building/",
+            "https://www.gdeetotdom.ru/mo/buy-commercial-land/",
+            "https://www.gdeetotdom.ru/mo/buy-free-use/",
+            "https://www.gdeetotdom.ru/mo/buy-office/",
+            "https://www.gdeetotdom.ru/mo/buy-warehouse/",
+            "https://www.gdeetotdom.ru/mo/rent-commercial-land/",
+            "https://www.gdeetotdom.ru/mo/rent-office/",
+            "https://www.gdeetotdom.ru/moscow/buy-building/",
+            "https://www.gdeetotdom.ru/moscow/buy-commercial-land/",
+            "https://www.gdeetotdom.ru/moscow/buy-free-use/",
+            "https://www.gdeetotdom.ru/moscow/buy-office/",
+            "https://www.gdeetotdom.ru/moscow/buy-warehouse/",
+            "https://www.gdeetotdom.ru/moscow/rent-commercial-land/",
+            "https://www.gdeetotdom.ru/moscow/rent-office/",
+            "https://yanao.gdeetotdom.ru/yamalo-nenetskiy-avtonomnyj-okrug/buy-building/",
+            "https://yanao.gdeetotdom.ru/yamalo-nenetskiy-avtonomnyj-okrug/buy-commercial-land/",
+            "https://yanao.gdeetotdom.ru/yamalo-nenetskiy-avtonomnyj-okrug/buy-free-use/",
+            "https://yanao.gdeetotdom.ru/yamalo-nenetskiy-avtonomnyj-okrug/buy-office/",
+            "https://yanao.gdeetotdom.ru/yamalo-nenetskiy-avtonomnyj-okrug/buy-warehouse/",
+            "https://yanao.gdeetotdom.ru/yamalo-nenetskiy-avtonomnyj-okrug/rent-commercial-land/",
+            "https://yanao.gdeetotdom.ru/yamalo-nenetskiy-avtonomnyj-okrug/rent-office/",
+            "https://yar.gdeetotdom.ru/yaroslavskaya-oblast/buy-building/",
+            "https://yar.gdeetotdom.ru/yaroslavskaya-oblast/buy-commercial-land/",
+            "https://yar.gdeetotdom.ru/yaroslavskaya-oblast/buy-free-use/",
+            "https://yar.gdeetotdom.ru/yaroslavskaya-oblast/buy-office/",
+            "https://yar.gdeetotdom.ru/yaroslavskaya-oblast/buy-warehouse/",
+            "https://yar.gdeetotdom.ru/yaroslavskaya-oblast/rent-commercial-land/",
+            "https://yar.gdeetotdom.ru/yaroslavskaya-oblast/rent-office/",
+            "https://zabaykalsk.gdeetotdom.ru/zabaykalskiy-kray/buy-building/",
+            "https://zabaykalsk.gdeetotdom.ru/zabaykalskiy-kray/buy-commercial-land/",
+            "https://zabaykalsk.gdeetotdom.ru/zabaykalskiy-kray/buy-free-use/",
+            "https://zabaykalsk.gdeetotdom.ru/zabaykalskiy-kray/buy-office/",
+            "https://zabaykalsk.gdeetotdom.ru/zabaykalskiy-kray/buy-warehouse/",
+            "https://zabaykalsk.gdeetotdom.ru/zabaykalskiy-kray/rent-commercial-land/",
+            "https://zabaykalsk.gdeetotdom.ru/zabaykalskiy-kray/rent-office/"
+        ],
+        "_segment": "Коммерческая Недвижимость",
+        "_operation": "",
+        "_federal_subject": "",
+        "_source": "http://www.gdeetotdom.ru",
+        "project_id": "metaspider",
+        "spider_id": "metacrawler",
+        "global_settings": {
+            "CONCURRENT_REQUESTS": 1024,
+            "SPLASH_URL": "http://0.0.0.0:8050",
+            "LOG_LEVEL": "INFO",
+            "AUTOTHROTTLE_ENABLED": true,
+            "AUTOTHROTTLE_START_DELAY": 1,
+            "AUTOTHROTTLE_MAX_DELAY": 60,
+            "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+            "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
+            "RETRY_ENABLED": true,
+            "RETRY_HTTP_CODES": [
+                500,
+                503,
+                504,
+                400,
+                403,
+                408,
+                429,
+                505,
+                303,
+                302,
+                301,
+                404,
+                407
+            ],
+            "HTTPERROR_ALLOWED_CODES": [],
+            "RETRY_TIMES": 40,
+            "ROBOTSTXT_ENABLED": false,
+            "ROBOTSTXT_OBEY": false,
+            "REDIRECT_ENABLED": true,
+            "COOKIES_ENABLED": true,
+            "DOWNLOAD_FAIL_ON_DATALOSS": false,
+            "RANDOM_UA_TYPE": "random",
+            "DOWNLOAD_TIMEOUT": 60,
+            "CLOSESPIDER_ITEMCOUNT": 0,
+            "CLOSESPIDER_ERRORCOUNT": 0
+        },
+        "methods": {
+            "crawling_type": "common",
+            "allowed_domains": [],
+            "proxy_settings": {
+                "types": [
+                    "https"
+                ],
+                "amount": 10000,
+                "save": false
+            }
+        },
+        "crawl_tree": [
+            {
+                "pagination_urls": {
+                    "path": "//li[contains(@class,'item_active')]/following-sibling::li[1]/a[contains(@href,'gdeetotdom')]/@href"
+                },
+                "item_urls": {
+                    "path": "//div[@class = 'b-objects-list__address-link']/a/@href",
+                    "methods": {"save_cookies": true}
+                }
+            }
+        ],
+          "sitemap_urls": {
+            "start": ["https://kemerovo.gdeetotdom.ru/robots.txt", "https://elista.gdeetotdom.ru/robots.txt", "https://cherkessk.gdeetotdom.ru/robots.txt", "https://yoshkar-ola.gdeetotdom.ru/robots.txt", "https://www.gdeetotdom.ru/robots.txt", "https://yuzhno-sahalinsk.gdeetotdom.ru/robots.txt", "https://mahachkala.gdeetotdom.ru/robots.txt", "https://voronezh.gdeetotdom.ru/robots.txt", "https://vladivostok.gdeetotdom.ru/robots.txt", "https://anadyr.gdeetotdom.ru/robots.txt", "https://ivanovo.gdeetotdom.ru/robots.txt", "https://tyumen.gdeetotdom.ru/robots.txt", "https://smolensk.gdeetotdom.ru/robots.txt", "https://astrahan.gdeetotdom.ru/robots.txt", "https://krasnoyarsk.gdeetotdom.ru/robots.txt", "https://novgorod.gdeetotdom.ru/robots.txt", "https://rostov.gdeetotdom.ru/robots.txt", "https://ekaterinburg.gdeetotdom.ru/robots.txt", "https://magadan.gdeetotdom.ru/robots.txt", "https://nazran.gdeetotdom.ru/robots.txt", "https://murmansk.gdeetotdom.ru/robots.txt", "https://izhevsk.gdeetotdom.ru/robots.txt", "https://petropavlovsk-kamchatskiy.gdeetotdom.ru/robots.txt", "https://barnaul.gdeetotdom.ru/robots.txt", "https://pskov.gdeetotdom.ru/robots.txt", "https://chelyabinsk.gdeetotdom.ru/robots.txt", "https://vladikavkaz.gdeetotdom.ru/robots.txt", "https://blagoveschensk.gdeetotdom.ru/robots.txt", "https://cheboksary.gdeetotdom.ru/robots.txt", "https://omsk.gdeetotdom.ru/robots.txt", "https://belgorod.gdeetotdom.ru/robots.txt", "https://tomsk.gdeetotdom.ru/robots.txt", "https://vladimir.gdeetotdom.ru/robots.txt", "https://yanao.gdeetotdom.ru/robots.txt", "https://orenburg.gdeetotdom.ru/robots.txt", "https://kaluga.gdeetotdom.ru/robots.txt", "https://orel.gdeetotdom.ru/robots.txt", "https://kaliningrad.gdeetotdom.ru/robots.txt", "https://volgograd.gdeetotdom.ru/robots.txt", "https://birobidzhan.gdeetotdom.ru/robots.txt", "https://bryansk.gdeetotdom.ru/robots.txt", "https://syktyvkar.gdeetotdom.ru/robots.txt", "https://samara.gdeetotdom.ru/robots.txt", "https://maykop.gdeetotdom.ru/robots.txt", "https://saratov.gdeetotdom.ru/robots.txt", "https://kostroma.gdeetotdom.ru/robots.txt", "https://novosibirsk.gdeetotdom.ru/robots.txt", "https://chita.gdeetotdom.ru/robots.txt", "https://penza.gdeetotdom.ru/robots.txt", "https://sevastopol.gdeetotdom.ru/robots.txt", "https://saransk.gdeetotdom.ru/robots.txt", "https://kirov.gdeetotdom.ru/robots.txt", "https://stavropol.gdeetotdom.ru/robots.txt", "https://yaroslavl.gdeetotdom.ru/robots.txt", "https://tambov.gdeetotdom.ru/robots.txt", "https://gorno-altaysk.gdeetotdom.ru/robots.txt", "https://ufa.gdeetotdom.ru/robots.txt", "https://nalchik.gdeetotdom.ru/robots.txt", "https://ryazan.gdeetotdom.ru/robots.txt", "https://ulan-ude.gdeetotdom.ru/robots.txt", "https://kazan.gdeetotdom.ru/robots.txt", "https://tver.gdeetotdom.ru/robots.txt", "https://krasnodar.gdeetotdom.ru/robots.txt", "https://yakutsk.gdeetotdom.ru/robots.txt", "https://tula.gdeetotdom.ru/robots.txt", "https://kyzyl.gdeetotdom.ru/robots.txt", "https://ulyanovsk.gdeetotdom.ru/robots.txt", "https://habarovsk.gdeetotdom.ru/robots.txt", "https://hmao.gdeetotdom.ru/robots.txt", "https://lipetsk.gdeetotdom.ru/robots.txt", "https://naryan-mar.gdeetotdom.ru/robots.txt", "https://krym.gdeetotdom.ru/robots.txt", "https://perm.gdeetotdom.ru/robots.txt", "https://groznyy.gdeetotdom.ru/robots.txt", "https://vologda.gdeetotdom.ru/robots.txt", "https://irkutsk.gdeetotdom.ru/robots.txt", "https://arhangelsk.gdeetotdom.ru/robots.txt", "https://kurgan.gdeetotdom.ru/robots.txt", "https://abakan.gdeetotdom.ru/robots.txt", "https://nizhniynovgorod.gdeetotdom.ru/robots.txt", "https://petrozavodsk.gdeetotdom.ru/robots.txt", "https://spb.gdeetotdom.ru/robots.txt", "https://kursk.gdeetotdom.ru/robots.txt"],
+            "type": "robots",
+            "target": "robots",
+            "crawl_tree": {
+                "robots": {
+                    "targets": {
+                        "sitemap": {"type": "sitemap"}
+                    }
+                },
+                "sitemap": {
+                    "targets": {
+                        "sitemap_2": {"type": "sitemap", "filters": ["/sitemap_classified_adr"]}
+                    }
+                },
+                "sitemap_2": {
+                    "targets": {
+                      "pagination": {
+                        "type": "pagination", "filters": ["-ofis-", "-sklad-", "-gotoviy-biznes-", "-torgovoe-pomeshchenie-", "-proizvodstvennoe-pomeshchenie-", "-pomeshchenie-svobodnogo-naznacheniya-", "-pomeshchenie-pod-uslugi-", "-pomeshchenie-pod-kafe-", "-pomeshchenie-pod-klub-", "-zdanie-"]
+                      }
+                    }
+                },
+                "pagination": {"targets": {
+                  "pagination": {"type": "pagination", "path": "//li[contains(@class,'item_active')]/following-sibling::li[1]/a[contains(@href,'gdeetotdom')]/@href"},
+                  "item": {"type": "item", "path": "//div[@class = 'b-objects-list__address-link']/a/@href", "methods": {"save_cookies": true}}
+                }},
+				"item": {}
+            }
+        },
+
+        "item_page": {
+            "fields": {
+                "segment": {
+                    "type": "string",
+                    "path": "//div[@class='title']//div[@class='fh1']//text()",
+                    "regex": "офисного помещения|земельного участка|склада|торгового помещения|свободного назначения|квартиры|дом|производственного помещения|под услуги|под кафе|под банк|под клуб|готового бизнеса",
+                    "operations": []
+                },
+                "source_latitude": {
+                    "type": "float",
+                    "path": "///script[text()[contains(.,'NearestLatlng')]]/text()",
+                    "regex": "= \\[(.+),",
+                    "operations": []
+                },
+                "address": {
+                    "type": "string",
+                    "path": "//div[@class='page__row top-row sticker js-top-row']//div[@class='address-line']//text()",
+                    "operations": []
+                },
+                "source_longitude": {
+                    "type": "float",
+                    "path": "//script[text()[contains(.,'NearestLatlng')]]/text()",
+                    "regex": ",(.+)\\]",
+                    "operations": []
+                },
+                "seller_name": {
+                    "type": "string",
+                    "path": "//div[@class='realtor-contacts__name']//span//text()",
+                    "operations": []
+                },
+                "company_name": {
+                    "type": "string",
+                    "path": "//div[@class='realtor-contacts__name']//p//text()",
+                    "operations": []
+                },
+                "date_info": {
+                    "type": "date",
+                    "time": "now",
+                    "operations": []
+                },
+                "operation": {
+                    "type": "string",
+                    "path": "//div[@class='title']//div[@class='fh1']//text()",
+                    "regex": "^\\S+\\s",
+                    "operations": []
+                },
+                "title_name": {
+                    "type": "string",
+                    "path": "//div[@class='title']//div[@class='fh1']//text()",
+                    "operations": []
+                },
+                "date_created": {
+                    "type": "date",
+                      "time": "from string",
+                    "path": "//li[@class='activity__publish']/text()",
+                    "regex": "Опубликовано (.+)",
+                    "operations": []
+                },
+                "federal_subject": {
+                    "type": "string",
+                    "path": "//ul[@class='ssp-breadcrumbs']//li[1]//span//text()",
+                    "regex": " в (.+)",
+                    "operations": []
+                },
+                "date_updated": {
+                    "type": "date",
+                  "time": "from string",
+                    "path": "//li[@class='activity__update']/text()",
+                    "regex": "Обновлено (.+)",
+                    "operations": []
+                },
+                "description": {
+                    "type": "list to string",
+                    "path": "//div[@class='description']//text()",
+                    "operations": []
+                },
+                "price_currency": {
+                    "type": "string",
+                    "path": "//div/span[text()='Цена']/../following-sibling::div/span/text()[2]",
+                    "operations": []
+                }
+            },
+            "tables": {
+                "table_1": {
+                    "_keys_path": "//h3[@class='title']/following-sibling::div//div[@class='b-dotted-block__left']/span/text()",
+                    "_vals_path": "//h3[@class='title']/following-sibling::div//div[@class='b-dotted-block__right']",
+                    "key_converter": {
+                        "этаж": {
+                            "type": "float",
+                            "name": "floor",
+                            "regex": "(?<=inner\\\">).+(?=из)"
+                        },
+                        "вода": {
+                            "type": "string",
+                            "name": "is_plumbing",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "телефон": {
+                            "type": "string",
+                            "name": "is_phone",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "цена": {
+                            "type": "float",
+                            "name": "price_total",
+                            "regex": "\\d*\\W?\\d+"
+                        },
+                        "газ": {
+                            "type": "string",
+                            "name": "is_gas",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "тв": {
+                            "type": "string",
+                            "name": "is_tv",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "номер_дома": {
+                            "type": "string",
+                            "name": "house_number",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "ипотека": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "цена_за_м2": {
+                            "type": "float",
+                            "name": "price_per_m",
+                            "regex": "inner\\\"> (.+) <span class"
+                        },
+                        "отопление": {
+                            "type": "string",
+                            "name": "heating_system_type",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "жилая_площадь": {
+                            "type": "float",
+                            "name": "area_living",
+                            "regex": "(?<=>)\\d*\\W?\\d+"
+                        },
+                        "интернет": {
+                            "type": "string",
+                            "name": "is_internet",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "мебель": {
+                            "type": "string",
+                            "name": "is_furniture",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "этажность": {
+                            "type": "float",
+                            "name": "floors_cnt",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "общая_площадь": {
+                            "type": "float",
+                            "name": "area_total",
+                            "regex": "(?<=inner\\\">).+(?=м2)"
+                        },
+                        "тип_строения": {
+                            "type": "string",
+                            "name": "building_type",
+                            "regex": "inner\\\">(.+) </span"
+                        },
+                        "площадь_кухни": {
+                            "type": "string",
+                            "name": "kitchen_area",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "комнат": {
+                            "type": "string",
+                            "name": "rooms_cnt",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "назначение_участка": {
+                            "type": "string",
+                            "name": "land_category",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "канализация": {
+                            "type": "string",
+                            "name": "is_sewage",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "полы": {
+                            "type": "string",
+                            "name": "floor_material"
+                        },
+                        "балконлоджия": {
+                            "type": "string",
+                            "name": "is_balcony",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "безопасность": {
+                            "type": "string",
+                            "name": "security_type",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "объекты_инфраструктуры": {
+                            "type": "string",
+                            "name": "infrastr_object",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "метро": {
+                            "type": [
+                                "string",
+                                "string"
+                            ],
+                            "name": [
+                                "metro_station",
+                                "metro_minutes"
+                            ],
+                            "regex": [
+                                "(.+)<em>",
+                                "<em>(.+)</em>"
+                            ]
+                        },
+                        "санузел": {
+                            "type": "string",
+                            "name": "is_bathroom",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "комнат_в_квартире": {
+                            "type": "float",
+                            "name": "rooms_cnt",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "ремонт": {
+                            "type": "string",
+                            "name": "decoration_type",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "площадь_комнат": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "электричество": {
+                            "type": "string",
+                            "name": "is_electricity",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        },
+                        "вид_из_окна": {
+                            "type": "string",
+                            "name": "is_view",
+                            "regex": "(?<=inner\\\">).+(?=</span)"
+                        }
+                    }
+                },
+                "table_2": {
+                    "_keys_path": "//div[@class='page__section house']//div[@class='b-dotted-block__left']/span/text()",
+                    "_vals_path": "//div[@class='page__section house']//div[@class='b-dotted-block__right']/span/text()",
+                    "key_converter": {
+                        "дата_последнего_обследования": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "год_установки_процента_износа": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "количество_подъездов": {
+                            "type": "string",
+                            "name": "entrance_cnt"
+                        },
+                        "общая_площадь_1комнатных_квартир": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "серия_дома": {
+                            "type": "string",
+                            "name": "building_series"
+                        },
+                        "грузовой_лифт": {
+                            "type": "float",
+                            "name": "is_cargo_elevator"
+                        },
+                        "этажность": {
+                            "type": "float",
+                            "name": "floors_cnt"
+                        },
+                        "общая_площадь_с_ваннами": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "отопление": {
+                            "type": "string",
+                            "name": "heating_system_type"
+                        },
+                        "всего_в_квартирах_комнат": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "источник_данных_о_здании": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "почтовый_индекс": {
+                            "type": "float",
+                            "name": "address_index"
+                        },
+                        "количество_душей": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "уникальный_no_статкарточки_бти": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "жилая_площадь_2комнатных_квартир": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "количество_1комнатных_квартир": {
+                            "type": "string",
+                            "name": "apart1_cnt"
+                        },
+                        "количество_мусоропроводов": {
+                            "type": "string",
+                            "name": "rubbish_chute"
+                        },
+                        "назначение_здания_характер_использования": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "расстояние_до_метро": {
+                            "type": "float",
+                            "name": "metro_distance"
+                        },
+                        "площадь_прочих_холодных_помещений": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "общая_площадь_4комнатных_квартир": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "всего_комнат_жилых": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "площадь_общая_нежилых_подвалов": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "год_капремонта": {
+                            "type": "string",
+                            "name": "renovation_year"
+                        },
+                        "количество_4комнатных_квартир": {
+                            "type": "string",
+                            "name": "apart4_cnt"
+                        },
+                        "жилая_площадь_1комнатных_квартир": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "наличие_мусоропровода": {
+                            "type": "string",
+                            "name": "is_garbage_flute"
+                        },
+                        "год_постройки": {
+                            "type": "float",
+                            "name": "year_built"
+                        },
+                        "канализация": {
+                            "type": "string",
+                            "name": "is_sewage"
+                        },
+                        "нежилая_площадь": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "год_переоборудования": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "жилая_площадь_многокомнатных_квартир": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "жилая_площадь": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "площадь_лоджий": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "год_надстройки": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "общая_площадь_3комнатных_квартир": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "дата_состояния_статкарточки": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "лифты": {
+                            "type": "string",
+                            "name": "lift"
+                        },
+                        "пассажирский_лифт": {
+                            "type": "float",
+                            "name": "is_elevator"
+                        },
+                        "площадь_общая_нежилых_цокольных_этажей": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "количество_3комнатных_квартир": {
+                            "type": "string",
+                            "name": "apart3_cnt"
+                        },
+                        "высота_потолков": {
+                            "type": "float",
+                            "name": "ceiling_height"
+                        },
+                        "тип_строения": {
+                            "type": "string",
+                            "name": "building_type"
+                        },
+                        "всего_помещений_жилых": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "количество_ванных_комнат": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "этажность_минимальная": {
+                            "type": "string",
+                            "name": "floors_min"
+                        },
+                        "жилая_площадь_4комнатных_квартир": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "водоснабжение": {
+                            "type": "string",
+                            "name": "is_plumbing"
+                        },
+                        "общая_площадь_2комнатных_квартир": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "количество_2комнатных_квартир": {
+                            "type": "string",
+                            "name": "apart2_cnt"
+                        },
+                        "класс_строения": {
+                            "type": "string",
+                            "name": "object_class"
+                        },
+                        "номер_дома": {
+                            "type": "string",
+                            "name": "house_number"
+                        },
+                        "площадь_балконов": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "процент_износа": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "количество_квартир": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "количество_электроплит": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "жилая_площадь_3комнатных_квартир": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "материал_стен": {
+                            "type": "string",
+                            "name": "wall_material"
+                        },
+                        "общая_площадь_полезная": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "общая_площадь_многокомнатных_квартир": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "тип_перекрытий": {
+                            "type": "string",
+                            "name": "slabs_type"
+                        },
+                        "тип_подземных_этажей": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "количество_многокомнатных_квартир": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "состояние_статкарточки": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "горячая_вода": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "количество_газовых_плит": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "материал_кровли": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "подземные_этажи": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "тип_ванн": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "жилая_площадь_с_ваннами": {
+                            "type": "string",
+                            "name": "none"
+                        }
+                    }
+                },
+                "address_table": {
+                    "_keys_path": "//div[@class='address-params']//div[@class='b-dotted-block__left']/span/text()",
+                    "_vals_path": "//div[@class='address-params']//div[@class='b-dotted-block__right']/div[@class='b-dotted-block__inner']/a/text()|//div[@class='address-params']//div[@class='b-dotted-block__right']/div[@class='b-dotted-block__inner']/text()[normalize-space()]",
+                    "key_converter": {
+                        "район": {
+                            "type": "string",
+                            "name": "reference_point"
+                        },
+                        "регион": {
+                            "type": "string",
+                            "name": "federal_subject"
+                        },
+                        "населённый_пункт": {
+                            "type": "string",
+                            "name": "address_city"
+                        },
+                        "улица": {
+                            "type": "string",
+                            "name": "street_name"
+                        },
+                        "метро": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "здание": {
+                            "type": "string",
+                            "name": "house_number"
+                        },
+                        "округ": {
+                            "type": "string",
+                            "name": "intown_district"
+                        }
+                    }
+                }
+            },
+            "follow": [
+                {
+                    "url_constructor": {
+                        "insert": {
+                            "place_to_insert": {
+                                "type": "string",
+                                "path": "(//div[contains(@class,'contact-phone-info')]/@data-advert-id)[1]"
+                            }
+                        }
+                    },
+                    "fields": {
+                        "phone": {
+                            "type": "phone",
+                            "path": "phones"
+                        }
+                    },
+                    "headers": {
+                        "accept-language": {
+                            "type": "string",
+                            "value": "en-US,en;q=0.9"
+                        },
+                        "x-requested-with": {
+                            "type": "string",
+                            "value": "XMLHttpRequest"
+                        },
+                        "accept-encoding": {
+                            "type": "string",
+                            "value": "gzip, deflate"
+                        }
+                    },
+                    "methods": {
+                        "crawling_type": "get",
+                        "content_type": "json",
+                        "filter_duplicates": false,
+                        "allowed_domains": [],
+                        "proxy_settings": {
+                            "types": [
+                                "https"
+                            ],
+                            "amount": 10000,
+                            "save": true
+                        },
+                        "save_cookies": true
+                    },
+                    "url": "https://www.gdeetotdom.ru/phone/place_to_insert/classified/"
+                }
+            ]
+        }
+    }
