@@ -1,5 +1,5 @@
 {
-    "_task_id" : "NNN_HOUSE_RU_1",
+    "_task_id" : "NNN_HOUSE_RU_3",
     "_start_urls" : [
 		"https://kalugahouse.ru/catalog/trade/prodazha/",
         "https://kalugahouse.ru/catalog/trade/arenda/",
@@ -43,21 +43,21 @@
         "http://ryazanhouse.ru/catalog/production/arenda/",
         "http://ryazanhouse.ru/catalog/biznes/prodazha_gotovogo_biznesa/",
         "http://ryazanhouse.ru/catalog/Garazhi/Prodazha/",
-        "http://ryazanhouse.ru/catalog/Garazhi/Arenda_predlozhenie/"      
+        "http://ryazanhouse.ru/catalog/Garazhi/Arenda_predlozhenie/"
 
     ],"_segment": "Коммерческая недвижимость",
   "_operation": "",
   "_federal_subject": "",
   "_source": "house.ru",
   "global_settings": {
-    "CONCURRENT_REQUESTS": 512,
+    "CONCURRENT_REQUESTS": 1204,
     "DOWNLOAD_TIMEOUT": 60,
     "SPLASH_URL": "http://0.0.0.0:8050",
     "LOG_LEVEL": "INFO",
     "AUTOTHROTTLE_ENABLED": true,
     "AUTOTHROTTLE_START_DELAY": 1.0,
     "AUTOTHROTTLE_MAX_DELAY": 60,
-    "AUTOTHROTTLE_TARGET_CONCURRENCY": 512,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
     "HTTPERROR_ALLOWED_CODES": [],
     "CONCURRENT_REQUESTS_PER_DOMAIN": 256,
     "RETRY_ENABLED": true,
@@ -73,7 +73,8 @@
       404,
       301,
       302,
-      303
+      303,
+      407
     ],
     "RETRY_TIMES": 20,
     "ROBOTSTXT_ENABLED": false,
@@ -176,127 +177,147 @@
 		 "tables" : {
 			"table_1" : {
 		        "_keys_path" : "//table[@class='properties']//td[@class='title']/text()",
-                "_vals_path" : "//table[@class='properties']//td[@class='title']/following-sibling::td/text()|//table[@class='properties']//td[@class='title']/following-sibling::td/a/text()",
+                "_vals_path" : "//table[@class='properties']//td[@class='title']/following-sibling::td",
 				"key_converter" : {
 					"комнат": {
 						"name": "room_count",
 						"type" : "float",
-						"regex": "\\d+"
+						"regex": "(?<=td>)\\d+"
 					},
 					"общая_площадь": {
 						"name": "area_total",
 						"type" : "float",
-						"regex" : "\\d*\\W?\\d+"
+						"regex" : "(?<=td>)\\d*\\W?\\d+"
 					},
 					"жилая_площадь": {
 						"name": "area_living",
 						"type" : "float",
-						"regex" : "\\d*\\W?\\d+"
+						"regex" : "(?<=td>)\\d*\\W?\\d+"
 					},
 					"площадь_кухни": {
 						"name": "area_kitchen",
 						"type" : "float",
-						"regex" : "\\d*\\W?\\d+"
+						"regex" : "(?<=td>)\\d*\\W?\\d+"
 					},
 					"площадь_участка": {
 						"name": ["area_land", "area_land_unit"],
 						"type" : ["float","string"],
-						"regex" : ["\\d*\\W?\\d+","[А-Яа-я]+"]
+						"regex" : ["(?<=td>)\\d*\\W?\\d+","[А-Яа-я]+"]
 					},
 					"площадь": {
-						"name": ["area", "area_unit"],
+						"name": ["area_total", "area_unit"],
 						"type" : ["float","string"],
-						"regex" : ["\\d*\\W?\\d+","[А-Яа-я\\.]+"]
+						"regex" : ["(?<=td>)\\d*\\W?\\d+","[А-Яа-я\\.]+"]
 					},
 					"компания": {
 						"name": "seller_company",
-						"type" : "string"
+						"type" : "string",
+                        "regex" : "(?<=\\\">).+(?=</a)"
 					},
 					"контактное_лицо": {
 						"name": "seller_name",
-						"type" : "string"
+						"type" : "string",
+                        "regex" : "(?<=td>).+(?=</td)"
 					},
 					"адрес": {
 						"name": "address",
-						"type" : "string"
+						"type" : "string",
+                        "regex" : "(?<=td>).+(?=</td)"
 					},
 					"тип_дома": {
 						"name": "building_construction",
-						"type" : "string"
-					},
+						"type" : "string",
+                        "regex" : "(?<=td>).+(?=</td)"
+                        					},
 					"этаж": {
 						"name": ["floor", "floor_count"],
 						"type" : ["float", "float"],
-						"regex" : ["^\\d+(?=/|$)", "(?<=/)\\d+"]
+						"regex" : ["(?<=td>)\\d+", "(?<=/)\\d+"]
 					},
 					"балкон_лоджия": {
 						"name": "balcony",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"планировка": {
 						"name": "floorplan",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"тип": {
 						"name": "sale_type",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"район": {
 						"name": "address_district",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"бытовая_техника": {
 						"name": "is_appliences",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"мебель": {
 						"name": "is_furniture",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"холодильник": {
 						"name": "is_freezer",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"дата_добавления": {
 						"name": "date_created",
-						"type" : "date"
+						"type" : "date",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"населенный_пункт": {
 						"name": "address_city",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"улица_деревня": {
 						"name": "address_city",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"деревня_или_улица": {
 						"name": "address_city",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"страна": {
 						"name": "address_country",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"коммуникации": {
 						"name": "is_communications",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"этажей": {
 						"name": "floors_count",
-						"type" : "float"
+						"type" : "float","regex" : "(?<=td>).+(?=</td)"
+
 					},
 					"удалённость": {
 						"name": ["distance", "distance_unit"],
 						"type" : ["float", "string"],
-						"regex" : ["\\d*\\W?\\d+", "[А-Яа-я]+"]
+						"regex" : ["(?<=td>)\\d*\\W?\\d+", "[А-Яа-я]+"]
 					},
 					"парковка": {
 						"name": "is_parking",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"офисная_мебель": {
 						"name": "is_furniture",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"для_этого_офиса": {
 						"name": "nil",
@@ -305,48 +326,57 @@
 					"оборот_за_последние_6_месяцев": {
 						"name": ["revenue_six", "revenue_unit"],
 						"type" : ["float", "string"],
-						"regex" : ["\\d*\\W?\\d+", "[А-Яа-я]+"]
+						"regex" : ["(?<=td>)\\d*\\W?\\d+", "(?<=td>)[А-Яа-я]+"]
 					},
 					"объем_кредитов_если_есть": {
 						"name": "mortage",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"год_основания": {
 						"name": "year_found",
-						"type" : "float"
+						"type" : "float",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"форма_собственности": {
 						"name": "property_type",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"число_работников": {
 						"name": "employees_count",
-						"type" : "float"
+						"type" : "float",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"подвал": {
 						"name": "is_basement",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"размеры": {
 						"name": "dimensions",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"кухня_площадь": {
 						"name": "area_kitchen",
 						"type" : "float",
-						"regex": "\\d*\\W?\\d+"
+						"regex": "(?<=td>)\\d*\\W?\\d+"
 					},
 					"номер_дома": {
 						"name": "house_number",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"улица": {
 						"name": "address_street",
-						"type" : "string"
+						"type" : "string",
+                      "regex" : "(?<=td>).+(?=</td)"
 					},
 					"всего_этажей": {
 						"name": "floor_count",
-						"type" : "float"
+						"type" : "float",
+                      "regex" : "(?<=td>).+(?=</td)"
 					}
 				}
 				}
