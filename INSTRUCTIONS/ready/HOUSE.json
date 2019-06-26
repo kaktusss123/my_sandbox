@@ -32,7 +32,18 @@
         "http://vladimirhouse.ru/catalog/production/arenda/",
         "http://vladimirhouse.ru/catalog/biznes/prodazha_gotovogo_biznesa/",
         "http://vladimirhouse.ru/catalog/Garazhi/Prodazha/",
-        "http://vladimirhouse.ru/catalog/Garazhi/Arenda_predlozhenie/"
+        "http://vladimirhouse.ru/catalog/Garazhi/Arenda_predlozhenie/",
+
+        "http://ryazanhouse.ru/catalog/trade/prodazha/",
+        "http://ryazanhouse.ru/catalog/trade/arenda/",
+        "http://ryazanhouse.ru/catalog/appartments/kvartiry_pod_kommertsiju/",
+        "http://ryazanhouse.ru/catalog/offices/prodazha/",
+        "http://ryazanhouse.ru/catalog/offices/arenda/",
+        "http://ryazanhouse.ru/catalog/production/prodazha/",
+        "http://ryazanhouse.ru/catalog/production/arenda/",
+        "http://ryazanhouse.ru/catalog/biznes/prodazha_gotovogo_biznesa/",
+        "http://ryazanhouse.ru/catalog/Garazhi/Prodazha/",
+        "http://ryazanhouse.ru/catalog/Garazhi/Arenda_predlozhenie/"      
 
     ],"_segment": "Коммерческая недвижимость",
   "_operation": "",
@@ -153,7 +164,7 @@
             },
             "operation": {
                 "type": "list to string",
-                "path":   "//div[@id='nav']/a/@title",
+                "path":  "//div[@id='nav']/a/text()",
                 "regex" : "Аренда|Продажа"
             },
             "segment_subtype": {
