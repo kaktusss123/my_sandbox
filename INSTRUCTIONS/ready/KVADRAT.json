@@ -1,241 +1,317 @@
 {
-	"_task_id": "KVADRAT",
-	"_start_urls": [
-		"https://kvadrat22.ru/mob_sellcombank-1-1.html",
-"https://kvadrat22.ru/mob_sellcombank-2-1.html",
-"https://kvadrat22.ru/mob_sellcombank-3-1.html",
-"https://kvadrat22.ru/mob_sellcombank-4-1.html",
-"https://kvadrat22.ru/mob_givecombank-1-1.html",
-"https://kvadrat22.ru/mob_givecombank-2-1.html",
-"https://kvadrat22.ru/mob_givecombank-3-1.html",
-"https://kvadrat22.ru/mob_givecombank-4-1.html",
-"https://n30.ru/mob_sellcombank-1-1.html",
-"https://n30.ru/mob_sellcombank-2-1.html",
-"https://n30.ru/mob_sellcombank-3-1.html",
-"https://n30.ru/mob_sellcombank-4-1.html",
-"https://n30.ru/mob_givecombank-1-1.html",
-"https://n30.ru/mob_givecombank-2-1.html",
-"https://n30.ru/mob_givecombank-3-1.html",
-"https://n30.ru/mob_givecombank-4-1.html",
-"https://n002.ru/mob_sellcombank-1-1.html",
-"https://n002.ru/mob_sellcombank-2-1.html",
-"https://n002.ru/mob_sellcombank-3-1.html",
-"https://n002.ru/mob_sellcombank-4-1.html",
-"https://n002.ru/mob_givecombank-1-1.html",
-"https://n002.ru/mob_givecombank-2-1.html",
-"https://n002.ru/mob_givecombank-3-1.html",
-"https://n002.ru/mob_givecombank-4-1.html",
-"https://kemdom.ru/mob_sellcombank-1-1.html",
-"https://kemdom.ru/mob_sellcombank-2-1.html",
-"https://kemdom.ru/mob_sellcombank-3-1.html",
-"https://kemdom.ru/mob_sellcombank-4-1.html",
-"https://kemdom.ru/mob_givecombank-1-1.html",
-"https://kemdom.ru/mob_givecombank-2-1.html",
-"https://kemdom.ru/mob_givecombank-3-1.html",
-"https://kemdom.ru/mob_givecombank-4-1.html",
-"https://kvadrat24.ru/mob_sellcombank-1-1.html",
-"https://kvadrat24.ru/mob_sellcombank-2-1.html",
-"https://kvadrat24.ru/mob_sellcombank-3-1.html",
-"https://kvadrat24.ru/mob_sellcombank-4-1.html",
-"https://kvadrat24.ru/mob_givecombank-1-1.html",
-"https://kvadrat24.ru/mob_givecombank-2-1.html",
-"https://kvadrat24.ru/mob_givecombank-3-1.html",
-"https://kvadrat24.ru/mob_givecombank-4-1.html",
-"https://kvadrat54.ru/mob_sellcombank-1-1.html",
-"https://kvadrat54.ru/mob_sellcombank-2-1.html",
-"https://kvadrat54.ru/mob_sellcombank-3-1.html",
-"https://kvadrat54.ru/mob_sellcombank-4-1.html",
-"https://kvadrat54.ru/mob_givecombank-1-1.html",
-"https://kvadrat54.ru/mob_givecombank-2-1.html",
-"https://kvadrat54.ru/mob_givecombank-3-1.html",
-"https://kvadrat54.ru/mob_givecombank-4-1.html",
-"https://kvadrat64.ru/mob_sellcombank-1-1.html",
-"https://kvadrat64.ru/mob_sellcombank-2-1.html",
-"https://kvadrat64.ru/mob_sellcombank-3-1.html",
-"https://kvadrat64.ru/mob_sellcombank-4-1.html",
-"https://kvadrat64.ru/mob_givecombank-1-1.html",
-"https://kvadrat64.ru/mob_givecombank-2-1.html",
-"https://kvadrat64.ru/mob_givecombank-3-1.html",
-"https://kvadrat64.ru/mob_givecombank-4-1.html",
-"https://kvadrat66.ru/mob_sellcombank-1-1.html",
-"https://kvadrat66.ru/mob_sellcombank-2-1.html",
-"https://kvadrat66.ru/mob_sellcombank-3-1.html",
-"https://kvadrat66.ru/mob_sellcombank-4-1.html",
-"https://kvadrat66.ru/mob_givecombank-1-1.html",
-"https://kvadrat66.ru/mob_givecombank-2-1.html",
-"https://kvadrat66.ru/mob_givecombank-3-1.html",
-"https://kvadrat66.ru/mob_givecombank-4-1.html",
-"https://kazan-n.ru/mob_sellcombank-1-1.html",
-"https://kazan-n.ru/mob_sellcombank-2-1.html",
-"https://kazan-n.ru/mob_sellcombank-3-1.html",
-"https://kazan-n.ru/mob_sellcombank-4-1.html",
-"https://kazan-n.ru/mob_givecombank-1-1.html",
-"https://kazan-n.ru/mob_givecombank-2-1.html",
-"https://kazan-n.ru/mob_givecombank-3-1.html",
-"https://kazan-n.ru/mob_givecombank-4-1.html",
-"https://kvadrat72.ru/mob_sellcombank-1-1.html",
-"https://kvadrat72.ru/mob_sellcombank-2-1.html",
-"https://kvadrat72.ru/mob_sellcombank-3-1.html",
-"https://kvadrat72.ru/mob_sellcombank-4-1.html",
-"https://kvadrat72.ru/mob_givecombank-1-1.html",
-"https://kvadrat72.ru/mob_givecombank-2-1.html",
-"https://kvadrat72.ru/mob_givecombank-3-1.html",
-"https://kvadrat72.ru/mob_givecombank-4-1.html",
-"https://nd27.ru/mob_sellcombank-1-1.html",
-"https://nd27.ru/mob_sellcombank-2-1.html",
-"https://nd27.ru/mob_sellcombank-3-1.html",
-"https://nd27.ru/mob_sellcombank-4-1.html",
-"https://nd27.ru/mob_givecombank-1-1.html",
-"https://nd27.ru/mob_givecombank-2-1.html",
-"https://nd27.ru/mob_givecombank-3-1.html",
-"https://nd27.ru/mob_givecombank-4-1.html",
-"https://kvadrat74.ru/mob_sellcombank-1-1.html",
-"https://kvadrat74.ru/mob_sellcombank-2-1.html",
-"https://kvadrat74.ru/mob_sellcombank-3-1.html",
-"https://kvadrat74.ru/mob_sellcombank-4-1.html",
-"https://kvadrat74.ru/mob_givecombank-1-1.html",
-"https://kvadrat74.ru/mob_givecombank-2-1.html",
-"https://kvadrat74.ru/mob_givecombank-3-1.html",
-"https://kvadrat74.ru/mob_givecombank-4-1.html"
-
-	],
-	"_segment": "",
-	"_operation": "",
-	"_federal_subject": "",
-	"_source": "KVADRAT",
-	"global_settings": {
-		"CONCURRENT_REQUESTS": 256,
-		"DOWNLOAD_TIMEOUT": 60,
-		"SPLASH_URL": "http://0.0.0.0:8050",
-		"LOG_LEVEL": "INFO",
-		"AUTOTHROTTLE_ENABLED": false,
-		"AUTOTHROTTLE_START_DELAY": 1.0,
-		"AUTOTHROTTLE_MAX_DELAY": 60,
-		"AUTOTHROTTLE_TARGET_CONCURRENCY": 256,
-		"HTTPERROR_ALLOWED_CODES": [],
-		"CONCURRENT_REQUESTS_PER_DOMAIN": 256,
-		"RETRY_ENABLED": true,
-		"RETRY_HTTP_CODES": [
-			500,
-			503,
-			502,
-			504,
-			400,
-			403,
-			408,
-			429,
-			505,
-			303,
-			302,
-			301,
-            404,
-            307,
-            410,
-            502,
-            451
-		],
-		"RETRY_TIMES": 20,
-		"ROBOTSTXT_ENABLED": false,
-		"ROBOTSTXT_OBEY": false,
-		"REDIRECT_ENABLED": false,
-		"COOKIES_ENABLED": false,
-		"RANDOM_UA_TYPE": "random"
-	},
-
-	"methods": {
-		"crawling_type": "common",
-		"allowed_domains": [],
-		"proxy_settings": {
-			"types": [
-				"https"
-			]
-		}
-	},
-	"crawl_tree": [
-           {
-               "pagination_urls": {
-                       "path":"(//div[@class = 'dphase']/following-sibling::a[1]/@href)[1]"
-               },
-               "item_urls": {
-                       "path": "//td[@class = 'tdecprm']/a/@href"
-               }
-           }],
-	"item_page": {
-		"fields": {
-
-
-			"title_name": {
-				"type": "string",
-				"path": "//td[@class = 'hh']/text()"
-			},
-			"date_info": {
-				"type": "date",
-				"time": "now"
-			},
-			"date_created": {
-				"type": "date",
-				"path": "(//td[@class = 'tdate']/text())[2]",
-				"time": "from string",
-				"regex": "(?<=но )([^;]*)"
-
-			},
-          "date_updated": {
-				"type": "date",
-				"path": "(//td[@class = 'tdate']/text())[1]",
-				"time": "from string",
-				"regex": "(?<=но )([^;]*)"
-
-			},
-			"address": {
-				"type": "string",
-				"path": "//td[@class = 'hh']/text()",
-                "regex": "(?<=ул. )([^;]*)"
-			},
-			"operation": {
-				"type": "string",
-				"path": "//td[@class = 'hh']/text()"
-			},
-			"purpose": {
-				"type": "string",
-				"path": "//td[@class = 'hh']/text()"
-			},
-			
-			"description": {
-				"type": "list_to_string",
-				"path": "((//div[@class = 'tddec2']/text())[contains(.,'информ')])/following-sibling::span/text()"
-			},
-
-			"price_total": {
-				"type": "string",
-				"path": "//td[@class = 'thprice']/text()",
-				"regex": "\\d+"
-			},
-
-			"seller_name": {
-				"type": "string",
-				"path": "((//div[@class = 'tddec2']/text())[contains(.,'посредник')])/following-sibling::span/text()"
-
-			},
-			"decoration_type": {
-				"type": "string",
-				"path": "((//div[@class = 'tddec2']/text())[contains(.,'ремонт')])/following-sibling::span/text()"
-			},
-			"area_total": {
-				"type": "string",
-				"path": "(((//div[@class = 'tddec']/text())[contains(.,'Продаваемая площадь')])/following-sibling::span/text())[1]",
-				"regex": "([^;]*)(?= м)"
-
-			},
-			"floor": {
-				"type": "string",
-				"path": "((//div[@class = 'tddec']/text())[contains(.,'Этаж')])/following-sibling::span/text()",
-				"regex": "\\d+(?=\/)"
-			},
-			"floors_cnt": {
-				"type": "string",
-				"path": "((//div[@class = 'tddec']/text())[contains(.,'Этаж')])/following-sibling::span/text()",
-				"regex": "(?<=\/)\\d+"
-			}
-		}
-				}
-			}
+  "_task_id": "KVADRAT_333",
+  "_start_urls": [
+    "https://kvadrat22.ru/mob_sellcombank-1-1.html",
+    "https://kvadrat22.ru/mob_sellcombank-2-1.html",
+    "https://kvadrat22.ru/mob_sellcombank-3-1.html",
+    "https://kvadrat22.ru/mob_sellcombank-4-1.html",
+    "https://kvadrat22.ru/mob_givecombank-1-1.html",
+    "https://kvadrat22.ru/mob_givecombank-2-1.html",
+    "https://kvadrat22.ru/mob_givecombank-3-1.html",
+    "https://kvadrat22.ru/mob_givecombank-4-1.html",
+    "https://n30.ru/mob_sellcombank-1-1.html",
+    "https://n30.ru/mob_sellcombank-2-1.html",
+    "https://n30.ru/mob_sellcombank-3-1.html",
+    "https://n30.ru/mob_sellcombank-4-1.html",
+    "https://n30.ru/mob_givecombank-1-1.html",
+    "https://n30.ru/mob_givecombank-2-1.html",
+    "https://n30.ru/mob_givecombank-3-1.html",
+    "https://n30.ru/mob_givecombank-4-1.html",
+    "https://n002.ru/mob_sellcombank-1-1.html",
+    "https://n002.ru/mob_sellcombank-2-1.html",
+    "https://n002.ru/mob_sellcombank-3-1.html",
+    "https://n002.ru/mob_sellcombank-4-1.html",
+    "https://n002.ru/mob_givecombank-1-1.html",
+    "https://n002.ru/mob_givecombank-2-1.html",
+    "https://n002.ru/mob_givecombank-3-1.html",
+    "https://n002.ru/mob_givecombank-4-1.html",
+    "https://kemdom.ru/mob_sellcombank-1-1.html",
+    "https://kemdom.ru/mob_sellcombank-2-1.html",
+    "https://kemdom.ru/mob_sellcombank-3-1.html",
+    "https://kemdom.ru/mob_sellcombank-4-1.html",
+    "https://kemdom.ru/mob_givecombank-1-1.html",
+    "https://kemdom.ru/mob_givecombank-2-1.html",
+    "https://kemdom.ru/mob_givecombank-3-1.html",
+    "https://kemdom.ru/mob_givecombank-4-1.html",
+    "https://kvadrat24.ru/mob_sellcombank-1-1.html",
+    "https://kvadrat24.ru/mob_sellcombank-2-1.html",
+    "https://kvadrat24.ru/mob_sellcombank-3-1.html",
+    "https://kvadrat24.ru/mob_sellcombank-4-1.html",
+    "https://kvadrat24.ru/mob_givecombank-1-1.html",
+    "https://kvadrat24.ru/mob_givecombank-2-1.html",
+    "https://kvadrat24.ru/mob_givecombank-3-1.html",
+    "https://kvadrat24.ru/mob_givecombank-4-1.html",
+    "https://kvadrat54.ru/mob_sellcombank-1-1.html",
+    "https://kvadrat54.ru/mob_sellcombank-2-1.html",
+    "https://kvadrat54.ru/mob_sellcombank-3-1.html",
+    "https://kvadrat54.ru/mob_sellcombank-4-1.html",
+    "https://kvadrat54.ru/mob_givecombank-1-1.html",
+    "https://kvadrat54.ru/mob_givecombank-2-1.html",
+    "https://kvadrat54.ru/mob_givecombank-3-1.html",
+    "https://kvadrat54.ru/mob_givecombank-4-1.html",
+    "https://kvadrat64.ru/mob_sellcombank-1-1.html",
+    "https://kvadrat64.ru/mob_sellcombank-2-1.html",
+    "https://kvadrat64.ru/mob_sellcombank-3-1.html",
+    "https://kvadrat64.ru/mob_sellcombank-4-1.html",
+    "https://kvadrat64.ru/mob_givecombank-1-1.html",
+    "https://kvadrat64.ru/mob_givecombank-2-1.html",
+    "https://kvadrat64.ru/mob_givecombank-3-1.html",
+    "https://kvadrat64.ru/mob_givecombank-4-1.html",
+    "https://kvadrat66.ru/mob_sellcombank-1-1.html",
+    "https://kvadrat66.ru/mob_sellcombank-2-1.html",
+    "https://kvadrat66.ru/mob_sellcombank-3-1.html",
+    "https://kvadrat66.ru/mob_sellcombank-4-1.html",
+    "https://kvadrat66.ru/mob_givecombank-1-1.html",
+    "https://kvadrat66.ru/mob_givecombank-2-1.html",
+    "https://kvadrat66.ru/mob_givecombank-3-1.html",
+    "https://kvadrat66.ru/mob_givecombank-4-1.html",
+    "https://kazan-n.ru/mob_sellcombank-1-1.html",
+    "https://kazan-n.ru/mob_sellcombank-2-1.html",
+    "https://kazan-n.ru/mob_sellcombank-3-1.html",
+    "https://kazan-n.ru/mob_sellcombank-4-1.html",
+    "https://kazan-n.ru/mob_givecombank-1-1.html",
+    "https://kazan-n.ru/mob_givecombank-2-1.html",
+    "https://kazan-n.ru/mob_givecombank-3-1.html",
+    "https://kazan-n.ru/mob_givecombank-4-1.html",
+    "https://kvadrat72.ru/mob_sellcombank-1-1.html",
+    "https://kvadrat72.ru/mob_sellcombank-2-1.html",
+    "https://kvadrat72.ru/mob_sellcombank-3-1.html",
+    "https://kvadrat72.ru/mob_sellcombank-4-1.html",
+    "https://kvadrat72.ru/mob_givecombank-1-1.html",
+    "https://kvadrat72.ru/mob_givecombank-2-1.html",
+    "https://kvadrat72.ru/mob_givecombank-3-1.html",
+    "https://kvadrat72.ru/mob_givecombank-4-1.html",
+    "https://nd27.ru/mob_sellcombank-1-1.html",
+    "https://nd27.ru/mob_sellcombank-2-1.html",
+    "https://nd27.ru/mob_sellcombank-3-1.html",
+    "https://nd27.ru/mob_sellcombank-4-1.html",
+    "https://nd27.ru/mob_givecombank-1-1.html",
+    "https://nd27.ru/mob_givecombank-2-1.html",
+    "https://nd27.ru/mob_givecombank-3-1.html",
+    "https://nd27.ru/mob_givecombank-4-1.html",
+    "https://kvadrat74.ru/mob_sellcombank-1-1.html",
+    "https://kvadrat74.ru/mob_sellcombank-2-1.html",
+    "https://kvadrat74.ru/mob_sellcombank-3-1.html",
+    "https://kvadrat74.ru/mob_sellcombank-4-1.html",
+    "https://kvadrat74.ru/mob_givecombank-1-1.html",
+    "https://kvadrat74.ru/mob_givecombank-2-1.html",
+    "https://kvadrat74.ru/mob_givecombank-3-1.html",
+    "https://kvadrat74.ru/mob_givecombank-4-1.html"
+  ],
+  "_segment": "Коммерческая недвижимость",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "KVADRAT",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 1024,
+    "DOWNLOAD_TIMEOUT": 60,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": false,
+    "AUTOTHROTTLE_START_DELAY": 1.0,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+    "HTTPERROR_ALLOWED_CODES": [],
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 256,
+    "RETRY_ENABLED": true,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      502,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      303,
+      302,
+      301,
+      404,
+      307,
+      410,
+      502,
+      451
+    ],
+    "RETRY_TIMES": 20,
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": false,
+    "RANDOM_UA_TYPE": "random"
+  },
+  "methods": {
+    "crawling_type": "common",
+    "allowed_domains": [],
+    "proxy_settings": {
+      "types": [
+        "https"
+      ]
+    }
+  },
+  "crawl_tree": [
+    {
+      "pagination_urls": {
+        "path": "(//div[@class = 'dphase']/following-sibling::a[1]/@href)[1]"
+      },
+      "item_urls": {
+        "path": "//td[@class = 'tdecprm']/a/@href"
+      }
+    }
+  ],
+  "item_page": {
+    "fields": {
+      "title_name": {
+        "type": "string",
+        "path": "//td[@class = 'hh']/text()"
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now"
+      },
+      "date_created": {
+        "type": "date",
+        "path": "(//td[@class = 'tdate']/text())[2]",
+        "time": "from string",
+        "regex": "(?<=но )([^;]*)"
+      },
+      "date_updated": {
+        "type": "date",
+        "path": "(//td[@class = 'tdate']/text())[1]",
+        "time": "from string",
+        "regex": "(?<=но )([^;]*)"
+      },
+      "address": {
+        "type": "string",
+        "path": "//td[@class = 'hh']/text()",
+        "regex": "(?<=ул. )([^;]*)"
+      },
+      "operation": {
+        "type": "string",
+        "path": "//div[@class = 'tbase']/div[@class='a'][1]/text()[normalize-space()]",
+        "regex": "Аренда|Продажа"
+      },
+      "purpose": {
+        "type": "string",
+        "path": "(//div[@class='tbase']/div[@class = 'a']/a[@class='black'])[1]/text()"
+      },
+      "description": {
+        "type": "list to string",
+        "path": "((//div[@class = 'tddec2']/text())[contains(.,'информ')])/following-sibling::span/text()"
+      },
+      "price_total": {
+        "type": "float",
+        "path": "//td[@class = 'thprice']/text()",
+        "regex": "\\d+"
+      },
+      "price_unit": {
+        "type": "string",
+        "path": "//td[@class = 'thprice']/text()",
+        "regex": "\\D+"
+      },
+      "seller_name": {
+        "type": "string",
+        "path": "((//div[@class = 'tddec2']/text())[contains(.,'посредник')])/following-sibling::span/text()"
+      },
+      "ceiling_height": {
+        "type": "string",
+        "path": "((//div[@class = 'tddec2']/text())[contains(.,'Высота потолков')])/following-sibling::span/text()"
+      },
+      "is_electriicity": {
+        "type": "string",
+        "path": "((//div[@class = 'tddec2']/text())[contains(.,'Электроснабжение')])/following-sibling::span/text()"
+      },
+      "is_plumbing": {
+        "type": "string",
+        "path": "((//div[@class = 'tddec2']/text())[contains(.,'Водоснабжение')])/following-sibling::span/text()"
+      },
+      "floor_type": {
+        "type": "string",
+        "path": "((//div[@class = 'tddec2']/text())[contains(.,'Устройство пола')])/following-sibling::span/text()"
+      },
+      "decoration_type": {
+        "type": "string",
+        "path": "((//div[@class = 'tddec2']/text())[contains(.,'ремонт')])/following-sibling::span/text()"
+      },
+      "area_total": {
+        "type": "string",
+        "path": "(((//div[@class = 'tddec']/text())[contains(.,'Продаваемая площадь')])/following-sibling::span/text())[1]|(((//div[@class = 'tddec']/text())[contains(.,'Сдаваемая площадь')])/following-sibling::span/text())[1]",
+        "regex": "\\d*\\W?\\d+"
+      },
+      "area_unit": {
+        "type": "string",
+        "path": "(((//div[@class = 'tddec']/text())[contains(.,'Продаваемая площадь')])/following-sibling::span/following-sibling::text())[1]|(((//div[@class = 'tddec']/text())[contains(.,'Сдаваемая площадь')])/following-sibling::span/following-sibling::text())[1]"
+      },
+      "area_building": {
+        "type": "string",
+        "path": "(((//div[@class = 'tddec']/text())[contains(.,'Общая площадь объекта')])/following-sibling::span/text())[1]",
+        "regex": "\\d*\\W?\\d+"
+      },
+      "floor": {
+        "type": "string",
+        "path": "((//div[@class = 'tddec']/text())[contains(.,'Этаж')])/following-sibling::span/text()",
+        "regex": "\\d+(?=\/)"
+      },
+      "floors_cnt": {
+        "type": "string",
+        "path": "((//div[@class = 'tddec']/text())[contains(.,'Этаж')])/following-sibling::span/text()",
+        "regex": "(?<=\/)\\d+"
+      }
+    },
+    "_comment": [
+      {
+        "url_constructor": {
+          "change_path": {
+            "type": "string",
+            "path": "//script[contains(text(),'phoneNumberUrl')]/text()",
+            "regex": "phoneNumberUrl\":\"(.*?)\"__first__"
+          }
+        },
+        "fields": {
+          "phone": {
+            "type": "phone",
+            "path": "phones"
+          }
+        },
+        "headers": {
+          "User-Agent": {
+            "type": "string",
+            "value": "false"
+          },
+          "Accept": {
+            "type": "string",
+            "value": "false"
+          },
+          "Accept-Language": {
+            "type": "string",
+            "value": "false"
+          },
+          "Accept-Encoding": {
+            "type": "string",
+            "value": "gzip"
+          },
+          "Referer": {
+            "type": "string",
+            "value": "false"
+          },
+          "Cookie": {
+            "type": "string",
+            "value": "_ym_uid=1550754199151137830; _ym_d=1550754199; __utmc=152112358; _fbp=fb.1.1550754199349.1776689523; _ga=GA1.2.867185631.1550754199; _ga=GA1.3.867185631.1550754199; __cfduid=d5a7c6f37dce603d5d73884e5d998ab271558519749; __utmz=152112358.1558604584.13.2.utmcsr=cre.mirkvartir.ru|utmccn=(referral)|utmcmd=referral|utmcct=/221146321/; _gid=GA1.2.1129475475.1559817830; mkab=0; _gid=GA1.3.1129475475.1559817830; __utma=152112358.867185631.1550754199.1559823042.1559902242.25; _ym_visorc_38620740=w; _ym_isad=1; __utmt_UA-3246178-2=1; activeMain=kurgan; __utmb=152112358.9.10.1559902242; _gat_UA-41435009-1=1"
+          }
+        },
+        "methods": {
+          "content_type": "json",
+          "filter_duplicates": false,
+          "allowed_domains": [],
+          "proxy_settings": {
+            "types": [
+              "https"
+            ],
+            "amount": 10000,
+            "save": true
+          }
+        }
+      }
+    ]
+  }
+}
