@@ -1,0 +1,159 @@
+{
+        "_task_id": "353",
+        "_start_urls": ["https://bcinform.ru/spb/arenda-ofisa/", "https://bcinform.moscow/arenda-ofisa/", "https://bcinform.ru/arkhangelsk/arenda-ofisa/", "https://bcinform.ru/astrakhan/arenda-ofisa/", "https://bcinform.ru/barnaul/arenda-ofisa/", "https://bcinform.ru/belgorod/arenda-ofisa/", "https://bcinform.ru/bryansk/arenda-ofisa/", "https://bcinform.ru/vladivostok/arenda-ofisa/", "https://bcinform.ru/volgograd/arenda-ofisa/", "https://bcinform.ru/voronezh/arenda-ofisa/", "https://bcinform.ru/gatchina/arenda-ofisa/", "https://ekb.bcinform.ru/arenda-ofisa/", "https://bcinform.ru/ivanovo/arenda-ofisa/", "https://bcinform.ru/izhevsk/arenda-ofisa/", "https://bcinform.ru/irkutsk/arenda-ofisa/", "https://bcinform.ru/kazan/arenda-ofisa/", "https://bcinform.ru/kaliningrad/arenda-ofisa/", "https://bcinform.ru/kemerovo/arenda-ofisa/", "https://bcinform.ru/kirov/arenda-ofisa/", "https://bcinform.ru/kotelniki/arenda-ofisa/", "https://bcinform.ru/krasnogorsk/arenda-ofisa/", "https://bcinform.ru/krasnodar/arenda-ofisa/", "https://bcinform.ru/krasnoyarsk/arenda-ofisa/", "https://bcinform.ru/lipetsk/arenda-ofisa/", "https://bcinform.ru/lomonosov/arenda-ofisa/", "https://bcinform.ru/murmansk/arenda-ofisa/", "https://bcinform.ru/mytishchi/arenda-ofisa/", "https://bcinform.ru/naberezhnyye-chelny/arenda-ofisa/", "https://bcinform.ru/nizhniy-novgorod/arenda-ofisa/", "https://bcinform.ru/novokuznetsk/arenda-ofisa/", "https://bcinform.ru/novosibirsk/arenda-ofisa/", "https://bcinform.ru/omsk/arenda-ofisa/", "https://bcinform.ru/orenburg/arenda-ofisa/", "https://bcinform.ru/penza/arenda-ofisa/", "https://bcinform.ru/perm/arenda-ofisa/", "https://bcinform.ru/rostov-na-donu/arenda-ofisa/", "https://bcinform.ru/ryazan/arenda-ofisa/", "https://bcinform.ru/samara/arenda-ofisa/", "https://bcinform.ru/saratov/arenda-ofisa/", "https://bcinform.ru/sevastopol/arenda-ofisa/", "https://bcinform.ru/simferopol/arenda-ofisa/", "https://bcinform.ru/sochi/arenda-ofisa/", "https://bcinform.ru/tolyatti/arenda-ofisa/", "https://bcinform.ru/tomsk/arenda-ofisa/", "https://bcinform.ru/tula/arenda-ofisa/", "https://bcinform.ru/tyumen/arenda-ofisa/", "https://bcinform.ru/ulyanovsk/arenda-ofisa/", "https://bcinform.ru/ufa/arenda-ofisa/", "https://bcinform.ru/feodosiya/arenda-ofisa/", "https://bcinform.ru/khabarovsk/arenda-ofisa/", "https://bcinform.ru/ximki/arenda-ofisa/", "https://bcinform.ru/cheboksary/arenda-ofisa/", "https://bcinform.ru/chelyabinsk/arenda-ofisa/", "https://bcinform.ru/elektrostal/arenda-ofisa/", "https://bcinform.ru/yaroslavl/arenda-ofisa/", "https://bcinform.ru/spb/prodazha-ofisa/", "https://bcinform.moscow/prodazha-ofisa/", "https://bcinform.ru/arkhangelsk/prodazha-ofisa/", "https://bcinform.ru/astrakhan/prodazha-ofisa/", "https://bcinform.ru/barnaul/prodazha-ofisa/", "https://bcinform.ru/belgorod/prodazha-ofisa/", "https://bcinform.ru/bryansk/prodazha-ofisa/", "https://bcinform.ru/vladivostok/prodazha-ofisa/", "https://bcinform.ru/volgograd/prodazha-ofisa/", "https://bcinform.ru/voronezh/prodazha-ofisa/", "https://bcinform.ru/gatchina/prodazha-ofisa/", "https://ekb.bcinform.ru/prodazha-ofisa/", "https://bcinform.ru/ivanovo/prodazha-ofisa/", "https://bcinform.ru/izhevsk/prodazha-ofisa/", "https://bcinform.ru/irkutsk/prodazha-ofisa/", "https://bcinform.ru/kazan/prodazha-ofisa/", "https://bcinform.ru/kaliningrad/prodazha-ofisa/", "https://bcinform.ru/kemerovo/prodazha-ofisa/", "https://bcinform.ru/kirov/prodazha-ofisa/", "https://bcinform.ru/kotelniki/prodazha-ofisa/", "https://bcinform.ru/krasnogorsk/prodazha-ofisa/", "https://bcinform.ru/krasnodar/prodazha-ofisa/", "https://bcinform.ru/krasnoyarsk/prodazha-ofisa/", "https://bcinform.ru/lipetsk/prodazha-ofisa/", "https://bcinform.ru/lomonosov/prodazha-ofisa/", "https://bcinform.ru/murmansk/prodazha-ofisa/", "https://bcinform.ru/mytishchi/prodazha-ofisa/", "https://bcinform.ru/naberezhnyye-chelny/prodazha-ofisa/", "https://bcinform.ru/nizhniy-novgorod/prodazha-ofisa/", "https://bcinform.ru/novokuznetsk/prodazha-ofisa/", "https://bcinform.ru/novosibirsk/prodazha-ofisa/", "https://bcinform.ru/omsk/prodazha-ofisa/", "https://bcinform.ru/orenburg/prodazha-ofisa/", "https://bcinform.ru/penza/prodazha-ofisa/", "https://bcinform.ru/perm/prodazha-ofisa/", "https://bcinform.ru/rostov-na-donu/prodazha-ofisa/", "https://bcinform.ru/ryazan/prodazha-ofisa/", "https://bcinform.ru/samara/prodazha-ofisa/", "https://bcinform.ru/saratov/prodazha-ofisa/", "https://bcinform.ru/sevastopol/prodazha-ofisa/", "https://bcinform.ru/simferopol/prodazha-ofisa/", "https://bcinform.ru/sochi/prodazha-ofisa/", "https://bcinform.ru/tolyatti/prodazha-ofisa/", "https://bcinform.ru/tomsk/prodazha-ofisa/", "https://bcinform.ru/tula/prodazha-ofisa/", "https://bcinform.ru/tyumen/prodazha-ofisa/", "https://bcinform.ru/ulyanovsk/prodazha-ofisa/", "https://bcinform.ru/ufa/prodazha-ofisa/", "https://bcinform.ru/feodosiya/prodazha-ofisa/", "https://bcinform.ru/khabarovsk/prodazha-ofisa/", "https://bcinform.ru/ximki/prodazha-ofisa/", "https://bcinform.ru/cheboksary/prodazha-ofisa/", "https://bcinform.ru/chelyabinsk/prodazha-ofisa/", "https://bcinform.ru/elektrostal/prodazha-ofisa/", "https://bcinform.ru/yaroslavl/prodazha-ofisa/"],
+        "_segment": "Коммерческая Недвижимость",
+        "_operation": "",
+        "_federal_subject": "",
+        "_source": "https://move.ru",
+        "project_id": "metaspider",
+        "spider_id": "metacrawler",
+        "global_settings": {
+            "CONCURRENT_REQUESTS": 1024,
+            "SPLASH_URL": "http://0.0.0.0:8050",
+            "LOG_LEVEL": "INFO",
+            "AUTOTHROTTLE_ENABLED": true,
+            "AUTOTHROTTLE_START_DELAY": 1,
+            "AUTOTHROTTLE_MAX_DELAY": 60,
+            "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+            "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
+            "RETRY_ENABLED": true,
+            "RETRY_HTTP_CODES": [
+                500,
+                503,
+                504,
+                400,
+                403,
+                408,
+                429,
+                505,
+                404,
+                301,
+                302,
+                303,
+                451,
+                307,
+                410,
+                502
+            ],
+            "HTTPERROR_ALLOWED_CODES": [],
+            "RETRY_TIMES": 20,
+            "ROBOTSTXT_ENABLED": false,
+            "ROBOTSTXT_OBEY": false,
+            "REDIRECT_ENABLED": false,
+            "COOKIES_ENABLED": true,
+            "DOWNLOAD_FAIL_ON_DATALOSS": false,
+            "RANDOM_UA_TYPE": "random",
+            "DOWNLOAD_TIMEOUT": 60,
+            "CLOSESPIDER_ITEMCOUNT": 0,
+            "CLOSESPIDER_ERRORCOUNT": 0
+        },
+        "methods": {
+            "crawling_type": "common",
+            "filter_duplicates": true,
+            "allowed_domains": [],
+            "proxy_settings": {
+                "types": [
+                    "https"
+                ],
+                "amount": 10000,
+                "save": false
+            },
+            "headers": {"Cookies": {"type": "string", "value": "beget=begetok; expires=Thu, 06 Feb 2020 18:54:04 GMT; path=/"}}
+        },
+        "crawl_tree": [
+            {
+                "pagination_urls": {
+                    "path": "//ul[@class='pagination']/li[@class='active']/following-sibling::li[1]/a/@href"
+                },
+                "item_urls": {
+                    "path": "//div[@class='row page-link']//a/@href"
+                }
+            }
+        ],
+        "item_page": {
+            "fields": {
+              "seller_name": {
+                    "type": "string",
+                    "path": "//span[contains(text(), 'Контактные данные')]/following-sibling::div/div[@class='name']/text()[normalize-space()]"
+                },
+                "phone": {
+                    "type": "phone",
+                    "path": "string(//span[contains(text(), 'Контактные данные')]/following-sibling::div/div[@class='phone']/@data-phone)"
+                },
+                "description": {
+                    "type": "string",
+                    "path": "//div[@class='extended-body']/text()",
+                    "operations": []
+                },
+                "address": {
+                    "type": "list to string",
+                    "path": "//span[contains(text(), 'Адрес объекта')]/following-sibling::div//a/text()[normalize-space()]",
+                    "operations": []
+                },
+                "source_latitude": {
+                    "type": "float",
+                    "path": "//script[contains(text(),'objects_to_geo')]/text()",
+                    "regex": "(?<=\"latit\":)(\\d{2}\\.\\d*)",
+                    "operations": []
+                },
+                "source_longitude": {
+                    "type": "float",
+                    "path": "//script[contains(text(),'objects_to_geo')]/text()",
+                    "regex": "(?<=\"longit\":)(\\d{2}\\.\\d*)",
+                    "operations": []
+                },
+                "operation": {
+                    "type": "string",
+                    "path": "//span[contains(text(), 'Условия')]",
+                    "regex": "(?<=Условия )(.*)",
+                    "operations": []
+                },
+                "date_info": {
+                    "type": "date",
+                    "time": "now",
+                    "operations": []
+                },
+              "date_updated": {
+                    "type": "date",
+                    "time": "from string",
+                    "path": "//div[contains(@class, 'lastModify')]/text()",
+                    "regex": "\\d{2}-\\d{2}-\\d{4}\\s\\d{2}:\\d{2}",
+                    "operations": []
+                }
+
+            },
+            "tables": {
+                "table_1": {
+                    "_keys_path": "//div[@class='inner-shadow']//th/text()",
+                    "_vals_path": "//div[@class='inner-shadow']//td/text()[normalize-space()]",
+                    "key_converter": {
+                        "тип": {
+                            "type": "string",
+                            "name": "subsegment"
+                        },
+                        "этаж": {
+                            "type": "float",
+                            "name": "floor"
+                        },
+                        "метраж": {
+                            "type": "float",
+                            "name": "area_total"
+                        },
+                        "рубм²вгод": {
+                            "type": "float",
+                            "name": "rent_price_per_area"
+                        },
+                        "руб_в_мес": {
+                            "type": "float",
+                            "name": "price_per_month"
+                        },
+                        "рубм2_в_мес": {
+                            "type": "float",
+                            "name": "price_per_month"
+                        }
+
+                    }
+                }
+            }
+        }
+    }
