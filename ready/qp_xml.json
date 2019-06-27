@@ -372,7 +372,7 @@
                 502
             ],
             "HTTPERROR_ALLOWED_CODES": [],
-            "RETRY_TIMES": 20,
+            "RETRY_TIMES": 30,
             "ROBOTSTXT_ENABLED": false,
             "ROBOTSTXT_OBEY": false,
             "REDIRECT_ENABLED": true,
