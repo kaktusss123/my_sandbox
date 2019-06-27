@@ -3742,10 +3742,20 @@
         "source": "json",
         "path": "entities.products[0].owner.name"
       },
+      "description": {
+        "type": "string",
+        "source": "json",
+        "path": "entities.products[0].description"
+      },
       "date_info": {
         "type": "date",
         "source": "json",
         "time": "now"
+      },
+      "price_total": {
+        "source": "json",
+        "path": "entities.products[0].price",
+        "type": "float"
       },
       "date_created": {
         "path": "entities.products[0].datePublished.timestamp",
@@ -3775,20 +3785,19 @@
             "type": "string"
           },
           "realtyhiddenlocation": {
-            "name": "addres",
+            "name": "address",
             "type": "string"
           },
           "sobstvennikiliagent": {
             "name": "seller_status",
             "type": "string"
           },
-
           "price": {
-            "name": "price",
+            "name": "price_total",
             "type": "float"
           },
-          "description": {
-            "name": "description",
+          "kommerrealtytipstroeniya": {
+            "name": "purpose",
             "type": "string"
           }
         }
