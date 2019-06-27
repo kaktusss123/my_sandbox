@@ -713,8 +713,8 @@
                 },
                 "source_latitude": {
                     "type": "float",
-                    "path": "///script[text()[contains(.,'NearestLatlng')]]/text()",
-                    "regex": "= \\[(.+),",
+                    "path": "//script[text()[contains(.,'NearestLatlng')]]/text()",
+                    "regex": "(?<=NearestLatlng = \\[)(\\d{2}\\.\\d*)",
                     "operations": []
                 },
                 "address": {
@@ -725,7 +725,7 @@
                 "source_longitude": {
                     "type": "float",
                     "path": "//script[text()[contains(.,'NearestLatlng')]]/text()",
-                    "regex": ",(.+)\\]",
+                    "regex": "(\\d{2}\\.\\d*)(?=];)",
                     "operations": []
                 },
                 "seller_name": {
