@@ -1,0 +1,829 @@
+ {
+        "_comment":"дубли возникали из-за небезопасного перехода на следующую страницу через кнопу далее",
+        "_task_id": "0000-0005-0271&T0118&1",
+        "_start_urls": [
+            "https://rosrealt.ru/adygeya/kommercheskaja/arenda",
+            "https://rosrealt.ru/adygeya/kommercheskaja/prodam",
+            "https://rosrealt.ru/altayskij-kraj/kommercheskaja/arenda",
+            "https://rosrealt.ru/altayskij-kraj/kommercheskaja/prodam",
+            "https://rosrealt.ru/amurskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/amurskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/arhangelskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/arhangelskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/astrahanskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/astrahanskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/bashkortostan/kommercheskaja/arenda",
+            "https://rosrealt.ru/bashkortostan/kommercheskaja/prodam",
+            "https://rosrealt.ru/belgorodskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/belgorodskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/bryanskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/bryanskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/buryatiya/kommercheskaja/arenda",
+            "https://rosrealt.ru/buryatiya/kommercheskaja/prodam",
+            "https://rosrealt.ru/chechnya/kommercheskaja/arenda",
+            "https://rosrealt.ru/chechnya/kommercheskaja/prodam",
+            "https://rosrealt.ru/chelyabinsk/kommercheskaja/arenda",
+            "https://rosrealt.ru/chelyabinsk/kommercheskaja/prodam",
+            "https://rosrealt.ru/chelyabinskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/chelyabinskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/chitinskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/chitinskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/chukotka/kommercheskaja/arenda",
+            "https://rosrealt.ru/chukotka/kommercheskaja/prodam",
+            "https://rosrealt.ru/chuvashiya/kommercheskaja/arenda",
+            "https://rosrealt.ru/chuvashiya/kommercheskaja/prodam",
+            "https://rosrealt.ru/dagestan/kommercheskaja/arenda",
+            "https://rosrealt.ru/dagestan/kommercheskaja/prodam",
+            "https://rosrealt.ru/eao/kommercheskaja/arenda",
+            "https://rosrealt.ru/eao/kommercheskaja/prodam",
+            "https://rosrealt.ru/ekaterinburg/kommercheskaja/arenda",
+            "https://rosrealt.ru/ekaterinburg/kommercheskaja/prodam",
+            "https://rosrealt.ru/habarovskij-kraj/kommercheskaja/arenda",
+            "https://rosrealt.ru/habarovskij-kraj/kommercheskaja/prodam",
+            "https://rosrealt.ru/hakasiya/kommercheskaja/arenda",
+            "https://rosrealt.ru/hakasiya/kommercheskaja/prodam",
+            "https://rosrealt.ru/ingushetiya/kommercheskaja/arenda",
+            "https://rosrealt.ru/ingushetiya/kommercheskaja/prodam",
+            "https://rosrealt.ru/irkutsk/kommercheskaja/arenda",
+            "https://rosrealt.ru/irkutsk/kommercheskaja/prodam",
+            "https://rosrealt.ru/irkutskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/irkutskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/ivanovskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/ivanovskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/kabardino-balkariya/kommercheskaja/arenda",
+            "https://rosrealt.ru/kabardino-balkariya/kommercheskaja/prodam",
+            "https://rosrealt.ru/kalinigradskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/kalinigradskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/kalmykiya/kommercheskaja/arenda",
+            "https://rosrealt.ru/kalmykiya/kommercheskaja/prodam",
+            "https://rosrealt.ru/kaluzhskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/kaluzhskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/kamchatka/kommercheskaja/arenda",
+            "https://rosrealt.ru/kamchatka/kommercheskaja/prodam",
+            "https://rosrealt.ru/karachaevo-cherkessiya/kommercheskaja/arenda",
+            "https://rosrealt.ru/karachaevo-cherkessiya/kommercheskaja/prodam",
+            "https://rosrealt.ru/kareliya/kommercheskaja/arenda",
+            "https://rosrealt.ru/kareliya/kommercheskaja/prodam",
+            "https://rosrealt.ru/kazan/kommercheskaja/arenda",
+            "https://rosrealt.ru/kazan/kommercheskaja/prodam",
+            "https://rosrealt.ru/kemerovskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/kemerovskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/kirovskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/kirovskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/komi/kommercheskaja/arenda",
+            "https://rosrealt.ru/komi/kommercheskaja/prodam",
+            "https://rosrealt.ru/kostromskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/kostromskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/krasnodar/kommercheskaja/arenda",
+            "https://rosrealt.ru/krasnodar/kommercheskaja/prodam",
+            "https://rosrealt.ru/krasnodarskij-kraj/kommercheskaja/arenda",
+            "https://rosrealt.ru/krasnodarskij-kraj/kommercheskaja/prodam",
+            "https://rosrealt.ru/krasnoyarsk/kommercheskaja/arenda",
+            "https://rosrealt.ru/krasnoyarsk/kommercheskaja/prodam",
+            "https://rosrealt.ru/krasnoyarskij-kraj/kommercheskaja/arenda",
+            "https://rosrealt.ru/krasnoyarskij-kraj/kommercheskaja/prodam",
+            "https://rosrealt.ru/krym/kommercheskaja/arenda",
+            "https://rosrealt.ru/krym/kommercheskaja/prodam",
+            "https://rosrealt.ru/kurganskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/kurganskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/kurskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/kurskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/leningradskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/leningradskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/lipetskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/lipetskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/magadanskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/magadanskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/marij-ehl/kommercheskaja/arenda",
+            "https://rosrealt.ru/marij-ehl/kommercheskaja/prodam",
+            "https://rosrealt.ru/mordoviya/kommercheskaja/arenda",
+            "https://rosrealt.ru/mordoviya/kommercheskaja/prodam",
+            "https://rosrealt.ru/moskovskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/moskovskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/moskva/kommercheskaja/arenda",
+            "https://rosrealt.ru/moskva/kommercheskaja/prodam",
+            "https://rosrealt.ru/murmanskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/murmanskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/nizhegorodskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/nizhegorodskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/nizhnij-novgorod/kommercheskaja/arenda",
+            "https://rosrealt.ru/nizhnij-novgorod/kommercheskaja/prodam",
+            "https://rosrealt.ru/novgorodskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/novgorodskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/novosibirsk/kommercheskaja/arenda",
+            "https://rosrealt.ru/novosibirsk/kommercheskaja/prodam",
+            "https://rosrealt.ru/novosibirskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/novosibirskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/omsk/kommercheskaja/arenda",
+            "https://rosrealt.ru/omsk/kommercheskaja/prodam",
+            "https://rosrealt.ru/omskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/omskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/orenburgskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/orenburgskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/orlovskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/orlovskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/penzenskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/penzenskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/permskij-kraj/kommercheskaja/arenda",
+            "https://rosrealt.ru/permskij-kraj/kommercheskaja/prodam",
+            "https://rosrealt.ru/primorskij-kraj/kommercheskaja/arenda",
+            "https://rosrealt.ru/primorskij-kraj/kommercheskaja/prodam",
+            "https://rosrealt.ru/pskovskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/pskovskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/respublika-altaj/kommercheskaja/arenda",
+            "https://rosrealt.ru/respublika-altaj/kommercheskaja/prodam",
+            "https://rosrealt.ru/rostov-na-donu/kommercheskaja/arenda",
+            "https://rosrealt.ru/rostov-na-donu/kommercheskaja/prodam",
+            "https://rosrealt.ru/rostovskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/rostovskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/ryazanskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/ryazanskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/sahalinskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/sahalinskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/samara/kommercheskaja/arenda",
+            "https://rosrealt.ru/samara/kommercheskaja/prodam",
+            "https://rosrealt.ru/samarskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/samarskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/sankt-peterburg/kommercheskaja/arenda",
+            "https://rosrealt.ru/sankt-peterburg/kommercheskaja/prodam",
+            "https://rosrealt.ru/saratov/kommercheskaja/arenda",
+            "https://rosrealt.ru/saratov/kommercheskaja/prodam",
+            "https://rosrealt.ru/saratovskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/saratovskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/severnaya-osetiya/kommercheskaja/arenda",
+            "https://rosrealt.ru/severnaya-osetiya/kommercheskaja/prodam",
+            "https://rosrealt.ru/smolenskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/smolenskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/sochi/kommercheskaja/arenda",
+            "https://rosrealt.ru/sochi/kommercheskaja/prodam",
+            "https://rosrealt.ru/stavropolskij-kraj/kommercheskaja/arenda",
+            "https://rosrealt.ru/stavropolskij-kraj/kommercheskaja/prodam",
+            "https://rosrealt.ru/sverdlovskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/sverdlovskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/tambovskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/tambovskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/tatarstan/kommercheskaja/arenda",
+            "https://rosrealt.ru/tatarstan/kommercheskaja/prodam",
+            "https://rosrealt.ru/tomsk/kommercheskaja/arenda",
+            "https://rosrealt.ru/tomsk/kommercheskaja/prodam",
+            "https://rosrealt.ru/tomskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/tomskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/tulskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/tulskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/tverskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/tverskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/tyumen/kommercheskaja/arenda",
+            "https://rosrealt.ru/tyumen/kommercheskaja/prodam",
+            "https://rosrealt.ru/tyumenskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/tyumenskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/tyva/kommercheskaja/arenda",
+            "https://rosrealt.ru/tyva/kommercheskaja/prodam",
+            "https://rosrealt.ru/udmurtiya/kommercheskaja/arenda",
+            "https://rosrealt.ru/udmurtiya/kommercheskaja/prodam",
+            "https://rosrealt.ru/ufa/kommercheskaja/arenda",
+            "https://rosrealt.ru/ufa/kommercheskaja/prodam",
+            "https://rosrealt.ru/ulyanovskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/ulyanovskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/vladimirskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/vladimirskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/vladivostok/kommercheskaja/arenda",
+            "https://rosrealt.ru/vladivostok/kommercheskaja/prodam",
+            "https://rosrealt.ru/volgogradskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/volgogradskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/vologodskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/vologodskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/voronezhskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/voronezhskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/yakutiya/kommercheskaja/arenda",
+            "https://rosrealt.ru/yakutiya/kommercheskaja/prodam",
+            "https://rosrealt.ru/yanao/kommercheskaja/arenda",
+            "https://rosrealt.ru/yanao/kommercheskaja/prodam",
+            "https://rosrealt.ru/yaroslavskaya-oblast/kommercheskaja/arenda",
+            "https://rosrealt.ru/yaroslavskaya-oblast/kommercheskaja/prodam",
+            "https://rosrealt.ru/yugra/kommercheskaja/arenda",
+            "https://rosrealt.ru/yugra/kommercheskaja/prodam"
+        ],
+        "_segment": "Коммерческая Недвижимость",
+        "_operation": "",
+        "_federal_subject": "",
+        "_source": "https://rosrealt.ru",
+        "project_id": "metaspider",
+        "spider_id": "metacrawler",
+        "global_settings": {
+            "CONCURRENT_REQUESTS": 256,
+            "SPLASH_URL": "http://0.0.0.0:8050",
+            "LOG_LEVEL": "INFO",
+            "AUTOTHROTTLE_ENABLED": false,
+            "AUTOTHROTTLE_START_DELAY": 1,
+            "AUTOTHROTTLE_MAX_DELAY": 60,
+            "AUTOTHROTTLE_TARGET_CONCURRENCY": 256,
+            "CONCURRENT_REQUESTS_PER_DOMAIN": 256,
+            "RETRY_ENABLED": true,
+            "RETRY_HTTP_CODES": [
+                500,
+                503,
+                504,
+                400,
+                403,
+                408,
+                429,
+                502,
+                505,
+                404,
+                303,
+                302,
+                301,
+                307,
+                410,
+                451
+            ],
+            "HTTPERROR_ALLOWED_CODES": [],
+            "RETRY_TIMES": 20,
+            "ROBOTSTXT_ENABLED": false,
+            "ROBOTSTXT_OBEY": false,
+            "REDIRECT_ENABLED": false,
+            "COOKIES_ENABLED": false,
+            "DOWNLOAD_FAIL_ON_DATALOSS": false,
+            "RANDOM_UA_TYPE": "random",
+            "DOWNLOAD_TIMEOUT": 60,
+            "CLOSESPIDER_ITEMCOUNT": 0,
+            "CLOSESPIDER_ERRORCOUNT": 0
+        },
+        "methods": {
+            "crawling_type": "common",
+            "allowed_domains": [],
+            "proxy_settings": {
+                "types": [
+                    "https"
+                ],
+                "amount": 10000,
+                "save": false
+            }
+        },
+        "crawl_tree": [
+            {
+                "pagination_urls": {
+                    "path": "//div[@class='info'][2]//div[@class='nolink']/parent::a/following-sibling::a[1]/@href"
+                },
+                "item_urls": {
+                    "path": "//div[@id = 'colmain']/div[@class = 'info']/a/@href"
+                }
+            }
+        ],
+        "item_page": {
+            "fields": {
+                "segment": {
+                    "type": "list to string",
+                    "path": "//span[@itemprop='title']//text()",
+                    "regex": "квартир|офис|участок|дом|склад|коммерч",
+                    "operations": []
+                },
+                "price_term": {
+                    "type": "string",
+                    "path": "//p[@class='pbig_gray']/text()",
+                    "regex": "в месяц|в год|в квартал|сутки",
+                    "operations": []
+                },
+                "phone": {
+                    "type": "phone",
+                    "path": "//a[contains(@href,'tel:')]/text()",
+                    "operations": []
+                },
+                "source_latitude": {
+                    "type": "float",
+                    "path": "//script[text()[contains(.,'center')]]/text()",
+                    "regex": "center: \\[(.+), ",
+                    "operations": []
+                },
+                "address": {
+                    "type": "list to string",
+                    "path": "//p[@class='pbig_gray']//b[@class='blue']//text()",
+                    "operations": []
+                },
+                "price_currency": {
+                    "type": "string",
+                    "path": "//b[@class='red_price']/text()",
+                    "regex": "[А-Яа-я]+",
+                    "operations": []
+                },
+                "source_longitude": {
+                    "type": "float",
+                    "path": "//script[text()[contains(.,'center')]]/text()",
+                    "regex": ", (.+)\\], \\{",
+                    "operations": []
+                },
+                "seller_name": {
+                    "type": "string",
+                    "path": "//div[@class='kontakt']//p[@class='status']//b//text()",
+                    "operations": []
+                },
+                "metro_station": {
+                    "type": "string",
+                    "path": "//a[contains(@href,'metro')]/text()",
+                    "operations": []
+                },
+                "date_info": {
+                    "type": "date",
+                    "time": "now",
+                    "operations": []
+                },
+                "operation": {
+                    "type": "string",
+                    "path": "(//span[@itemprop='title']/text())[3]",
+                    "regex": "Снять|Купить",
+                    "operations": []
+                },
+                "title_name": {
+                    "type": "list to string",
+                    "path": "//div[@id='pagetitleblock']//text()",
+                    "operations": []
+                },
+                "price_total": {
+                    "type": "float",
+                    "path": "//b[@class='red_price']/text()",
+                    "regex": "\\d*\\W?\\d+",
+                    "operations": []
+                },
+                "federal_subject": {
+                    "type": "string",
+                    "path": "//div[@id='path_block']/div[2]/a/span/text()",
+                    "operations": []
+                },
+                "description": {
+                    "type": "list to string",
+                    "path": "//div[@class='info_self']//p/text()",
+                    "operations": []
+                },
+                "address_city": {
+                    "type": "string",
+                    "path": "(//span[@itemprop='title']/text())[2]",
+                    "operations": []
+                },
+                "price_unit": {
+                    "type": "string",
+                    "path": "//p[@class='pbig_gray']/text()",
+                    "regex": "за кв.м.|за сотку|за га",
+                    "operations": []
+                }
+            },
+            "tables": {
+                "table_2": {
+                    "_keys_path": "//div[@class='info']/table[@width='100%']//p/text()|//div[@class='info']/table[@width='100%']//p/nobr/text()|//div[@class='info']/table[@width='100%']//td/p/b/text()|//div[@class='info']/table[@width='100%']//td/p[not(text())]/a/text()",
+                    "_vals_path": "//div[@class='info']/table[@width='100%']//p",
+                    "key_regex": "^.+(?=:)|^.+",
+                    "key_converter": {
+                        "вода": {
+                            "type": "string",
+                            "name": "is_plumbing",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "класс": {
+                            "type": "string",
+                            "name": "object_class",
+                            "regex": "(?<=\\\">).+(?=</a)"
+                        },
+                        "вентиляция": {
+                            "type": "string",
+                            "name": "ventilation_system",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "этажность": {
+                            "type": "float",
+                            "name": "floors_cnt",
+                            "regex": "\\d+"
+                        },
+                        "интернет": {
+                            "type": "string",
+                            "name": "is_internet",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "отопление": {
+                            "type": "string",
+                            "name": "heating_system_type",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "вид_из_окна": {
+                            "type": "string",
+                            "name": "is_view",
+                            "regex": ": (.+)"
+                        },
+                        "посудомоечная_машина": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "телевизор": {
+                            "type": "string",
+                            "name": "is_tv",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "залог": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "санузел": {
+                            "type": "string",
+                            "name": "is_wc",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "класс_недвижимости": {
+                            "type": "string",
+                            "name": "object_class",
+                            "regex": "(?<=\\\">).+(?=</a)"
+                        },
+                        "грузовой лифт": {
+                            "type": "string",
+                            "name": "is_cargo_elevator"
+                        },
+                        "требует_ремонта": {
+                            "type": "string",
+                            "name": "decoration_type",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "номер": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "водопровод": {
+                            "type": "string",
+                            "name": "is_plumbing",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "прямая_аренда": {
+                            "type": "string",
+                            "name": "operation",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "с_ремонтом": {
+                            "type": "string",
+                            "name": "decoration_type",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "выделенная_электрическая_мощность": {
+                            "type": "string",
+                            "name": "electricity_power_discharge",
+                            "regex": "\\:(.+) кВт"
+                        },
+                        "комиссия_агента": {
+                            "type": "float",
+                            "name": "agent_fee"
+                        },
+                        "название": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "мусопропровод": {
+                            "type": "string",
+                            "name": "garbage_type"
+                        },
+                        "первичная_продажа_вторички": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "кухонная_мебель": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "назначение_зу": {
+                            "type": "string",
+                            "name": "purpose",
+                            "regex": "(?<=\\\">).+(?=</a)"
+                        },
+                        "малосемейка_гостинка": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "парковка": {
+                            "type": "string",
+                            "name": "is_parking",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "высота_потолка": {
+                            "type": "float",
+                            "name": "ceiling_height",
+                            "regex": ": (.+) м"
+                        },
+                        "кондиционер": {
+                            "type": "string",
+                            "name": "conditioning_type",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "этаж": {
+                            "type": "float",
+                            "name": "floor",
+                            "regex": "\\d+"
+                        },
+                        "расстояние_до_мкад": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "1комнатная": {
+                            "type": "float",
+                            "name": "rooms_cnt",
+                            "regex": "\\d+"
+                        },
+                        "канализация": {
+                            "type": "string",
+                            "name": "is_sewage"
+                        },
+                        "3комнатная": {
+                            "type": "float",
+                            "name": "rooms_cnt",
+                            "regex": "\\d+"
+                        },
+                        "ипотека": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "просьба_агентам_не_звонить": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "жилая_площадь": {
+                            "type": "float",
+                            "name": "area_living",
+                            "regex": "\\d*\\W+\\d+"
+                        },
+                        "черновая_отделка": {
+                            "type": "string",
+                            "name": "decoration_type",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "лифт": {
+                            "type": "string",
+                            "name": "is_elevator"
+                        },
+                        "площадь_кухни": {
+                            "type": "float",
+                            "name": "kitchen_area",
+                            "regex": "\\d*\\W+\\d+"
+                        },
+                        "добавлено": {
+                            "type": "date",
+                            "time": "from string",
+                            "name": "date_created",
+                            "regex": "(?<=добавлено:).+(?=<)"
+                        },
+                        "материал": {
+                            "type": "string",
+                            "name": "none"
+                        },
+                        "срок_сдачи": {
+                            "type": "float",
+                            "name": "year_built",
+                            "regex": "\\d+"
+                        },
+                        "состояние": {
+                            "type": "string",
+                            "name": "decoration_type",
+                            "regex": ": (.+) <"
+                        },
+                        "5_и_более_комнатная": {
+                            "type": "float",
+                            "name": "rooms_cnt",
+                            "regex": "\\d+"
+                        },
+                        "площадь_зу": {
+                            "type": [
+                                "float",
+                                "string"
+                            ],
+                            "name": [
+                                "land_area",
+                                "area_land_unit"
+                            ],
+                            "regex": [
+                                "\\d*\\W?\\d+",
+                                "сот|га|гектар"
+                            ]
+                        },
+                        "охрана": {
+                            "type": "string",
+                            "name": "security_type"
+                        },
+                        "возможность_круглосуточного_доступа_сотрудников": {
+                            "type": "string",
+                            "name": "is_access"
+                        },
+                        "размер_комиссии_для_клиента_в_процентах": {
+                            "type": "float",
+                            "name": "agent_fee",
+                            "regex": "\\d+"
+                        },
+                        "без_ремонта": {
+                            "type": "string",
+                            "name": "decoration_type",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "просмотров": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "прямая_продажа": {
+                            "type": "string",
+                            "name": "operation",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "колво_парковочных_мест": {
+                            "type": "float",
+                            "name": "parking_cnt",
+                            "regex": "\\:(.+)"
+                        },
+                        "напольное_покрытие": {
+                            "type": "string",
+                            "name": "floor_material",
+                            "regex": "\\:(.+)"
+                        },
+                        "категория": {
+                            "type": "string",
+                            "name": "segment_category",
+                            "regex": "(?<=\\\">).+(?=</a)"
+                        },
+                        "балкон": {
+                            "type": "string",
+                            "name": "is_blacony",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "холодильник": {
+                            "type": "string",
+                            "name": "is_freezer",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "комнаты": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "стиральная_машина": {
+                            "type": "string",
+                            "name": "is_washmachine",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "возможность_добавления_телефонных_линий": {
+                            "type": "string",
+                            "name": "is_phone",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "студия": {
+                            "type": "string",
+                            "name": "rooms_cnt",
+                            "regex": "[А-Яа-я]+"
+                        },
+                        "лоджия": {
+                            "type": "string",
+                            "name": "is_balcony"
+                        },
+                        "вход": {
+                            "type": "string",
+                            "name": "private_entrance",
+                            "regex": "\\:(.+)<"
+                        },
+                        "комнат": {
+                            "type": "float",
+                            "name": "rooms_cnt",
+                            "regex": "\\:(.+)"
+                        },
+                        "наличие_предприятий_общепита_в_здании": {
+                            "type": "string",
+                            "name": "is_food"
+                        },
+                        "количество_телефонных_линий": {
+                            "type": "string",
+                            "name": "is_phone"
+                        },
+                        "c_ремонтом_и_мебелью": {
+                            "type": "string",
+                            "name": "decoration_type",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "электричество": {
+                            "type": "string",
+                            "name": "is_electricity",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "тип_окон": {
+                            "type": "string",
+                            "name": "is_windows",
+                            "regex": "\\:(.+)<"
+                        },
+                        "2_лоджии": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "торг": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "предоплата": {
+                            "type": "string",
+                            "name": "is_pre_pay",
+                            "regex": "(?<=предоплата:).+(?=<)"
+                        },
+                        "тип_недвижимости": {
+                            "type": "string",
+                            "name": "building_type",
+                            "regex": "(?<=\\\">).+(?=</a)"
+                        },
+                        "общая_площадь": {
+                            "type": [
+                                "float",
+                                "string"
+                            ],
+                            "name": [
+                                "area_total",
+                                "area_unit"
+                            ],
+                            "regex": [
+                                "\\d*\\W?\\d+",
+                                "кв.м.|м2|м"
+                            ]
+                        },
+                        "2комнатная": {
+                            "type": "float",
+                            "name": "rooms_cnt",
+                            "regex": "\\d+"
+                        },
+                        "пожарная_сигнализация": {
+                            "type": "string",
+                            "name": "firefighting"
+                        },
+                        "4комнатная": {
+                            "type": "float",
+                            "name": "rooms_cnt",
+                            "regex": "\\d+"
+                        },
+                        "частичный_ремонт": {
+                            "type": "string",
+                            "name": "decoration_type",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "евроремонт": {
+                            "type": "string",
+                            "name": "decoration_type",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "с_ремонтом_и_мебелью": {
+                            "type": "string",
+                            "name": "decoration_type",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "корпус": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "до_метро": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "2_балкона": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "телефон": {
+                            "type": "string",
+                            "name": "is_phone"
+                        },
+                        "газ": {
+                            "type": "string",
+                            "name": "is_gas"
+                        },
+                        "обновлено": {
+                            "type": "date",
+                            "time": "from string",
+                            "name": "date_updated",
+                            "regex": "(?<=обновлено:).+(?=<)"
+                        },
+                        "требует ремонта": {
+                            "type": "string",
+                            "name": "decoration_type",
+                            "regex": "(?<=>).+(?=<)"
+                        },
+                        "класс_бизнесцентра": {
+                            "type": "string",
+                            "name": "object_class",
+                            "regex": ": (.+)"
+                        },
+                        "мебель": {
+                            "type": "string",
+                            "name": "is_furniture",
+                            "regex": "(?<=>).+(?=<)"
+                        }
+                    }
+                }
+            }
+        }
+    }
