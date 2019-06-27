@@ -3755,7 +3755,7 @@
       "price_total": {
         "source": "json",
         "path": "entities.products[0].price",
-        "type": "float"
+        "type": "string"
       },
       "date_created": {
         "path": "entities.products[0].datePublished.timestamp",
