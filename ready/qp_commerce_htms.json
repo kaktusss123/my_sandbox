@@ -182,7 +182,7 @@
             "LOG_LEVEL": "INFO",
             "AUTOTHROTTLE_ENABLED": true,
             "AUTOTHROTTLE_START_DELAY": 1,
-            "AUTOTHROTTLE_MAX_DELAY": 180,
+            "AUTOTHROTTLE_MAX_DELAY": 240,
             "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
             "CONCURRENT_REQUESTS_PER_DOMAIN": 512,
             "RETRY_ENABLED": true,
@@ -211,7 +211,7 @@
             "COOKIES_ENABLED": true,
             "DOWNLOAD_FAIL_ON_DATALOSS": false,
             "RANDOM_UA_TYPE": "random",
-            "DOWNLOAD_TIMEOUT": 180,
+            "DOWNLOAD_TIMEOUT": 240,
             "CLOSESPIDER_ITEMCOUNT": 0,
             "CLOSESPIDER_ERRORCOUNT": 0
         },
