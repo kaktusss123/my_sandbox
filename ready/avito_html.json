@@ -1524,9 +1524,9 @@
     "CONCURRENT_REQUESTS": 1024,
     "SPLASH_URL": "http://0.0.0.0:8050",
     "LOG_LEVEL": "INFO",
-    "AUTOTHROTTLE_ENABLED": false,
+    "AUTOTHROTTLE_ENABLED": true,
     "AUTOTHROTTLE_START_DELAY": 1,
-    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_MAX_DELAY": 40,
     "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
     "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
     "RETRY_ENABLED": true,
@@ -1548,20 +1548,20 @@
       451
     ],
     "HTTPERROR_ALLOWED_CODES": [],
-    "RETRY_TIMES": 120,
+    "RETRY_TIMES": 40,
     "ROBOTSTXT_ENABLED": false,
     "ROBOTSTXT_OBEY": false,
     "REDIRECT_ENABLED": false,
     "COOKIES_ENABLED": false,
     "DOWNLOAD_FAIL_ON_DATALOSS": false,
     "RANDOM_UA_TYPE": "random",
-    "DOWNLOAD_TIMEOUT": 20,
+    "DOWNLOAD_TIMEOUT": 40,
     "CLOSESPIDER_ITEMCOUNT": 0,
     "CLOSESPIDER_ERRORCOUNT": 0
   },
   "methods": {
     "crawling_type": "common",
-    "filter_duplicates": true,
+    "filter_duplicates": false,
     "allowed_domains": [
       "avito.ru"
     ],
