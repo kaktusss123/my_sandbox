@@ -1,5 +1,5 @@
 {
-    "comment": "доделать пагинации xpath",
+    "comment": "",
     "_task_id" : "AGENT42_test_1",
     "_start_urls" : [
   "http://agent42.ru/index.php?option=com_adsmanager&page=show_category&catid=20&order=0&expand=0&Itemid=546",
