@@ -1,5 +1,5 @@
 {
-        "_task_id": "QP_COOKIES_3",
+        "_task_id": "QP_NEW_HTML_TEST",
         "_start_urls": [
             "https://bryanskaya-oblast.qp.ru/realty/prodau_kommercheskaja",
             "https://bryanskaya-oblast.qp.ru/realty/sdau_kommercheskaja",
@@ -350,9 +350,9 @@
             "LOG_LEVEL": "INFO",
             "AUTOTHROTTLE_ENABLED": true,
             "AUTOTHROTTLE_START_DELAY": 1,
-            "AUTOTHROTTLE_MAX_DELAY": 60,
+            "AUTOTHROTTLE_MAX_DELAY": 40,
             "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
-            "CONCURRENT_REQUESTS_PER_DOMAIN": 512,
+            "CONCURRENT_REQUESTS_PER_DOMAIN": 256,
             "RETRY_ENABLED": true,
             "RETRY_HTTP_CODES": [
                 500,
@@ -372,14 +372,14 @@
                 502
             ],
             "HTTPERROR_ALLOWED_CODES": [],
-            "RETRY_TIMES": 30,
+            "RETRY_TIMES": 40,
             "ROBOTSTXT_ENABLED": false,
             "ROBOTSTXT_OBEY": false,
             "REDIRECT_ENABLED": true,
             "COOKIES_ENABLED": true,
             "DOWNLOAD_FAIL_ON_DATALOSS": false,
             "RANDOM_UA_TYPE": "random",
-            "DOWNLOAD_TIMEOUT": 60,
+            "DOWNLOAD_TIMEOUT": 40,
             "CLOSESPIDER_ITEMCOUNT": 0,
             "CLOSESPIDER_ERRORCOUNT": 0
         },
