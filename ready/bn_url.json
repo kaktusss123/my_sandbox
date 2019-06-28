@@ -1,6 +1,6 @@
 {
   "_comment": "увеличена скорость за счет мультидоменности 1024 - 2048",
-  "_task_id": "BN_AMOUNT_TEST",
+  "_task_id": "BN_AMOUNT_TEST_PLUS",
   "_start_urls": [
     "https://01.bn.ru/rent/commerce/freestanding/",
     "https://01.bn.ru/rent/commerce/offices/",
