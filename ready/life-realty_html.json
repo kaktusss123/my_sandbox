@@ -1,0 +1,205 @@
+{
+  "_task_id": "LIFEREALTY_AMOUNT_TEST",
+  "_start_urls": [
+    "http://rostov.life-realty.ru/commerce/oficy/",
+    "http://rostov.life-realty.ru/commerce/torgovye/",
+    "http://rostov.life-realty.ru/commerce/skladskie/",
+    "http://rostov.life-realty.ru/commerce/proizvodstvo/",
+    "http://krasnodar.life-realty.ru/commerce/oficy/",
+    "http://krasnodar.life-realty.ru/commerce/torgovye/",
+    "http://krasnodar.life-realty.ru/commerce/skladskie/",
+    "http://krasnodar.life-realty.ru/commerce/proizvodstvo/",
+    "http://novgorod.life-realty.ru/commerce/oficy/",
+    "http://novgorod.life-realty.ru/commerce/torgovye/",
+    "http://novgorod.life-realty.ru/commerce/skladskie/",
+    "http://novgorod.life-realty.ru/commerce/proizvodstvo/",
+    "http://ekaterinburg.life-realty.ru/commerce/oficy/",
+    "http://ekaterinburg.life-realty.ru/commerce/torgovye/",
+    "http://ekaterinburg.life-realty.ru/commerce/skladskie/",
+    "http://ekaterinburg.life-realty.ru/commerce/proizvodstvo/"
+  ],
+  "_segment": "Коммерческая недвижимость",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "LIFEREALTY",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 1024,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 256,
+    "DOWNLOAD_TIMEOUT": 60,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": false,
+    "AUTOTHROTTLE_START_DELAY": 1.0,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_ENABLED": true,
+    "RETRY_TIMES": 20,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      303,
+      302,
+      301,
+      410,
+      451,
+      407,
+      502
+    ],
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": false,
+    "RANDOM_UA_TYPE": "random"
+  },
+  "methods": {
+    "crawling_type": "common",
+    "allowed_domains": [],
+    "filter_duplicates": false,
+    "proxy_settings": {
+      "types": [
+        "https"
+      ]
+    }
+  },
+  "crawl_tree": [
+    {
+      "pagination_urls": {
+        "path": "//div[@class='pager']/b/following-sibling::a[1]/@href"
+      },
+      "item_urls": {
+        "path": "//tr/@offerhref"
+      }
+    }
+  ],
+  "item_page": {
+    "methods": {
+      "crawling_type": "common",
+      "filter_duplicates": true
+    },
+    "fields": {
+      "operation": {
+        "type": "string",
+        "path": "//h1//text()",
+        "regex": "Продается|Сдается"
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now"
+      },
+      "price_currency": {
+        "type": "string",
+        "value": "RUB"
+      },
+      "title_name": {
+        "type": "string",
+        "path": "//h1//text()"
+      },
+      "description": {
+        "type": "list to string",
+        "path": "//h4[contains(.,'Дополнительная')]/parent::div/text()"
+      },
+      "seller_name": {
+        "type": "string",
+        "path": "//div[@class='card_contacts']//div[@class='c_face']//text()"
+      },
+      "company_name": {
+        "type": "list to string",
+        "path": "//table[@class='card_saler_info']//b//text()"
+      },
+      "phone": {
+        "type": "phone",
+        "path": "//div[@class='c_phone']/text()"
+      },
+      "date_created": {
+        "type": "date",
+        "path": "//div[@class='card_date']//text()",
+        "regex": "добавлено (.+)",
+        "time": "from string"
+      },
+      "date_updated": {
+        "type": "date",
+        "path": "//div[@class='card_date']//text()",
+        "regex": "добавлено (.+)",
+        "time": "from string"
+      },
+      "price_total": {
+        "type": "list to string",
+        "path": "//div[@class='card_price']/text()",
+        "regex": "\\d+"
+      },
+      "source_longitude": {
+        "type": "float",
+        "path": "//script[text()[contains(.,'center')]]//text()",
+        "regex": ", (\\d*\\W?\\d+\\W?\\d+)\\],\\s*zoom:"
+      },
+      "source_latitude": {
+        "type": "float",
+        "path": "//script[text()[contains(.,'center')]]//text()",
+        "regex": "center: \\[(\\d*\\W?\\d+\\W?\\d+),"
+      },
+      "segment": {
+        "type": "string",
+        "path": "(//li//a[@class='current']//text())[1]"
+      },
+      "purpose": {
+        "type": "string",
+        "path": "//h1//text()",
+        "regex": "офис |помещение свободного назначения|под гостиницу|под общепит|склад|участок|квартира|комната|дом"
+      }
+    },
+    "tables": {
+      "table_1": {
+        "_keys_path": "//h4[contains(.,'Параметры')]/parent::div/text()",
+        "_vals_path": "//h4[contains(.,'Параметры')]/parent::div/text()",
+        "key_regex": "^.+(?=:)",
+        "key_converter": {
+          "площадь_участка": {
+            "name": "land_area",
+            "type": "float",
+            "regex": "участка: (.+) сот"
+          },
+          "тип_земли": {
+            "name": "land_category",
+            "type": "string",
+            "regex": "земли: (.+)"
+          },
+          "площадь_помещения": {
+            "name": "area_total",
+            "type": "string",
+            "regex": "помещения: (.+) м"
+          }
+        }
+      },
+      "table_2": {
+        "_keys_path": "//h4[contains(.,'Местонахождение')]/parent::div/text()",
+        "_vals_path": "//h4[contains(.,'Местонахождение')]/parent::div/text()",
+        "key_regex": "^.+(?=:)",
+        "key_converter": {
+          "адрес": {
+            "name": "address",
+            "type": "string",
+            "regex": "Адрес: (.+)"
+          },
+          "населенный_пункт": {
+            "name": "address_city",
+            "type": "string",
+            "regex": "пункт: (.+)"
+          },
+          "район": {
+            "name": "intown_district",
+            "type": "string",
+            "regex": "Район: (.+)"
+          }
+        }
+      }
+    }
+  }
+}
