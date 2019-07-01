@@ -62,7 +62,8 @@
         "path": "//span[@class ='item selected']/following-sibling::span[1]/a/@href"
       },
       "item_urls": {
-        "path": "//div[contains(@class, 'snapshot')]/a/@href"
+        "path": "//div[contains(@class, 'snapshot')]/a/@href",
+        "methods":{"save_cookies": false, "filter_duplicates": false}
       }
     }
   ],
@@ -116,7 +117,13 @@
       },
       "operation": {
         "type": "string",
-        "path": "//div[contains(@id, 'offer')]/h1/text()"
+        "path": "//div[contains(@id, 'offer')]/h1/text()",
+        "regex": "Сдам|Продам"
+      },
+      "segment": {
+        "type": "string",
+        "path": "//div[contains(@id, 'offer')]/h1/text()",
+        "regex": "коммерческ"
       },
       "purpose": {
         "type": "string",
@@ -190,8 +197,64 @@
           }
         }
       }
+    },
+    "follow": [
+      {
+        "fields": {
+          "phone": {
+            "type": "string",
+            "path": "html",
+            "regex": "(?<=\">)[0-9-()+]+(?=</a></em>)"
+          }
+        },
+        "post_params": {
+          "fields": {
+            "action": {
+              "type": "string",
+              "value": "get-phone"
+            },
+            "id": {
+              "type": "string",
+              "path": "//div[@id='how-to-contact']/@data-id"
+            },
+            "type": {
+              "type": "string",
+              "path": "//div[@id='how-to-contact']/@data-type"
+            },
+            "key": {
+              "type": "string",
+              "path": "//div[@id='how-to-contact']/@data-key"
+            }
+          }
+        },
+        "headers": {
+          "x-requested-with": {
+            "type": "string",
+            "value": "XMLHttpRequest"
+          },
+          "accept":{
+            "type": "string",
+            "value": "application/json, text/javascript, */*; q=0.01"
+          }
+        },
+          "methods": {
+            "crawling_type": "post",
+            "save_cookies": false,
+            "content_type": "json",
+            "filter_duplicates": false,
+            "allowed_domains": [],
+            "proxy_settings": {
+              "types": [
+                "https"
+              ],
+              "amount": 10000,
+              "save": false
+            }
+          },
+          "url": "https://dom.sakh.com/usrajax.php"
+        }
+        ]
+      }
     }
-  }
-}
 
 
