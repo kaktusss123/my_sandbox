@@ -1,5 +1,5 @@
 {
-        "_task_id": "QP_NEW_HTML_TEST",
+        "_task_id": "QP_NEW_HTML_TEST_NO_DUPLICATES",
         "_start_urls": [
             "https://bryanskaya-oblast.qp.ru/realty/prodau_kommercheskaja",
             "https://bryanskaya-oblast.qp.ru/realty/sdau_kommercheskaja",
@@ -385,7 +385,7 @@
         },
         "methods": {
             "crawling_type": "common",
-            "filter_duplicates": true,
+            "filter_duplicates": false,
             "allowed_domains": [],
             "proxy_settings": {
                 "types": [
