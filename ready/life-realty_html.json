@@ -109,7 +109,7 @@
   "item_page": {
     "methods": {
       "crawling_type": "common",
-      "filter_duplicates": true
+      "filter_duplicates": false
     },
     "fields": {
       "operation": {
