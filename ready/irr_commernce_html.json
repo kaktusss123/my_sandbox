@@ -1,5 +1,5 @@
 {
-  "_task_id": "IRR_AMOUNT_TEST_2",
+  "_task_id": "IRR_AMOUNT_TEST_3",
   "_start_urls": [
     "https://adygeya-resp.irr.ru/real-estate/commercial-sale/offices/",
     "https://adygeya-resp.irr.ru/real-estate/commercial-sale/production-warehouses/",
@@ -1197,7 +1197,7 @@
   "_federal_subject": "",
   "_source": "IRR",
   "global_settings": {
-    "CONCURRENT_REQUESTS": 2048,
+    "CONCURRENT_REQUESTS": 1024,
     "CONCURRENT_REQUESTS_PER_DOMAIN": 512,
     "DOWNLOAD_TIMEOUT": 60,
     "SPLASH_URL": "http://0.0.0.0:8050",
@@ -1205,7 +1205,7 @@
     "AUTOTHROTTLE_ENABLED": true,
     "AUTOTHROTTLE_START_DELAY": 1,
     "AUTOTHROTTLE_MAX_DELAY": 60,
-    "AUTOTHROTTLE_TARGET_CONCURRENCY": 2048,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
     "HTTPERROR_ALLOWED_CODES": [],
     "RETRY_ENABLED": true,
     "RETRY_TIMES": 20,
@@ -1226,7 +1226,7 @@
     ],
     "ROBOTSTXT_ENABLED": false,
     "ROBOTSTXT_OBEY": false,
-    "REDIRECT_ENABLED": false,
+    "REDIRECT_ENABLED": true,
     "COOKIES_ENABLED": false,
     "RANDOM_UA_TYPE": "random"
   },
