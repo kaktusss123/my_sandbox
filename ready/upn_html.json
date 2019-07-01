@@ -181,9 +181,9 @@
 						"name": "type_deal"
 					},
 					"этаж": {
-						"type" : ["float","float"],
-						"name": ["floor","floors_cnt"],
-						"regex": [">(\\d*\\W?\\d+) \/"," \/ (\\d*\\W?\\d+)"]
+						"type" : "float",
+						"name": "floor",
+						"regex": "^\\d+"
 					},
 					 "балкон":  {
 						"type" : "string",
@@ -249,7 +249,7 @@
 					"площадь": {
 						"type" : "string",
 						"name": "area_total",
-						"regex": ">(\\d*\\W?\\d+) кв"
+						"regex": "\\d*\\W?\\d+"
 					},
 					"пол": {
 						"type" : "string",
@@ -357,8 +357,9 @@
 						"name": "type_windows"
 					},
 					"этажность": {
-						"type" : "string",
-						"name": "floors_cnt"
+						"type" : "float",
+						"name": "floors_cnt",
+                      "regex": "^\\d+"
 					},
 					"высота_перекрытий": {
 						"type" : "string",
@@ -538,12 +539,15 @@
 						"name": "address"
 					},
 					 "телефон_агента": {
-						"type" : "phone",
-						"name": "phone"
+						"type" : "string",
+						"name": "agent_phone",
+                       "regex": "(?<=tel:).+(?=\">)"
+
 					},
 					"телефон_агентства": {
-						"type" : "phone",
-						"name": "phone"
+						"type" : "string",
+						"name": "agency_phone",
+                        "regex": "(?<=<td>).+(?=</td>)"
 					},
 					 "email": {
 						"type" : "string",
