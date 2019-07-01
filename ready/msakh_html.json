@@ -112,7 +112,7 @@
       },
       "address_city": {
         "type": "list to string",
-        "path": "//div[@class = 'currentCity']"
+        "path": "//div[@class = 'currentCity']/text()"
       },
       "operation": {
         "type": "string",
