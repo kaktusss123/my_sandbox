@@ -49,7 +49,7 @@
         },
         "methods": {
             "crawling_type": "common",
-            "filter_duplicates": true,
+            "filter_duplicates": false,
             "allowed_domains": [],
             "proxy_settings": {
                 "types": [
@@ -87,25 +87,20 @@
                 },
                 "address": {
                     "type": "list to string",
-                    "path": "//span[contains(text(), 'Адрес объекта')]/following-sibling::div//a/text()[normalize-space()]",
+                    "path": "//li[@data-activates='city-dropdown']/button/text()|//div[@class='district']/a/text()|//div[@class='street']/a/text()",
+                    "_comment": "//span[contains(text(), 'Адрес объекта')]/following-sibling::div//a/text()[normalize-space()]",
                     "operations": []
                 },
-                "source_latitude": {
-                    "type": "float",
-                    "path": "//script[contains(text(),'objects_to_geo')]/text()",
-                    "regex": "(?<=\"latit\":)(\\d{2}\\.\\d*)",
-                    "operations": []
-                },
-                "source_longitude": {
-                    "type": "float",
-                    "path": "//script[contains(text(),'objects_to_geo')]/text()",
-                    "regex": "(?<=\"longit\":)(\\d{2}\\.\\d*)",
+              "address_city": {
+                    "type": "string",
+                    "path": "//li[@data-activates='city-dropdown']/button/text()",
+                    "_comment": "//span[contains(text(), 'Адрес объекта')]/following-sibling::div//a/text()[normalize-space()]",
                     "operations": []
                 },
                 "operation": {
                     "type": "string",
-                    "path": "//span[contains(text(), 'Условия')]",
-                    "regex": "(?<=Условия )(.*)",
+                    "path": "//span[@itemprop='name']/text()",
+                    "regex": "Аренда|Продажа",
                     "operations": []
                 },
                 "date_info": {
@@ -119,7 +114,17 @@
                     "path": "//div[contains(@class, 'lastModify')]/text()",
                     "regex": "\\d{2}-\\d{2}-\\d{4}\\s\\d{2}:\\d{2}",
                     "operations": []
-                }
+                },
+              "source_latitude": {
+                "type": "string",
+                "path": "//script[contains(text(),'objects_to_geo')]/text()",
+                "regex": "(?<=latit\":)\\d*\\W?\\d+(?=,\")__first__"
+              },
+              "source_longitude": {
+                "type": "string",
+                "path": "//script[contains(text(),'objects_to_geo')]/text()",
+                "regex": "(?<=longit\":)\\d*\\W?\\d+(?=,\")__first__"
+              }
 
             },
             "tables": {
