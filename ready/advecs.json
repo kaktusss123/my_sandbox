@@ -67,7 +67,8 @@
             "path": "(//div[@class = 'pages']/span/following-sibling::a[1]/@href)[1]"
         },
         "item_urls": {
-            "path": "//td[@class = 'first']//@href"
+            "path": "//td[@class = 'first']//@href",
+            "methods": {"filter_duplicates": false}
         }
     }],
     "item_page": {
