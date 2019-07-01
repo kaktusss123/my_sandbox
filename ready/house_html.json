@@ -1,5 +1,5 @@
 {
-    "_task_id" : "NNN_HOUSE_RU_3",
+    "_task_id" : "KALUGAHOUSE_TEST",
     "_start_urls" : [
 		"https://kalugahouse.ru/catalog/trade/prodazha/",
         "https://kalugahouse.ru/catalog/trade/arenda/",
@@ -46,7 +46,7 @@
         "http://ryazanhouse.ru/catalog/Garazhi/Arenda_predlozhenie/"
 
     ],
-	"_segment": "Коммерческая недвижимость",
+  "_segment": "Коммерческая недвижимость",
   "_operation": "",
   "_federal_subject": "",
   "_source": "house.ru",
@@ -108,7 +108,7 @@
         "_comment" : {
             "crawling_type" : "common",
             "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
-            "filter_duplicates" : true
+            "filter_duplicates" : false
         },
         "fields" : {
             "date_info" : {
