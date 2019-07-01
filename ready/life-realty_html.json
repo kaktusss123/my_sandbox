@@ -5,18 +5,45 @@
     "http://rostov.life-realty.ru/commerce/torgovye/",
     "http://rostov.life-realty.ru/commerce/skladskie/",
     "http://rostov.life-realty.ru/commerce/proizvodstvo/",
+    "http://rostov.life-realty.ru/garage/",
+    "http://rostov.life-realty.ru/commerce-rent/oficy/",
+    "http://rostov.life-realty.ru/commerce-rent/torgovye/",
+    "http://rostov.life-realty.ru/commerce-rent/sklady/",
+    "http://rostov.life-realty.ru/commerce-rent/proizvodstvo/",
+    "http://rostov.life-realty.ru/garage-rent/",
+
     "http://krasnodar.life-realty.ru/commerce/oficy/",
     "http://krasnodar.life-realty.ru/commerce/torgovye/",
     "http://krasnodar.life-realty.ru/commerce/skladskie/",
     "http://krasnodar.life-realty.ru/commerce/proizvodstvo/",
+    "http://krasnodar.life-realty.ru/garage/",
+    "http://krasnodar.life-realty.ru/commerce-rent/oficy/",
+    "http://krasnodar.life-realty.ru/commerce-rent/torgovye/",
+    "http://krasnodar.life-realty.ru/commerce-rent/sklady/",
+    "http://krasnodar.life-realty.ru/commerce-rent/proizvodstvo/",
+    "http://krasnodar.life-realty.ru/garage-rent/",
+
     "http://novgorod.life-realty.ru/commerce/oficy/",
     "http://novgorod.life-realty.ru/commerce/torgovye/",
     "http://novgorod.life-realty.ru/commerce/skladskie/",
     "http://novgorod.life-realty.ru/commerce/proizvodstvo/",
+    "http://novgorod.life-realty.ru/garage/",
+    "http://novgorod.life-realty.ru/commerce-rent/oficy/",
+    "http://novgorod.life-realty.ru/commerce-rent/torgovye/",
+    "http://novgorod.life-realty.ru/commerce-rent/sklady/",
+    "http://novgorod.life-realty.ru/commerce-rent/proizvodstvo/",
+    "http://novgorod.life-realty.ru/garage-rent/",
+
     "http://ekaterinburg.life-realty.ru/commerce/oficy/",
     "http://ekaterinburg.life-realty.ru/commerce/torgovye/",
     "http://ekaterinburg.life-realty.ru/commerce/skladskie/",
-    "http://ekaterinburg.life-realty.ru/commerce/proizvodstvo/"
+    "http://ekaterinburg.life-realty.ru/commerce/proizvodstvo/",
+    "http://ekaterinburg.life-realty.ru/garage/",
+    "http://ekaterinburg.life-realty.ru/commerce-rent/oficy/",
+    "http://ekaterinburg.life-realty.ru/commerce-rent/torgovye/",
+    "http://ekaterinburg.life-realty.ru/commerce-rent/sklady/",
+    "http://ekaterinburg.life-realty.ru/commerce-rent/proizvodstvo/",
+    "http://ekaterinburg.life-realty.ru/garage-rent/"
   ],
   "_segment": "Коммерческая недвижимость",
   "_operation": "",
@@ -101,6 +128,11 @@
       "title_name": {
         "type": "string",
         "path": "//h1//text()"
+      },
+      "operation": {
+        "type": "string",
+        "path": "//h1//text()",
+        "regex": "Продается|Сдается"
       },
       "description": {
         "type": "list to string",
