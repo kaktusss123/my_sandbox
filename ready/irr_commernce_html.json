@@ -1,5 +1,5 @@
 {
-  "_task_id": "IRR_AMOUNT_TEST_3",
+  "_task_id": "IRR_AMOUNT_TEST_DEBUG_6",
   "_start_urls": [
     "https://adygeya-resp.irr.ru/real-estate/commercial-sale/offices/",
     "https://adygeya-resp.irr.ru/real-estate/commercial-sale/production-warehouses/",
@@ -1198,13 +1198,13 @@
   "_source": "IRR",
   "global_settings": {
     "CONCURRENT_REQUESTS": 1024,
-    "CONCURRENT_REQUESTS_PER_DOMAIN": 512,
-    "DOWNLOAD_TIMEOUT": 60,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
+    "DOWNLOAD_TIMEOUT": 180,
     "SPLASH_URL": "http://0.0.0.0:8050",
     "LOG_LEVEL": "INFO",
-    "AUTOTHROTTLE_ENABLED": true,
+    "AUTOTHROTTLE_ENABLED": false,
     "AUTOTHROTTLE_START_DELAY": 1,
-    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_MAX_DELAY": 180,
     "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
     "HTTPERROR_ALLOWED_CODES": [],
     "RETRY_ENABLED": true,
@@ -1227,12 +1227,12 @@
     "ROBOTSTXT_ENABLED": false,
     "ROBOTSTXT_OBEY": false,
     "REDIRECT_ENABLED": true,
-    "COOKIES_ENABLED": false,
+    "COOKIES_ENABLED": true,
     "RANDOM_UA_TYPE": "random"
   },
   "methods": {
     "crawling_type": "common",
-    "filter_duplicates": false,
+    "filter_duplicates": true,
     "allowed_domains": [],
     "proxy_settings": {
       "types": [
@@ -1250,12 +1250,12 @@
       }
     }
   ],
-  "federal_subject": {
-    "type": "string",
-    "path": "//h1[@class='siteBody__blockTitle js-categoryTitle']/text()"
-  },
   "item_page": {
     "fields": {
+      "federal_subject": {
+        "type": "string",
+        "path": "//h1[@class='siteBody__blockTitle js-categoryTitle']/text()"
+      },
       "date_info": {
         "type": "date",
         "time": "now"
