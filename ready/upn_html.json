@@ -93,7 +93,7 @@
            },
             "price_total" : {
                "type" : "float",
-               "path" : "//a[contains(@id,'creditanim')]/font/text()",
+               "path" : "//a[contains(@id,'creditanim')]/font/text()|//font[contains(@style,'font-size: 1.1em;')]/text()",
                 "regex": "\\d+"
            },
            "title_name" : {
