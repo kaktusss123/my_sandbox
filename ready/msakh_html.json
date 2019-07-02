@@ -238,7 +238,7 @@
           }
         },
           "methods": {
-            "crawling_type": "form_post",
+            "crawling_type": "fpost",
             "save_cookies": false,
             "content_type": "json",
             "filter_duplicates": false,
