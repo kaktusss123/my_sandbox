@@ -1,48 +1,43 @@
 {
-    "_task_id": "NNN_AYAX",
+    "_task_id": "NNN_AYAX_TEST",
     "_start_urls": [
-        "https://www.ayax.ru/kvartiry/",
-        "https://www.ayax.ru/kupit-dom-v-krasnodare/",
-        "https://www.ayax.ru/uchastki-izhs/",
-        "https://www.ayax.ru/dachnye-uchastki/",
-        "https://www.ayax.ru/kupit-ofis-v-krasnodare/",
+        "https://www.ayax.ru/kupit-ofis/",
         "https://www.ayax.ru/sklady/",
         "https://www.ayax.ru/biznes/",
         "https://www.ayax.ru/torgovye-ploshadi/",
         "https://www.ayax.ru/uchastki-kommertsiya/",
         "https://www.ayax.ru/gostinitsy/",
         "https://www.ayax.ru/prodazha-sto-krasnodar/",
-        "https://www.ayax.ru/garazhi/",
-        "https://www.ayax.ru/snyat-kvartiru/",
-        "https://www.ayax.ru/snyat-dom/"
+        "https://www.ayax.ru/garazhi/"
     ],
     "_segment": "",
     "_operation": "",
     "_federal_subject": "",
     "_source": "AYAX",
     "global_settings": {
-        "CONCURRENT_REQUESTS": 724,
+        "CONCURRENT_REQUESTS": 1024,
         "SPLASH_URL": "http://0.0.0.0:8050",
         "LOG_LEVEL": "INFO",
         "AUTOTHROTTLE_ENABLED": true,
         "AUTOTHROTTLE_START_DELAY": 1.0,
-        "AUTOTHROTTLE_MAX_DELAY": 5.0,
-        "AUTOTHROTTLE_TARGET_CONCURRENCY": 724,
-        "CONCURRENT_REQUESTS_PER_DOMAIN": 724,
+        "AUTOTHROTTLE_MAX_DELAY": 40,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+        "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
         "RETRY_ENABLED": true,
         "RETRY_HTTP_CODES": [500, 503, 504, 400, 403, 408, 429, 505, 404, 303, 302, 307, 410, 451],
         "HTTPERROR_ALLOWED_CODES": [],
-        "RETRY_TIMES": 10,
+        "RETRY_TIMES": 20,
         "ROBOTSTXT_ENABLED": false,
         "ROBOTSTXT_OBEY": false,
         "REDIRECT_ENABLED": false,
         "COOKIES_ENABLED": false,
         "RANDOM_UA_TYPE": "random",
-        "DOWNLOAD_TIMEOUT": 60.0
+        "DOWNLOAD_TIMEOUT": 40
     },
   "methods": {
             "crawling_type": "common",
             "allowed_domains": [],
+            "filter_duplicates": false,
             "proxy_settings": {
                 "types": [
                     "https"
@@ -126,9 +121,8 @@
 			"operation": {
 			  "type": "string",
                 "path": "//div[@itemprop='description']/p/text()"
-
 			},
-				"address": {
+            "address": {
 			  "type": "string",
                 "path": "//div[div[@class='object__other-property_name' and contains(string(), 'Адрес')]]/div[@class='object__other-property_value']/text()"
 
@@ -136,7 +130,7 @@
 			"segment": {
 			  "type": "list to string",
                 "path": "//div[@class='in breadcrumb']//div//span//text()",
-				"regex": "Торговые площади|Офисы|Склады|Квартиры|Дома|Земельные участки|Гостиницы|коммерческая земля"
+				"regex": "Торговые площади|Офисы|Склады|Квартиры|Дома|Земельные участки|Гостиницы|коммерческая земля|Гараж"
 			}
 
         },
