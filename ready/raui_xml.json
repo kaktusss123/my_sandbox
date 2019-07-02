@@ -679,7 +679,7 @@
     },
     "follow": [
        {"methods": {
-          "crawling_type": "form_post",
+          "crawling_type": "post",
           "content_type": "json",
           "filter_duplicates": false,
           "proxy_settings": {"save": true},
