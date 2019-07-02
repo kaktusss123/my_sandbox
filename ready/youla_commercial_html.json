@@ -1,5 +1,5 @@
 {
-        "_task_id": "YULA_TEST_LONG_TIMEOUT",
+        "_task_id": "YULA_TEST_LONG_TIMEOUT_HTML",
         "_start_urls": [
             "https://youla.ru/abadzehskaya/nedvijimost/kommercheskaya-nedvijimost",
             "https://youla.ru/abaza/nedvijimost/kommercheskaya-nedvijimost",
@@ -3684,7 +3684,7 @@
                 "save": false
             }
         },
-        "_comment": [
+        "crawl_tree": [
             {
                 "pagination_urls": {
                     "url_generator": {
@@ -3695,7 +3695,7 @@
                             },
                             "end": {
                                 "type": "string",
-                                "value": "12"
+                                "value": "20"
                             }
                         },
                         "url_constructor": {
@@ -3767,55 +3767,6 @@
                 }
             }
         ],
-        "sitemap_urls": {
-            "start": [
-                "https://youla.ru/robots.txt"
-            ],
-            "type": "robots",
-            "target": "robots",
-            "crawl_tree": {
-                "robots": {
-                    "targets": {
-                        "sitemap": {
-                            "type": "sitemap"
-                        }
-                    }
-                },
-                "sitemap": {
-                    "targets": {
-                        "sitemap_2": {
-                            "type": "sitemap",
-                            "filters": [
-                                "/sitemap-product-"
-                            ]
-                        }
-                    }
-                },
-                "sitemap_2": {
-                    "targets": {
-                        "item": {
-                            "type": "item",
-                            "filters": [
-                                "/nedvijimost/kommercheskaya-nedvijimost/", "/nedvijimost/prochie-stroeniya/"
-                            ],
-                            "methods": {
-                                "js_regex": "window.__YOULA_STATE__ = ({.*?});",
-                                "content_type": "html_and_json",
-                                "allowed_domains": [],
-                                "proxy_settings": {
-                                    "types": [
-                                        "https"
-                                    ],
-                                    "amount": 10000,
-                                    "save": false
-                                }
-                            }
-                        }
-                    }
-                },
-                "item": {}
-            }
-        },
         "item_page": {
             "fields": {
                 "address_city": {
