@@ -180,7 +180,7 @@
           {
             "url": "https://www.sibdom.ru/api/showphone",
             "methods": {
-                        "crawling_type": "form_post",
+                        "crawling_type": "post",
                         "content_type": "json",
                         "filter_duplicates": false,
                         "allowed_domains": [],
