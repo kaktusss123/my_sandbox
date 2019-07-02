@@ -189,7 +189,7 @@
         "follow": [{
             "url": "https://www.sibdom.ru/api/showphone",
             "methods": {
-                "crawling_type": "post",
+                "crawling_type": "porm_post",
                 "content_type": "json",
                 "filter_duplicates": false,
                 "allowed_domains": [],

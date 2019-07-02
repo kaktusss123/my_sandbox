@@ -247,7 +247,7 @@
           }
         },
         "methods": {
-          "crawling_type": "post",
+          "crawling_type": "form_post",
           "content_type": "json",
           "js": "//",
           "filter_duplicates": false
