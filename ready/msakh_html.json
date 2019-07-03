@@ -3,7 +3,11 @@
   "_start_urls": [
     "https://dom.sakh.com/business/?s[type][]=офис",
     "https://dom.sakh.com/business/?s[type][]=магазин",
-    "https://dom.sakh.com/business/?s[type][]=склад"
+    "https://dom.sakh.com/business/?s[type][]=склад",
+    "https://dom.sakh.com/business/?s[type][]=производство",
+    "https://dom.sakh.com/business/?s[type][]=сфера услуг",
+    "https://dom.sakh.com/business/?s[type][]=другое",
+    "https://dom.sakh.com/business/?s[type][]=питание"
   ],
   "_segment": "",
   "_operation": "",
