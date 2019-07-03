@@ -1,5 +1,5 @@
 {
-  "_task_id": "DOSKA_BENCH_TEST",
+  "_task_id": "DOSKA_BENCH_TEST_2",
   "_start_urls": [
     "https://www.doska.ru/real-estate/ofisi/drugoe/",
     "https://www.doska.ru/real-estate/garages/",
@@ -118,7 +118,8 @@
   "crawl_tree": [
     {
       "pagination_urls": {
-        "path": "//button[contains(@onclick,'return false')]/following-sibling::a[1]/@href"
+        "path": "//button[contains(@onclick,'return false')]/following-sibling::a[1][not(img)]/@href",
+        "methods": {"filter_duplicates": true}
       },
       "item_urls": {
         "path": "//div[@class='d1']/a[contains(@class, 'am')]/@href"
