@@ -1,6 +1,6 @@
 {
   "_comment": "",
-  "_task_id": "UPN_NO_DUPEFILTER_STARTS_EXTENDED",
+  "_task_id": "UPN_NO_DUPEFILTER_STARTS_EXTENDED_3",
   "_start_urls": [
     "https://upn.ru/realty_offices_sale.htm",
     "https://upn.ru/realty_offices_flats_sale.htm",
@@ -27,7 +27,7 @@
     "AUTOTHROTTLE_TARGET_CONCURRENCY": 512,
     "HTTPERROR_ALLOWED_CODES": [],
     "RETRY_ENABLED": true,
-    "RETRY_TIMES": 100,
+    "RETRY_TIMES": 20,
     "RETRY_HTTP_CODES": [
       500,
       503,
@@ -48,7 +48,7 @@
     "ROBOTSTXT_ENABLED": false,
     "ROBOTSTXT_OBEY": false,
     "REDIRECT_ENABLED": false,
-    "COOKIES_ENABLED": false,
+    "COOKIES_ENABLED": true,
     "RANDOM_UA_TYPE": "random"
   },
   "methods": {
@@ -65,7 +65,7 @@
   "crawl_tree": [
     {
       "pagination_urls": {
-        "path": "//div[@class='active pn']/following-sibling::a[1]/@href"
+        "path": "(//div[@class='active pn']/following-sibling::a[1]/@href)[1]"
       },
       "item_urls": {
         "path": "//td[contains(@style, 'Left')]/a/@href"
@@ -75,7 +75,7 @@
   "item_page": {
     "methods": {
       "crawling_type": "common",
-      "filter_duplicates": true
+      "filter_duplicates": false
     },
     "fields": {
       "segment": {
