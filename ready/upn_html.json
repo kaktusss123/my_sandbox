@@ -1,576 +1,581 @@
 {
-   "_comment" : "",
-   "_task_id" : "UPN_NO_DUPEFILTER_STARTS_EXTENDED",
-   "_start_urls" : [
-		"https://upn.ru/realty_offices_sale.htm",
-	   "https://upn.ru/realty_offices_flats_sale.htm",
-	   "https://upn.ru/realty_ready_business_sale.htm",
-	   "https://upn.ru/realty_land_sale.htm",
-		"https://upn.ru/realty_industrials_sale.htm",
-		"https://upn.ru/realty_commercials_sale.htm",
-		"https://upn.ru/realty_stores_sale.htm",
-	   "https://upn.ru/realty_garages_sale.htm"
-   ],
-   "_segment" : "",
-   "_operation" : "",
-   "_federal_subject" : "Свердловская область",
-   "_source": "UPN",
-   "global_settings" : {
-       "CONCURRENT_REQUESTS" : 512,
-       "CONCURRENT_REQUESTS_PER_DOMAIN" : 512,
-       "DOWNLOAD_TIMEOUT" : 60,
-       "SPLASH_URL" : "http://0.0.0.0:8050",
-       "LOG_LEVEL" : "INFO",
-       "AUTOTHROTTLE_ENABLED" : false,
-       "AUTOTHROTTLE_START_DELAY" : 1.0,
-       "AUTOTHROTTLE_MAX_DELAY" : 60,
-       "AUTOTHROTTLE_TARGET_CONCURRENCY" : 512,
-       "HTTPERROR_ALLOWED_CODES" : [],
-       "RETRY_ENABLED" : true,
-       "RETRY_TIMES" : 100,
-       "RETRY_HTTP_CODES" : [
-           500,
-           503,
-           504,
-           400,
-           403,
-           408,
-           429,
-           505,
-           404,
-           303,
-           302,
-           301,
-		   307,
-		   410,
-		   451
-       ],
-       "ROBOTSTXT_ENABLED" : false,
-       "ROBOTSTXT_OBEY" : false,
-       "REDIRECT_ENABLED" : false,
-       "COOKIES_ENABLED" : false,
-       "RANDOM_UA_TYPE" : "random"
-   },
-
-
-	"methods": {
-		"crawling_type": "common",
-		"allowed_domains": [],
-		"filter_duplicates": false,
-		"proxy_settings": {
-			"types": [
-				"https"
-			],
-			"amount": 10000
-		}
-	},
-
-
-	"crawl_tree": [
-           {
-               "pagination_urls": {
-                   "path": "//div[@class='active pn']/following-sibling::a[1]/@href"
-               },
-               "item_urls": {
-                   "path": "//td[contains(@style, 'Left')]/a/@href"
-               }
-           }],
-
-   "item_page": {
-       "methods" : {
-           "crawling_type" : "common",
-           "filter_duplicates" : true
-       },
-       "fields" : {
-			"segment": {
-               "type" : "string",
-               "path" : "//div[@class='crumbs']//a[last()]//text()"
-           },
-
-           "date_info" : {
-               "type" : "date",
-               "time" : "now"
-           },
-           "price_currency" : {
-               "type" : "string",
-                "path" : "//a[contains(@id,'creditanim')]/font/text()",
-                "regex": "\\D+"
-           },
-            "price_total" : {
-               "type" : "float",
-               "path" : "//a[contains(@id,'creditanim')]/font/text()|//font[contains(@style,'font-size: 1.1em;')]/text()",
-                "regex": "\\d+"
-           },
-           "title_name" : {
-               "type" : "string",
-               "path" : "//h1[@id='printH1']//text()"
-           },
-           "description": {
-               "type" : "list to string",
-               "path" : "//tr[@id]//td[@colspan='2']//div/text()"
-           },
-			"source_longitude" :{
-				"type" : "float",
-				"path": "//script[text()[contains(.,'point')]]/text()",
-				"regex": ",(\\d*\\W?\\d+)\\];\\s*ymaps"
-			},
-			"source_latitude" :{
-				"type" : "float",
-				"path": "//script[text()[contains(.,'point')]]/text()",
-				"regex": "point = \\[(\\d*\\W?\\d+),"
-			},
-			"operation": {
-               "type" : "list to string",
-               "path" : "//div[@class='crumbs']//a//text()",
-			   "regex": "Продажа|Аренда"
-           }
-       },
-
-        "tables" : {
-           "table_1" : {
-               "_keys_path" : "//td[contains(@style,'height: 17')]/b/text()",
-               "_vals_path" : "//td[contains(@style,'height: 17')]/following-sibling::td/text()[normalize-space()]|//td[contains(@style,'height: 17')]/following-sibling::td/a[1]/text()[normalize-space()]",
-               "key_converter" : {
-					"адрес":  {
-						"type" : "string",
-						"name": "address",
-						"_comment": "(?<=\"#map\">).+(?=</a>)"
-					},
-					"время_работы":  {
-						"type" : "string",
-						"name": "none"
-					},
-					"встроенная_техника":  {
-						"type" : "string",
-						"name": "appliances"
-					},
-					"количество_комнат":{
-						"type" : "string",
-						"name": "rooms_cnt"
-					},
-					"материал_стен":  {
-						"type" : "string",
-						"name": "wall_material"
-					},
-					"мебель":  {
-						"type" : "string",
-						"name": "is_furniture"
-					},
-					"объект":  {
-						"type" : "string",
-						"name": "purpose"
-					},
-					"площадь_общаяжилаякухни": {
-						"type" : ["float","float","float"],
-						"name": ["area_total","area_living","kitchen_area"],
-						"regex": [">(\\d*\\W?\\d+) \/"," \/(\\d*\\W?\\d+) \/"," \/(\\d*\\W?\\d+) кв"]
-					},
-					"сан_узлы_совмещенныхраздельных": {
-						"type" : "string",
-						"name": "is_bathroom"
-					},
-					"стадия": {
-						"type" : "string",
-						"name": "none"
-					},
-					"телефон":  {
-						"type" : "string",
-						"name": "is_phone"
-					},
-					"тип_конструкции": {
-						"type" : "string",
-						"name": "none"
-					},
-					"условия_продажи": {
-						"type" : "string",
-						"name": "type_deal"
-					},
-					"этаж": {
-						"type" : "float",
-						"name": "floor",
-						"regex": "^\\d+"
-					},
-					 "балкон":  {
-						"type" : "string",
-						"name": "is_balcony"
-					},
-					"всего_комнат_в_квартире": {
-						"type" : "string",
-						"name": "count_rooms"
-					},
-					"год_постройки": {
-						"type" : "string",
-						"name": "year_built"
-					},
-					"дом": {
-						"type" : "string",
-						"name": "layout_type"
-					},
-					"комнат_на_продажу": {
-						"type" : "string",
-						"name": "none"
-					},
-					 "перепланировка":  {
-						"type" : "string",
-						"name": "none"
-					},
-					"ремонт": {
-						"type" : "string",
-						"name": "decoration_type"
-					},
-					"стеклопакеты": {
-						"type" : "string",
-						"name": "type_windows"
-					},
-					"высота_потолков": {
-						"type" : "string",
-						"name": "ceiling_height",
-						"regex": "\\d*\\W?\\d+"
-					},
-					"готовый_бизнес": {
-						"type" : "string",
-						"name": "none"
-					},
-					"жд_подъезд": {
-						"type" : "string",
-						"name": "has_railway"
-					},
-					"количество_зданий": {
-						"type" : "string",
-						"name": "none"
-					},
-					"количество_уровней": {
-						"type" : "string",
-						"name": "floors_cnt"
-					},
-					"ответственное_хранение": {
-						"type" : "string",
-						"name": "none"
-					},
-					"офисные_площади": {
-						"type" : "string",
-						"name": "none"
-					},
-					"площадь": {
-						"type" : "string",
-						"name": "area_total",
-						"regex": "\\d*\\W?\\d+"
-					},
-					"пол": {
-						"type" : "string",
-						"name": "none"
-					},
-					"право_на_землю": {
-						"type" : "string",
-						"name": "pravo"
-					},
-					"тип_хранения": {
-						"type" : "string",
-						"name": "none"
-					},
-					"уровень": {
-						"type" : "string",
-						"name": "floor"
-					},
-					"вентиляция": {
-						"type" : "string",
-						"name": "ventilation_system"
-					},
-					"климат": {
-						"type" : "string",
-						"name": "none"
-					},
-					"электричество": {
-						"type" : "string",
-						"name": "is_electricity"
-					},
-					"действующий":{
-						"type" : "string",
-						"name": "none"
-					},
-					"ипотека": {
-						"type" : "string",
-						"name": "can_mortgage"
-					},
-					"мансардный_этаж": {
-						"type" : "string",
-						"name": "none"
-					},
-					"общая_площадь": {
-						"type" : "float",
-						"name": "area_total",
-                        "regex": "\\d*\\W?\\d+"
-					},
-					"объект_продажи": {
-						"type" : "string",
-						"name": "none"
-					},
-					"отдельный_вход": {
-						"type" : "string",
-						"name": "private_entrance"
-					},
-					"планировка": {
-						"type" : "string",
-						"name": "layout_type"
-					},
-					"тип_здания": {
-						"type" : "string",
-						"name": "building_type"
-					},
-					"тип_строения": {
-						"type" : "string",
-						"name": "none"
-					},
-					"цокольный_этаж": {
-						"type" : "string",
-						"name": "none"
-					},
-					"водоснабжение": {
-						"type" : "string",
-						"name": "is_plumbing"
-					},
-					"газоснабжение": {
-						"type" : "string",
-						"name": "is_gas"
-					},
-					"жилое_окружение": {
-						"type" : "string",
-						"name": "none"
-					},
-					"канализация": {
-						"type" : "string",
-						"name": "is_sewage"
-					},
-					"категория_земель": {
-						"type" : "string",
-						"name": "land_category"
-					},
-					"подъезд": {
-						"type" : "string",
-						"name": "none"
-					},
-					"тракт_расстояние":{
-						"type" : "string",
-						"name": "remoteness"
-					},
-					"название": {
-						"type" : "string",
-						"name": "none"
-					},
-					"остекление": {
-						"type" : "string",
-						"name": "type_windows"
-					},
-					"этажность": {
-						"type" : "float",
-						"name": "floors_cnt",
-                      "regex": "^\\d+"
-					},
-					"высота_перекрытий": {
-						"type" : "string",
-						"name": "none"
-					},
-					"количество_входов": {
-						"type" : "string",
-						"name": "none"
-					},
-					"описание": {
-						"type" : "string",
-						"name": "description"
-					},
-					"количество_мест_парковки": {
-						"type" : "string",
-						"name": "parking_cnt"
-					},
-					"количество_строений": {
-						"type" : "string",
-						"name": "has_buildings"
-					},
-					"площадь_земельного_участка": {
-						"type" : "string",
-						"name": "land_area",
-						"regex": ">(\\d*\\W?\\d+) "
-					},
-					"спецоборудование": {
-						"type" : "string",
-						"name": "none"
-					},
-					"отопление": {
-						"type" : "string",
-						"name": "heating_system_type"
-					},
-					"комментарий": {
-						"type" : "string",
-						"name": "none"
-					},
-					"баня": {
-						"type" : "string",
-						"name": "is_bathhouse"
-					},
-					"водоем": {
-						"type" : "string",
-						"name": "none"
-					},
-					"гараж": {
-						"type" : "string",
-						"name": "none"
-					},
-					"количество_теплиц": {
-						"type" : "string",
-						"name": "none"
-					},
-					"лесная_зона":{
-						"type" : "string",
-						"name": "none"
-					},
-					"многолетние_насаждения": {
-						"type" : "string",
-						"name": "none"
-					},
-					"название_сада": {
-						"type" : "string",
-						"name": "none"
-					},
-					"овощная_яма": {
-						"type" : "string",
-						"name": "none"
-					},
-					"охрана": {
-						"type" : "string",
-						"name": "security_type"
-					},
-					"площадь_дома": {
-						"type" : "string",
-						"name": "area_total"
-					},
-					"площадь_участка": {
-						"type" : "string",
-						"name": "land_area"
-					},
-					"право_на_участок": {
-						"type" : "string",
-						"name": "pravo"
-					},
-					"пригородный_транспорт": {
-						"type" : "string",
-						"name": "none"
-					},
-					"расстояние_до_остановки": {
-						"type" : "string",
-						"name": "remoteness"
-					},
-					"сарай": {
-						"type" : "string",
-						"name": "none"
-					},
-					"тип_дома": {
-						"type" : "string",
-						"name": "none"
-					},
-					"участок_разработан": {
-						"type" : "string",
-						"name": "none"
-					},
-					"фундамент": {
-						"type" : "string",
-						"name": "none"
-					},
-					"центральный_полив": {
-						"type" : "string",
-						"name": "none"
-					},
-					"готовность": {
-						"type" : "string",
-						"name": "none"
-					},
-					"зимний_сад": {
-						"type" : "string",
-						"name": "none"
-					},
-					"камин": {
-						"type" : "string",
-						"name": "none"
-					},
-					"количество_спален": {
-						"type" : "string",
-						"name": "none"
-					},
-					"ландшафтный_дизайн": {
-						"type" : "string",
-						"name": "none"
-					},
-					"малая_архитектура": {
-						"type" : "string",
-						"name": "none"
-					},
-					"отдельная_баня": {
-						"type" : "string",
-						"name": "is_bathhouse"
-					},
-					"площадь_общаяцоколямансарды": {
-						"type" : "string",
-						"name": "square",
-						"regex": ">(\\d*\\W?\\d+) \/"
-					},
-					"сад": {
-						"type" : "string",
-						"name": "none"
-					},
-					"сауна":{
-						"type" : "string",
-						"name": "is_bathhouse"
-					},
-					"спортзал":{
-						"type" : "string",
-						"name": "none"
-					},
-					"спутниковое_тв": {
-						"type" : "string",
-						"name": "is_tv"
-					}
-               }
-           },
-		    "table_2" : {
-               "_keys_path" : "(//tr//td[contains(.,'Контактная информация')])[2]/../following-sibling::tr/td/b/text()",
-               "_vals_path" : "(//tr//td[contains(.,'Контактная информация')])[2]/../following-sibling::tr/td[2]",
-               "key_converter" : {
-					"агентство_недвижимости": {
-						"type" : "string",
-						"name": "company_name",
-                      "regex": "(?<=itle=\").+(?=\">)"
-					},
-					"адрес": {
-						"type" : "string",
-						"name": "address"
-					},
-					 "телефон_агента": {
-						"type" : "string",
-						"name": "agent_phone",
-                       "regex": "(?<=tel:).+(?=\">)"
-
-					},
-					"телефон_агентства": {
-						"type" : "string",
-						"name": "agency_phone",
-                        "regex": "(?<=<td>).+(?=</td>)"
-					},
-					 "email": {
-						"type" : "string",
-						"name": "email",
-						"regex": "\">(.+)<\/a"
-					},
-					"www":{
-						"type" : "string",
-						"name": "none",
-						"regex": "\">(.+)<\/a"
-					},
-                    "время_работы": {
-                      "type": "string",
-                      "value":"",
-                      "name": "none"
-                    }
-               }
-           }
-       }
-   }
+  "_comment": "",
+  "_task_id": "UPN_NO_DUPEFILTER_STARTS_EXTENDED",
+  "_start_urls": [
+    "https://upn.ru/realty_offices_sale.htm",
+    "https://upn.ru/realty_offices_flats_sale.htm",
+    "https://upn.ru/realty_ready_business_sale.htm",
+    "https://upn.ru/realty_land_sale.htm",
+    "https://upn.ru/realty_industrials_sale.htm",
+    "https://upn.ru/realty_commercials_sale.htm",
+    "https://upn.ru/realty_stores_sale.htm",
+    "https://upn.ru/realty_garages_sale.htm"
+  ],
+  "_segment": "",
+  "_operation": "",
+  "_federal_subject": "Свердловская область",
+  "_source": "UPN",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 512,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 512,
+    "DOWNLOAD_TIMEOUT": 60,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": false,
+    "AUTOTHROTTLE_START_DELAY": 1.0,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 512,
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_ENABLED": true,
+    "RETRY_TIMES": 100,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      303,
+      302,
+      301,
+      307,
+      410,
+      451
+    ],
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": false,
+    "RANDOM_UA_TYPE": "random"
+  },
+  "methods": {
+    "crawling_type": "common",
+    "allowed_domains": [],
+    "filter_duplicates": false,
+    "proxy_settings": {
+      "types": [
+        "https"
+      ],
+      "amount": 10000
+    }
+  },
+  "crawl_tree": [
+    {
+      "pagination_urls": {
+        "path": "//div[@class='active pn']/following-sibling::a[1]/@href"
+      },
+      "item_urls": {
+        "path": "//td[contains(@style, 'Left')]/a/@href"
+      }
+    }
+  ],
+  "item_page": {
+    "methods": {
+      "crawling_type": "common",
+      "filter_duplicates": true
+    },
+    "fields": {
+      "segment": {
+        "type": "string",
+        "path": "//div[@class='crumbs']//a[last()]//text()"
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now"
+      },
+      "price_currency": {
+        "type": "string",
+        "path": "//a[contains(@id,'creditanim')]/font/text()",
+        "regex": "\\D+"
+      },
+      "price_total": {
+        "type": "float",
+        "path": "//a[contains(@id,'creditanim')]/font/text()|//font[contains(@style,'font-size: 1.1em;')]/text()",
+        "regex": "\\d+"
+      },
+      "title_name": {
+        "type": "string",
+        "path": "//h1[@id='printH1']//text()"
+      },
+      "description": {
+        "type": "list to string",
+        "path": "//tr[@id]//td[@colspan='2']//div/text()"
+      },
+      "source_longitude": {
+        "type": "float",
+        "path": "//script[text()[contains(.,'point')]]/text()",
+        "regex": ",(\\d*\\W?\\d+)\\];\\s*ymaps"
+      },
+      "source_latitude": {
+        "type": "float",
+        "path": "//script[text()[contains(.,'point')]]/text()",
+        "regex": "point = \\[(\\d*\\W?\\d+),"
+      },
+      "operation": {
+        "type": "list to string",
+        "path": "//div[@class='crumbs']//a//text()",
+        "regex": "Продажа|Аренда"
+      }
+    },
+    "tables": {
+      "table_1": {
+        "_keys_path": "//td[contains(@style,'height: 17')]/b/text()",
+        "_vals_path": "//td[contains(@style,'height: 17')]/following-sibling::td/text()[normalize-space()]|//td[contains(@style,'height: 17')]/following-sibling::td/a[1]/text()[normalize-space()]",
+        "key_converter": {
+          "адрес": {
+            "type": "string",
+            "name": "address",
+            "_comment": "(?<=\"#map\">).+(?=</a>)"
+          },
+          "время_работы": {
+            "type": "string",
+            "name": "none"
+          },
+          "встроенная_техника": {
+            "type": "string",
+            "name": "appliances"
+          },
+          "количество_комнат": {
+            "type": "string",
+            "name": "rooms_cnt"
+          },
+          "материал_стен": {
+            "type": "string",
+            "name": "wall_material"
+          },
+          "мебель": {
+            "type": "string",
+            "name": "is_furniture"
+          },
+          "объект": {
+            "type": "string",
+            "name": "purpose"
+          },
+          "площадь_общаяжилаякухни": {
+            "type": [
+              "float",
+              "float",
+              "float"
+            ],
+            "name": [
+              "area_total",
+              "area_living",
+              "kitchen_area"
+            ],
+            "regex": [
+              ">(\\d*\\W?\\d+) \/",
+              " \/(\\d*\\W?\\d+) \/",
+              " \/(\\d*\\W?\\d+) кв"
+            ]
+          },
+          "сан_узлы_совмещенныхраздельных": {
+            "type": "string",
+            "name": "is_bathroom"
+          },
+          "стадия": {
+            "type": "string",
+            "name": "none"
+          },
+          "телефон": {
+            "type": "string",
+            "name": "is_phone"
+          },
+          "тип_конструкции": {
+            "type": "string",
+            "name": "none"
+          },
+          "условия_продажи": {
+            "type": "string",
+            "name": "type_deal"
+          },
+          "этаж": {
+            "type": "float",
+            "name": "floor",
+            "regex": "^\\d+"
+          },
+          "балкон": {
+            "type": "string",
+            "name": "is_balcony"
+          },
+          "всего_комнат_в_квартире": {
+            "type": "string",
+            "name": "count_rooms"
+          },
+          "год_постройки": {
+            "type": "string",
+            "name": "year_built"
+          },
+          "дом": {
+            "type": "string",
+            "name": "layout_type"
+          },
+          "комнат_на_продажу": {
+            "type": "string",
+            "name": "none"
+          },
+          "перепланировка": {
+            "type": "string",
+            "name": "none"
+          },
+          "ремонт": {
+            "type": "string",
+            "name": "decoration_type"
+          },
+          "стеклопакеты": {
+            "type": "string",
+            "name": "type_windows"
+          },
+          "высота_потолков": {
+            "type": "string",
+            "name": "ceiling_height",
+            "regex": "\\d*\\W?\\d+"
+          },
+          "готовый_бизнес": {
+            "type": "string",
+            "name": "none"
+          },
+          "жд_подъезд": {
+            "type": "string",
+            "name": "has_railway"
+          },
+          "количество_зданий": {
+            "type": "string",
+            "name": "none"
+          },
+          "количество_уровней": {
+            "type": "string",
+            "name": "floors_cnt"
+          },
+          "ответственное_хранение": {
+            "type": "string",
+            "name": "none"
+          },
+          "офисные_площади": {
+            "type": "string",
+            "name": "none"
+          },
+          "площадь": {
+            "type": "string",
+            "name": "area_total",
+            "regex": "\\d*\\W?\\d+"
+          },
+          "пол": {
+            "type": "string",
+            "name": "none"
+          },
+          "право_на_землю": {
+            "type": "string",
+            "name": "pravo"
+          },
+          "тип_хранения": {
+            "type": "string",
+            "name": "none"
+          },
+          "уровень": {
+            "type": "string",
+            "name": "floor"
+          },
+          "вентиляция": {
+            "type": "string",
+            "name": "ventilation_system"
+          },
+          "климат": {
+            "type": "string",
+            "name": "none"
+          },
+          "электричество": {
+            "type": "string",
+            "name": "is_electricity"
+          },
+          "действующий": {
+            "type": "string",
+            "name": "none"
+          },
+          "ипотека": {
+            "type": "string",
+            "name": "can_mortgage"
+          },
+          "мансардный_этаж": {
+            "type": "string",
+            "name": "none"
+          },
+          "общая_площадь": {
+            "type": "float",
+            "name": "area_total",
+            "regex": "\\d*\\W?\\d+"
+          },
+          "объект_продажи": {
+            "type": "string",
+            "name": "none"
+          },
+          "отдельный_вход": {
+            "type": "string",
+            "name": "private_entrance"
+          },
+          "планировка": {
+            "type": "string",
+            "name": "layout_type"
+          },
+          "тип_здания": {
+            "type": "string",
+            "name": "building_type"
+          },
+          "тип_строения": {
+            "type": "string",
+            "name": "none"
+          },
+          "цокольный_этаж": {
+            "type": "string",
+            "name": "none"
+          },
+          "водоснабжение": {
+            "type": "string",
+            "name": "is_plumbing"
+          },
+          "газоснабжение": {
+            "type": "string",
+            "name": "is_gas"
+          },
+          "жилое_окружение": {
+            "type": "string",
+            "name": "none"
+          },
+          "канализация": {
+            "type": "string",
+            "name": "is_sewage"
+          },
+          "категория_земель": {
+            "type": "string",
+            "name": "land_category"
+          },
+          "подъезд": {
+            "type": "string",
+            "name": "none"
+          },
+          "тракт_расстояние": {
+            "type": "string",
+            "name": "remoteness"
+          },
+          "название": {
+            "type": "string",
+            "name": "none"
+          },
+          "остекление": {
+            "type": "string",
+            "name": "type_windows"
+          },
+          "этажность": {
+            "type": "float",
+            "name": "floors_cnt",
+            "regex": "^\\d+"
+          },
+          "высота_перекрытий": {
+            "type": "string",
+            "name": "none"
+          },
+          "количество_входов": {
+            "type": "string",
+            "name": "none"
+          },
+          "описание": {
+            "type": "string",
+            "name": "description"
+          },
+          "количество_мест_парковки": {
+            "type": "string",
+            "name": "parking_cnt"
+          },
+          "количество_строений": {
+            "type": "string",
+            "name": "has_buildings"
+          },
+          "площадь_земельного_участка": {
+            "type": "string",
+            "name": "land_area",
+            "regex": ">(\\d*\\W?\\d+) "
+          },
+          "спецоборудование": {
+            "type": "string",
+            "name": "none"
+          },
+          "отопление": {
+            "type": "string",
+            "name": "heating_system_type"
+          },
+          "комментарий": {
+            "type": "string",
+            "name": "none"
+          },
+          "баня": {
+            "type": "string",
+            "name": "is_bathhouse"
+          },
+          "водоем": {
+            "type": "string",
+            "name": "none"
+          },
+          "гараж": {
+            "type": "string",
+            "name": "none"
+          },
+          "количество_теплиц": {
+            "type": "string",
+            "name": "none"
+          },
+          "лесная_зона": {
+            "type": "string",
+            "name": "none"
+          },
+          "многолетние_насаждения": {
+            "type": "string",
+            "name": "none"
+          },
+          "название_сада": {
+            "type": "string",
+            "name": "none"
+          },
+          "овощная_яма": {
+            "type": "string",
+            "name": "none"
+          },
+          "охрана": {
+            "type": "string",
+            "name": "security_type"
+          },
+          "площадь_дома": {
+            "type": "string",
+            "name": "area_total"
+          },
+          "площадь_участка": {
+            "type": "string",
+            "name": "land_area"
+          },
+          "право_на_участок": {
+            "type": "string",
+            "name": "pravo"
+          },
+          "пригородный_транспорт": {
+            "type": "string",
+            "name": "none"
+          },
+          "расстояние_до_остановки": {
+            "type": "string",
+            "name": "remoteness"
+          },
+          "сарай": {
+            "type": "string",
+            "name": "none"
+          },
+          "тип_дома": {
+            "type": "string",
+            "name": "none"
+          },
+          "участок_разработан": {
+            "type": "string",
+            "name": "none"
+          },
+          "фундамент": {
+            "type": "string",
+            "name": "none"
+          },
+          "центральный_полив": {
+            "type": "string",
+            "name": "none"
+          },
+          "готовность": {
+            "type": "string",
+            "name": "none"
+          },
+          "зимний_сад": {
+            "type": "string",
+            "name": "none"
+          },
+          "камин": {
+            "type": "string",
+            "name": "none"
+          },
+          "количество_спален": {
+            "type": "string",
+            "name": "none"
+          },
+          "ландшафтный_дизайн": {
+            "type": "string",
+            "name": "none"
+          },
+          "малая_архитектура": {
+            "type": "string",
+            "name": "none"
+          },
+          "отдельная_баня": {
+            "type": "string",
+            "name": "is_bathhouse"
+          },
+          "площадь_общаяцоколямансарды": {
+            "type": "string",
+            "name": "square",
+            "regex": ">(\\d*\\W?\\d+) \/"
+          },
+          "сад": {
+            "type": "string",
+            "name": "none"
+          },
+          "сауна": {
+            "type": "string",
+            "name": "is_bathhouse"
+          },
+          "спортзал": {
+            "type": "string",
+            "name": "none"
+          },
+          "спутниковое_тв": {
+            "type": "string",
+            "name": "is_tv"
+          }
+        }
+      },
+      "table_2": {
+        "_keys_path": "(//tr//td[contains(.,'Контактная информация')])[2]/../following-sibling::tr/td/b/text()",
+        "_vals_path": "(//tr//td[contains(.,'Контактная информация')])[2]/../following-sibling::tr/td[2]",
+        "key_converter": {
+          "агентство_недвижимости": {
+            "type": "string",
+            "name": "company_name",
+            "regex": "(?<=itle=\").+(?=\">)"
+          },
+          "адрес": {
+            "type": "string",
+            "name": "address"
+          },
+          "телефон_агента": {
+            "type": "string",
+            "name": "agent_phone",
+            "regex": "(?<=tel:).+(?=\">)"
+          },
+          "телефон_агентства": {
+            "type": "string",
+            "name": "agency_phone",
+            "regex": "(?<=<td>).+(?=</td>)"
+          },
+          "email": {
+            "type": "string",
+            "name": "email",
+            "regex": "\">(.+)<\/a"
+          },
+          "www": {
+            "type": "string",
+            "name": "none",
+            "regex": "\">(.+)<\/a"
+          },
+          "время_работы": {
+            "type": "string",
+            "value": "",
+            "name": "none"
+          }
+        }
+      }
+    }
+  }
 }
