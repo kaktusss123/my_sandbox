@@ -122,7 +122,7 @@
 			},
 			"seller_name": {
 				"type": "string",
-				"path": "(//div[@class = 'area']/text())[2]",
+				"path": "(//div[@class = 'area']/text())[2]"
 			},
 			"floors_cnt": {
 				"type": "string",
