@@ -65,7 +65,7 @@
     },
     "crawl_tree": [{
         "pagination_urls": {
-            "path": "(//div[@class = 'pages']/span/following-sibling::a[1]/@href)[1]"
+            "path": "(//div[@class = 'pages']/span[not(@class)]/following-sibling::a[1]/@href)[1]"
         },
         "item_urls": {
             "path": "//td[@class = 'first']//@href",

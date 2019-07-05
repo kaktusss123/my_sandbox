@@ -228,6 +228,11 @@
                     "path": "//span[contains(.,'тел')]/parent::div/text()",
                     "operations": []
                 },
+                "operation": {
+                    "type": "list to string",
+                    "path": "//span[@class='bread-crumb-link']/a/text()",
+                    "regex": "Cдача|Продажа"
+                },
                 "source_latitude": {
                     "type": "float",
                     "path": "//script[text()[contains(.,'AdvMap')]]//text()",
@@ -236,7 +241,12 @@
                 },
                 "address": {
                     "type": "string",
-                    "path": "//div[@class='adv-main-data']//td[contains(.,'Адрес')]/following-sibling::td",
+                    "path": "//div[@class='adv-main-data']//td[contains(.,'Адрес')]/following-sibling::td/text()",
+                    "operations": []
+                },
+                "address_city": {
+                    "type": "string",
+                    "path": "//div[@class='cur-city-name']/text()",
                     "operations": []
                 },
                 "detail": {
@@ -253,7 +263,7 @@
                 "area_total": {
                     "type": "string",
                     "path": "//div[@class='adv-main-data']//td[contains(.,'Площадь')]/following-sibling::td",
-                    "regex": "\\d+",
+                    "regex": "\\d*\\W?\\d+",
                     "operations": []
                 },
                 "seller_name": {
@@ -321,9 +331,9 @@
                     "name": "floor_room",
                     "regex": "field\">\\s*(.+)(.+)"
                   },
-                  "площадь": {
-                    "type": "float",
-                    "name": "area_total",
+                  "_площадь": {
+                    "type": ["float","float","float"],
+                    "name": ["area_total","area_living","area_kitchen"],
                     "regex": [
                       "общая\\s*(\\d*\\W?\\d+) м",
                       "жилая\\s*(\\d*\\W?\\d+) м",
