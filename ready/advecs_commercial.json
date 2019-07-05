@@ -1,6 +1,6 @@
 {
     "_comment": "был мусорный ключ tables в item_page без указания path + увеличено количество потоков",
-    "_task_id": "ADVEKS_TEST_1",
+    "_task_id": "ADVEKS_TEST_2",
     "_start_urls": [
         "https://www.advecs.com/catalog/commercial/"
     ],
@@ -54,6 +54,7 @@
     "methods": {
         "crawling_type": "common",
         "allowed_domains": [],
+        "filter_duplicates": false,
         "proxy_settings": {
             "types": [
                 "https"
