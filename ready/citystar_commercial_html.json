@@ -230,8 +230,8 @@
                 },
                 "operation": {
                     "type": "list to string",
-                    "path": "//span[@class='bread-crumb-link']/a/text()",
-                    "regex": "Cдача|Продажа"
+                    "path": "//span[@class='bread-crumb-link']/a/text()|//title/text()",
+                    "regex": "Cдача|Продажа|Продам|Сдам"
                 },
                 "source_latitude": {
                     "type": "float",
@@ -247,6 +247,11 @@
                 "address_city": {
                     "type": "string",
                     "path": "//div[@class='cur-city-name']/text()",
+                    "operations": []
+                },
+                "address_city_2": {
+                    "type": "string",
+                    "path": "//div[@class='adv-main-data']//td[contains(.,'Город')]/following-sibling::td/text()",
                     "operations": []
                 },
                 "source_longitude": {
@@ -328,38 +333,35 @@
                 "key_converter": {
                   "этаж": {
                     "type": "string",
-                    "name": "floor_room",
-                    "regex": "field\">\\s*(.+)(.+)"
+                    "name": "floor_room"
                   },
                   "район": {
                     "type": "string",
-                    "name": "district",
-                    "regex": "field\">(.+)"
+                    "name": "address_district"
                   },
                   "колво_комнат": {
                     "type": "string",
-                    "name": "count_room",
-                    "regex": "field\">(.+)"
+                    "name": "count_room"
                   },
                   "вид_недвижимости": {
                     "type": "string",
-                    "name": "segment",
-                    "regex": "field\">(.+)"
+                    "name": "segment"
                   },
                   "планировка": {
                     "type": "string",
-                    "name": "plan",
-                    "regex": "field\">(.+)"
+                    "name": "plan"
                   },
                   "цена": {
                     "type": "string",
-                    "name": "none",
-                    "regex": "field\">(.+)"
+                    "name": "none"
                   },
                   "состояние_квартиры": {
                     "type": "string",
-                    "name": "remont",
-                    "regex": "field\">(.+)"
+                    "name": "remont"
+                  },
+                    "город": {
+                    "type": "string",
+                    "name": "none"
                   }
                 }}}}}
 
