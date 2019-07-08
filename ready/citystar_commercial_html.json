@@ -249,11 +249,6 @@
                     "path": "//div[@class='cur-city-name']/text()",
                     "operations": []
                 },
-                "detail": {
-                    "type": "string",
-                    "path": "//td[@class='note']/text()",
-                    "operations": []
-                },
                 "source_longitude": {
                     "type": "float",
                     "path": "//script[text()[contains(.,'AdvMap')]]//text()",
@@ -261,9 +256,14 @@
                     "operations": []
                 },
                 "area_total": {
-                    "type": "string",
-                    "path": "//div[@class='adv-main-data']//td[contains(.,'Площадь')]/following-sibling::td",
+                    "type": "float",
+                    "path": "//div[@class='adv-main-data']//td[contains(.,'Площадь')]/following-sibling::td/text()",
                     "regex": "\\d*\\W?\\d+",
+                    "operations": []
+                },
+                "area_unit": {
+                    "type": "string",
+                    "path": "//div[@class='adv-main-data']//td[contains(.,'Площадь')]/following-sibling::td/span/text()",
                     "operations": []
                 },
                 "seller_name": {
@@ -293,9 +293,14 @@
                     "operations": []
                 },
                 "price_total": {
-                    "type": "string",
+                    "type": "float",
                     "path": "//span[@class='price']/text()",
-                    "regex": "\\d+",
+                    "regex": "[0-9,.]+",
+                    "operations": []
+                },
+                "price_currency": {
+                    "type": "string",
+                    "path": "//span[@class='price']/parent::td/text()",
                     "operations": []
                 },
                 "date_updated": {
@@ -313,14 +318,9 @@
                     "type": "string",
                     "path": "//span[@class='colored-text-1']//strong/text()",
                     "operations": []
-                },
-                "currency": {
-                    "type": "string",
-                    "value": "RUB",
-                    "operations": []
                 }
             },
-            "tables": {
+            "_comment": {
               "table_2": {
                 "_keys_path": "//div[@class='adv-main-data']//tr/td[@class = 'field-title']/text()",
                 "_vals_path": "//div[@class='adv-main-data']//tr/td[@class = 'field']/text()",
@@ -330,15 +330,6 @@
                     "type": "string",
                     "name": "floor_room",
                     "regex": "field\">\\s*(.+)(.+)"
-                  },
-                  "_площадь": {
-                    "type": ["float","float","float"],
-                    "name": ["area_total","area_living","area_kitchen"],
-                    "regex": [
-                      "общая\\s*(\\d*\\W?\\d+) м",
-                      "жилая\\s*(\\d*\\W?\\d+) м",
-                      "кухни\\s*(\\d*\\W?\\d+) м"
-                    ]
                   },
                   "район": {
                     "type": "string",
@@ -353,11 +344,6 @@
                   "вид_недвижимости": {
                     "type": "string",
                     "name": "segment",
-                    "regex": "field\">(.+)"
-                  },
-                  "адрес": {
-                    "type": "string",
-                    "name": "address",
                     "regex": "field\">(.+)"
                   },
                   "планировка": {
