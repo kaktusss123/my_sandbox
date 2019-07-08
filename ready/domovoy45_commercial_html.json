@@ -2,7 +2,117 @@
 	"_comment" : "не собираются сегмент+заглушки в таблице",
     "_task_id" : "DOMOVOI_test_1",
     "_start_urls" : [
-		"https://dom45.ru/kvartira/2-komn/realty385377.html"
+		"https://dom45.ru/index.php?topic_id=180&optype=1&city_id=3",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=4",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=57",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=50",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=51",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=52",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=53",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=54",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=55",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=56",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=58",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=59",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=60",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=61",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=62",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=63",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=64",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=65",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=66",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=67",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=68",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=69",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=70",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=71",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=72",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=73",
+        "https://dom45.ru/index.php?topic_id=180&optype=1&city_id=86",
+
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=3",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=4",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=57",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=50",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=51",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=52",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=53",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=54",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=55",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=56",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=58",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=59",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=60",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=61",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=62",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=63",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=64",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=65",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=66",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=67",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=68",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=69",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=70",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=71",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=72",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=73",
+        "https://dom45.ru/index.php?topic_id=180&optype=3&city_id=86",
+
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=3",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=4",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=57",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=50",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=51",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=52",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=53",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=54",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=55",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=56",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=58",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=59",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=60",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=61",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=62",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=63",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=64",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=65",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=66",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=67",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=68",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=69",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=70",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=71",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=72",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=73",
+        "https://dom45.ru/index.php?topic_id=170&optype=1&city_id=86",
+
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=3",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=4",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=57",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=50",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=51",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=52",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=53",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=54",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=55",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=56",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=58",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=59",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=60",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=61",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=62",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=63",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=64",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=65",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=66",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=67",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=68",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=69",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=70",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=71",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=72",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=73",
+        "https://dom45.ru/index.php?topic_id=170&optype=3&city_id=86"
     ],
     "_segment" : "",
     "_operation" : "",
@@ -41,11 +151,10 @@
         "COOKIES_ENABLED" : false,
         "RANDOM_UA_TYPE" : "random"
     },
-    "crawling_settings" : {
-        "global_crawling_type" : "common",
-        "js": "//",
-        "rotate_useragents" : true,
+    "methods" : {
+        "crawling_type" : "common",
         "allowed_domains" : [],
+        "filter_duplicates": false,
         "proxy_settings" : {
             "types" : [
                 "https"
@@ -53,33 +162,41 @@
             "amount": 10000
         }
     },
-    "item_page" : {
-        "_target_xpath" : "//div[@class='grid_item ']/@href",
-        "methods" : {
-            "crawling_type" : "common",
-            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
-            "filter_duplicates" : true
+    "crawl_tree": [{
+        "pagination_urls": {
+            "path": "(//span[@class='pagenav']/parent::li/following-sibling::li/a/@href)[1]"
         },
+        "item_urls": {
+            "path": "//div[@id='gridwrap']//div[@class='row-fluid']/div[@class='span3']/a/@href",
+            "methods": {"filter_duplicates": false}
+        }
+    }],
+    "item_page" : {
         "fields" : {
             "date_info" : {
                 "type" : "date",
                 "time" : "now"
             },
-			"currency" : {
+			"title_name" : {
                 "type" : "string",
-                "value" : "RUB"
+                "path" : "//div[@class='row-fluid']//div[@class='span12 price']//h3//text()"
             },
-			"header" : {
-                "type" : "string",
-                "xpath" : "//div[@class='row-fluid']//div[@class='span12 price']//h3//text()"
-            },
-			"detail" : {
+			"description" : {
 				"type" : "list to string",
-				"xpath": "(//div[@class='row-fluid']//p//text())[1]"
+				"path": "(//div[@class='row-fluid']//p//text())[1]"
 			},
-			"seller" : {
+            "operation" : {
+				"type" : "list to string",
+				"path": "//ul[@class='realty-options']/comment()",
+                "regex": "Сдам|Продам"
+			},
+			"seller_company" : {
 				"type" : "string",
-				"xpath": "//div[@class='avtor']//h4//text()"
+				"path": "//div[@class='avtor']//h4//text()"
+			},
+            "seller_name" : {
+				"type" : "string",
+				"path": "//span[@class='ffio']/text()[normalize-space()]"
 			},
 			"phone" : {
 				"type" : "phone",
@@ -87,44 +204,54 @@
 			},
 			"date_created" : {
                 "type" : "date",
-                "xpath" : "//div[@class='advdesc']/text()",
+                "path" : "//div[@class='advdesc']/text()",
 				"regex" : "Опубликовано: (.+). Просмотров",
 				"time" : "from string"
             },
 			"date_updated" : {
                 "type" : "date",
-                "xpath" : "//div[@class='advdesc']/text()",
+                "path" : "//div[@class='advdesc']/text()",
 				"regex" : "Обновлено: (.+). Опубликовано",
 				"time" : "from string"
             },
-			"longitude" :{
+			"source_longitude" :{
 				"type" : "float",
-				"xpath": "//script[text()[contains(.,'center')]]//text()",
+				"path": "//script[text()[contains(.,'center')]]//text()",
 				"regex" : ", (\\d*\\W?\\d+\\W?\\d+)\\],\\s*behaviors:"
 			},
-			"latitude" :{
+			"source_latitude" :{
 				"type" : "float",
-				"xpath": "//script[text()[contains(.,'center')]]//text()",
+				"path": "//script[text()[contains(.,'center')]]//text()",
 				"regex": "center: \\[(\\d*\\W?\\d+\\W?\\d+),"
 			},
 			"price": {
 				"type" : "float",
-				"xpath": "//div[@class='row-fluid']//div[@class='span12 price']//h3//text()",
+				"path": "//div[@class='row-fluid']//div[@class='span12 price']//h3//text()",
 				"regex": "Цена - (.+) руб"
+            },
+			"price_currency": {
+				"type" : "float",
+				"path": "//div[@class='row-fluid']//div[@class='span12 price']//h3//text()",
+				"regex": "[А-Яа-я.\\W]+$"
 			},
 			"segment": {
 				"type" : "string",
-                "xpath" : "//div[@class='row-fluid']//div[@class='span12 price']//h3//text()",
-				"regex" : "^\\b\\w+"
+                "path" : "//div[@class='row-fluid']//div[@class='span12 price']//h3//text()",
+				"regex" : "Коммерческая"
+			},
+            "purpose": {
+				"type" : "string",
+                "path" : "//div[@class='row-fluid']//div[@class='span12 price']//h3//text()",
+				"regex" : "свободного назначения|офисная|торговая|складская|производственная|ГСК|парковка|отдельностоящ"
 			}
         },
 		 "tables" : {
 			"table_1" : {
-                "_keys_xpath" : "//div[@class='row-fluid']//li//label/text()",
-                "_vals_xpath" : "//div[@class='row-fluid']//li//span/text()",
+                "_keys_path" : "//div[@class='row-fluid']//li//label/text()",
+                "_vals_path" : "//div[@class='row-fluid']//li//span/text()",
 				"key_converter" : {
 					"город": {
-						"name": "none",
+						"name": "address_city",
 						"type" : "string"
 					},
 					"комнат": {
@@ -133,49 +260,16 @@
 						"regex": "\\d*\\W?\\d+"
 					},
 					"материал_стен": {
-						"name": "material",
+						"name": "walls_material",
 						"type" : "string"
 					},
 					"площадь": {
-						"name": "square",
-						"type" : "float",
-						"regex": "\\d*\\W?\\d+"
+						"name": ["area_total", "area_unit"],
+						"type" : ["float", "string"],
+						"regex": ["\\d*\\W?\\d+", "[А-Яа-я \\W]+"]
 					},
-					"район": {
-						"name": "district",
-						"type" : "string"
-					},
-					"улица": {
-						"name": "address",
-						"type" : "string"
-					},
-					"этаж": {
-						"name": ["floor_room", "floor_bulding"],
-						"type" : ["float","float"],
-						"regex": ["(.+)\/","\/(.+)"]
-					},
-					"балкон": {
-						"name": "balcony",
-						"type" : "string"
-					},
-					"мебель": {
-						"name": "furniture",
-						"type" : "string"
-					},
-					"планировка": {
-						"name": "plan",
-						"type" : "string"
-					},
-					"санузел": {
-						"name": "bathroom",
-						"type" : "string"
-					},
-					"свет": {
-						"name": "electricity",
-						"type" : "string"
-					},
-					"площадь_жилая": {
-						"name": "square_flat",
+                    "площадь_жилая": {
+						"name": "square_living",
 						"type" : "float",
 						"regex":"\\d*\\W?\\d+"
 					},
@@ -185,9 +279,42 @@
 						"regex":"\\d*\\W?\\d+"
 					},
 					"площадь_участка": {
-						"name": "square_land",
-						"type" : "float",
-						"regex":"\\d*\\W?\\d+"
+						"name": ["areal_land", "area_land_unit"],
+						"type" : ["float", "string"],
+						"regex": ["\\d*\\W?\\d+", "[А-Яа-я \\W]+"]
+					},
+					"район": {
+						"name": "district",
+						"type" : "string"
+					},
+					"улица": {
+						"name": "address_street",
+						"type" : "string"
+					},
+					"этаж": {
+						"name": ["floor", "floors"],
+						"type" : ["float","float"],
+						"regex": ["(.+)\/","\/(.+)"]
+					},
+					"балкон": {
+						"name": "is_balcony",
+						"type" : "string"
+					},
+					"мебель": {
+						"name": "is_furniture",
+						"type" : "string"
+					},
+					"планировка": {
+						"name": "floor_layout",
+						"type" : "string"
+					},
+					"санузел": {
+						"name": "is_bathroom",
+						"type" : "string"
+					},
+					"свет": {
+						"name": "is_electricity",
+						"type" : "string"
 					},
 					"ориентир": {
 						"name": "none",
