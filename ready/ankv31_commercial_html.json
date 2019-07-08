@@ -104,7 +104,7 @@
       },
       "description": {
         "type": "list to string",
-        "path": "//div[@class = 'field-item even']/p/text()"
+        "path": "//div[@class = 'field-item even']/h2//text()[normalize-space()]|//div[@class = 'field-item even']/p//text()[normalize-space()]"
       },
       "price_total": {
         "type": "float",
@@ -112,7 +112,7 @@
         "regex": "\\d*\\W?\\d+"
       },
       "price_currency": {
-        "type": "float",
+        "type": "string",
         "path": "//div[contains(@class, 'price')]//div[@class='field-item even']/text()",
         "regex": "[А-Яа-я ]+"
       },
@@ -162,7 +162,7 @@
           "высота_потолков": {
             "name": "ceiling_height",
             "type": "float",
-            "regex": "(?<=item even\">)[А-Яа-я0-9\\W]+(?=</div>)"
+            "regex": "(?<=item even\">)\\d*\\W?\\d+"
           },
           "год_постройки": {
             "name": "year_built",
@@ -180,9 +180,9 @@
             "regex": "(?<=item even\">)[А-Яа-я0-9\\W]+(?=</div>)"
           },
           "категория_недвижимости": {
-            "name": "purpose",
-            "type": "list to string",
-            "regex": "(?<=item even\">)[А-Яа-я0-9\\W]+(?=</div>)"
+            "name": "purpose_2",
+            "type": "string",
+            "regex": "(?<=item even\">)[А-Яа-я0-9 ]+"
           },
           "вид_из_окон": {
             "name": "is_view",
@@ -197,7 +197,7 @@
           "общая_площадь": {
             "name": ["area_total","area_unit"],
             "type": ["float","string"],
-            "regex": ["(?<=item even\">)[0-9\\W ]+(?=</div>)", "(?<=item even\">)[А-Яа-я ]+(?=</div>)"]
+            "regex": ["(?<=item even\">)[0-9 \\W]+", "[А-Яа-я.]+(?=</div)"]
           },
           "тип_дома": {
             "name": "building_materials",
@@ -207,7 +207,7 @@
           "вид_недвижимости": {
             "name": "roperty_type",
             "type": "list to string",
-            "regex": "(?<=datatype=\\\"\\\">)[А-Яа-я0-9\\W]+(?=</a>)"
+            "regex": "(?<=datatype=\"\">)[А-Яа-я0-9\\W]+(?=</a>)"
           },
           "бизнесцентр": {
             "name": "object_name",
