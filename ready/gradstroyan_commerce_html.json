@@ -1,0 +1,304 @@
+{
+  "_task_id": "gradstroyan",
+  "_start_urls": [
+    "https://gradstroy35.ru/kupit/kommercheskaya/"
+  ],
+  "_segment": "C",
+  "_operation": "sale",
+  "_federal_subject": "Вологодская область",
+  "_source": "gradstroyan",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 256,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "DEBUG",
+    "AUTOTHROTTLE_ENABLED": true,
+    "AUTOTHROTTLE_START_DELAY": 1,
+    "AUTOTHROTTLE_MAX_DELAY": 20,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 256,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 256,
+    "RETRY_ENABLED": true,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      303,
+      302
+    ],
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_TIMES": 40,
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": false,
+    "RANDOM_UA_TYPE": "random",
+    "DOWNLOAD_TIMEOUT": 20
+  },
+  "methods": {
+    "crawling_type": "common",
+    "rotate_useragents": true,
+    "allowed_domains": "",
+    "proxy_settings": {
+      "types": [
+        "https"
+      ],
+      "amount": 10000
+    }
+  },
+  "crawl_tree": [
+    {
+      "pagination_urls": {
+        "path": "//div[@id='offer-pager']/span/following-sibling::a[1]/@href"
+      },
+      "item_urls": {
+        "path": "//a[@itemprop='url']/@href",
+        "methods": {
+          "filter_duplicates": false
+        }
+      }
+    }
+  ],
+  "item_page": {
+    "fields": {
+      "area_total": {
+        "type": "float",
+        "path": "//span[@itemprop='name']/text()",
+        "regex": "\\d+\\W?\\d*\\s?(?=м²)"
+      },
+      "operation": {
+        "type": "string",
+        "path": "//title/text()",
+        "regex": "Снять|Купить|снять|купить"
+      },
+      "address": {
+        "type": "string",
+        "path": "//span[@itemprop='name']/text()",
+        "regex": "(?<=:).+(?=\\()"
+      },
+      "purpose": {
+        "type": "string",
+        "path": "//span[@itemprop='name']/text()",
+        "regex": "^.+(?=:)"
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now"
+      },
+      "title_name": {
+        "type": "string",
+        "path": "//span[@itemprop='name']/text()"
+      },
+      "date_created": {
+        "type": "date",
+        "time": "from string",
+        "path": "//time/text()",
+        "regex": "(?<=щено).+"
+      },
+      "description": {
+        "type": "list to string",
+        "path": "//div[@id='offer-description']//text()"
+      },
+      "seller_name": {
+        "type": "string",
+        "path": "(//a[@class='author'])[1]/text()"
+      },
+      "phone": {
+        "type": "phone",
+        "path": "(//a[@class='author'])[1]/following-sibling::a[1]/text()"
+      },
+      "price": {
+        "type": "float",
+        "path": "//meta[@itemprop='price']/@content"
+      },
+      "price_currency": {
+        "type": "string",
+        "path": "//meta[@itemprop='priceCurrency']/@content"
+      },
+      "price_term": {
+        "type": "string",
+        "path": "//section[@id='offer-price']/h2/text()",
+        "regex": "[А-Яа-я]+"
+      },
+      "latitude": {
+        "type": "float",
+        "path": "//div[@class='offer-map']/@data-lat"
+      },
+      "longitude": {
+        "type": "float",
+        "path": "//div[@class='offer-map']/@data-long"
+      }
+    },
+    "tables": {
+      "table_1": {
+        "_keys_path": "//div[@class='name']/text()",
+        "_vals_path": "//div[@class='value']",
+        "key_converter": {
+          "площадь_участка": {
+            "name": [
+              "area_land",
+              "area_land_unit"
+            ],
+            "type": [
+              "float",
+              "string"
+            ],
+            "regex": [
+              "(?<=e\">)\\d*\\W?\\d+",
+              "[A-Яа-я]+(?=</div>)"
+            ]
+          },
+          "тип_участка": {
+            "name": "land_type",
+            "type": "float",
+            "regex": "(?<=e\">).+(?=</div>)"
+          },
+          "этаж": {
+            "name": [
+              "floor",
+              "floors_count"
+            ],
+            "type": [
+              "float",
+              "float"
+            ],
+            "regex": [
+              "(?<=e\">)\\d+",
+              "\\d+(?=</div>)"
+            ]
+          },
+          "этажи": {
+            "name": [
+              "floor"
+            ],
+            "type": [
+              "float"
+            ],
+            "regex": [
+              "(?<=e\">)\\d+"
+            ]
+          },
+          "ежемесячный_платеж": {
+            "name": "nil",
+            "value": " "
+          },
+          "процентная_ставка": {
+            "name": "nil",
+            "value": " "
+          },
+          "срок_кредита": {
+            "name": "nil",
+            "value": " "
+          },
+          "сумма_всех_платежей": {
+            "name": "nil",
+            "value": " "
+          },
+          "сумма_кредита": {
+            "name": "nil",
+            "value": " "
+          },
+          "переплата": {
+            "name": "nil",
+            "value": " "
+          },
+          "первый_взнос": {
+            "name": "nil",
+            "value": " "
+          },
+          "цена_квартиры": {
+            "name": "nil",
+            "value": " "
+          },
+          "год_постройки": {
+            "name": "year_built",
+            "type": "float",
+            "regex": "(?<=e\">).+(?=</div>)"
+          },
+          "жилая_площадь": {
+            "name": "area_living",
+            "type": "float",
+            "regex": "(?<=e\">)\\d*\\W?\\d+"
+          },
+          "количество_комнат": {
+            "name": "rooms_count",
+            "type": "float",
+            "regex": "(?<=e\">)\\d*\\W?\\d+"
+          },
+          "комнат_в_квартире": {
+            "name": "rooms_total",
+            "type": "float",
+            "regex": "(?<=e\">)\\d*\\W?\\d+"
+          },
+          "площадь_комнаты": {
+            "name": "area_room",
+            "type": "float",
+            "regex": "(?<=e\">)\\d*\\W?\\d+"
+          },
+          "количество_этажей": {
+            "name": "floors_count",
+            "type": "float",
+            "regex": "(?<=e\">)\\d*\\W?\\d+"
+          },
+          "этажность": {
+            "name": "floors_count",
+            "type": "float",
+            "regex": "(?<=e\">)\\d*\\W?\\d+"
+          },
+          "площадь_кухни": {
+            "name": "area_kitchen",
+            "type": "float",
+            "regex": "(?<=e\">)\\d*\\W?\\d+"
+          },
+          "общая_площадь": {
+            "name": "area_total",
+            "type": "float",
+            "regex": "(?<=e\">)\\d*\\W?\\d+"
+          },
+          "площадь_дома": {
+            "name": "area_total",
+            "type": "float",
+            "regex": "(?<=e\">)\\d*\\W?\\d+"
+          },
+          "лоджия": {
+            "name": "is_balcony",
+            "type": "string",
+            "regex": "(?<=e\">).+(?=</div>)"
+          },
+          "балкон": {
+            "name": "is_balcony",
+            "type": "string",
+            "regex": "(?<=e\">).+(?=</div>)"
+          },
+          "пассажирский_лифт": {
+            "name": "is_elevator",
+            "type": "string",
+            "regex": "(?<=e\">).+(?=</div>)"
+          },
+          "тип_стен": {
+            "name": "building_walls",
+            "type": "string",
+            "regex": "(?<=e\">).+(?=</div>)"
+          },
+          "машиномест": {
+            "name": "parking_units",
+            "type": "float",
+            "regex": "(?<=e\">).+(?=</div>)"
+          },
+          "площадь": {
+            "name": "nil",
+            "type": "float",
+            "regex": "(?<=e\">)\\d*\\W?\\d+"
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
