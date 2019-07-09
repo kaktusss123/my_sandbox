@@ -1,25 +1,25 @@
 {
-    "_task_id" : "REALTYCENTRUM_test_1",
+    "_task_id" : "",
     "_start_urls" : [
 		"https://realty-centrum.com/prodaja/kottedj/rechitsi-dachnaya-ul/"
     ],
     "_segment" : "",
     "_operation" : "",
     "_federal_subject" : "",
-    "_source": "REALTYCENTRUM",
+    "_source": "is_center",
     "global_settings" : {
-        "CONCURRENT_REQUESTS" : 256,
-        "CONCURRENT_REQUESTS_PER_DOMAIN" : 256,
+        "CONCURRENT_REQUESTS" : 512,
+        "CONCURRENT_REQUESTS_PER_DOMAIN" : 512,
         "DOWNLOAD_TIMEOUT" : 60,
         "SPLASH_URL" : "http://0.0.0.0:8050",
         "LOG_LEVEL" : "INFO",
         "AUTOTHROTTLE_ENABLED" : false,
         "AUTOTHROTTLE_START_DELAY" : 1.0,
         "AUTOTHROTTLE_MAX_DELAY" : 60,
-        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 256,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY" : 512,
         "HTTPERROR_ALLOWED_CODES" : [],
         "RETRY_ENABLED" : true,
-        "RETRY_TIMES" : 100,
+        "RETRY_TIMES" : 20,
         "RETRY_HTTP_CODES" : [
             500,
             503,
@@ -40,9 +40,8 @@
         "COOKIES_ENABLED" : false,
         "RANDOM_UA_TYPE" : "random"
     },
-    "crawling_settings" : {
-        "global_crawling_type" : "common",
-        "js": "//",
+    "methods" : {
+        "crawling_type" : "common",
         "rotate_useragents" : true,
         "allowed_domains" : [],
         "proxy_settings" : {
@@ -52,13 +51,20 @@
             "amount": 10000
         }
     },
+   "crawl_tree": [
+    {
+      "pagination_urls": {
+        "path": "//div[@id='offer-pager']/span/following-sibling::a[1]/@href"
+      },
+      "item_urls": {
+        "path": "//div[@class='property span9']//div[@class='title span4']//a/@href",
+        "methods": {
+          "filter_duplicates": false
+        }
+      }
+    }
+  ],
     "item_page" : {
-        "_target_xpath" : "//div[@class='property span9']//div[@class='title span4']//a/@href",
-        "methods" : {
-            "crawling_type" : "common",
-            "js": "//document.getElementsByClassName('offer-detail__contact-phone-button')[0].click()",
-            "filter_duplicates" : true
-        },
         "fields" : {
             "date_info" : {
                 "type" : "date",
