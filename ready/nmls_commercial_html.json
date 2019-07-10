@@ -125,7 +125,9 @@
       404,
       303,
       302,
-      301
+      301,
+      502,
+      407
     ],
     "ROBOTSTXT_ENABLED": false,
     "ROBOTSTXT_OBEY": false,
