@@ -1,0 +1,264 @@
+{
+  "_task_id": "",
+  "_start_urls": [
+    "http://29.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://29.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://astrahan.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://astrahan.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://ufa.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://ufa.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://belgorod.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://belgorod.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://brsn.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://brsn.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://vladimir.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://vladimir.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://volgograd.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://volgograd.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://vologda.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://vologda.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://vrz.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://vrz.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://ivanovo.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://ivanovo.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://uralsk.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://uralsk.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://klg.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://klg.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://kaluga.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://kaluga.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://kirov.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://kirov.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://kostroma.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://kostroma.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://krasnodar.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://krasnodar.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://krym.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://krym.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://kursk.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://kursk.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://minsk.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://minsk.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://msk.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://msk.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://murmansk.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://murmansk.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://nn.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://nn.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://nsk.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://nsk.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://orenburg.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://orenburg.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://orel.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://orel.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://penza.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://penza.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://perm.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://perm.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://prim.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://prim.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://mariel.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://mariel.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://kazan.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://kazan.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://izhevsk.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://izhevsk.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://rostov.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://rostov.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://rzn.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://rzn.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://samara.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://samara.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://saratov.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://saratov.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://ekb.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://ekb.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://so.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://so.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://smolensk.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://smolensk.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://stv.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://stv.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://tver.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://tver.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://tula.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://tula.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://ulyanovsk.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://ulyanovsk.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://hb.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://hb.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://74.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://74.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://yaroslavl.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://yaroslavl.nmls.ru/arenda-kommercheskoy-nedvizhimosti"
+  ],
+  "_segment": "Коммерческая недвижимость",
+  "_operation": "",
+  "_federal_subject": "Нижегородская область",
+  "_source": "http://nn.nmls.ru",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 512,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 512,
+    "DOWNLOAD_TIMEOUT": 60,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": false,
+    "AUTOTHROTTLE_START_DELAY": 1.0,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 512,
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_ENABLED": true,
+    "RETRY_TIMES": 20,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      303,
+      302,
+      301
+    ],
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": false,
+    "RANDOM_UA_TYPE": "random"
+  },
+  "methods": {
+    "crawling_type": "common",
+    "rotate_useragents": true,
+    "allowed_domains": [],
+    "proxy_settings": {
+      "types": [
+        "https"
+      ],
+      "amount": 10000
+    }
+  },
+  "crawl_tree": [
+    {
+      "pagination_urls": {
+        "path": "//li[@class='is-active']/following-sibling::li[1]/a[not(@class)]/@href"
+      },
+      "item_urls": {
+        "path": "//div[@class='row realty-row']//a[@target='_blank']/@href",
+        "methods": {
+          "filter_duplicates": false
+        }
+      }
+    }
+  ],
+  "item_page": {
+    "fields": {
+      "federal_subject": {
+        "type": "string",
+        "path": "//a[@href='#regions-modal']/text()"
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now"
+      },
+      "title_name": {
+        "type": "string",
+        "path": "//h1/text()"
+      },
+      "operation": {
+        "type": "list to string",
+        "path": "//li[@class='breadcrumb-item']//span/text()",
+        "regex": "Аренда|Продажа"
+      },
+      "purpose": {
+        "type": "string",
+        "path": "//title/text()",
+        "regex": "(?<=\\().+(?=\\))"
+      },
+      "price": {
+        "type": "float",
+        "path": "//div[@class='card-price']/span[not(@class)]/text()",
+        "regex": "\\d*\\W?\\d+"
+      },
+      "price_currency": {
+        "type": "string",
+        "path": "//div[@class='card-price']/span[@class]/text()"
+      },
+      "seller_name": {
+        "type": "string",
+        "path": "//div[@class='dit']//text()[contains(.,'Агент:')]/following-sibling::a/text()"
+      },
+      "seller_company": {
+        "type": "string",
+        "path": "//div[@class='dit']//text()[contains(.,'АН:')]/following-sibling::a/text()"
+      },
+      "phone": {
+        "type": "list to string",
+        "path": "//a[contains(@href,'tel:')]/text()"
+      },
+      "description": {
+        "type": "list to string",
+        "path": "//div[contains(text(),'Дополнительная информация')]/following-sibling::div[@class='object-infoblock']//text()[normalize-space()]"
+      },
+      "area_total": {
+        "type": "string",
+        "path": "//div[contains(text(),'Дополнительная информация')]/following-sibling::div[@class='object-infoblock']//text()[normalize-space()]",
+        "regex": "\\d*\\W?\\s?\\d+(?=\\s?кв\\.\\s?м)|\\d*\\W?.?\\d+(?=\\s?метров)"
+      },
+      "_comment": {
+        "type": "float",
+        "path": "//script[contains(@src,'//api-maps.yandex.ru/services/coverage/v2')]/@src",
+        "regex": "(?<=ll=).+(?=,)"
+      },
+      "_comment": {
+        "type": "float",
+        "path": "//div[@id='catalog-card__map']/@data-coord",
+        "regex": "\\d*\\W?\\d+(?=&amp;z)"
+      }
+    },
+    "tables": {
+      "table_1": {
+        "_keys_path": "//table[@class='object_info']//tr/td[1]/text()",
+        "_vals_path": "//table[@class='object_info']//tr/td[2]/text()",
+        "key_converter": {
+          "адрес": {
+            "type": "string",
+            "name": "address"
+          },
+          "город": {
+            "type": "string",
+            "name": "address_city"
+          },
+          "дата_подачи_объявления": {
+            "type": "date",
+            "time": "from string",
+            "name": "date_created"
+          },
+          "использование": {
+            "type": "string",
+            "name": "purpose_2"
+          },
+          "метро": {
+            "type": "string",
+            "name": "metro"
+          },
+          "номер_объявления": {
+            "type": "string",
+            "name": "object_id"
+          },
+          "район": {
+            "type": "string",
+            "name": "address_district"
+          },
+          "тип": {
+            "type": "string",
+            "name": "purpose"
+          }
+        }
+      }
+    }
+  }
+}
+
