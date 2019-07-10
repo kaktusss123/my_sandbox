@@ -1,5 +1,5 @@
 {
-  "_task_id": "",
+  "_task_id": "NMLS_AMOUNT_TEST",
   "_start_urls": [
     "http://29.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
     "http://29.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
@@ -90,7 +90,11 @@
     "http://74.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
     "http://74.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
     "http://yaroslavl.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
-    "http://yaroslavl.nmls.ru/arenda-kommercheskoy-nedvizhimosti"
+    "http://yaroslavl.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://spb.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://spb.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
+    "http://lipmetr.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
+    "http://lipmetr.nmls.ru/arenda-kommercheskoy-nedvizhimosti"
   ],
   "_segment": "Коммерческая недвижимость",
   "_operation": "",
@@ -143,7 +147,7 @@
   "crawl_tree": [
     {
       "pagination_urls": {
-        "path": "//li[@class='is-active']/following-sibling::li[1]/a[not(@class)]/@href"
+        "path": "(//*[contains(@class,'pagenav')]//*[contains(@class,'active')]/following-sibling::a[1]/@href)[1]"
       },
       "item_urls": {
         "path": "//div[@class='row realty-row']//a[@target='_blank']/@href",
