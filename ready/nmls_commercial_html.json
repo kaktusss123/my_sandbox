@@ -1,5 +1,5 @@
 {
-  "_task_id": "NMLS_AMOUNT_TEST",
+  "_task_id": "NMLS_AMOUNT_TEST_2",
   "_start_urls": [
     "http://29.nmls.ru/prodazha-kommercheskoy-nedvizhimosti",
     "http://29.nmls.ru/arenda-kommercheskoy-nedvizhimosti",
@@ -127,7 +127,8 @@
       302,
       301,
       502,
-      407
+      407,
+      401
     ],
     "ROBOTSTXT_ENABLED": false,
     "ROBOTSTXT_OBEY": false,
