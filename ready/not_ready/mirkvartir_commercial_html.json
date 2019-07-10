@@ -1,0 +1,541 @@
+{
+  "_task_id": "MIRKV_test_1",
+  "_start_urls": ["https://arendacre.mirkvartir.ru/Адыгея+республика/Майкоп/",
+ "https://arendacre.mirkvartir.ru/Алтай+республика/Горно-Алтайск/",
+ "https://arendacre.mirkvartir.ru/Алтайский+край/Барнаул/",
+ "https://arendacre.mirkvartir.ru/Амурская+область/Благовещенск/",
+ "https://arendacre.mirkvartir.ru/Архангельская+область/Архангельск/",
+ "https://arendacre.mirkvartir.ru/Астраханская+область/Астрахань/",
+ "https://arendacre.mirkvartir.ru/Байконур/",
+ "https://arendacre.mirkvartir.ru/Башкортостан+республика/Уфа/",
+ "https://arendacre.mirkvartir.ru/Белгородская+область/Белгород/",
+ "https://arendacre.mirkvartir.ru/Брянская+область/Брянск/",
+ "https://arendacre.mirkvartir.ru/Бурятия+республика/Улан-Удэ/",
+ "https://arendacre.mirkvartir.ru/Владимирская+область/Владимир/",
+ "https://arendacre.mirkvartir.ru/Волгоградская+область/Волгоград/",
+ "https://arendacre.mirkvartir.ru/Вологодская+область/Вологда/",
+ "https://arendacre.mirkvartir.ru/Воронежская+область/Воронеж/",
+ "https://arendacre.mirkvartir.ru/Дагестан+республика/Махачкала/",
+ "https://arendacre.mirkvartir.ru/Еврейская+автономная+область/Биробиджан/",
+ "https://arendacre.mirkvartir.ru/Забайкальский+край/Чита/",
+ "https://arendacre.mirkvartir.ru/Ивановская+область/Иваново/",
+ "https://arendacre.mirkvartir.ru/Ингушетия+республика/Магас/",
+ "https://arendacre.mirkvartir.ru/Иркутская+область/Иркутск/",
+ "https://arendacre.mirkvartir.ru/Кабардино-Балкарская+республика/Нальчик/",
+ "https://arendacre.mirkvartir.ru/Калининградская+область/Калининград/",
+ "https://arendacre.mirkvartir.ru/Калмыкия+республика/Элиста/",
+ "https://arendacre.mirkvartir.ru/Калужская+область/Калуга/",
+ "https://arendacre.mirkvartir.ru/Камчатский+край/Петропавловск-Камчатский/",
+ "https://arendacre.mirkvartir.ru/Карачаево-Черкесская+республика/Черкесск/",
+ "https://arendacre.mirkvartir.ru/Карелия+республика/Петрозаводск/",
+ "https://arendacre.mirkvartir.ru/Кемеровская+область/Кемерово/",
+ "https://arendacre.mirkvartir.ru/Кировская+область/Киров/",
+ "https://arendacre.mirkvartir.ru/Коми+республика/Сыктывкар/",
+ "https://arendacre.mirkvartir.ru/Костромская+область/Костромской+район/Кострома/",
+ "https://arendacre.mirkvartir.ru/Краснодарский+край/Краснодар/",
+ "https://arendacre.mirkvartir.ru/Красноярский+край/Красноярск/",
+ "https://arendacre.mirkvartir.ru/Крым+республика/Симферополь/",
+ "https://arendacre.mirkvartir.ru/Курганская+область/Курган/",
+ "https://arendacre.mirkvartir.ru/Курская+область/Курск/",
+ "https://arendacre.mirkvartir.ru/Липецкая+область/Липецк/",
+ "https://arendacre.mirkvartir.ru/Магаданская+область/Магадан/",
+ "https://arendacre.mirkvartir.ru/Марий+Эл+республика/Йошкар-Ола/",
+ "https://arendacre.mirkvartir.ru/Мордовия+республика/Саранск/",
+ "https://arendacre.mirkvartir.ru/Москва/",
+ "https://arendacre.mirkvartir.ru/Мурманская+область/Мурманск/",
+ "https://arendacre.mirkvartir.ru/Ненецкий+автономный+округ/Нарьян-Мар/",
+ "https://arendacre.mirkvartir.ru/Нижегородская+область/Нижний+Новгород/",
+ "https://arendacre.mirkvartir.ru/Новгородская+область/Великий+Новгород/",
+ "https://arendacre.mirkvartir.ru/Новосибирская+область/Новосибирск/",
+ "https://arendacre.mirkvartir.ru/Омская+область/Омск/",
+ "https://arendacre.mirkvartir.ru/Оренбургская+область/Оренбург/",
+ "https://arendacre.mirkvartir.ru/Орловская+область/Орёл/",
+ "https://arendacre.mirkvartir.ru/Пензенская+область/Пенза/",
+ "https://arendacre.mirkvartir.ru/Пермский+край/Пермь/",
+ "https://arendacre.mirkvartir.ru/Приморский+край/Владивосток/",
+ "https://arendacre.mirkvartir.ru/Псковская+область/Псков/",
+ "https://arendacre.mirkvartir.ru/Ростовская+область/Ростов-на-Дону/",
+ "https://arendacre.mirkvartir.ru/Рязанская+область/Рязань/",
+ "https://arendacre.mirkvartir.ru/Самарская+область/Самара/",
+ "https://arendacre.mirkvartir.ru/Санкт-Петербург/",
+ "https://arendacre.mirkvartir.ru/Саратовская+область/Саратов/",
+ "https://arendacre.mirkvartir.ru/Сахалинская+область/Южно-Сахалинск/",
+ "https://arendacre.mirkvartir.ru/Свердловская+область/Екатеринбург/",
+ "https://arendacre.mirkvartir.ru/Севастополь/",
+ "https://arendacre.mirkvartir.ru/Северная+Осетия+-+Алания+республика/Владикавказ/",
+ "https://arendacre.mirkvartir.ru/Смоленская+область/Смоленск/",
+ "https://arendacre.mirkvartir.ru/Ставропольский+край/Ставрополь/",
+ "https://arendacre.mirkvartir.ru/Тамбовская+область/Тамбов/",
+ "https://arendacre.mirkvartir.ru/Татарстан+республика/Казань/",
+ "https://arendacre.mirkvartir.ru/Тверская+область/Тверь/",
+ "https://arendacre.mirkvartir.ru/Томская+область/Томск/",
+ "https://arendacre.mirkvartir.ru/Тульская+область/Тула/",
+ "https://arendacre.mirkvartir.ru/Тыва+республика/Кызыл/",
+ "https://arendacre.mirkvartir.ru/Тюменская+область/Тюмень/",
+ "https://arendacre.mirkvartir.ru/Удмуртская+республика/Ижевск/",
+ "https://arendacre.mirkvartir.ru/Ульяновская+область/Ульяновск/",
+ "https://arendacre.mirkvartir.ru/Хабаровский+край/Хабаровск/",
+ "https://arendacre.mirkvartir.ru/Хакасия+республика/Абакан/",
+ "https://arendacre.mirkvartir.ru/Ханты-Мансийский+автономный+округ/Ханты-Мансийск/",
+ "https://arendacre.mirkvartir.ru/Челябинская+область/Челябинск/",
+ "https://arendacre.mirkvartir.ru/Чеченская+республика/Грозный/",
+ "https://arendacre.mirkvartir.ru/Чувашия+республика/Чебоксары/",
+ "https://arendacre.mirkvartir.ru/Чукотский+автономный+округ/Анадырь/",
+ "https://arendacre.mirkvartir.ru/Якутия+республика/Якутск/",
+ "https://arendacre.mirkvartir.ru/Ямало-Ненецкий+автономный+округ/Салехард/",
+ "https://arendacre.mirkvartir.ru/Ярославская+область/Ярославль/",
+ "https://cre.mirkvartir.ru/Адыгея+республика/Майкоп/",
+ "https://cre.mirkvartir.ru/Алтай+республика/Горно-Алтайск/",
+ "https://cre.mirkvartir.ru/Алтайский+край/Барнаул/",
+ "https://cre.mirkvartir.ru/Амурская+область/Благовещенск/",
+ "https://cre.mirkvartir.ru/Архангельская+область/Архангельск/",
+ "https://cre.mirkvartir.ru/Астраханская+область/Астрахань/",
+ "https://cre.mirkvartir.ru/Байконур/",
+ "https://cre.mirkvartir.ru/Башкортостан+республика/Уфа/",
+ "https://cre.mirkvartir.ru/Белгородская+область/Белгород/",
+ "https://cre.mirkvartir.ru/Брянская+область/Брянск/",
+ "https://cre.mirkvartir.ru/Бурятия+республика/Улан-Удэ/",
+ "https://cre.mirkvartir.ru/Владимирская+область/Владимир/",
+ "https://cre.mirkvartir.ru/Волгоградская+область/Волгоград/",
+ "https://cre.mirkvartir.ru/Вологодская+область/Вологда/",
+ "https://cre.mirkvartir.ru/Воронежская+область/Воронеж/",
+ "https://cre.mirkvartir.ru/Дагестан+республика/Махачкала/",
+ "https://cre.mirkvartir.ru/Еврейская+автономная+область/Биробиджан/",
+ "https://cre.mirkvartir.ru/Забайкальский+край/Чита/",
+ "https://cre.mirkvartir.ru/Ивановская+область/Иваново/",
+ "https://cre.mirkvartir.ru/Ингушетия+республика/Магас/",
+ "https://cre.mirkvartir.ru/Иркутская+область/Иркутск/",
+ "https://cre.mirkvartir.ru/Кабардино-Балкарская+республика/Нальчик/",
+ "https://cre.mirkvartir.ru/Калининградская+область/Калининград/",
+ "https://cre.mirkvartir.ru/Калмыкия+республика/Элиста/",
+ "https://cre.mirkvartir.ru/Калужская+область/Калуга/",
+ "https://cre.mirkvartir.ru/Камчатский+край/Петропавловск-Камчатский/",
+ "https://cre.mirkvartir.ru/Карачаево-Черкесская+республика/Черкесск/",
+ "https://cre.mirkvartir.ru/Карелия+республика/Петрозаводск/",
+ "https://cre.mirkvartir.ru/Кемеровская+область/Кемерово/",
+ "https://cre.mirkvartir.ru/Кировская+область/Киров/",
+ "https://cre.mirkvartir.ru/Коми+республика/Сыктывкар/",
+ "https://cre.mirkvartir.ru/Костромская+область/Костромской+район/Кострома/",
+ "https://cre.mirkvartir.ru/Краснодарский+край/Краснодар/",
+ "https://cre.mirkvartir.ru/Красноярский+край/Красноярск/",
+ "https://cre.mirkvartir.ru/Крым+республика/Симферополь/",
+ "https://cre.mirkvartir.ru/Курганская+область/Курган/",
+ "https://cre.mirkvartir.ru/Курская+область/Курск/",
+ "https://cre.mirkvartir.ru/Липецкая+область/Липецк/",
+ "https://cre.mirkvartir.ru/Магаданская+область/Магадан/",
+ "https://cre.mirkvartir.ru/Марий+Эл+республика/Йошкар-Ола/",
+ "https://cre.mirkvartir.ru/Мордовия+республика/Саранск/",
+ "https://cre.mirkvartir.ru/Москва/",
+ "https://cre.mirkvartir.ru/Мурманская+область/Мурманск/",
+ "https://cre.mirkvartir.ru/Ненецкий+автономный+округ/Нарьян-Мар/",
+ "https://cre.mirkvartir.ru/Нижегородская+область/Нижний+Новгород/",
+ "https://cre.mirkvartir.ru/Новгородская+область/Великий+Новгород/",
+ "https://cre.mirkvartir.ru/Новосибирская+область/Новосибирск/",
+ "https://cre.mirkvartir.ru/Омская+область/Омск/",
+ "https://cre.mirkvartir.ru/Оренбургская+область/Оренбург/",
+ "https://cre.mirkvartir.ru/Орловская+область/Орёл/",
+ "https://cre.mirkvartir.ru/Пензенская+область/Пенза/",
+ "https://cre.mirkvartir.ru/Пермский+край/Пермь/",
+ "https://cre.mirkvartir.ru/Приморский+край/Владивосток/",
+ "https://cre.mirkvartir.ru/Псковская+область/Псков/",
+ "https://cre.mirkvartir.ru/Ростовская+область/Ростов-на-Дону/",
+ "https://cre.mirkvartir.ru/Рязанская+область/Рязань/",
+ "https://cre.mirkvartir.ru/Самарская+область/Самара/",
+ "https://cre.mirkvartir.ru/Санкт-Петербург/",
+ "https://cre.mirkvartir.ru/Саратовская+область/Саратов/",
+ "https://cre.mirkvartir.ru/Сахалинская+область/Южно-Сахалинск/",
+ "https://cre.mirkvartir.ru/Свердловская+область/Екатеринбург/",
+ "https://cre.mirkvartir.ru/Севастополь/",
+ "https://cre.mirkvartir.ru/Северная+Осетия+-+Алания+республика/Владикавказ/",
+ "https://cre.mirkvartir.ru/Смоленская+область/Смоленск/",
+ "https://cre.mirkvartir.ru/Ставропольский+край/Ставрополь/",
+ "https://cre.mirkvartir.ru/Тамбовская+область/Тамбов/",
+ "https://cre.mirkvartir.ru/Татарстан+республика/Казань/",
+ "https://cre.mirkvartir.ru/Тверская+область/Тверь/",
+ "https://cre.mirkvartir.ru/Томская+область/Томск/",
+ "https://cre.mirkvartir.ru/Тульская+область/Тула/",
+ "https://cre.mirkvartir.ru/Тыва+республика/Кызыл/",
+ "https://cre.mirkvartir.ru/Тюменская+область/Тюмень/",
+ "https://cre.mirkvartir.ru/Удмуртская+республика/Ижевск/",
+ "https://cre.mirkvartir.ru/Ульяновская+область/Ульяновск/",
+ "https://cre.mirkvartir.ru/Хабаровский+край/Хабаровск/",
+ "https://cre.mirkvartir.ru/Хакасия+республика/Абакан/",
+ "https://cre.mirkvartir.ru/Ханты-Мансийский+автономный+округ/Ханты-Мансийск/",
+ "https://cre.mirkvartir.ru/Челябинская+область/Челябинск/",
+ "https://cre.mirkvartir.ru/Чеченская+республика/Грозный/",
+ "https://cre.mirkvartir.ru/Чувашия+республика/Чебоксары/",
+ "https://cre.mirkvartir.ru/Чукотский+автономный+округ/Анадырь/",
+ "https://cre.mirkvartir.ru/Якутия+республика/Якутск/",
+ "https://cre.mirkvartir.ru/Ямало-Ненецкий+автономный+округ/Салехард/",
+ "https://cre.mirkvartir.ru/Ярославская+область/Ярославль/"],
+  "_segment": "",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "MIRKVARTIR",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 1024,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
+    "DOWNLOAD_TIMEOUT": 60,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": false,
+    "AUTOTHROTTLE_START_DELAY": 1.0,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_ENABLED": true,
+    "RETRY_TIMES": 100,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      303,
+      302,
+      301,
+      502,
+	307,
+	410,
+	451
+    ],
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": false,
+    "RANDOM_UA_TYPE": "random"
+  },
+  "methods": {
+    "crawling_type": "common",
+    "allowed_domains": [],
+    "proxy_settings": {
+      "types": [
+        "https"
+      ]
+    }
+  },
+  "crawl_tree": [
+    {"pagination_urls":  {"path": "//ul[contains(@class, 'b-paging')]/li[contains(@class, 'm-active')]/following-sibling::li[1]/a/@href"},
+     "item_urls": {"path": "//div[contains(@class,'no-lptitle')]//h4/a/@href"}}
+  ],
+  "item_page": {
+    "fields": {
+      "operation": {
+        "type": "string",
+        "path": "//script[contains(text(),'listingType')]/text()",
+        "regex": "(?<=\"listingType\":).+(?=,\"wh)"
+      },
+      "segment": {
+        "type": "string",
+        "path": "//script[contains(text(),'listingType')]/text()",
+        "regex": "(?<=\"estateType\":).+(?=,\"hostUrl\":)"
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now"
+      },
+      "price_currency": {
+        "type": "string",
+        "value": "RUB"
+      },
+      "title_name": {
+        "type": "string",
+        "path": "//div[@class='b-title']//text()"
+      },
+      "address": {
+        "type": "list_to_string",
+        "path": "//p[@class='address']//text()"
+      },
+      "description": {
+        "type": "string",
+        "path": "(//div[@class='l-object-description']//p/text())[1]"
+      },
+      "seller_name": {
+        "type": "string",
+        "path": "//div[@class='l-object-description']//div[@class='seller-info']/p/strong[1]/text()"
+      },
+      "company_name": {
+        "type": "string",
+        "path": "(//div[@class='seller-info'])[1]/p/strong/a/text()"
+      },
+      "seller_type": {
+        "type": "string",
+        "path": "//div[@class='l-object-description']//div[@class='seller-info']/p/span/text()"
+      },
+      "date_created": {
+        "type": "date",
+        "path": "(//div[@class='dates']/text())[2]",
+        "regex": ", размещено (.+)",
+        "time": "from string"
+      },
+      "price_total": {
+        "type": "float",
+        "path": "//div[@class='l-page-title']//div[@class='price m-all']//strong/text()[normalize-space()]",
+        "regex": "\\d*"
+      },
+      "rent_price_per_area": {
+        "type": "float",
+        "path": "//div[@class='l-page-title']//div[@class='price m-m2']//strong/text()",
+        "regex": "\\d*"
+      },
+      "price_term": {
+        "type": "list to string",
+        "path": "//div[@class='price m-all']/span/text()[normalize-space()]"
+      },
+      "source_longitude": {
+        "type": "float",
+        "path": "//script[text()[contains(.,'coordinate')]]/text()",
+        "regex": "(?<=\"lon\":)\\d*\\W?\\d+"
+      },
+      "source_latitude": {
+        "type": "float",
+        "path": "//script[text()[contains(.,'coordinate')]]/text()",
+        "regex": "(?<=\"lat\":)\\d*\\W?\\d+"
+      },
+      "metro_station": {
+        "type": "string",
+        "path": "(//div[@class='l-object-address']//p//span//a//text())[2]"
+      },
+      "metro_minutes": {
+        "type": "string",
+        "path": "(//div[@class='l-object-address']//p//small//text())[2]"
+      },
+      "reference_point": {
+        "type": "string",
+        "path": "(//p[@class='lp-title']//a/text())[1]"
+      },
+      "purpose": {
+        "type": "string",
+        "path": "//h3[text()[contains(.,'Информация о')]]/text()",
+        "regex": "Информация о (.+)"
+      },
+      "federal_subject": {
+        "type": "string",
+        "path": "(//li[@itemprop='itemListElement']//a//span//text())[1]"
+      }
+    },
+    "tables": {
+      "table_1": {
+        "_keys_path": "//div[@class='l-house-info']//div[@class='details']//span/text()",
+        "_vals_path": "//div[@class='l-house-info']//div[@class='details']//strong/text()",
+        "key_converter": {
+          "площадь": {
+            "name": [
+              "area_total",
+              "kitchen_area",
+              "area_living",
+              "land_area",
+              "area_land_unit"
+            ],
+            "type": [
+              "float",
+              "float",
+              "float",
+              "float",
+              "string"
+            ],
+            "regex": [
+              "^\\S+\\s",
+              "кухня (\\d*\\W?\\d+)",
+              "жилая (\\d*\\W?\\d+)",
+              "(?<=участок)\\d*\\W?\\d+",
+              "сот|га"
+            ]
+          },
+          "этаж": {
+            "name": ["floor", "floors_cnt"],
+            "type": ["float", "float"],
+            "regex": [".+(?=из)", "(?<=из).+"]
+          },
+          "состояние": {
+            "name": "decoration_type",
+            "type": "string"
+          },
+          "комнаты": {
+            "name": "rooms_cnt",
+            "type": "string",
+            "regex": "(.+)-"
+          },
+          "бытовая_техника": {
+            "name": "is_appliences",
+            "type": "string"
+          },
+          "дом": {
+            "name": [
+              "wall_material",
+              "year_built"
+            ],
+            "type": [
+              "string",
+              "float"
+            ],
+            "regex": [
+              "^\\S+\\s",
+              ", \\d+"
+            ]
+          },
+          "комфорт": {
+            "name": "none",
+            "type": "string"
+          },
+          "лифт": {
+            "name": "is_elevator",
+            "type": "string"
+          },
+          "связь": {
+            "name": "is_internet",
+            "type": "string"
+          },
+          "инфраструктура": {
+            "name": "infrastr_object",
+            "type": "string"
+          },
+          "коммуникации": {
+            "name": "none",
+            "type": "string"
+          },
+          "тип_участка": {
+            "name": "land_category",
+            "type": "string"
+          },
+          "планировка": {
+            "name": "layout_type",
+            "type": "string"
+          },
+          "этажность": {
+            "name": "floors_cnt",
+            "type": "float",
+            "regex": "^\\d+"
+          },
+          "всего_комнат": {
+            "name": "rooms_cnt",
+            "type": "float",
+            "regex": "^\\d+"
+          },
+          "безопасность": {
+            "name": "in_save_object",
+            "type": "string"
+          }
+        }
+      },
+      "table_2": {
+        "_keys_path": "//div[@class='l-complex-info']//div[@class='details']//span/text()",
+        "_vals_path": "//div[@class='l-complex-info']//div[@class='details']//strong/text()",
+        "key_converter": {
+
+          "готовность": {
+            "name": "none",
+            "type": "float"
+          },
+          "класс_жилья": {
+            "name": "object_class",
+            "type": "string"
+          },
+          "материал_стен": {
+            "name": "wall_material",
+            "type": "string"
+          },
+          "отделка": {
+            "name": "decoration_type",
+            "type": "string"
+          },
+          "паркинг": {
+            "name": "parking_cnt",
+            "type": "string"
+          },
+          "количество_квартир": {
+            "name": "none",
+            "type": "string"
+          },
+          "безопасность": {
+            "name": "in_save_object",
+            "type": "string"
+          },
+          "всего_комнат": {
+            "name": "rooms_cnt",
+            "type": "float",
+            "regex": "^\\d+"
+          },
+          "этажность": {
+            "name": "floors_cnt",
+            "type": "string"
+          },
+          "высота_потолка": {
+            "name": "ceiling_height",
+            "type": "float",
+            "regex": "^\\d*\\W?\\d+"
+          },
+          "тип_зданий": {
+            "name": "building_type",
+            "type": "string"
+          },
+          "территория": {
+            "name": "none",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "follow": [
+                {
+                    "url_constructor": {
+                        "change_path": {
+                            "type": "string",
+                            "path": "//script[contains(text(),'phoneNumberUrl')]/text()",
+                            "regex": "phoneNumberUrl\":\"(.*?)\"__first__"
+                        }
+                    },
+                    "fields": {
+                        "phone": {
+                            "type": "phone",
+                            "path": "phones"
+                        }
+                    },
+                    "headers": {
+                        "User-Agent": {
+                            "type": "string",
+                            "value": "false"
+                        },
+                        "Accept": {
+                            "type": "string",
+                            "value": "false"
+                        },
+                        "Accept-Language": {
+                            "type": "string",
+                            "value": "false"
+                        },
+                        "Accept-Encoding": {
+                            "type": "string",
+                            "value": "gzip"
+                        },
+                        "Referer": {
+                            "type": "string",
+                            "value": "false"
+                        },
+                        "Cookie": {
+                            "type": "string",
+                            "value": "_ym_uid=1550754199151137830; _ym_d=1550754199; __utmc=152112358; _fbp=fb.1.1550754199349.1776689523; _ga=GA1.2.867185631.1550754199; _ga=GA1.3.867185631.1550754199; __cfduid=d5a7c6f37dce603d5d73884e5d998ab271558519749; __utmz=152112358.1558604584.13.2.utmcsr=cre.mirkvartir.ru|utmccn=(referral)|utmcmd=referral|utmcct=/221146321/; _gid=GA1.2.1129475475.1559817830; mkab=0; _gid=GA1.3.1129475475.1559817830; __utma=152112358.867185631.1550754199.1559823042.1559902242.25; _ym_visorc_38620740=w; _ym_isad=1; __utmt_UA-3246178-2=1; activeMain=kurgan; __utmb=152112358.9.10.1559902242; _gat_UA-41435009-1=1"
+                        }
+                    },
+                    "methods": {
+                        "content_type": "json",
+                        "filter_duplicates": false,
+                        "allowed_domains": [],
+                        "proxy_settings": {
+                            "types": [
+                                "https"
+                            ],
+                            "amount": 10000,
+                            "save": true
+                        }
+                    }
+                }
+            ]
+
+  }
+}
+
