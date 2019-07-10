@@ -1155,7 +1155,7 @@
       "item_urls": {
         "path": "//div[@class = 'objects-list__wrapper flex flex--wrap w-100']/a/@href",
         "methods": {
-          "save_cookies": true, "filter_duplicates": false
+          "save_cookies": false, "filter_duplicates": false
         }
       }
     }
