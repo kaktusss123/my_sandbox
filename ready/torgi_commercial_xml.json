@@ -1,23 +1,23 @@
 {
-  "_task_id": "TORGI",
+  "_task_id": "TORGI_TO_CSV_BIG_3",
   "_start_urls": [
-    "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=1&publishDateFrom=20190601T0000"
+    "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=1&publishDateFrom=20180601T0000"
   ],
-  "_segment": "test",
-  "_operation": "test",
+  "_segment": "Коммерческая недвижимость",
+  "_operation": "",
   "_federal_subject": "all",
   "_source": "torgi.gov.ru",
   "global_settings": {
-    "CONCURRENT_REQUESTS": 200,
+    "CONCURRENT_REQUESTS": 186,
     "DOWNLOAD_TIMEOUT": 20,
     "SPLASH_URL": "http://0.0.0.0:8050",
     "LOG_LEVEL": "INFO",
     "AUTOTHROTTLE_ENABLED": true,
     "AUTOTHROTTLE_START_DELAY": 1.0,
     "AUTOTHROTTLE_MAX_DELAY": 20,
-    "AUTOTHROTTLE_TARGET_CONCURRENCY": 200,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 186,
     "HTTPERROR_ALLOWED_CODES": [],
-    "CONCURRENT_REQUESTS_PER_DOMAIN": 200,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 186,
     "RETRY_ENABLED": true,
     "RETRY_HTTP_CODES": [
       500,
@@ -64,7 +64,8 @@
   ],
   "sitemap_urls": {
     "start": [
-      "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=1&publishDateFrom=20190601T0000"
+      "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=1&publishDateFrom=20180601T0000",
+      "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=1&publishDateFrom=20180601T0000"
     ],
     "type": "pagination",
     "target": "pagination",
