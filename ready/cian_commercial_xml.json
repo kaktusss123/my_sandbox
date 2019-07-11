@@ -17,7 +17,7 @@
         "AUTOTHROTTLE_TARGET_CONCURRENCY" : 1000,
         "HTTPERROR_ALLOWED_CODES" : [],
         "RETRY_ENABLED" : true,
-        "RETRY_TIMES" : 20,
+        "RETRY_TIMES" : 30,
         "RETRY_HTTP_CODES" : [
             500,
             503,
