@@ -402,7 +402,8 @@
                     "path": "(//li[@class='active page-item']/following-sibling::li[1]/a/@href)[1]"
                 },
                 "item_urls": {
-                    "path": "//article[contains(@class,'adoc-item')]/a/@href"
+                    "path": "//article[contains(@class,'adoc-item')]/a/@href",
+                    "methods":{"filter_duplicates": false}
                 }
             }
         ],
