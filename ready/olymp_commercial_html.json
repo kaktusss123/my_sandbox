@@ -1,8 +1,11 @@
 {
     "_comment": "",
-    "_task_id": "olymp_ver_1",
+    "_task_id": "OLYMP_ver2",
     "_start_urls": [
-        "http://olymprealty.ru/sale/kommercheskaya-nedvizhimost/"
+        "http://olymprealty.ru/sale/kommercheskaya-nedvizhimost/",
+        "http://olymprealty.ru/sale/zdanie-i-torgovoe-pomeschenie/",
+        "http://olymprealty.ru/rent/kommercheskaya-nedvizhimost/",
+        "http://olymprealty.ru/rent/zdanie-i-torgovoe-pomeschenie/"
     ],
     "_segment": "Коммерческая Недвижимость",
     "_operation": "",
