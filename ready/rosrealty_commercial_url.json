@@ -328,8 +328,8 @@
                     "operations": []
                 },
                 "operation": {
-                    "type": "string",
-                    "path": "(//span[@itemprop='title']/text())[3]",
+                    "type": "list to string",
+                    "path": "(//span[@itemprop='title']/text())",
                     "regex": "Снять|Купить",
                     "operations": []
                 },
@@ -363,6 +363,31 @@
                     "type": "string",
                     "path": "//p[@class='pbig_gray']/text()",
                     "regex": "за кв.м.|за сотку|за га",
+                    "operations": []
+                },
+                "area_total":{
+                    "type": "float",
+                    "path": "//td/p[contains(text(),'общая площадь')]/text()",
+                    "regex": "(?<=:\\s)(.*)(?=\\sк)"
+                },
+                "date_created": {
+                    "type": "date",
+                    "path": "//td/p[contains(text(),'добавлено')]/text()",
+                    "time": "from string",
+                    "regex": "\\d\\d.\\d\\d.\\d\\d\\d\\d",
+                    "operations": []
+                },          
+                "date_updated": {
+                    "type": "date",
+                    "path": "//td/p[contains(text(),'обновлено')]/text()",
+                    "time": "from string",
+                    "regex": "\\d\\d.\\d\\d.\\d\\d\\d\\d",
+                    "operations": []
+                },
+                "building_type": {
+                    "type": "string",
+                    "path": "//td/p[contains(text(),'тип недвижимости')]/a/text()",
+                    "regex": "(?<=:\\s)(.*)",
                     "operations": []
                 }
             },
@@ -566,12 +591,6 @@
                             "name": "kitchen_area",
                             "regex": "\\d*\\W+\\d+"
                         },
-                        "добавлено": {
-                            "type": "date",
-                            "time": "from string",
-                            "name": "date_created",
-                            "regex": "(?<=добавлено:).+(?=<)"
-                        },
                         "материал": {
                             "type": "string",
                             "name": "none"
@@ -730,25 +749,6 @@
                             "name": "is_pre_pay",
                             "regex": "(?<=предоплата:).+(?=<)"
                         },
-                        "тип_недвижимости": {
-                            "type": "string",
-                            "name": "building_type",
-                            "regex": "(?<=\\\">).+(?=</a)"
-                        },
-                        "общая_площадь": {
-                            "type": [
-                                "float",
-                                "string"
-                            ],
-                            "name": [
-                                "area_total",
-                                "area_unit"
-                            ],
-                            "regex": [
-                                "\\d*\\W?\\d+",
-                                "кв.м.|м2|м"
-                            ]
-                        },
                         "2комнатная": {
                             "type": "float",
                             "name": "rooms_cnt",
@@ -800,12 +800,6 @@
                         "газ": {
                             "type": "string",
                             "name": "is_gas"
-                        },
-                        "обновлено": {
-                            "type": "date",
-                            "time": "from string",
-                            "name": "date_updated",
-                            "regex": "(?<=обновлено:).+(?=<)"
                         },
                         "требует ремонта": {
                             "type": "string",
