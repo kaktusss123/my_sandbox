@@ -1,16 +1,16 @@
 {
-        "_task_id": "0001-0393-0239&W3100&1&1",
+        "_task_id": "test",
         "project_id": "metaspider",
         "spider_id": "metacrawler",
         "global_settings": {
-            "CONCURRENT_REQUESTS": 1024,
+            "CONCURRENT_REQUESTS": 64,
             "SPLASH_URL": "http://0.0.0.0:8050",
             "LOG_LEVEL": "INFO",
-            "AUTOTHROTTLE_ENABLED": true,
+            "AUTOTHROTTLE_ENABLED": false,
             "AUTOTHROTTLE_START_DELAY": 1,
             "AUTOTHROTTLE_MAX_DELAY": 60,
-            "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
-            "CONCURRENT_REQUESTS_PER_DOMAIN": 256,
+            "AUTOTHROTTLE_TARGET_CONCURRENCY": 64,
+            "CONCURRENT_REQUESTS_PER_DOMAIN": 64,
             "RETRY_ENABLED": true,
             "RETRY_HTTP_CODES": [
                 400,
