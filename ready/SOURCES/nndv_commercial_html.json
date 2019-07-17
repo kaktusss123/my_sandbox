@@ -174,17 +174,14 @@
       "segment_subtype": {
         "type": "string",
         "path": "//label[contains(text(),'Объект')]/following-sibling::div/text()",
-        "regex": "офис|склад|магазин|земельн|производств|торгов",
+        "regex": "офис|склад|магазин|производств|торгов|свободн",
         "operations": []
       },
       "operation": {
         "type": "string",
-        "path": "//div[@itemprop='name']/h2/text()",
-        "regex": "[Пп]род|[Аа]ренд",
-        "operations": [],
-        "string-operations": [
-          "lower"
-        ]
+        "path": "//meta[@property='og:url']/@content",
+        "regex": "(?<=\\/)sdam(?=\\/)|(?<=\\/)prodam(?=\\/)",
+        "operations": []
       },
       "area_total": {
         "type": "float",
@@ -213,6 +210,10 @@
         "type": "string",
         "path": "//label[contains(text(),'Контакт')]/following-sibling::div/text()[2]",
         "regex": "(?<=фирма: ).*"
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now"
       }
     },
     "follow": [

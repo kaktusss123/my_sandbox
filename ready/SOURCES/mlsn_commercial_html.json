@@ -1,0 +1,356 @@
+{
+  "_task_id": "333",
+  "_start_urls": [
+    "https://adigea.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://altay.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://altkray.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://amur.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://arh.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://astrahan.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://brn.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://ufa.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://belgorod.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://bryansk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://ulanude.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://vladimir.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://volgograd.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://vologda.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://vrn.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://dagestan.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://erveyskaya.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://zabaykalsk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://ivanovo.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://ingush.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://irkutsk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://kabardbalk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://kazan.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://kaliningrad.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://kalmikiya.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://kaluga.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://nvkz.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://karachaevo.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://karelia.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://kemerovo.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://kirov.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://komi.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://kostroma.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://krasnodar.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://krasnodarkray.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://krs.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://krym.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://kurgan.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://kursk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://lenobl.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://lipetsk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://magadan.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://yoshkar-ola.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://modrdoviya.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://msk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://mosobl.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://murmansk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://nvrsk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://nenetsk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://nn.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://novgorod.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://nsk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://nizhnevartovsk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://omsk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://orenburg.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://orel.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://penza.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://perm.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://vladivostok.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://pskov.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://rostov.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://ryazan.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://sochi.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://samara.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://spb.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://saratov.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://yakutia.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://sahalin.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://ekb.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://sevastopol.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://osetia.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://smolensk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://stavropol.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://surgut.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://tambov.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://tatarstan.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://tver.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://tomsk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://tula.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://tiva.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://tmn.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://izh.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://ul.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://habarovsk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://hakasia.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://hanti.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://chelyabinsk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://chechnya.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://chuvash.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://chuk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://yamalonenetsk.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://yaroslavl.mlsn.ru/pokupka-kommercheskaja-nedvizhimost/",
+    "https://adigea.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://altay.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://altkray.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://amur.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://arh.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://astrahan.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://brn.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://ufa.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://belgorod.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://bryansk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://ulanude.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://vladimir.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://volgograd.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://vologda.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://vrn.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://dagestan.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://erveyskaya.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://zabaykalsk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://ivanovo.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://ingush.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://irkutsk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://kabardbalk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://kazan.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://kaliningrad.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://kalmikiya.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://kaluga.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://nvkz.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://karachaevo.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://karelia.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://kemerovo.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://kirov.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://komi.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://kostroma.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://krasnodar.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://krasnodarkray.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://krs.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://krym.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://kurgan.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://kursk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://lenobl.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://lipetsk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://magadan.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://yoshkar-ola.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://modrdoviya.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://msk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://mosobl.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://murmansk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://nvrsk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://nenetsk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://nn.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://novgorod.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://nsk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://nizhnevartovsk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://omsk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://orenburg.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://orel.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://penza.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://perm.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://vladivostok.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://pskov.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://rostov.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://ryazan.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://sochi.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://samara.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://spb.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://saratov.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://yakutia.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://sahalin.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://ekb.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://sevastopol.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://osetia.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://smolensk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://stavropol.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://surgut.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://tambov.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://tatarstan.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://tver.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://tomsk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://tula.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://tiva.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://tmn.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://izh.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://ul.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://habarovsk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://hakasia.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://hanti.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://chelyabinsk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://chechnya.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://chuvash.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://chuk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://yamalonenetsk.mlsn.ru/arenda-kommercheskaja-nedvizhimost/",
+    "https://yaroslavl.mlsn.ru/arenda-kommercheskaja-nedvizhimost/"
+  ],
+  "_segment": "Коммерческая Недвижимость",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "https://mlsn.ru",
+  "project_id": "metaspider",
+  "spider_id": "metacrawler",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 1000,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": true,
+    "AUTOTHROTTLE_START_DELAY": 1,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1000,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 1000,
+    "RETRY_ENABLED": true,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      301,
+      302,
+      303,
+      451,
+      307,
+      410,
+      502,
+      407
+    ],
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_TIMES": 20,
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": true,
+    "DOWNLOAD_FAIL_ON_DATALOSS": false,
+    "RANDOM_UA_TYPE": "random",
+    "DOWNLOAD_TIMEOUT": 60,
+    "CLOSESPIDER_ITEMCOUNT": 0,
+    "CLOSESPIDER_ERRORCOUNT": 0
+  },
+  "methods": {
+    "crawling_type": "common",
+    "filter_duplicates": true,
+    "allowed_domains": [],
+    "proxy_settings": {
+      "types": [
+        "https"
+      ],
+      "amount": 10000,
+      "save": false
+    }
+  },
+  "crawl_tree": [
+    {
+      "pagination_urls": {
+        "path": "//link[@rel='next']/@href"
+      },
+      "item_urls": {
+        "path": "//table[@class='table table-bordered grid-view mode-grid'][1]//a[@class='location']/@href"
+      }
+    }
+  ],
+  "item_page": {
+    "fields": {
+      "address_city": {
+        "type": "string",
+        "path": "//head/title/text()",
+        "regex": "(?<=MLSN\\.RU\\s).+"
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now"
+      },
+      "federal_subject": {
+        "type": "string",
+        "path": ""
+      },
+      "price_total": {
+        "type": "float",
+        "path": "//div[@class='ColumnLeft__base']//span[@class='Price__base']/text()",
+        "regex": "\\d+ ?\\d* ?\\d*"
+      },
+      "address": {
+        "type": "string",
+        "path": "//span[@itemprop='name']//span[2]/text()"
+      },
+      "segment_subtype": {
+        "type": "string",
+        "path": "//span[@itemprop='name']//span[1]/text()",
+        "regex": "[Оо]фис|[Сс]клад|[Тт]оргов|[Сс]вободн",
+        "string-operations": ["lower"]
+      },
+      "operation": {
+        "type": "string",
+        "path": "//head/title/text()",
+        "regex": "[Пп]род|[Аа]ренд"
+      },
+      "area_total": {
+        "type": "float",
+        "path": "//span[@itemprop='name']//span[1]/text()",
+        "regex": "\\d+(?=\\sм)"
+      },
+      "description": {
+        "type": "string",
+        "path": "//div[@itemprop='description']//p/text()"
+      },
+      "rent_price_per_area": {
+        "type": "float",
+        "path": "//div[@class='PropertyHeader__priceAddition typography__bodySmall fonts__mainFont']/text()",
+        "regex": "\\d+"
+      },
+      "date_created": {
+        "type": "date",
+        "time": "from string",
+        "path": "//div[@class='PropertyStats__propertyStatistics typography__bodySmall fonts__mainFont']/div[3]/span/text()"
+      },
+      "date_updated": {
+        "type": "date",
+        "time": "from string",
+        "path": "//div[@class='PropertyStats__propertyStatistics typography__bodySmall fonts__mainFont']/div[4]/span/text()"
+      },
+      "seller_name": {
+        "type": "string",
+        "path": "//*[contains(@class, 'ContactsCard__contactName')][1]/text()"
+      },
+      "company_name": {
+        "type": "string",
+        "path": "//div[contains(@class, 'ContactsCard__agencyName')][1]/span/text()[3]|//div[contains(@class, 'ContactsCard__agencyName')][1]/a/text()[3]"
+      },
+      "phone": {
+        "type": "phone",
+        "path": "//html/body/script[2]/text()",
+        "regex": "(?<=number\":\")\\d+"
+      }
+    },
+    "tables": {
+      "table_1": {
+        "_keys_path": "//td[@class='ParamsList__paramName typography__bodySmall fonts__mainFont']/text()",
+        "_vals_path": "//td[@class='ParamsList__paramValue typography__body fonts__mainFont']/text()",
+        "key_converter": {
+          "этаж": {
+            "type": "string",
+            "name": "floors"
+          },
+          "первая_линия": {
+            "type": "string",
+            "name": "beach_meters"
+          },
+          "отдельностоящее_здание": {
+            "type": "string",
+            "name": "osz"
+          },
+          "отдельный_вход": {
+            "type": "string",
+            "name": "private_entrance"
+          }
+        }
+      }
+    }
+  }
+}
