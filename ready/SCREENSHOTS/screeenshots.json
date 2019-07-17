@@ -1,5 +1,5 @@
 {
-        "_task_id": "test",
+        "_task_id": "W001-0397-0004&S3100&1&1",
         "project_id": "metaspider",
         "spider_id": "metacrawler",
         "global_settings": {
@@ -54,8 +54,6 @@
                 800
             ],
             "HTTPERROR_ALLOWED_CODES": [
-                301,
-                302,
                 404,
                 410
             ],
