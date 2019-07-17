@@ -182,7 +182,9 @@
         "path": "//div[@itemprop='name']/h2/text()",
         "regex": "[Пп]род|[Аа]ренд",
         "operations": [],
-        "string-operations": ["lower"]
+        "string-operations": [
+          "lower"
+        ]
       },
       "area_total": {
         "type": "float",
@@ -208,10 +210,75 @@
         "operations": []
       },
       "company_name": {
-            "type": "string",
-            "path": "//label[contains(text(),'Контакт')]/following-sibling::div/text()[2]",
-            "regex": "(?<=фирма: ).*"
+        "type": "string",
+        "path": "//label[contains(text(),'Контакт')]/following-sibling::div/text()[2]",
+        "regex": "(?<=фирма: ).*"
       }
-    }
+    },
+    "follow": [
+      {
+        "url_constructor": {
+          "insert": {
+            "place_to_insert": {
+              "type": "string",
+              "path": "//meta[@property='og:url']/@content"
+            }
+          }
+        },
+        "fields": {
+          "phone": {
+            "type": "phone",
+            "regex": "(?<=\"tel:).+(?=\"><i)"
+          }
+        },
+        "post_params": {
+          "fields": {
+            "__VIEWSTATE": {
+              "type": "string",
+              "path": "//input[@name='__VIEWSTATE']/@value"
+            },
+            "__CALLBACKID": {
+              "type": "string",
+              "value": "ctl00$Content$ctl00$ctl04$cpShowPhone"
+            },
+            "__EVENTVALIDATION": {
+              "type": "string",
+              "path": "//input[@name='__EVENTVALIDATION']/@value"
+            },
+            "__VIEWSTATEGENERATOR": {
+              "type": "string",
+              "path": "//input[@name='__VIEWSTATEGENERATOR']/@value"
+            },
+            "ctl00$hiddenParam": {
+              "type": "string",
+              "value": ""
+            },
+            "ctl00$ctl05$ctl09$votesRadio": {
+              "type": "string",
+              "value": ""
+            },
+            "__CALLBACKPARAM": {
+              "type": "string",
+              "path": "concat('c0:', substring-before(substring-after(string(//form[@id='form1']/@action), '/'), '.'), ';4;')"
+            }
+          }
+        },
+        "methods": {
+          "crawling_type": "post",
+          "content_type": "html",
+          "filter_duplicates": false,
+          "allowed_domains": [],
+          "proxy_settings": {
+            "types": [
+              "https"
+            ],
+            "amount": 10000,
+            "save": true
+          },
+          "save_cookies": true
+        },
+        "url": "place_to_insert"
+      }
+    ]
   }
 }
