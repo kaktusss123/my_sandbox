@@ -124,6 +124,13 @@
                 "regex": "(?<=введена )([^;]*)(?=\\,)",
                 "operations": []
             },
+            "date_updated": {
+                "type": "date",
+                "path": "(//td[@id = 'right']/div[@align ='right']/text())[1]",
+                "time": "from string",
+                "regex": "(?<=изменена )([^;]*)",
+                "operations": []
+            },
             "title_name": {
                 "type": "list to string",
                 "path": "//span[@class ='title indentright']//text()",
