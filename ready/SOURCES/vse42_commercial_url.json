@@ -155,6 +155,13 @@
                   "time": "from string",
                   "regex": "(?<=: )(.*)",
                   "operations": []
+                 },
+                "date_updated": {
+                  "type": "date",
+                  "path": "//span[@class='afterheader']/span[2]/text()",
+                  "time": "from string",
+                  "regex": "(?<=: )(.*)",
+                  "operations": []
                  }
 
             },
