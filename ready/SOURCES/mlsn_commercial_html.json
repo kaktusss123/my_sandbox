@@ -266,10 +266,6 @@
         "type": "date",
         "time": "now"
       },
-      "federal_subject": {
-        "type": "string",
-        "path": ""
-      },
       "price_total": {
         "type": "float",
         "path": "//div[@class='ColumnLeft__base']//span[@class='Price__base']/text()",
