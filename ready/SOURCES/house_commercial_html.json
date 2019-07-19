@@ -19,8 +19,7 @@
         "http://tulahouse.ru/catalog/offices/arenda/",
         "http://tulahouse.ru/catalog/production/prodazha/",
         "http://tulahouse.ru/catalog/production/arenda/",
-        "http://tulahouse.ru/catalog/biznes/prodazha_gotovogo_biznesa/",
-        "http://tulahouse.ru/catalog/Garazhi/Prodazha/",
+        "http://tulahouse.ru/catalog/garazhi/prodazha/",
         "http://tulahouse.ru/catalog/Garazhi/Arenda_predlozhenie/",
 
         "http://vladimirhouse.ru/catalog/trade/prodazha/",
@@ -30,20 +29,18 @@
         "http://vladimirhouse.ru/catalog/offices/arenda/",
         "http://vladimirhouse.ru/catalog/production/prodazha/",
         "http://vladimirhouse.ru/catalog/production/arenda/",
-        "http://vladimirhouse.ru/catalog/biznes/prodazha_gotovogo_biznesa/",
         "http://vladimirhouse.ru/catalog/Garazhi/Prodazha/",
-        "http://vladimirhouse.ru/catalog/Garazhi/Arenda_predlozhenie/",
+        "http://vladimirhouse.ru/catalog/garazhi/arenda_predlozheni/",
 
         "http://ryazanhouse.ru/catalog/trade/prodazha/",
         "http://ryazanhouse.ru/catalog/trade/arenda/",
-        "http://ryazanhouse.ru/catalog/appartments/kvartiry_pod_kommertsiju/",
+        "http://www.ryazanhouse.ru/catalog/kvartiry/kvartiry_pod_kommertsiju/",
         "http://ryazanhouse.ru/catalog/ofisy/prodazha/",
         "http://ryazanhouse.ru/catalog/ofisy/arenda/",
         "http://ryazanhouse.ru/catalog/proizvodstva_i_sklady/prodazha/",
         "http://ryazanhouse.ru/catalog/proizvodstva_i_sklady/arenda/",
-        "http://ryazanhouse.ru/catalog/biznes/prodazha_gotovogo_biznesa/",
         "http://ryazanhouse.ru/catalog/Garazhi/Prodazha/",
-        "http://ryazanhouse.ru/catalog/Garazhi/Arenda_predlozhenie/"
+        "http://ryazanhouse.ru/catalog/garazhi/arenda_predlozheni/"
 
     ],
   "_segment": "Коммерческая недвижимость",
@@ -117,14 +114,7 @@
             },
 			"date_created" : {
                 "type" : "date",
-                "path": "//div[@class='item-properties-extra']/div/p[contains(text(),'Размещено')]/text()",
-				"regex" : "(?<=:).+",
-				"time" : "from string"
-            },
-			"date_updated" : {
-                "type" : "date",
-                "path": "//div[@class='item-properties-extra']/div/p[contains(text(),'Обновлено')]/text()",
-				"regex" : "(?<=:).+",
+                "path": "//td[@class='title' and contains(text(), 'Дата')]/following-sibling::td/text()",
 				"time" : "from string"
             },
 			"description" : {
@@ -134,7 +124,7 @@
 			"price" : {
                 "type" : "float",
 				"path": "//td[@class='title-price']/div/text()",
-				"regex" : "\\d+|\\s|\\.|\\,"
+				"regex" : "[\\d|\\s|\\,|\\.]+"
             },
 			"price_currency" : {
                 "type" : "string",
@@ -185,7 +175,7 @@
 						"type" : "float",
 						"regex": "(?<=td>)\\d+"
 					},
-					"общая_площадь": {
+					"площадь": {
 						"name": "area_total",
 						"type" : "float",
 						"regex" : "(?<=td>)\\d*\\W?\\d+"
