@@ -1,7 +1,7 @@
 {
     "_task_id" : "DOM43_2",
     "_start_urls" : [
-		"https://dom43.ru/realty/search/?realtor=&operation=sell&object_type=commercial",
+        "https://dom43.ru/realty/search/?realtor=&operation=sell&object_type=commercial",
         "https://dom43.ru/realty/search/?realtor=&operation=rent&object_type=commercial",
         "https://dom43.ru/realty/search/?realtor=&operation=sell&object_type=garage",
         "https://dom43.ru/realty/search/?realtor=&operation=rent&object_type=garage"
@@ -58,7 +58,7 @@
             "methods": {"filter_duplicates": true}
         },
         "item_urls": {
-            "path": "//div[@class='property-card-grid__title']/a/@href",
+            "path": "//a[@class=\"property-card__link\"]/@href",
             "methods": {"filter_duplicates": false}
         }
     }],
@@ -68,41 +68,41 @@
                 "type" : "date",
                 "time" : "now"
             },
-			"title_name" : {
+            "title_name" : {
                 "type" : "string",
                 "path": "//h1[@id='title']/text()"
             },
             "operation": {
-				"type" : "string",
-				"path": "//h1[@id='title']/text()",
+                "type" : "string",
+                "path": "//h1[@id='title']/text()",
                 "regex": "продаж|аренд"
-			},
-			"description" : {
-				"type" : "list to string",
-				"path": "//div[contains(@class,'realty__description')]/text()[normalize-space()]"
-			},
-			"seller_company" : {
-				"type" : "string",
-				"path": "//div[contains(text(),'Прoдaвeц')]/following-sibling::div/p/text()[normalize-space()]"
-			},
-			"phone" : {
-				"type" : "string",
-				"path": "//div[@id='phone-number']/text()"
-			},
+            },
+            "description" : {
+                "type" : "list to string",
+                "path": "//div[contains(@class, 'realty__description')]/p/text()"
+            },
+            "seller_company" : {
+                "type" : "string",
+                "path": "//div[contains(text(),'Прoдaвeц')]/following-sibling::div/p/text()[normalize-space()]"
+            },
+            "phone" : {
+                "type" : "string",
+                "path": "//div[@id='phone-number']/text()"
+            },
             "address" : {
-				"type" : "string",
-				"path": "//p[@id='realty-address']/text()"
-			},
+                "type" : "string",
+                "path": "//p[@id='realty-address']/text()"
+            },
             "phone_comment" : {
-				"type" : "string",
-				"value": "нужно развернуть телефон"
-			}
+                "type" : "string",
+                "value": "нужно развернуть телефон"
+            }
         },
-		 "tables" : {
-			"table_1" : {
+         "tables" : {
+            "table_1" : {
                 "_keys_path" : "//div[contains(@class,'realty__fields')]/p/strong/text()[normalize-space()]",
                 "_vals_path" : "//div[contains(@class,'realty__fields')]/p/text()[normalize-space()]",
-				"key_converter" : {
+                "key_converter" : {
                     "общая_площадь":{
                         "type": ["float", "string"],
                         "name": ["area_total", "area_unit"],
@@ -114,7 +114,8 @@
                     },
                     "тип":{
                         "type": "string",
-                        "name": "type"
+                        "name": "purpose",
+                        "regex": "[Мм]ашином|[Тт]оргов|[Пп]роизв|[Сс]клад|[Сс]вободн|[Гг]араж|[Оо]фис"
                     },
                     "микрорайон_г_кирова":{
                         "type": "string",
@@ -126,9 +127,9 @@
                         "regex": "\\d*\\W?\\d+"
                     }
                 }
-				}
-			}
-		}
+                }
+            }
+        }
     }
 
 

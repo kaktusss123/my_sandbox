@@ -88,7 +88,7 @@
             "area_total": {
                 "type": "float",
                 "path": "//i[@class='area']/../../p/text()",
-                "regex": "(.*)(?=\\s)",
+                "regex": "(\\d*)(?=\\s)",
                 "operations": []
             },
             "date_info": {
@@ -134,11 +134,6 @@
             "phone": {
                 "type": "list to string",
                 "path": "//div[@class='tels']/p/text()",
-                "operations": []
-            },
-            "seller_name": {
-                "type": "string",
-                "path": "//div[@class='item-contacts-right']/p/text()",
                 "operations": []
             },
             "seller_name": {
