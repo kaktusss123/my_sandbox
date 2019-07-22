@@ -1,0 +1,371 @@
+{
+  "_task_id": "22.07.2019",
+  "_start_urls": [],
+  "_segment": "",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "CIAN",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 1000,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 1000,
+    "DOWNLOAD_TIMEOUT": 120,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": true,
+    "AUTOTHROTTLE_START_DELAY": 1.0,
+    "AUTOTHROTTLE_MAX_DELAY": 120,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1000,
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_ENABLED": true,
+    "RETRY_TIMES": 30,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      303,
+      302,
+      301,
+      511,
+      407,
+      307,
+      502
+    ],
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": false,
+    "CLOSESPIDER_ITEMCOUNT": 0,
+    "RANDOM_UA_TYPE": "random"
+  },
+  "methods": {
+    "crawling_type": "common",
+    "allowed_domains": [],
+    "filter_duplicates": false,
+    "proxy_settings": {
+      "types": [
+        "https"
+      ]
+    }
+  },
+  "sitemap_urls": {
+    "start": [
+      "https://petropavlovsk-kamchatskiy.cian.ru/robots.txt",
+      "https://cheboksary.cian.ru/robots.txt",
+      "https://krasnoyarsk.cian.ru/robots.txt",
+      "https://hmao.cian.ru/robots.txt",
+      "https://volgograd.cian.ru/robots.txt",
+      "https://groznyy.cian.ru/robots.txt",
+      "https://birobidzhan.cian.ru/robots.txt",
+      "https://belgorod.cian.ru/robots.txt",
+      "https://tomsk.cian.ru/robots.txt",
+      "https://magadan.cian.ru/robots.txt",
+      "https://ulyanovsk.cian.ru/robots.txt",
+      "https://ekb.cian.ru/robots.txt",
+      "https://sevastopol.cian.ru/robots.txt",
+      "https://ivanovo.cian.ru/robots.txt",
+      "https://bryansk.cian.ru/robots.txt",
+      "https://mahachkala.cian.ru/robots.txt",
+      "https://chelyabinsk.cian.ru/robots.txt",
+      "https://tula.cian.ru/robots.txt",
+      "https://irkutsk.cian.ru/robots.txt",
+      "https://orenburg.cian.ru/robots.txt",
+      "https://lipetsk.cian.ru/robots.txt",
+      "https://orel.cian.ru/robots.txt",
+      "https://pskov.cian.ru/robots.txt",
+      "https://barnaul.cian.ru/robots.txt",
+      "https://voronezh.cian.ru/robots.txt",
+      "https://elista.cian.ru/robots.txt",
+      "https://syktyvkar.cian.ru/robots.txt",
+      "https://abakan.cian.ru/robots.txt",
+      "https://chita.cian.ru/robots.txt",
+      "https://kostroma.cian.ru/robots.txt",
+      "https://habarovsk.cian.ru/robots.txt",
+      "https://yuzhno-sahalinsk.cian.ru/robots.txt",
+      "https://vladikavkaz.cian.ru/robots.txt",
+      "https://gorno-altaysk.cian.ru/robots.txt",
+      "https://astrahan.cian.ru/robots.txt",
+      "https://vladimir.cian.ru/robots.txt",
+      "https://ulan-ude.cian.ru/robots.txt",
+      "https://saransk.cian.ru/robots.txt",
+      "https://tver.cian.ru/robots.txt",
+      "https://izhevsk.cian.ru/robots.txt",
+      "https://anadyr.cian.ru/robots.txt",
+      "https://kaliningrad.cian.ru/robots.txt",
+      "https://nalchik.cian.ru/robots.txt",
+      "https://blagoveschensk.cian.ru/robots.txt",
+      "https://murmansk.cian.ru/robots.txt",
+      "https://vladivostok.cian.ru/robots.txt",
+      "https://saratov.cian.ru/robots.txt",
+      "https://omsk.cian.ru/robots.txt",
+      "https://www.cian.ru/robots.txt",
+      "https://samara.cian.ru/robots.txt",
+      "https://perm.cian.ru/robots.txt",
+      "https://kursk.cian.ru/robots.txt",
+      "https://cherkessk.cian.ru/robots.txt",
+      "https://smolensk.cian.ru/robots.txt",
+      "https://yaroslavl.cian.ru/robots.txt",
+      "https://kaluga.cian.ru/robots.txt",
+      "https://novgorod.cian.ru/robots.txt",
+      "https://maykop.cian.ru/robots.txt",
+      "https://nazran.cian.ru/robots.txt",
+      "https://yoshkar-ola.cian.ru/robots.txt",
+      "https://tambov.cian.ru/robots.txt",
+      "https://yanao.cian.ru/robots.txt",
+      "https://kirov.cian.ru/robots.txt",
+      "https://ryazan.cian.ru/robots.txt",
+      "https://vologda.cian.ru/robots.txt",
+      "https://spb.cian.ru/robots.txt",
+      "https://naryan-mar.cian.ru/robots.txt",
+      "https://nn.cian.ru/robots.txt",
+      "https://arhangelsk.cian.ru/robots.txt",
+      "https://kurgan.cian.ru/robots.txt",
+      "https://novosibirsk.cian.ru/robots.txt",
+      "https://rostov.cian.ru/robots.txt",
+      "https://kazan.cian.ru/robots.txt",
+      "https://kyzyl.cian.ru/robots.txt",
+      "https://tyumen.cian.ru/robots.txt",
+      "https://petrozavodsk.cian.ru/robots.txt",
+      "https://kemerovo.cian.ru/robots.txt",
+      "https://penza.cian.ru/robots.txt",
+      "https://yakutsk.cian.ru/robots.txt",
+      "https://stavropol.cian.ru/robots.txt",
+      "https://krasnodar.cian.ru/robots.txt",
+      "https://ufa.cian.ru/robots.txt",
+      "https://krym.cian.ru/robots.txt"
+    ],
+    "type": "robots",
+    "target": "robots",
+    "crawl_tree": {
+      "robots": {
+        "targets": {
+          "sitemap": {
+            "type": "sitemap"
+          }
+        }
+      },
+      "sitemap": {
+        "targets": {
+          "sitemap_2": {
+            "type": "sitemap"
+          }
+        }
+      },
+      "sitemap_2": {
+        "targets": {
+          "pagination": {
+            "type": "pagination",
+            "filters": [
+              "zemelniy-uchastok",
+              "kommercheskiy-uchastok",
+              "dachniy-uchastok",
+              "kupit-uchastok"
+            ]
+          }
+        }
+      },
+      "pagination": {
+        "targets": {
+          "pagination": {
+            "type": "pagination",
+            "content_type": "json",
+            "path": "//li[contains(@class, 'list-item--active')]/following-sibling::li[1]/a/@href"
+          },
+          "item": {
+            "type": "item",
+            "path": "//a[@class=\"link_component-link-xUBVR4w6\"]/@href"
+          },
+          "item_2": {
+            "type": "item",
+            "path": "//div[contains(@class, 'offer-container')]//*[not(contains(@class, 'addres'))]/a[contains(@class,'header')][1]/@href"
+          }
+        }
+      },
+      "item": {},
+      "item_2": {}
+    }
+  },
+  "crawl_tree": [
+    {
+      "pagination_urls": {
+        "path": "//li[contains(@class, 'list-item--active')]/following-sibling::li[1]/a/@href"
+      },
+      "item_urls": {
+        "path": "//h3[contains(@class,'header-title')]//a[contains(@class,'header')]/@href"
+      }
+    }
+  ],
+  "item_page": {
+    "fields": {
+      "date_info": {
+        "type": "date",
+        "time": "now"
+      },
+      "federal_subject": {
+        "type": "string",
+        "path": "//address[@class='a10a3f92e9--address--140Ec']/a[1]/text()"
+      },
+      "area_total": {
+        "type": "float",
+        "path": "//div[text()='Площадь']/preceding-sibling::div/text()",
+        "regex": "[\\d \\.]+(?= м| сот| га)"
+      },
+      "price_total": {
+        "type": "float",
+        "path": "//span[@itemprop=\"price\"]/text()",
+        "regex": "\\d+"
+      },
+      "price_term": {
+        "type": "string",
+        "path": "//*[@itemprop='price']/@content[normalize-space()]",
+        "regex": "мес|год|ден "
+      },
+      "price_currency": {
+        "type": "string",
+        "path": "//*[@itemprop='priceCurrency']/@content[normalize-space()]",
+        "regex": ".+"
+      },
+      "rent_price_per_area": {
+        "type": "float",
+        "path": "//div[contains(@class,'price_per_meter')]/text()[normalize-space()]",
+        "regex": "^\\d*\\W?\\d*\\W?\\d+"
+      },
+      "price_per_m_term": {
+        "type": "string",
+        "path": "//div[contains(@class,'price_per_meter')]/text()[normalize-space()]",
+        "regex": "мес|год|ден"
+      },
+      "title_name": {
+        "type": "string",
+        "path": "//h1[@class='a10a3f92e9--title--2Widg']/text()"
+      },
+      "address": {
+        "type": "list to string",
+        "path": "//address[@class='a10a3f92e9--address--140Ec']//text()",
+        "regex": "(.+)На"
+      },
+      "metro_station": {
+        "type": "string",
+        "path": "(//a[@class='a10a3f92e9--underground_link--AzxRC']/text())[1]"
+      },
+      "metro_minutes": {
+        "type": "string",
+        "path": "(//span[@class='a10a3f92e9--underground_time--1fKft']//text())[4]"
+      },
+      "description": {
+        "type": "list to string",
+        "path": "//p[@class='a10a3f92e9--description-text--1_Lup']//text()"
+      },
+      "seller": {
+        "type": "string",
+        "path": "//h2[@class='a10a3f92e9--title--2Jh26']/text()"
+      },
+      "seller_name": {
+        "type": "string",
+        "path": "//a[contains(@class,'--name--')]/text()"
+      },
+      "seller_type": {
+        "type": "string",
+        "path": "//span[@class='a10a3f92e9--tag--14rPx a10a3f92e9--tag--JwTf_ a10a3f92e9--tag-pro--2M2Is']/@title"
+      },
+      "agency": {
+            "type": "string",
+            "path": "//h2[@class=\"a10a3f92e9--title--2gUWg\"]/text()"
+      },
+      "phone": {
+        "type": "phone",
+        "path": "//div[@class='a10a3f92e9--print_phones--Y-NKh']//text()"
+      },
+      "date_created": {
+        "type": "date",
+        "path": "//div[@class='a10a3f92e9--container--3nJ0d']/text()",
+        "time": "from string"
+      },
+      "source_longitude": {
+        "type": "float",
+        "path": "//script[text()[contains(.,'coordinate')]]/text()",
+        "regex": "(?<=\"lng\":)(\\d+\\W?\\d+\\W?\\d+)"
+      },
+      "source_latitude": {
+        "type": "float",
+        "path": "//script[text()[contains(.,'coordinate')]]/text()",
+        "regex": "(?<=\"lat\":)(\\d+\\W?\\d+\\W?\\d+)"
+      },
+      "segment": {
+        "type": "string",
+        "path": "//div[contains(@class,'breadcrumbs')]/span[3]/a/span/text()"
+      },
+      "address_city": {
+        "type": "string",
+        "path": "//div[contains(@class,'breadcrumbs')]/span[1]/a/span/text()",
+        "regex": "Недвижимость в (.+)"
+      },
+      "refence_point": {
+        "type": "string",
+        "path": "//div[@class='a10a3f92e9--container--1nBq8']//a/text()"
+      },
+      "operation": {
+        "type": "string",
+        "path": "//div[contains(@class,'breadcrumbs')]/span[3]/a/span/text()",
+        "regex": "Аренда|Продажа"
+      },
+      "addit_comm_condition": {
+        "type": "string",
+        "path": "//p[@class='a10a3f92e9--description--2xRVn']/text()"
+      }
+    },
+    "tables": {
+      "descr": {
+        "_keys_path": "//div[contains(@class,'--info-block--')]//div[contains(@class,'--info-title--')]/text()",
+        "_vals_path": "//div[contains(@class,'--info-block--')]//div[contains(@class,'--info-text--')]/text()",
+        "key_converter": {
+          "площадь": {
+            "name": [
+              "area_object",
+              "area_unit"
+            ],
+            "type": [
+              "float",
+              "string"
+            ],
+            "regex": [
+              "^\\d*\\W?\\d+\\W?\\d+",
+              "[А-Яа-я]+"
+            ]
+          },
+          "статус_земли": {
+            "type": "string",
+            "name": "purpose"
+          }
+        }
+      },
+      "table_5": {
+        "_keys_path": "//ul[@class='a10a3f92e9--container--L-EIV']//li/text()",
+        "_vals_path": "//ul[@class='a10a3f92e9--container--L-EIV']//li/text()",
+        "key_converter": {
+          "электричество": {
+            "name": "is_electricity",
+            "type": "string"
+          },
+          "водоснабжение": {
+            "name": "is_plumbing",
+            "type": "string"
+          },
+          "канализация": {
+            "name": "is_sewage",
+            "type": "string"
+          },
+          "газ": {
+            "name": "is_gas",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
