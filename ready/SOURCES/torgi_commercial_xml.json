@@ -1,25 +1,220 @@
 {
-  "_task_id": "TORGI_TO_CSV_BIG_3",
   "_start_urls": [
     "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=1&publishDateFrom=20180601T0000",
     "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=8&publishDateFrom=20180601T0000"
   ],
-  "_segment": "Коммерческая недвижимость",
-  "_operation": "",
-  "_federal_subject": "all",
+  "methods": {
+    "namespace": {
+      "prefix": "d",
+      "url": "http://torgi.gov.ru/opendata"
+    },
+    "crawling_type": "common",
+    "allowed_domains": [],
+    "content_type": "xml",
+    "proxy_settings": {
+      "types": [
+        "https"
+      ]
+    }
+  },
+  "item_page": {
+    "count": {
+      "type": "list",
+      "path": "//d:lot/d:lotNum/text()",
+      "replace": "*index*"
+    },
+    "fields": {
+      "address_2": {
+        "type": "string",
+        "path": "//d:lot/d:kladrLocation/d:name/text()"
+      },
+      "doc_provide": {
+        "type": "string",
+        "path": "//d:common/d:docProvide/text()"
+      },
+      "price_total": {
+        "type": "float",
+        "path": "//d:startPrice/text()"
+      },
+      "price_sale_total": {
+        "type": "float",
+        "path": "//d:startSalePrice/text()"
+      },      
+      "doc_rate": {
+        "type": "float",
+        "path": "//d:docChargeRateRur/text()"
+      },
+      "price_month_rent": {
+        "type": "float",
+        "path": "//d:lot[*index*]/d:monthPrice/text()"
+      },
+      "address": {
+        "type": "string",
+        "path": "//d:lot/d:location/text()"
+      },
+      "date_created": {
+        "type": "string",
+        "path": "//d:published/text()"
+      },
+      "date_updated": {
+        "type": "string",
+        "path": "//d:common/d:published/text()"
+      },
+      "bid_auction_place": {
+        "type": "string",
+        "path": "//d:common/d:bidAuctionPlace/text()"
+      },
+      "deposit_size": {
+        "type": "float",
+        "path": "//d:lot[*index*]/d:depositSize/text()"
+      },
+      "operation": {
+        "type": "string",
+        "path": "//d:common/d:bidKind/d:name/text()"
+      },
+      "is_subrent": {
+        "type": "float",
+        "path": "//d:lot[*index*]/d:isSubrent/text()"
+      },
+      "rent_per_contract": {
+        "type": "float",
+        "path": "//d:lot[*index*]/d:dealFee/text()"
+      },
+      "trading_status": {
+        "type": "string",
+        "path": "//d:lot[*index*]/d:bidStatus/d:name/text()"
+      },
+      "seller_name": {
+        "type": "string",
+        "path": "//d:bidOrganization/d:fullName/text()"
+      },
+      "ownership_type": {
+        "type": "string",
+        "path": "//d:lot[*index*]/d:propKind/d:name/text()"
+      },
+      "email": {
+        "type": "string",
+        "path": "//d:bidOrganization//d:email/text()"
+      },
+      "bargain_for_msp": {
+        "type": "string",
+        "path": "//d:isOnlySmps/text()"
+      },
+      "rent_price_per_area": {
+        "type": "float",
+        "path": "//d:lot[*index*]/d:startPricePerMonth/text()"
+      },
+      "date_trade": {
+        "type": "string",
+        "path": "//d:common/d:bidAuctionDate/text()"
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now"
+      },
+      "area_total": {
+        "type": "float",
+        "path": "//d:lot[*index*]/d:areaMeters/text()"
+      },
+      "phone": {
+        "type": "string",
+        "path": "//d:bidOrganization//d:phone/text()"
+      },
+      "price_currency": {
+        "type": "string",
+        "path": "//d:lot[*index*]/d:currency/text()"
+      },
+      "date_expire": {
+        "type": "string",
+        "path": "//d:common/d:expireDate/text()"
+      },
+      "fax": {
+        "type": "string",
+        "path": "//d:bidOrganization//d:fax/text()"
+      },
+      "sale_type": {
+        "type": "string",
+        "path": "//d:bidType/d:name/text()"
+      },
+      "contract_term": {
+        "type": "string",
+        "path": "concat(//d:lot[*index*]/d:termYear/text(), ' лет, ', //d:lot[*index*]/d:termMonth/text(), ' месяцев, ', //d:lot[*index*]/d:termDay/text(), ' дней')"
+      },
+      "contract_fee": {
+        "type": "float",
+        "path": "//d:lot[*index*]/d:contractFee/text()"
+      },
+      "price_term": {
+        "type": "string",
+        "path": "//d:lot/d:article/d:name/text()"
+      },
+      "url": {
+        "type": "string",
+        "path": "//d:notificationUrl/text()"
+      },
+      "rent_per_year": {
+        "type": "float",
+        "path": "//d:lot[*index*]/d:yearPrice/text()"
+      },
+      "description": {
+        "type": "string",
+        "path": "//d:lot[*index*]/d:description/text()"
+      },
+      "description_sale": {
+        "type": "string",
+        "path": "//d:lot[*index*]/d:propDesc/text()"
+      },
+      "price_summ": {
+        "type": "float",
+        "path": "//d:startPriceAreaSm/text()"
+      },
+      "object_type": {
+        "type": "string",
+        "path": "//d:lot[*index*]/d:propertyType/d:name/text()"
+      },
+      "is_burdened": {
+        "type": "float",
+        "path": "//d:lot[*index*]/d:isBurdened/text()"
+      },
+      "purpose": {
+        "type": "string",
+        "path": "//d:lot[*index*]/d:mission/text()"
+      }
+    }
+  },
+  "sitemap_urls": {
+    "start": [
+      "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=1&publishDateFrom=20180601T0000",
+      "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=8&publishDateFrom=20180601T0000"
+    ],
+    "type": "pagination",
+    "crawl_tree": {
+      "item": {},
+      "pagination": {
+        "targets": {
+          "item": {
+            "type": "item",
+            "path": "//d:odDetailedHref/text()"
+          }
+        }
+      }
+    },
+    "target": "pagination"
+  },
   "_source": "torgi.gov.ru",
+  "_federal_subject": "all",
+  "crawl_tree": [{
+    "item_urls": {
+      "path": "//d:odDetailedHref/text()"
+    }
+  }],
+  "_operation": "",
+  "_task_id": "TORGI_TO_CSV_BIG_3",
   "global_settings": {
-    "CONCURRENT_REQUESTS": 186,
-    "DOWNLOAD_TIMEOUT": 20,
+    "ROBOTSTXT_OBEY": false,
     "SPLASH_URL": "http://0.0.0.0:8050",
-    "LOG_LEVEL": "INFO",
-    "AUTOTHROTTLE_ENABLED": true,
-    "AUTOTHROTTLE_START_DELAY": 1.0,
-    "AUTOTHROTTLE_MAX_DELAY": 20,
-    "AUTOTHROTTLE_TARGET_CONCURRENCY": 186,
-    "HTTPERROR_ALLOWED_CODES": [],
-    "CONCURRENT_REQUESTS_PER_DOMAIN": 186,
     "RETRY_ENABLED": true,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 186,
     "RETRY_HTTP_CODES": [
       500,
       503,
@@ -35,209 +230,19 @@
       502,
       407
     ],
-    "RETRY_TIMES": 60,
+    "AUTOTHROTTLE_START_DELAY": 1,
     "ROBOTSTXT_ENABLED": false,
-    "ROBOTSTXT_OBEY": false,
     "REDIRECT_ENABLED": true,
+    "CONCURRENT_REQUESTS": 186,
+    "RANDOM_UA_TYPE": "random",
+    "AUTOTHROTTLE_ENABLED": true,
+    "DOWNLOAD_TIMEOUT": 20,
+    "LOG_LEVEL": "INFO",
+    "RETRY_TIMES": 60,
     "COOKIES_ENABLED": false,
-    "RANDOM_UA_TYPE": "random"
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 186,
+    "AUTOTHROTTLE_MAX_DELAY": 20,
+    "HTTPERROR_ALLOWED_CODES": []
   },
-  "methods": {
-    "crawling_type": "common",
-    "content_type": "xml",
-    "allowed_domains": [],
-    "proxy_settings": {
-      "types": [
-        "https"
-      ]
-    },
-    "namespace": {
-      "prefix": "d",
-      "url": "http://torgi.gov.ru/opendata"
-    }
-  },
-  "crawl_tree": [
-    {
-      "item_urls": {
-        "path": "//d:odDetailedHref/text()"
-      }
-    }
-  ],
-  "sitemap_urls": {
-    "start": [
-      "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=1&publishDateFrom=20180601T0000",
-      "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=1&publishDateFrom=20180601T0000"
-    ],
-    "type": "pagination",
-    "target": "pagination",
-    "crawl_tree": {
-      "pagination": {
-        "targets": {
-          "item": {
-            "type": "item",
-            "path": "//d:odDetailedHref/text()"
-          }
-        }
-      },
-      "item": {}
-    }
-  },
-  "item_page": {
-    "count": {
-      "type": "list",
-      "path": "//d:lot/d:lotNum/text()",
-      "replace": "*index*"
-    },
-    "fields": {
-      "date_info": {
-        "type": "date",
-        "time": "now"
-      },
-      "address": {
-        "type": "string",
-        "path": "//d:lot/d:location/text()"
-      },
-      "address_2": {
-        "type": "string",
-        "path": "//d:lot/d:kladrLocation/d:name/text()"
-      },
-      "trading_status": {
-        "type": "string",
-        "path": "//d:lot[*index*]/d:bidStatus/d:name/text()"
-      },
-      "object_type": {
-        "type": "string",
-        "path": "//d:lot[*index*]/d:propertyType/d:name/text()"
-      },
-      "price_term": {
-        "type": "string",
-        "path": "//d:lot/d:article/d:name/text()"
-      },
-      "price_currency": {
-        "type": "string",
-        "path": "//d:lot[*index*]/d:currency/text()"
-      },
-      "price_total": {
-        "path": "//d:startPrice/text()",
-        "type": "float"
-      },
-      "price_summ": {
-        "type": "float",
-        "path": "//d:startPriceAreaSm/text()"
-      },
-      "price_month_rent": {
-        "type": "float",
-        "path": "//d:lot[*index*]/d:monthPrice/text()"
-      },
-      "rent_price_per_area": {
-        "type": "float",
-        "path": "//d:lot[*index*]/d:startPricePerMonth/text()"
-      },
-      "ownership_type": {
-        "type": "string",
-        "path": "//d:lot[*index*]/d:propKind/d:name/text()"
-      },
-      "contract_term": {
-        "type": "string",
-        "path": "concat(//d:lot[*index*]/d:termYear/text(), ' лет, ', //d:lot[*index*]/d:termMonth/text(), ' месяцев, ', //d:lot[*index*]/d:termDay/text(), ' дней')"
-      },
-      "rent_per_year": {
-        "type": "float",
-        "path": "//d:lot[*index*]/d:yearPrice/text()"
-      },
-      "rent_per_contract": {
-        "type": "float",
-        "path": "//d:lot[*index*]/d:dealFee/text()"
-      },
-      "contract_fee": {
-        "type": "float",
-        "path": "//d:lot[*index*]/d:contractFee/text()"
-      },
-      "deposit_size": {
-        "type": "float",
-        "path": "//d:lot[*index*]/d:depositSize/text()"
-      },
-      "is_subrent": {
-        "type": "float",
-        "path": "//d:lot[*index*]/d:isSubrent/text()"
-      },
-      "is_burdened": {
-        "type": "float",
-        "path": "//d:lot[*index*]/d:isBurdened/text()"
-      },
-      "description": {
-        "type": "string",
-        "path": "//d:lot[*index*]/d:description/text()"
-      },
-      "area_total": {
-        "type": "float",
-        "path": "//d:lot[*index*]/d:areaMeters/text()"
-      },
-      "purpose": {
-        "type": "string",
-        "path": "//d:lot[*index*]/d:mission/text()"
-      },
-      "sale_type": {
-        "type": "string",
-        "path": "//d:bidType/d:name/text()"
-      },
-      "date_created": {
-        "type": "string",
-        "path": "//d:published/text()"
-      },
-      "date_updated": {
-        "type": "string",
-        "path": "//d:common/d:published/text()"
-      },
-      "date_expire": {
-        "type": "string",
-        "path": "//d:common/d:expireDate/text()"
-      },
-      "date_trade": {
-        "type": "string",
-        "path": "//d:common/d:bidAuctionDate/text()"
-      },
-      "seller_name": {
-        "type": "string",
-        "path": "//d:bidOrganization/d:fullName/text()"
-      },
-      "bargain_for_msp": {
-        "type": "string",
-        "path": "//d:isOnlySmps/text()"
-      },
-      "doc_rate": {
-        "type": "float",
-        "path": "//d:docChargeRateRur/text()"
-      },
-      "doc_provide": {
-        "type": "string",
-        "path": "//d:common/d:docProvide/text()"
-      },
-      "bid_auction_place": {
-        "type": "string",
-        "path": "//d:common/d:bidAuctionPlace/text()"
-      },
-      "operation": {
-        "type": "string",
-        "path": "//d:common/d:bidKind/d:name/text()"
-      },
-      "phone": {
-        "type": "string",
-        "path": "//d:bidOrganization//d:phone/text()"
-      },
-      "fax": {
-        "type": "string",
-        "path": "//d:bidOrganization//d:fax/text()"
-      },
-      "email": {
-        "type": "string",
-        "path": "//d:bidOrganization//d:email/text()"
-      },
-      "url": {
-        "type": "string",
-        "path": "//d:notificationUrl/text()"
-      }
-
-      }
-    }
-  }
+  "_segment": "Коммерческая недвижимость"
+}
