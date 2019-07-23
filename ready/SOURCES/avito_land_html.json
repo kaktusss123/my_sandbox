@@ -1,0 +1,399 @@
+{
+  "_task_id": "AVITO_SPEED_AMOUNT_TEST_XML",
+  "_start_urls": [
+    "https://www.avito.ru/adygeya/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/altayskiy_kray/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/amurskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/arhangelskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/astrahanskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/bashkortostan/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/belgorodskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/bryanskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/buryatiya/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/chechenskaya_respublika/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/chelyabinskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/chukotskiy_ao/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/chuvashiya/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/dagestan/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/evreyskaya_ao/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/habarovskiy_kray/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/hakasiya/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/hanty-mansiyskiy_ao/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/ingushetiya/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/irkutskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/ivanovskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/kabardino-balkariya/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/kaliningradskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/kalmykiya/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/kaluzhskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/kamchatskiy_kray/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/karachaevo-cherkesiya/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/kareliya/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/kemerovskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/kirovskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/komi/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/kostromskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/krasnodarskiy_kray/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/krasnoyarskiy_kray/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/kurganskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/kurskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/leningradskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/lipetskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/magadanskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/mariy_el/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/mordoviya/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/moskovskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/moskva/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/murmanskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/nenetskiy_ao/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/nizhegorodskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/novgorodskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/novosibirskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/omskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/orenburgskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/orlovskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/penzenskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/permskiy_kray/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/primorskiy_kray/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/pskovskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/respublika_altay/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/respublika_krym/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/rostovskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/ryazanskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/saha_yakutiya/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/sahalinskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/samarskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/sankt-peterburg/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/saratovskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/severnaya_osetiya/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/smolenskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/stavropolskiy_kray/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/sverdlovskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/tambovskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/tatarstan/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/tomskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/tulskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/tverskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/tyumenskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/tyva/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/udmurtiya/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/ulyanovskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/vladimirskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/volgogradskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/vologodskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/voronezhskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/yamalo-nenetskiy_ao/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/yaroslavskaya_oblast/zemelnye_uchastki/prodam",
+    "https://www.avito.ru/zabaykalskiy_kray/zemelnye_uchastki/prodam",
+
+    "https://www.avito.ru/adygeya/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/altayskiy_kray/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/amurskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/arhangelskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/astrahanskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/bashkortostan/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/belgorodskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/bryanskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/buryatiya/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/chechenskaya_respublika/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/chelyabinskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/chukotskiy_ao/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/chuvashiya/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/dagestan/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/evreyskaya_ao/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/habarovskiy_kray/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/hakasiya/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/hanty-mansiyskiy_ao/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/ingushetiya/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/irkutskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/ivanovskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/kabardino-balkariya/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/kaliningradskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/kalmykiya/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/kaluzhskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/kamchatskiy_kray/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/karachaevo-cherkesiya/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/kareliya/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/kemerovskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/kirovskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/komi/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/kostromskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/krasnodarskiy_kray/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/krasnoyarskiy_kray/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/kurganskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/kurskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/leningradskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/lipetskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/magadanskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/mariy_el/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/mordoviya/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/moskovskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/moskva/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/murmanskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/nenetskiy_ao/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/nizhegorodskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/novgorodskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/novosibirskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/omskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/orenburgskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/orlovskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/penzenskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/permskiy_kray/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/primorskiy_kray/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/pskovskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/respublika_altay/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/respublika_krym/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/rostovskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/ryazanskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/saha_yakutiya/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/sahalinskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/samarskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/sankt-peterburg/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/saratovskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/severnaya_osetiya/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/smolenskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/stavropolskiy_kray/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/sverdlovskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/tambovskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/tatarstan/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/tomskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/tulskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/tverskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/tyumenskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/tyva/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/udmurtiya/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/ulyanovskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/vladimirskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/volgogradskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/vologodskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/voronezhskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/yamalo-nenetskiy_ao/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/yaroslavskaya_oblast/zemelnye_uchastki/sdam",
+    "https://www.avito.ru/zabaykalskiy_kray/zemelnye_uchastki/sdam"
+  ],
+  "_segment": "Земельные участки",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "https://www.avito.ru",
+  "project_id": "metaspider",
+  "spider_id": "metacrawler",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 1024,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": false,
+    "AUTOTHROTTLE_START_DELAY": 1,
+    "AUTOTHROTTLE_MAX_DELAY": 20,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
+    "RETRY_ENABLED": true,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      502,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      303,
+      302,
+      301,
+      307,
+      410,
+      451,
+      407
+    ],
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_TIMES": 60,
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": false,
+    "DOWNLOAD_FAIL_ON_DATALOSS": false,
+    "RANDOM_UA_TYPE": "random",
+    "DOWNLOAD_TIMEOUT": 20,
+    "CLOSESPIDER_ITEMCOUNT": 0,
+    "CLOSESPIDER_ERRORCOUNT": 0
+  },
+  "methods": {
+    "crawling_type": "common",
+    "filter_duplicates": true,
+    "allowed_domains": [
+      "avito.ru"
+    ],
+    "proxy_settings": {
+      "types": [
+        "https"
+      ],
+      "amount": 10000,
+      "save": false
+    }
+  },
+  "crawl_tree": [
+    {
+      "pagination_urls": {
+        "path": "//span[@class='pagination-page pagination-page_current']/following-sibling::a[1]/@href"
+      },
+      "item_urls": {
+        "path": "//a[@class='item-description-title-link']/@href"
+      }
+    }
+  ],
+  "item_page": {
+    "fields": {
+      "federal_subject": {
+        "type": "string",
+        "path": "/html/head/title/text()",
+        "regex": "[Аа]дыг|[Аа]лтайск|[Аа]мурск|[Аа]рханг|[Аа]страх|[Бб]ашк|[Бб]елгор|[Бб]рянск|[Бб]урят|[Чч]еч|[Чч]еляб|[Чч]укот|[Чч]уваш|[Дд]агестан|[Ее]врейск|[Хх]абаров|[Хх]акас|[Хх]анты|[Ии]нгушет|[Ии]ркутс|[Ии]вановс|[Кк]абард|[Кк]алининг|[Кк]алмык|[Кк]алу|[Кк]амчатск|[Кк]арачаев|[Кк]арел|[Кк]емеров|[Кк]иров|[Кк]оми|[Кк]остромск|[Кк]раснодар|[Кк]расноярск|[Кк]урганс|[Кк]урск|[Лл]енингр|[Лл]ипецк|[Мм]агадан|[Мм]арий|[Мм]ордов|[Мм]осковск|[Мм]оскв|[Мм]урман|[Нн]енецк|[Нн]ижегор|[Нн]овгород|[Нн]овосибир|[Оо]мск|[Оо]ренбу|[Оо]рловс|[Пп]ензен|[Пп]ермск|[Пп]риморск|[Пп]сков|[Аа]лтай|[Кк]рым|[Рр]остовск|[Рр]язан|[Яя]кут|[Сс]ахалин|[Сс]амарск|[Сс]анкт|[Сс]аратов|[Оо]сети|[Сс]моленск|[Сс]тавропол|[Сс]вердлов|[Тт]амбов|[Тт]атарстан|[Тт]омск|[Тт]ул|[Тт]вер|[Тт]юмен|[Тт]ыва|[Уу]дмурт|[Уу]льян|[Вв]ладимир|[Вв]олгоград|[Вв]олог|[Вв]оронеж|[Яя]мал|[Яя]росл|[Зз]абайкал",
+        "operations": []
+      },
+      "price_term": {
+        "type": "string",
+        "path": "(//span[@itemprop='priceCurrency']/following-sibling::text())[1]",
+        "regex": "в месяц|в год|в неделю|еженедельно|понедельно|ежедневно|в мес|/год|/мес",
+        "operations": []
+      },
+      "source_latitude": {
+        "type": "float",
+        "path": "//div[@class='b-search-map expanded item-map-wrapper js-item-map-wrapper']/@data-map-lat",
+        "operations": []
+      },
+      "price_currency": {
+        "type": "string",
+        "path": "//div[@class='sticky-header-prop sticky-header-price']//span[@itemprop='priceCurrency']/@content",
+        "operations": []
+      },
+      "address": {
+        "type": "string",
+        "path": "//span[@itemprop='streetAddress']/text()",
+        "operations": []
+      },
+      "purpose": {
+        "type": "string",
+        "path": "//div[@class='breadcrumbs js-breadcrumbs ']/a[last()]/text()",
+        "operations": []
+      },
+      "source_longitude": {
+        "type": "float",
+        "path": "//div[@class='b-search-map expanded item-map-wrapper js-item-map-wrapper']/@data-map-lon",
+        "operations": []
+      },
+      "seller_name": {
+        "type": "string",
+        "path": "(//div[@class='seller-info-value']//a/text())[1]",
+        "operations": []
+      },
+      "company_name": {
+        "type": "string",
+        "path": "(//div[@class='seller-info-col']/div[@class='seller-info-value']/following-sibling::div[1]/text())[1]",
+        "operations": []
+      },
+      "addit_comm_condition": {
+        "type": "list to string",
+        "path": "//div[@class='item-price-sub-price']/text()",
+        "operations": []
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now",
+        "operations": []
+      },
+      "operation": {
+        "type": "list to string",
+        "path": "//a[@class='js-breadcrumbs-link js-breadcrumbs-link-interaction']/text()",
+        "regex": "Снять|Купить",
+        "operations": []
+      },
+      "title_name": {
+        "type": "string",
+        "path": "//span[@class='title-info-title-text']/text()",
+        "operations": []
+      },
+      "price_total": {
+        "type": "float",
+        "path": "//div[@class='sticky-header-prop sticky-header-price']//span[@class='js-item-price']/@content",
+        "operations": []
+      },
+      "date_created": {
+        "type": "date",
+        "path": "//div[@class='title-info-metadata-item-redesign']/text()",
+        "time": "from string",
+        "regex": "(?<=азмещено\\s).+",
+        "operations": []
+      },
+      "description": {
+        "type": "list to string",
+        "path": "//div[contains(@itemprop,'description')]//text()",
+        "operations": []
+      },
+      "address_city": {
+        "type": "string",
+        "path": "//meta[@itemprop='addressLocality']/@content",
+        "operations": []
+      }
+    },
+    "tables": {
+      "table": {
+        "_keys_path": "//span[@class='item-params-label']/text()",
+        "_vals_path": "//span[@class='item-params-label']/../text()[2]",
+        "key_converter": {
+          "площадь": {
+            "type": ["float", "string"],
+            "name": ["area_total", "area_land_unit"],
+            "regex": ["[\\d\\.,\\s]+(?=\\s)", "сот|га|гектар|м2|метр"]
+          },
+          "расстояние_до_города": {
+            "type": "float",
+            "name": "from_the_town"
+          },
+          "класс_здания": {
+            "type": "string",
+            "name": "object_class"
+          },
+          "назначение_участка": {
+            "type": "string",
+            "name": "purpose"
+          }
+        }
+      }
+    },
+    "follow": [
+      {
+        "url_constructor": {
+          "insert": {
+            "www.avito.ru": {
+              "type": "string",
+              "value": "m.avito.ru"
+            }
+          }
+        },
+        "fields": {
+          "phone": {
+            "type": "phone",
+            "path": "//a[contains(@href,'tel:')]/@href"
+          }
+        },
+        "headers": {
+          "User-Agent": {
+            "type": "string",
+            "value": "false"
+          }
+        },
+        "methods": {
+          "crawling_type": "common",
+          "filter_duplicates": false,
+          "allowed_domains": [],
+          "proxy_settings": {
+            "types": [
+              "https"
+            ],
+            "amount": 10000,
+            "save": false
+          }
+        }
+      }
+    ]
+  }
+}
