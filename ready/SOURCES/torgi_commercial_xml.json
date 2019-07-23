@@ -1,7 +1,8 @@
 {
   "_task_id": "TORGI_TO_CSV_BIG_3",
   "_start_urls": [
-    "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=1&publishDateFrom=20180601T0000"
+    "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=1&publishDateFrom=20180601T0000",
+    "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=8&publishDateFrom=20180601T0000"
   ],
   "_segment": "Коммерческая недвижимость",
   "_operation": "",
@@ -95,6 +96,10 @@
       "address": {
         "type": "string",
         "path": "//d:lot/d:location/text()"
+      },
+      "address_2": {
+        "type": "string",
+        "path": "//d:lot/d:kladrLocation/d:name/text()"
       },
       "trading_status": {
         "type": "string",
@@ -212,7 +217,7 @@
         "type": "string",
         "path": "//d:common/d:bidAuctionPlace/text()"
       },
-      "contract_type": {
+      "operation": {
         "type": "string",
         "path": "//d:common/d:bidKind/d:name/text()"
       },
@@ -228,11 +233,11 @@
         "type": "string",
         "path": "//d:bidOrganization//d:email/text()"
       },
-
       "url": {
         "type": "string",
         "path": "//d:notificationUrl/text()"
       }
+
       }
     }
   }
