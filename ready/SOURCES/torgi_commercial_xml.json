@@ -38,8 +38,12 @@
       },
       "price_sale_total": {
         "type": "float",
-        "path": "//d:startSalePrice/text()"
-      },      
+        "path": "//d:lot[*index*]/d:startSalePrice/text()"
+      }, 
+      "min_price": {
+        "type": "float",
+        "path": "//d:lot[*index*]/d:minPrice/text()"
+      },           
       "doc_rate": {
         "type": "float",
         "path": "//d:docChargeRateRur/text()"
@@ -56,6 +60,10 @@
         "type": "string",
         "path": "//d:published/text()"
       },
+      "date_created_2": {
+        "type": "string",
+        "path": "//d:lastChanged/text()"
+      },      
       "date_updated": {
         "type": "string",
         "path": "//d:common/d:published/text()"
