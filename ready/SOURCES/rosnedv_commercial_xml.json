@@ -1,0 +1,451 @@
+{       "_comment":"добавлен 418 ответ, увеличено количество потоков",
+       "_task_id":"ROSNEDV_DEBUG_17",
+        "_start_urls": [
+            "https://www.rosnedv.ru/sitemap/realty_1.xml",
+            "https://www.rosnedv.ru/sitemap/realty_2.xml",
+            "https://www.rosnedv.ru/sitemap/realty_3.xml",
+            "https://www.rosnedv.ru/sitemap/realty_4.xml",
+            "https://www.rosnedv.ru/sitemap/realty_5.xml",
+            "https://www.rosnedv.ru/sitemap/realty_6.xml",
+            "https://www.rosnedv.ru/sitemap/realty_7.xml",
+            "https://www.rosnedv.ru/sitemap/realty_8.xml",
+            "https://www.rosnedv.ru/sitemap/realty_9.xml",
+            "https://www.rosnedv.ru/sitemap/realty_10.xml",
+            "https://www.rosnedv.ru/sitemap/realty_11.xml",
+            "https://www.rosnedv.ru/sitemap/realty_12.xml",
+            "https://www.rosnedv.ru/sitemap/realty_13.xml",
+            "https://www.rosnedv.ru/sitemap/realty_14.xml",
+            "https://www.rosnedv.ru/sitemap/realty_15.xml",
+            "https://www.rosnedv.ru/sitemap/realty_16.xml",
+            "https://www.rosnedv.ru/sitemap/realty_17.xml",
+            "https://www.rosnedv.ru/sitemap/realty_18.xml",
+            "https://www.rosnedv.ru/sitemap/realty_19.xml",
+            "https://www.rosnedv.ru/sitemap/realty_20.xml",
+            "https://www.rosnedv.ru/sitemap/realty_21.xml",
+            "https://www.rosnedv.ru/sitemap/realty_22.xml",
+            "https://www.rosnedv.ru/sitemap/realty_23.xml",
+            "https://www.rosnedv.ru/sitemap/realty_24.xml",
+            "https://www.rosnedv.ru/sitemap/realty_25.xml",
+            "https://www.rosnedv.ru/sitemap/realty_26.xml"
+        ],
+        "_segment": "Коммерческая Недвижимость",
+        "_operation": "",
+        "_federal_subject": "",
+        "_source": "http://www.rosnedv.ru",
+        "project_id": "metaspider",
+        "spider_id": "metacrawler",
+        "global_settings": {
+            "CONCURRENT_REQUESTS": 512,
+            "SPLASH_URL": "http://0.0.0.0:8050",
+            "LOG_LEVEL": "INFO",
+            "AUTOTHROTTLE_ENABLED": false,
+            "AUTOTHROTTLE_START_DELAY": 1,
+            "AUTOTHROTTLE_MAX_DELAY": 60,
+            "AUTOTHROTTLE_TARGET_CONCURRENCY": 512,
+            "CONCURRENT_REQUESTS_PER_DOMAIN": 512,
+            "RETRY_ENABLED": true,
+            "RETRY_HTTP_CODES": [
+                500,
+                503,
+                504,
+                400,
+                403,
+                408,
+                429,
+                505,
+                404,
+                502,
+                307,
+                410,
+                451,
+                418,
+                303,
+                418,
+                407
+            ],
+            "HTTPERROR_ALLOWED_CODES": [],
+            "RETRY_TIMES": 30,
+            "ROBOTSTXT_ENABLED": false,
+            "ROBOTSTXT_OBEY": false,
+            "REDIRECT_ENABLED": true,
+            "COOKIES_ENABLED": false,
+            "DOWNLOAD_FAIL_ON_DATALOSS": false,
+            "RANDOM_UA_TYPE": "random",
+            "DOWNLOAD_TIMEOUT": 60,
+            "CLOSESPIDER_ITEMCOUNT": 0,
+            "CLOSESPIDER_ERRORCOUNT": 0
+        },
+        "methods": {
+            "crawling_type": "common",
+            "allowed_domains": [],
+            "content_type":"html",
+            "proxy_settings": {
+                "types": [
+                    "https"
+                ],
+                "amount": 10000,
+                "countries": ["RU", "KZ", "BY", "UA"]
+            }
+        },
+        "crawl_tree": [
+            {
+            "item_urls": {
+                  "path":"//d:loc[contains(text(),'kommercheskaya_nedvijimost')]/text()",
+                  "methods": {
+                        "crawling_type": "common",
+                        "allowed_domains": [],
+                        "content_type":"xml",
+                        "proxy_settings": {
+                            "types": [
+                                "https"
+                            ],
+                            "amount": 10000,
+                            "save": false
+                        }
+                    }
+                }
+            }
+        ],
+        "sitemap_urls": {
+            "start": ["https://www.rosnedv.ru/sitemap.xml"],
+            "type": "sitemap",
+            "target": "sitemap",
+            "crawl_tree": {
+                "robots": {
+                    "targets": {
+                        "sitemap": {"type": "sitemap"}
+                    }
+                },
+                "sitemap": {
+                    "targets": {
+                        "sitemap_2": {"type": "sitemap", "filters": ["realty_"]}
+                    }
+                },
+                "sitemap_2": {
+                    "targets": {
+                      "item": {
+                        "type": "item",
+                        "filters": ["/kommercheskaya_nedvijimost"]
+                      }
+                    }
+                },
+				"item": {}
+            }
+        },
+        "item_page": {
+            "fields": {
+                "segment": {
+                    "type": "string",
+                    "path": "//div[@class='breadcrumbs-box']/a[2]/text()[normalize-space()]",
+                    "operations": [
+                        "lower"
+                    ]
+                },
+                "phone": {
+                    "type": "phone",
+                    "path": "//div[@class='item-specialist']//div[@class='spec-phone']//a/text()",
+                    "operations": []
+                },
+                "source_latitude": {
+                    "type": "float",
+                    "path": "//script[contains(text(),'JSON.parse')]/text()",
+                    "regex": "lat\":(.+)\\}",
+                    "operations": []
+                },
+                "price_currency": {
+                    "type": "string",
+                    "value": "RUB",
+                    "operations": []
+                },
+                "address": {
+                    "type": "string",
+                    "path": "//h1[@class='item-page-title']//small//text()",
+                    "operations": []
+                },
+                "source_longitude": {
+                    "type": "float",
+                    "path": "//script[contains(text(),'JSON.parse')]/text()",
+                    "regex": "lng\":(.+),",
+                    "operations": []
+                },
+                "seller_name": {
+                    "type": "string",
+                    "path": "//div[@class='item-specialist']//div[@class='spec-name']//text()",
+                    "operations": []
+                },
+                "seller_type": {
+                    "type": "string",
+                    "path": "//div[@class='item-specialist']//div[@class='spec-info']//text()",
+                    "operations": []
+                },
+                "date_info": {
+                    "type": "date",
+                    "time": "now",
+                    "operations": []
+                },
+                "operation": {
+                    "type": "string",
+                    "path": "//div[@class='breadcrumbs-box']/span/text()",
+                    "regex": "Продажа|Аренда",
+                    "operations": [
+                        "lower"
+                    ]
+                },
+                "title_name": {
+                    "type": "string",
+                    "path": "//h1[@class='item-page-title']//text()",
+                    "operations": []
+                },
+                "date_created": {
+                    "type": "date",
+                    "path": "(//div[@class='info-status']//text())[1]",
+                    "time": "from string",
+                    "regex": "Добавлено (.+)",
+                    "operations": []
+                },
+                "price_total": {
+                    "type": "float",
+                    "path": "//div[@itemprop='price']/text()[normalize-space()]",
+                    "regex": "[0-9\\. ]+",
+                    "operations": []
+                },
+                "federal_subject": {
+                    "type": "string",
+                    "path": "//h1[@class='item-page-title']//small//text()",
+                    "operations": []
+                },
+                "date_updated": {
+                    "type": "date",
+                    "path": "(//div[@class='info-status']//text())[2]",
+                    "time": "from string",
+                    "regex": "Обновлено (.+)",
+                    "operations": []
+                },
+                "description": {
+                    "type": "list to string",
+                    "path": "//div[@class='desc-wrap']/text()",
+                    "operations": []
+                }
+            },
+            "tables": {
+                "table_1": {
+                    "_keys_path": "//div[@class='info-wrap']//div[@class='info-title']//text()",
+                    "_vals_path": "//div[@class='info-wrap']//div[@class='info-val']/text()",
+                    "key_converter": {
+                        "микрорайон": {
+                            "type": "string",
+                            "name": "reference_point"
+                        },
+                        "этаж": {
+                            "type": [
+                                "float",
+                                "float"
+                            ],
+                            "name": [
+                                "floor",
+                                "floors_cnt"
+                            ],
+                            "regex": [
+                                "^\\d+",
+                                "\\d+$"
+                            ]
+                        },
+                        "тип": {
+                            "type": "string",
+                            "name": "purpose"
+                        },
+                        "площадь": {
+                            "type": [
+                                "float",
+                                "string"
+                            ],
+                            "name": [
+                                "area_total",
+                                "area_unit"
+                            ],
+                            "regex": [
+                                "\\d*\\W?\\d+",
+                                "[А-Яа-я]+"
+                            ]
+                        },
+                        "район": {
+                            "type": "string",
+                            "name": "intown_district"
+                        },
+                        "площадь_участка": {
+                            "type": [
+                                "float",
+                                "string"
+                            ],
+                            "name": [
+                                "land_area",
+                                "area_land_unit"
+                            ],
+                            "regex": [
+                                "\\d*\\W?\\d+",
+                                "[А-Яа-я]+"
+                            ]
+                        },
+                        "комнат": {
+                            "type": "float",
+                            "name": "rooms_cnt",
+                            "regex": "\\d+"
+                        },
+                        "ориентир": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "None"
+                        },
+                        "период": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "None"
+                        }
+                    }
+                },
+                "table_2": {
+                    "_keys_path": "//div[@class='item-desc-box']//div[@class='tbl-wrap']//th//text()",
+                    "_vals_path": "//div[@class='item-desc-box']//div[@class='tbl-wrap']//td/text()",
+                    "key_converter": {
+                        "время_до_метро_пешком": {
+                            "type": "string",
+                            "name": "metro_minutes"
+                        },
+                        "этаж": {
+                            "type": "string",
+                            "name": "floor"
+                        },
+                        "телефон": {
+                            "type": "string",
+                            "name": "is_phone"
+                        },
+                        "материал_стен": {
+                            "type": "string",
+                            "name": "wall_material"
+                        },
+                        "расстояние_по_шоссе_до_мкад": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "шоссе_москвы": {
+                            "type": "string",
+                            "name": "nearest_highway"
+                        },
+                        "время_до_метро_на_транспорте": {
+                            "type": "string",
+                            "value": " ",
+                            "name": "none"
+                        },
+                        "газ": {
+                            "type": "string",
+                            "name": "is_gas"
+                        },
+                        "отдельный_вход": {
+                            "type": "string",
+                            "name": "private_entrance"
+                        },
+                        "комиссия": {
+                            "type": "float",
+                            "name": "agent_fee",
+                            "regex": "\\d*\\W?\\d+"
+                        },
+                        "отопление": {
+                            "type": "string",
+                            "name": "heating_system_type"
+                        },
+                        "населённый_пункт": {
+                            "type": "string",
+                            "name": "address_city"
+                        },
+                        "год_постройки": {
+                            "type": "float",
+                            "name": "year_built",
+                            "regex": "\\d+"
+                        },
+                        "интернет": {
+                            "type": "string",
+                            "name": "is_internet"
+                        },
+                        "мебель": {
+                            "type": "string",
+                            "name": "is_furniture"
+                        },
+                        "водоснабжение": {
+                            "type": "string",
+                            "name": "is_plumbing"
+                        },
+                        "адрес": {
+                            "type": "string",
+                            "name": "street_name"
+                        },
+                        "площадь_общая": {
+                            "type": [
+                                "float",
+                                "string"
+                            ],
+                            "name": [
+                                "area_total",
+                                "area_unit"
+                            ],
+                            "regex": [
+                                "\\d*\\W?\\d+",
+                                "[А-Яа-я]"
+                            ]
+                        },
+                        "площадь_кухни": {
+                            "type": "float",
+                            "name": "kitchen_area",
+                            "regex": "\\d*\\W?\\d+"
+                        },
+                        "мебель_на_кухне": {
+                            "type": "string",
+                            "name": "furniture_kitchen"
+                        },
+                        "микрорайон": {
+                            "type": "string",
+                            "name": "reference_point"
+                        },
+                        "площадь_жилая": {
+                            "type": "float",
+                            "name": "area_living",
+                            "regex": "\\d*\\W?\\d+"
+                        },
+                        "комнат": {
+                            "type": "float",
+                            "name": "rooms_cnt",
+                            "regex": "\\d+"
+                        },
+                        "метро": {
+                            "type": "string",
+                            "name": "metro_station"
+                        },
+                        "балкон": {
+                            "type": "string",
+                            "name": "is_balcony"
+                        },
+                        "ремонт": {
+                            "type": "string",
+                            "name": "decoration_type"
+                        },
+                        "дом": {
+                            "type": "string",
+                            "name": "house_number"
+                        },
+                        "электричество": {
+                            "type": "string",
+                            "name": "is_electricity"
+                        },
+                        "район": {
+                            "type": "string",
+                            "name": "intown_district"
+                        },
+                        "предоплата": {
+                            "type": "string",
+                            "name": "is_pre_pay"
+                        }
+                    }
+                }
+            }
+        }
+    }
