@@ -1,12 +1,12 @@
 {
-        "_task_id": "W001-0397-0004&S3100&1&1",
+        "_task_id": "TEST_DEB_11",
         "project_id": "metaspider",
         "spider_id": "metacrawler",
         "global_settings": {
-            "CONCURRENT_REQUESTS": 64,
+            "CONCURRENT_REQUESTS":64,
             "SPLASH_URL": "http://0.0.0.0:8050",
             "LOG_LEVEL": "INFO",
-            "AUTOTHROTTLE_ENABLED": false,
+            "AUTOTHROTTLE_ENABLED": true,
             "AUTOTHROTTLE_START_DELAY": 1,
             "AUTOTHROTTLE_MAX_DELAY": 60,
             "AUTOTHROTTLE_TARGET_CONCURRENCY": 64,
@@ -64,9 +64,10 @@
             "COOKIES_ENABLED": true,
             "DOWNLOAD_FAIL_ON_DATALOSS": false,
             "RANDOM_UA_TYPE": "random",
-            "DOWNLOAD_TIMEOUT": 180,
+            "DOWNLOAD_TIMEOUT": 90,
             "CLOSESPIDER_ITEMCOUNT": 0,
-            "CLOSESPIDER_ERRORCOUNT": 0
+            "CLOSESPIDER_ERRORCOUNT": 0,
+            "SCREENSHOT_DATES_RANGE": ["2019-07-21 00:00:01", "2019-07-22 00:00:01"]
         },
         "methods": {
             "crawling_type": "common",
@@ -123,7 +124,8 @@
                         "form form-inline withoutBootstrapValidator search",
                         "страница не найдена"
                     ],
-                    "host_url": "https://raui.ru/"
+                    "host_url": "https://raui.ru/",
+                    "js": "closePopup()"
                 },
                 "ryazanhouse.ru": {
                     "expr": [
@@ -292,15 +294,6 @@
                         "Данной страницы на этом сайте нет"
                     ],
                     "host_url": "https://gde.ru/"
-                },
-                "mirkvartir.ru": {
-                    "expr": [
-                        "Связаться с продавцом:"
-                    ],
-                    "exprn": [
-                        "За месяц"
-                    ],
-                    "host_url": "https://www.mirkvartir.ru/"
                 },
                 "multilisting.su": {
                     "expr": [
@@ -532,7 +525,7 @@
                     "exprn": "",
                     "host_url": "https://www.granta24.ru/"
                 },
-                "kvadrat64": {
+                "kvadrat64.ru": {
                     "expr": [
                         "thprice"
                     ],
