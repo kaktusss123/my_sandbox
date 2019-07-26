@@ -1,0 +1,359 @@
+{
+  "_task_id": "MIRKV_test_19",
+  "_start_urls": [
+    "https://cre.mirkvartir.ru/Москва/",
+    "https://arendacre.mirkvartir.ru/Москва/",
+    "https://cre.mirkvartir.ru/Санкт-Петербург/",
+    "https://arendacre.mirkvartir.ru/Санкт-Петербург/"
+  ],
+  "_segment": "",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "MIRKVARTIR",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 512,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 512,
+    "DOWNLOAD_TIMEOUT": 60,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": true,
+    "AUTOTHROTTLE_START_DELAY": 1.0,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 512,
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_ENABLED": true,
+    "RETRY_TIMES": 20,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      303,
+      302,
+      301,
+      502,
+	307,
+	410,
+	451
+    ],
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": true,
+    "RANDOM_UA_TYPE": "random"
+  },
+  "methods": {
+    "crawling_type": "common",
+    "allowed_domains": [],
+    "proxy_settings": {
+      "types": [
+        "https"
+      ],
+      "countries": ["RU"]
+    }
+  },
+  "crawl_tree": [
+    {"pagination_urls":  {"path": "(//ul[@class='b-paging']//li[@class='m-active']/following-sibling::li/a/@href)[1]"},
+     "item_urls": {"path": "//div[contains(@class,'no-lptitle')]//h4/a/@href"}, "methods": {"save_cookies": true}}
+  ],
+  "sitemap_urls": {
+            "start": ["https://cre.mirkvartir.ru/sitemap.xml", "https://arendacre.mirkvartir.ru/sitemap.xml"],
+            "type": "sitemap",
+            "target": "sitemap",
+            "crawl_tree": {
+                "robots": {
+                    "targets": {
+                        "sitemap": {"type": "sitemap"}
+                    }
+                },
+                "sitemap": {
+                    "targets": {
+                        "sitemap_2": {"type": "sitemap"}
+                    }
+                },
+                "sitemap_2": {
+                    "targets": {
+                      "pagination": {
+                        "type": "pagination"
+                      }
+                    }
+                },
+                "pagination": {"targets": {
+                  "pagination": {"type": "pagination", "path": "//ul[contains(@class, 'b-paging')]/li[contains(@class, 'm-active')]/following-sibling::li[1]/a/@href"},
+                  "item": {"type": "item", "path": "//h4/a/@href", "priority": 1}
+                }},
+				"item": {}
+            }
+        },
+  "item_page": {
+    "fields": {
+      "operation": {
+        "type": "string",
+        "path": "//div[@class='b-menu']//li[@class='m-highlight m-active']/a/text()"
+      },
+      "segment": {
+        "type": "string",
+        "path": "//script[contains(text(),'listingType')]/text()",
+        "regex": "(?<=\"estateType\":).+(?=,\"hostUrl\":)"
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now"
+      },
+      "price_currency": {
+        "type": "string",
+        "value": "RUB"
+      },
+      "title_name": {
+        "type": "string",
+        "path": "//div[@class='b-title']//text()"
+      },
+      "address": {
+        "type": "list to string",
+        "path": "//div[@class='l-gallery m-open']//p[@class='address']//text()[normalize-space()]"
+      },
+      "description": {
+        "type": "string",
+        "path": "(//div[@class='l-object-description']//p/text())[1]"
+      },
+      "seller_name": {
+        "type": "string",
+        "path": "//div[@class='l-object-description']//div[@class='seller-info']/p/strong[1]/text()"
+      },
+      "company_name": {
+        "type": "string",
+        "path": "(//div[@class='seller-info'])[1]/p/strong/a/text()"
+      },
+      "seller_type": {
+        "type": "string",
+        "path": "//div[@class='l-object-description']//div[@class='seller-info']/p/span/text()"
+      },
+      "date_created": {
+        "type": "date",
+        "path": "substring-after(//div[@class='dates']/text()[3], 'размещено ')",
+        "time": "from string"
+      },
+      "date_updated": {
+        "type": "date",
+        "path": "substring-after(//div[@class='dates']/text()[3], 'обновлено ')",
+        "time": "from string"
+      },
+      "price_total": {
+        "type": "float",
+        "path": "//div[@class='l-page-title']//div[@class='price m-all']//strong/text()[normalize-space()]",
+        "regex": "\\d*"
+      },
+      "rent_price_per_area": {
+        "type": "float",
+        "path": "//div[@class='l-page-title']//div[@class='price m-m2']//strong/text()",
+        "regex": "\\d*"
+      },
+      "price_term": {
+        "type": "list to string",
+        "path": "//div[@class='price m-all']/span/text()[normalize-space()]"
+      },
+      "source_longitude": {
+        "type": "float",
+        "path": "//script[text()[contains(.,'coordinate')]]/text()",
+        "regex": "(?<=\"lon\":)\\d*\\W?\\d+"
+      },
+      "source_latitude": {
+        "type": "float",
+        "path": "//script[text()[contains(.,'coordinate')]]/text()",
+        "regex": "(?<=\"lat\":)\\d*\\W?\\d+"
+      },
+      "metro_station": {
+        "type": "string",
+        "path": "(//div[@class='l-object-address']//p//span//a//text())[2]"
+      },
+      "metro_minutes": {
+        "type": "string",
+        "path": "(//div[@class='l-object-address']//p//small//text())[2]"
+      },
+      "reference_point": {
+        "type": "string",
+        "path": "(//p[@class='lp-title']//a/text())[1]"
+      },
+      "purpose": {
+        "type": "string",
+        "path": "//h3[text()[contains(.,'Информация о')]]/text()",
+        "regex": "Информация о (.+)"
+      },
+      "area_total": {
+        "type": "string",
+        "path": "//div[@class='b-title']/h1/text()",
+        "regex": "\\d*\\.?\\d+"
+      },
+      "federal_subject": {
+        "type": "string",
+        "path": "(//li[@itemprop='itemListElement']//a//span//text())[1]"
+      }
+    },
+    "tables": {
+      "table_1": {
+        "_keys_path": "//div[@class='l-house-info']//div[@class='details']//span/text()",
+        "_vals_path": "//div[@class='l-house-info']//div[@class='details']//strong/text()",
+        "key_converter": {
+          "этаж": {
+            "name": ["floor", "floors_cnt"],
+            "type": ["float", "float"],
+            "regex": [".+(?=из)", "(?<=из).+"]
+          },
+          "состояние": {
+            "name": "decoration_type",
+            "type": "string"
+          },
+          "комнаты": {
+            "name": "rooms_cnt",
+            "type": "string",
+            "regex": "(.+)-"
+          },
+          "бытовая_техника": {
+            "name": "is_appliences",
+            "type": "string"
+          },
+          "дом": {
+            "name": [
+              "wall_material",
+              "year_built"
+            ],
+            "type": [
+              "string",
+              "float"
+            ],
+            "regex": [
+              "^\\S+\\s",
+              ", \\d+"
+            ]
+          },
+          "комфорт": {
+            "name": "none",
+            "type": "string"
+          },
+          "лифт": {
+            "name": "is_elevator",
+            "type": "string"
+          },
+          "связь": {
+            "name": "is_internet",
+            "type": "string"
+          },
+          "инфраструктура": {
+            "name": "infrastr_object",
+            "type": "string"
+          },
+          "коммуникации": {
+            "name": "none",
+            "type": "string"
+          },
+          "тип_участка": {
+            "name": "land_category",
+            "type": "string"
+          },
+          "планировка": {
+            "name": "layout_type",
+            "type": "string"
+          },
+          "этажность": {
+            "name": "floors_cnt",
+            "type": "float",
+            "regex": "^\\d+"
+          },
+          "всего_комнат": {
+            "name": "rooms_cnt",
+            "type": "float",
+            "regex": "^\\d+"
+          },
+          "безопасность": {
+            "name": "in_save_object",
+            "type": "string"
+          }
+        }
+      },
+      "table_2": {
+        "_keys_path": "//div[@class='l-complex-info']//div[@class='details']//span/text()",
+        "_vals_path": "//div[@class='l-complex-info']//div[@class='details']//strong/text()",
+        "key_converter": {
+
+          "готовность": {
+            "name": "none",
+            "type": "float"
+          },
+          "класс_жилья": {
+            "name": "object_class",
+            "type": "string"
+          },
+          "материал_стен": {
+            "name": "wall_material",
+            "type": "string"
+          },
+          "отделка": {
+            "name": "decoration_type",
+            "type": "string"
+          },
+          "паркинг": {
+            "name": "parking_cnt",
+            "type": "string"
+          },
+          "количество_квартир": {
+            "name": "none",
+            "type": "string"
+          },
+          "безопасность": {
+            "name": "in_save_object",
+            "type": "string"
+          },
+          "всего_комнат": {
+            "name": "rooms_cnt",
+            "type": "float",
+            "regex": "^\\d+"
+          },
+          "этажность": {
+            "name": "floors_cnt",
+            "type": "string"
+          },
+          "высота_потолка": {
+            "name": "ceiling_height",
+            "type": "float",
+            "regex": "^\\d*\\W?\\d+"
+          },
+          "тип_зданий": {
+            "name": "building_type",
+            "type": "string"
+          },
+          "территория": {
+            "name": "none",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "follow": [
+	{
+		"fields": {"phone": {"type": "phone", "path": "phones"}},
+		"headers": {
+                        "Accept": {
+                           "type": "string", "value": "false"
+                        },
+                        "Accept-Language": {
+                            "type": "string", "value": "false"
+                        },
+                        "Accept-Encoding": {
+                            "type": "string", "value": "gzip"
+                        },
+                        "Cookie": {
+                            "type": "string", "value": "activeMain=kurgan"
+                        }
+                    },
+		"methods": {"content_type": "json", "filter_duplicates": false, "proxy_settings": {"save": true}, "save_cookies": true},
+		"url_constructor": {"change_path": {"type": "string", "path": "//script[contains(text(),'phoneNumberUrl')]/text()", "regex": "phoneNumberUrl\":\"(.*?)\"__first__"}}
+	}
+]
+
+  }
+}
