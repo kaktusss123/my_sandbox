@@ -94,7 +94,8 @@
     "fields": {
       "operation": {
         "type": "string",
-        "path": "//div[@class='b-menu']//li[@class='m-highlight m-active']/a/text()"
+        "path": "//title/text()",
+        "regex": "[Пп]род|[Аа]ренд"
       },
       "segment": {
         "type": "string",
@@ -135,12 +136,14 @@
       },
       "date_created": {
         "type": "date",
-        "path": "substring-after(//div[@class='dates']/text()[3], 'размещено ')",
+        "path": "//script[contains(text(),'listingType')]/text()",
+        "regex": "(?<=размещено ).+(?=\",\"whenUpdated)",
         "time": "from string"
       },
       "date_updated": {
         "type": "date",
-        "path": "substring-after(//div[@class='dates']/text()[3], 'обновлено ')",
+        "path": "//script[contains(text(),'listingType')]/text()",
+        "regex": "(?<=обновлено ).+\\d\\d:\\d\\d",
         "time": "from string"
       },
       "price_total": {
@@ -185,7 +188,7 @@
         "regex": "Информация о (.+)"
       },
       "area_total": {
-        "type": "string",
+        "type": "float",
         "path": "//div[@class='b-title']/h1/text()",
         "regex": "\\d*\\.?\\d+"
       },
