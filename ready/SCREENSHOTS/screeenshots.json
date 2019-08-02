@@ -1,5 +1,5 @@
 {
-  "_task_id": "TEST_DEB_11",
+  "_task_id": "STEST_TIME",
   "project_id": "metaspider",
   "spider_id": "metacrawler",
   "global_settings": {
@@ -66,11 +66,7 @@
     "RANDOM_UA_TYPE": "random",
     "DOWNLOAD_TIMEOUT": 90,
     "CLOSESPIDER_ITEMCOUNT": 0,
-    "CLOSESPIDER_ERRORCOUNT": 0,
-    "SCREENSHOT_DATES_RANGE": [
-      "2019-07-21 00:00:01",
-      "2019-07-22 00:00:01"
-    ]
+    "CLOSESPIDER_ERRORCOUNT": 0
   },
   "methods": {
     "crawling_type": "common",
