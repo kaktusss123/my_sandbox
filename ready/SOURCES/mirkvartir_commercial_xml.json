@@ -134,16 +134,10 @@
         "type": "string",
         "path": "//div[@class='l-object-description']//div[@class='seller-info']/p/span/text()"
       },
-      "date_created": {
-        "type": "date",
-        "path": "//script[contains(text(),'listingType')]/text()",
-        "regex": "(?<=размещено ).+(?=\",\"whenUpdated)",
-        "time": "from string"
-      },
       "date_updated": {
         "type": "date",
         "path": "//script[contains(text(),'listingType')]/text()",
-        "regex": "(?<=обновлено ).+\\d\\d:\\d\\d",
+        "regex": "(?<=обновлено ).*?(?=\")",
         "time": "from string"
       },
       "price_total": {
