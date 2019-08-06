@@ -6726,7 +6726,7 @@
       },
       "address": {
         "type": "string",
-        "path": "//span[@itemprop='streetAddress']/text()",
+        "path": "//span[@itemprop=\"address\"]/text()",
         "operations": []
       },
       "purpose": {
