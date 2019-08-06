@@ -1,0 +1,417 @@
+{
+  "_comment": "Телефон не собирается",
+  "_task_id": "0000-0005-0273&T0118&1_DEBUG_6",
+  "_start_urls": [],
+  "_segment": "Земельные участки",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "http://www.gdeetotdom.ru",
+  "project_id": "metaspider",
+  "spider_id": "metacrawler",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 1024,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": true,
+    "AUTOTHROTTLE_START_DELAY": 1,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
+    "RETRY_ENABLED": true,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      303,
+      302,
+      301,
+      404,
+      407
+    ],
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_TIMES": 40,
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": true,
+    "COOKIES_ENABLED": true,
+    "DOWNLOAD_FAIL_ON_DATALOSS": false,
+    "RANDOM_UA_TYPE": "random",
+    "DOWNLOAD_TIMEOUT": 60,
+    "CLOSESPIDER_ITEMCOUNT": 0,
+    "CLOSESPIDER_ERRORCOUNT": 0
+  },
+  "methods": {
+    "crawling_type": "common",
+    "allowed_domains": [],
+    "proxy_settings": {
+      "types": [
+        "https"
+      ],
+      "amount": 10000,
+      "save": false
+    }
+  },
+  "crawl_tree": [
+    {
+      "pagination_urls": {
+        "path": "//li[contains(@class,'item_active')]/following-sibling::li[1]/a[contains(@href,'gdeetotdom')]/@href"
+      },
+      "item_urls": {
+        "path": "//div[@class = 'b-objects-list__address-link']/a/@href",
+        "methods": {
+          "save_cookies": true
+        }
+      }
+    }
+  ],
+  "sitemap_urls": {
+    "start": [
+      "https://kemerovo.gdeetotdom.ru/robots.txt",
+      "https://elista.gdeetotdom.ru/robots.txt",
+      "https://cherkessk.gdeetotdom.ru/robots.txt",
+      "https://yoshkar-ola.gdeetotdom.ru/robots.txt",
+      "https://www.gdeetotdom.ru/robots.txt",
+      "https://yuzhno-sahalinsk.gdeetotdom.ru/robots.txt",
+      "https://mahachkala.gdeetotdom.ru/robots.txt",
+      "https://voronezh.gdeetotdom.ru/robots.txt",
+      "https://vladivostok.gdeetotdom.ru/robots.txt",
+      "https://anadyr.gdeetotdom.ru/robots.txt",
+      "https://ivanovo.gdeetotdom.ru/robots.txt",
+      "https://tyumen.gdeetotdom.ru/robots.txt",
+      "https://smolensk.gdeetotdom.ru/robots.txt",
+      "https://astrahan.gdeetotdom.ru/robots.txt",
+      "https://krasnoyarsk.gdeetotdom.ru/robots.txt",
+      "https://novgorod.gdeetotdom.ru/robots.txt",
+      "https://rostov.gdeetotdom.ru/robots.txt",
+      "https://ekaterinburg.gdeetotdom.ru/robots.txt",
+      "https://magadan.gdeetotdom.ru/robots.txt",
+      "https://nazran.gdeetotdom.ru/robots.txt",
+      "https://murmansk.gdeetotdom.ru/robots.txt",
+      "https://izhevsk.gdeetotdom.ru/robots.txt",
+      "https://petropavlovsk-kamchatskiy.gdeetotdom.ru/robots.txt",
+      "https://barnaul.gdeetotdom.ru/robots.txt",
+      "https://pskov.gdeetotdom.ru/robots.txt",
+      "https://chelyabinsk.gdeetotdom.ru/robots.txt",
+      "https://vladikavkaz.gdeetotdom.ru/robots.txt",
+      "https://blagoveschensk.gdeetotdom.ru/robots.txt",
+      "https://cheboksary.gdeetotdom.ru/robots.txt",
+      "https://omsk.gdeetotdom.ru/robots.txt",
+      "https://belgorod.gdeetotdom.ru/robots.txt",
+      "https://tomsk.gdeetotdom.ru/robots.txt",
+      "https://vladimir.gdeetotdom.ru/robots.txt",
+      "https://yanao.gdeetotdom.ru/robots.txt",
+      "https://orenburg.gdeetotdom.ru/robots.txt",
+      "https://kaluga.gdeetotdom.ru/robots.txt",
+      "https://orel.gdeetotdom.ru/robots.txt",
+      "https://kaliningrad.gdeetotdom.ru/robots.txt",
+      "https://volgograd.gdeetotdom.ru/robots.txt",
+      "https://birobidzhan.gdeetotdom.ru/robots.txt",
+      "https://bryansk.gdeetotdom.ru/robots.txt",
+      "https://syktyvkar.gdeetotdom.ru/robots.txt",
+      "https://samara.gdeetotdom.ru/robots.txt",
+      "https://maykop.gdeetotdom.ru/robots.txt",
+      "https://saratov.gdeetotdom.ru/robots.txt",
+      "https://kostroma.gdeetotdom.ru/robots.txt",
+      "https://novosibirsk.gdeetotdom.ru/robots.txt",
+      "https://chita.gdeetotdom.ru/robots.txt",
+      "https://penza.gdeetotdom.ru/robots.txt",
+      "https://sevastopol.gdeetotdom.ru/robots.txt",
+      "https://saransk.gdeetotdom.ru/robots.txt",
+      "https://kirov.gdeetotdom.ru/robots.txt",
+      "https://stavropol.gdeetotdom.ru/robots.txt",
+      "https://yaroslavl.gdeetotdom.ru/robots.txt",
+      "https://tambov.gdeetotdom.ru/robots.txt",
+      "https://gorno-altaysk.gdeetotdom.ru/robots.txt",
+      "https://ufa.gdeetotdom.ru/robots.txt",
+      "https://nalchik.gdeetotdom.ru/robots.txt",
+      "https://ryazan.gdeetotdom.ru/robots.txt",
+      "https://ulan-ude.gdeetotdom.ru/robots.txt",
+      "https://kazan.gdeetotdom.ru/robots.txt",
+      "https://tver.gdeetotdom.ru/robots.txt",
+      "https://krasnodar.gdeetotdom.ru/robots.txt",
+      "https://yakutsk.gdeetotdom.ru/robots.txt",
+      "https://tula.gdeetotdom.ru/robots.txt",
+      "https://kyzyl.gdeetotdom.ru/robots.txt",
+      "https://ulyanovsk.gdeetotdom.ru/robots.txt",
+      "https://habarovsk.gdeetotdom.ru/robots.txt",
+      "https://hmao.gdeetotdom.ru/robots.txt",
+      "https://lipetsk.gdeetotdom.ru/robots.txt",
+      "https://naryan-mar.gdeetotdom.ru/robots.txt",
+      "https://krym.gdeetotdom.ru/robots.txt",
+      "https://perm.gdeetotdom.ru/robots.txt",
+      "https://groznyy.gdeetotdom.ru/robots.txt",
+      "https://vologda.gdeetotdom.ru/robots.txt",
+      "https://irkutsk.gdeetotdom.ru/robots.txt",
+      "https://arhangelsk.gdeetotdom.ru/robots.txt",
+      "https://kurgan.gdeetotdom.ru/robots.txt",
+      "https://abakan.gdeetotdom.ru/robots.txt",
+      "https://nizhniynovgorod.gdeetotdom.ru/robots.txt",
+      "https://petrozavodsk.gdeetotdom.ru/robots.txt",
+      "https://spb.gdeetotdom.ru/robots.txt",
+      "https://kursk.gdeetotdom.ru/robots.txt"
+    ],
+    "type": "robots",
+    "target": "robots",
+    "crawl_tree": {
+      "robots": {
+        "targets": {
+          "sitemap": {
+            "type": "sitemap"
+          }
+        }
+      },
+      "sitemap": {
+        "targets": {
+          "sitemap_2": {
+            "type": "sitemap",
+            "filters": [
+              "/sitemap_classified_adr"
+            ]
+          }
+        }
+      },
+      "sitemap_2": {
+        "targets": {
+          "pagination": {
+            "type": "pagination",
+            "filters": [
+              "zemelniy-uchastok"
+            ]
+          }
+        }
+      },
+      "pagination": {
+        "targets": {
+          "pagination": {
+            "type": "pagination",
+            "path": "//li[contains(@class,'item_active')]/following-sibling::li[1]/a[contains(@href,'gdeetotdom')]/@href"
+          },
+          "item": {
+            "type": "item",
+            "path": "//div[@class = 'b-objects-list__address-link']/a/@href",
+            "methods": {
+              "save_cookies": true
+            }
+          }
+        }
+      },
+      "item": {}
+    }
+  },
+  "item_page": {
+    "fields": {
+      "segment": {
+        "type": "string",
+        "path": "//div[@class='title']//div[@class='fh1']//text()",
+        "regex": "офисного помещения|земельного участка|склада|торгового помещения|свободного назначения|квартиры|дом|производственного помещения|под услуги|под кафе|под банк|под клуб|готового бизнеса",
+        "operations": []
+      },
+      "source_latitude": {
+        "type": "float",
+        "path": "//script[text()[contains(.,'NearestLatlng')]]/text()",
+        "regex": "(?<=NearestLatlng = \\[)[\\d\\.]+",
+        "operations": []
+      },
+      "source_longitude": {
+        "type": "float",
+        "path": "//script[text()[contains(.,'NearestLatlng')]]/text()",
+        "regex": "(?<=, )[\\d\\.]+(?=];\\s+window\\.HouseAddress)",
+        "operations": []
+      },
+      "address": {
+        "type": "string",
+        "path": "//div[@class='page__row top-row sticker js-top-row']//div[@class='address-line']//text()",
+        "operations": []
+      },
+      "seller_name": {
+        "type": "string",
+        "path": "//div[@class='realtor-contacts__name']//span//text()",
+        "operations": []
+      },
+      "company_name": {
+        "type": "string",
+        "path": "//div[@class='realtor-contacts__name']//p//text()",
+        "operations": []
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now",
+        "operations": []
+      },
+      "operation": {
+        "type": "string",
+        "path": "//div[@class='title']//div[@class='fh1']//text()",
+        "regex": "[Пп]род|[Аа]ренд",
+        "operations": [
+          "lower"
+        ]
+      },
+      "title_name": {
+        "type": "string",
+        "path": "//div[@class='title']//div[@class='fh1']//text()",
+        "operations": []
+      },
+      "date_created": {
+        "type": "date",
+        "time": "from string",
+        "path": "//li[@class='activity__publish']/text()",
+        "regex": "(?<=Опубликовано ).+",
+        "operations": []
+      },
+      "federal_subject": {
+        "type": "string",
+        "path": "//ul[@class='ssp-breadcrumbs']//li[1]//span//text()",
+        "regex": " в (.+)",
+        "operations": []
+      },
+      "date_updated": {
+        "type": "date",
+        "time": "from string",
+        "path": "//li[@class='activity__update']/text()",
+        "regex": "(?<=Обновлено ).+",
+        "operations": []
+      },
+      "description": {
+        "type": "list to string",
+        "path": "//div[@class='description']//text()",
+        "operations": []
+      },
+      "price_currency": {
+        "type": "string",
+        "path": "//span[@class=\"currency\"][1]//text()",
+        "regex": "[А-Яа-я \\.]+",
+        "operations": []
+      },
+      "price_term": {
+        "type": "string",
+        "path": "//li[@itemprop=\"offers\"]/text()[4]",
+        "regex": "мес|год|нед"
+      },
+      "is_balcony": {
+        "type": "list to string",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Балкон/лоджия\"]/parent::div/following-sibling::div//text()[normalize-space()]"
+      },
+      "is_plumbing": {
+        "type": "list to string",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Вода\"]/parent::div/following-sibling::div//text()[normalize-space()]"
+      },
+      "is_gas": {
+        "type": "list to string",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Газ\"]/parent::div/following-sibling::div//text()[normalize-space()]"
+      },
+      "is_internet": {
+        "type": "list to string",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Интернет\"]/parent::div/following-sibling::div//text()[normalize-space()]"
+      },
+      "is_sewage": {
+        "type": "list to string",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Канализация\"]/parent::div/following-sibling::div//text()[normalize-space()]"
+      },
+      "purpose": {
+        "type": "list to string",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Назначение участка\"]/parent::div/following-sibling::div//text()[normalize-space()]"
+      },
+      "is_heating": {
+        "type": "list to string",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Отопление\"]/parent::div/following-sibling::div//text()[normalize-space()]"
+      },
+      "land_use_text": {
+        "type": "list to string",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Тип участка\"]/parent::div/following-sibling::div//text()[normalize-space()]"
+      },
+      "price": {
+        "type": "list to float",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Цена\"]/parent::div/following-sibling::div//text()[normalize-space()]",
+        "regex": "\\d* ?\\d+"
+      },
+      "is_electicity": {
+        "type": "list to string",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Электричество\"]/parent::div/following-sibling::div//text()[normalize-space()]"
+      },
+      "intown_district": {
+        "type": "list to string",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Район\"]/parent::div/following-sibling::div//text()[normalize-space()]"
+      },
+      "district_name": {
+        "type": "list to string",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Регион\"]/parent::div/following-sibling::div//text()[normalize-space()]"
+      },
+      "address_city": {
+        "type": "list to string",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Населённый пункт\"]/parent::div/following-sibling::div//text()[normalize-space()]"
+      },
+      "street_name": {
+        "type": "list to string",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Улица\"]/parent::div/following-sibling::div//text()[normalize-space()]"
+      },
+      "metro_station": {
+        "type": "list to string",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Метро\"]/parent::div/following-sibling::div//text()[normalize-space()]"
+      },
+      "house": {
+        "type": "list to string",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Здание\"]/parent::div/following-sibling::div//text()[normalize-space()]"
+      },
+      "district": {
+        "type": "list to string",
+        "path": "//div[@class=\"b-dotted-block__left\"]/span[text() = \"Округ\"]/parent::div/following-sibling::div//text()[normalize-space()]"
+      }
+    },
+    "follow": [
+      {
+        "url_constructor": {
+          "insert": {
+            "place_to_insert": {
+              "type": "string",
+              "path": "(//div[contains(@class,'contact-phone-info')]/@data-advert-id)[1]"
+            }
+          }
+        },
+        "fields": {
+          "phone": {
+            "type": "phone",
+            "path": "phones"
+          }
+        },
+        "headers": {
+          "accept": {
+            "type": "string",
+            "value": "*/*"
+          },
+          "accept-language": {
+            "type": "string",
+            "value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+          },
+          "x-requested-with": {
+            "type": "string",
+            "value": "XMLHttpRequest"
+          },
+          "user-agent": {
+            "type": "string",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36"
+          }
+        },
+        "methods": {
+          "crawling_type": "get",
+          "content_type": "json",
+          "filter_duplicates": false,
+          "allowed_domains": [],
+          "proxy_settings": {
+            "types": [
+              "https"
+            ],
+            "amount": 10000,
+            "save": true
+          },
+          "save_cookies": true
+        },
+        "url": "https://www.gdeetotdom.ru/phone/place_to_insert/classified/"
+      }
+    ]
+  }
+}
