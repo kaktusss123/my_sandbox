@@ -1,0 +1,250 @@
+{
+  "_task_id": "NMLS_AMOUNT_TEST_3",
+  "_start_urls": [
+    "http://29.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://74.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://astrahan.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://belgorod.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://brsn.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://dagestan.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://ekb.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://hb.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://ivanovo.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://izhevsk.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://kaluga.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://kazan.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://kirov.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://klg.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://kostroma.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://krasnodar.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://krym.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://kursk.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://lipmetr.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://mariel.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://minsk.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://msk.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://murmansk.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://nn.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://novgorod.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://nsk.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://orel.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://orenburg.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://penza.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://perm.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://prim.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://rostov.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://rzn.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://samara.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://saratov.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://smolensk.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://so.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://spb.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://stv.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://tula.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://tver.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://ufa.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://ulyanovsk.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://uralsk.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://vladimir.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://volgograd.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://vologda.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://vrz.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://yaroslavl.nmls.ru/prodazha-zemelnyh-uchastkov",
+    "http://29.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://74.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://astrahan.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://belgorod.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://brsn.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://dagestan.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://ekb.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://hb.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://ivanovo.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://izhevsk.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://kaluga.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://kazan.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://kirov.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://klg.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://kostroma.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://krasnodar.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://krym.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://kursk.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://lipmetr.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://mariel.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://minsk.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://msk.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://murmansk.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://nn.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://novgorod.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://nsk.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://orel.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://orenburg.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://penza.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://perm.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://prim.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://rostov.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://rzn.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://samara.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://saratov.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://smolensk.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://so.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://spb.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://stv.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://tula.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://tver.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://ufa.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://ulyanovsk.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://uralsk.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://vladimir.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://volgograd.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://vologda.nmls.ru/arenda-zemelnyh-uchastkov",
+    "http://yaroslavl.nmls.ru/arenda-zemelnyh-uchastkov"
+  ],
+  "_segment": "Земельные участки",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "http://nn.nmls.ru",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 512,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 512,
+    "DOWNLOAD_TIMEOUT": 60,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": false,
+    "AUTOTHROTTLE_START_DELAY": 1.0,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 512,
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_ENABLED": true,
+    "RETRY_TIMES": 20,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      303,
+      302,
+      301,
+      502,
+      407,
+      401,
+      307
+    ],
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": false,
+    "RANDOM_UA_TYPE": "random"
+  },
+  "methods": {
+    "crawling_type": "common",
+    "rotate_useragents": true,
+    "allowed_domains": [],
+    "proxy_settings": {
+      "types": [
+        "https"
+      ],
+      "amount": 10000
+    }
+  },
+  "crawl_tree": [
+    {
+      "pagination_urls": {
+        "path": "//a[text() = \"следующая \"]/@href"
+      },
+      "item_urls": {
+        "path": "//div[@class='row realty-row']//a[@target='_blank']/@href",
+        "methods": {
+          "filter_duplicates": false
+        }
+      }
+    }
+  ],
+  "item_page": {
+    "fields": {
+      "federal_subject": {
+        "type": "string",
+        "path": "//a[@href='#regions-modal']/text()[normalize-space()]",
+        "regex": "[Аа]дыг|[Аа]лтайск|[Аа]мурск|[Аа]рханг|[Аа]страх|[Бб]ашк|[Бб]елгор|[Бб]рянск|[Бб]урят|[Чч]еч|[Чч]еляб|[Чч]укот|[Чч]уваш|[Дд]агестан|[Ее]врейск|[Хх]абаров|[Хх]акас|[Хх]анты|[Ии]нгушет|[Ии]ркутс|[Ии]вановс|[Кк]абард|[Кк]алининг|[Кк]алмык|[Кк]алу|[Кк]амчатск|[Кк]арачаев|[Кк]арел|[Кк]емеров|[Кк]иров|[Кк]оми|[Кк]остромск|[Кк]раснодар|[Кк]расноярск|[Кк]урганс|[Кк]урск|[Лл]енингр|[Лл]ипецк|[Мм]агадан|[Мм]арий|[Мм]ордов|[Мм]осковск|[Мм]оскв|[Мм]урман|[Нн]енецк|[Нн]ижегор|[Нн]овгород|[Нн]овосибир|[Оо]мск|[Оо]ренбу|[Оо]рловс|[Пп]ензен|[Пп]ермск|[Пп]риморск|[Пп]сков|[Аа]лтай|[Кк]рым|[Рр]остовск|[Рр]язан|[Яя]кут|[Сс]ахалин|[Сс]амарск|[Сс]анкт|[Сс]аратов|[Оо]сети|[Сс]моленск|[Сс]тавропол|[Сс]вердлов|[Тт]амбов|[Тт]атарстан|[Тт]омск|[Тт]ул|[Тт]вер|[Тт]юмен|[Тт]ыва|[Уу]дмурт|[Уу]льян|[Вв]ладимир|[Вв]олгоград|[Вв]олог|[Вв]оронеж|[Яя]мал|[Яя]росл|[Зз]абайкал"
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now"
+      },
+      "title_name": {
+        "type": "string",
+        "path": "//h1/text()[normalize-space()]"
+      },
+      "operation": {
+        "type": "list to string",
+        "path": "//li[@class='breadcrumb-item']//span/text()[normalize-space()]",
+        "regex": "Аренда|Продажа"
+      },
+      "price": {
+        "type": "float",
+        "path": "//div[@class='card-price']/span[not(@class)]/text()[normalize-space()]",
+        "regex": "[\\d ]+"
+      },
+      "price_currency": {
+        "type": "string",
+        "path": "//div[@class='card-price']/span[@class]/text()[normalize-space()]"
+      },
+      "seller_name": {
+        "type": "string",
+        "path": "//div[@class='dit']//text()[contains(.,'Агент:')]/following-sibling::a/text()[normalize-space()]"
+      },
+      "seller_company": {
+        "type": "string",
+        "path": "//div[@class='dit']//text()[contains(.,'АН:')]/following-sibling::a/text()[normalize-space()]"
+      },
+      "phone": {
+        "type": "phone",
+        "path": "//a[contains(@href,'tel:')]/text()[normalize-space()]"
+      },
+      "description": {
+        "type": "list to string",
+        "path": "//div[contains(text(),'Дополнительная информация')]/following-sibling::div[@class='object-infoblock']//text()[normalize-space()]"
+      },
+      "area_total": {
+        "type": "float",
+        "path": "//td[contains(text(), \"Площадь участка\")]/following-sibling::td/text()[normalize-space()]",
+        "regex": "[\\d ]+"
+      },
+      "area_land_unit": {
+        "type": "string",
+        "path": "//td[contains(text(), \"Площадь участка\")]/following-sibling::td/text()[normalize-space()]",
+        "regex": "[А-Яа-я ]+"
+      },
+      "address": {
+        "type": "string",
+        "path": "//td[contains(text(), \"Адрес\")]/following-sibling::td/text()[normalize-space()]"        
+      },
+      "address_city": {
+        "type": "string",
+        "path": "//td[contains(text(), \"Город\")]/following-sibling::td/text()[normalize-space()]"        
+      },
+      "date_created": {
+        "type": "date",
+        "time": "from string",
+        "path": "//td[contains(text(), \"Дата подачи объявления\")]/following-sibling::td/text()[normalize-space()]"        
+      },
+      "date_updated": {
+        "type": "date",
+        "time": "from string",
+        "path": "//td[contains(text(), \"Дата обновления\")]/following-sibling::td/text()[normalize-space()]"        
+      },
+      "metro": {
+        "type": "string",
+        "path": "//td[contains(text(), \"Метро\")]/following-sibling::td/text()[normalize-space()]"        
+      },
+      "address_district": {
+        "type": "string",
+        "path": "//td[contains(text(), \"Район\")]/following-sibling::td/text()[normalize-space()]"        
+      }
+    }
+  }
+}
