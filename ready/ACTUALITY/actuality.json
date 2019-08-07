@@ -143,7 +143,7 @@
             },
             "ndv31.ru": {
                 "expr": [
-                    "object--left"
+                    "action_btn_right"
                 ],
                 "exprn": ""
             },
@@ -221,7 +221,7 @@
             },
             "realty.dmir.ru": {
                 "expr": [
-                    "price_offer"
+                    "button_component-button-text-JxDJ68fq"
                 ],
                 "exprn": [
                     "Объявление не актуально"
@@ -385,7 +385,7 @@
             },
             "aliant.pro": {
                 "expr": [
-                    "subTitle"
+                    "specification characteristics"
                 ],
                 "exprn": ""
             },
@@ -438,7 +438,7 @@
             },
             "domchel.ru": {
                 "expr": [
-                    "contacts:show"
+                    "offer-card-contacts__block"
                 ],
                 "exprn": ""
             },
@@ -450,7 +450,7 @@
             },
             "irr.ru": {
                 "expr": [
-                    "y0q7tZFoqe8lzygJJ9BOP",
+                    "productPage__infoBlock",
                     "icon icon_starEmpty js-iconFavorite"
                 ],
                 "exprn": [
@@ -466,7 +466,7 @@
             },
             "market.sakh.com": {
                 "expr": [
-                    "div class=\"seller\""
+                    "\"?promote\""
                 ],
                 "exprn": ""
             },
@@ -498,7 +498,7 @@
             },
             "rk-region.ru": {
                 "expr": [
-                    "price-curr"
+                    "map-label"
                 ],
                 "exprn": [
                     "Элемент не найден"
@@ -604,13 +604,13 @@
             },
             "alterainvest.ru": {
                 "expr": [
-                    "new_cart new-style-cart"
+                    "add_favorites"
                 ],
                 "exprn": ""
             },
             "qp.ru": {
                 "expr": [
-                    "Показать телефон"
+                    "btnPriceWatchAdd"
                 ],
                 "exprn": [
                     "Ой, такой страницы не существует"
@@ -663,7 +663,7 @@
             },
             "dom43.ru": {
                 "expr": [
-                    "Показать телефон"
+                    "realty-phone__collapse"
                 ],
                 "exprn": [
                     "Возможно, объект недвижимости уже продан, или у объявления закончился срок публикации"
@@ -695,7 +695,7 @@
             },
             "kn.ngs.ru": {
                 "expr": [
-                    "contacts:show"
+                    "offer-card-contacts__block"
                 ],
                 "exprn": [
                     "card__header-status",
@@ -730,7 +730,7 @@
             },
             "businessesforsale.ru": {
                 "expr": [
-                    "contactSellerForm"
+                    "hlWatchListing"
                 ],
                 "exprn": ""
             },
