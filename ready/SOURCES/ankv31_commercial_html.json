@@ -59,7 +59,7 @@
   "crawl_tree": [
     {
       "pagination_urls": {
-        "path": "//li[@class = 'pager-current first']/following-sibling::li[1]//@href"
+        "path": "//li[@class=\"pager-next\"]/a/@href"
       },
       "item_urls": {
         "path": "//a[@class = 'overlayed']/@href"
