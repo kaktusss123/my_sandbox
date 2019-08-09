@@ -1526,7 +1526,7 @@
     "LOG_LEVEL": "INFO",
     "AUTOTHROTTLE_ENABLED": true,
     "AUTOTHROTTLE_START_DELAY": 1,
-    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_MAX_DELAY": 40,
     "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
     "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
     "RETRY_ENABLED": true,
@@ -1548,14 +1548,14 @@
       451
     ],
     "HTTPERROR_ALLOWED_CODES": [],
-    "RETRY_TIMES": 20,
+    "RETRY_TIMES": 40,
     "ROBOTSTXT_ENABLED": false,
     "ROBOTSTXT_OBEY": false,
     "REDIRECT_ENABLED": false,
     "COOKIES_ENABLED": false,
     "DOWNLOAD_FAIL_ON_DATALOSS": false,
     "RANDOM_UA_TYPE": "random",
-    "DOWNLOAD_TIMEOUT": 60,
+    "DOWNLOAD_TIMEOUT": 40,
     "CLOSESPIDER_ITEMCOUNT": 0,
     "CLOSESPIDER_ERRORCOUNT": 0
   },
@@ -1609,7 +1609,7 @@
       },
       "address": {
         "type": "string",
-        "path": "//span[@itemprop='streetAddress']/text()",
+        "path": "//span[@class='item-address__string']/text()",
         "operations": []
       },
       "purpose": {
@@ -1660,7 +1660,7 @@
       },
       "date_created": {
         "type": "date",
-        "path": "//div[@class='title-info-metadata-item']/text()",
+        "path": "//div[@class='title-info-metadata-item-redesign']/text()",
         "time": "from string",
         "regex": "размещено(.+)",
         "operations": []
@@ -1706,85 +1706,6 @@
           "назначение_участка": {
             "type": "string",
             "name": "purpose"
-          }
-        }
-      },
-      "land": {
-        "_keys_path": "//div[@class='item-params']/span/span/text()",
-        "_vals_path": "//div[@class='item-params']/span/text()",
-        "key_converter": {
-          "отдельный_вход": {
-            "type": "string",
-            "name": "private_entrance"
-          },
-          "площадь": {
-            "type": "float",
-            "name": "area_total",
-            "regex": "(\\d*.\\d*).\\w+"
-          },
-          "расстояние_до_города": {
-            "type": "float",
-            "name": "from_the_town"
-          },
-          "класс_здания": {
-            "type": "string",
-            "name": "object_class"
-          },
-          "назначение_участка": {
-            "type": "string",
-            "name": "purpose"
-          }
-        }
-      },
-      "table_flats": {
-        "_keys_path": "//span[@class='item-params-label']/text()",
-        "_vals_path": "//li[@class='item-params-list-item']/text()[normalize-space()]",
-        "key_converter": {
-          "этаж": {
-            "type": "float",
-            "name": "floor",
-            "regex": "^\\d+"
-          },
-          "официальный_застройщик": {
-            "type": "string",
-            "name": "developer_name"
-          },
-          "количество_комнат": {
-            "type": "string",
-            "name": "rooms_cnt"
-          },
-          "жилая_площадь": {
-            "type": "float",
-            "name": "area_living",
-            "regex": "^\\d+\\W?\\d*"
-          },
-          "этажей_в_доме": {
-            "type": "float",
-            "name": "floors_max",
-            "regex": "^\\d+"
-          },
-          "площадь_кухни": {
-            "type": "float",
-            "name": "kitchen_area",
-            "regex": "^\\d+\\W?\\d*"
-          },
-          "общая_площадь": {
-            "type": [
-              "float",
-              "string"
-            ],
-            "name": [
-              "area_total",
-              "area_total_unit"
-            ],
-            "regex": [
-              "^\\d+\\W?\\d*",
-              "[А-Яа-я]+"
-            ]
-          },
-          "тип_дома": {
-            "type": "string",
-            "name": "wall_material"
           }
         }
       }

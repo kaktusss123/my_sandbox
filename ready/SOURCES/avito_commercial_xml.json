@@ -1,5 +1,5 @@
 {
-  "_task_id": "AVITO_SPEED_AMOUNT_TEST_XML",
+  "_task_id": "AVITO_ALL_2019_05_31",
   "_start_urls": [
     "https://www.avito.ru/moskva/kommercheskaya_nedvizhimost/prodam/gostinicy",
     "https://www.avito.ru/moskva/kommercheskaya_nedvizhimost/prodam/ofis",
@@ -1521,14 +1521,14 @@
   "project_id": "metaspider",
   "spider_id": "metacrawler",
   "global_settings": {
-    "CONCURRENT_REQUESTS": 1024,
+    "CONCURRENT_REQUESTS": 1000,
     "SPLASH_URL": "http://0.0.0.0:8050",
     "LOG_LEVEL": "INFO",
     "AUTOTHROTTLE_ENABLED": false,
     "AUTOTHROTTLE_START_DELAY": 1,
     "AUTOTHROTTLE_MAX_DELAY": 60,
-    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
-    "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1000,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 1000,
     "RETRY_ENABLED": true,
     "RETRY_HTTP_CODES": [
       500,
@@ -1554,9 +1554,9 @@
     "ROBOTSTXT_OBEY": false,
     "REDIRECT_ENABLED": false,
     "COOKIES_ENABLED": false,
-    "DOWNLOAD_FAIL_ON_DATALOSS": false,
+    "DOWNLOAD_FAIL_ON_DATALOSS": true,
     "RANDOM_UA_TYPE": "random",
-    "DOWNLOAD_TIMEOUT": 60,
+    "DOWNLOAD_TIMEOUT": 180,
     "CLOSESPIDER_ITEMCOUNT": 0,
     "CLOSESPIDER_ERRORCOUNT": 0
   },
