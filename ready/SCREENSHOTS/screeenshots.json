@@ -1,5 +1,5 @@
 {
-  "_task_id": "STEST_TIME",
+  "_task_id": "SCREENS",
   "project_id": "metaspider",
   "spider_id": "metacrawler",
   "global_settings": {
@@ -223,7 +223,8 @@
       },
       "move.ru": {
         "expr": [
-          "object-page__user-block"
+          "object-page__user-block",
+            "block-user__name"
         ],
         "exprn": [
           "Данное объявление было снято с публикации автором или срок его подачи истек",
