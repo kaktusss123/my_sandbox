@@ -1,6 +1,5 @@
 {
-  "_comment": "увеличена скорость за счет мультидоменности 1024 - 2048",
-  "_task_id": "BN_AMOUNT_TEST_PLUS",
+  "_task_id": "09.08.2019",
   "_start_urls": [
     "https://01.bn.ru/rent/commerce/comm_lands/",
     "https://02.bn.ru/rent/commerce/comm_lands/",
@@ -346,7 +345,7 @@
       },
       "phone": {
         "type": "phone",
-        "path": "//dt[text() = \"Телефон\"]/following-sibling::dd/text()[normalize-space()]"
+        "path": "//dt[contains(text(), \"Телефон\")]/following-sibling::dd/text()[normalize-space()]"
       },
       "title": {
         "type": "string",
@@ -354,11 +353,11 @@
       },
       "federal_subject": {
         "type": "string",
-        "path": "//dt[text() = \"Регион\"]/following-sibling::dd/text()[normalize-space()]"
+        "path": "//dt[contains(text(), \"Регион\")]/following-sibling::dd/text()[normalize-space()]"
       },
       "address": {
         "type": "list to string",
-        "path": "//td[text() = \"Адрес\"]/following-sibling::td/text()[normalize-space()]|//div[text() = \"Адрес\"]/following-sibling::div/text()[normalize-space()]"
+        "path": "//td[contains(text(), \"Адрес\")]/following-sibling::td/text()[normalize-space()]|//div[contains(text(), \"Адрес\")]/following-sibling::div/text()[normalize-space()]"
       },
       "source_latitude": {
         "type": "float",
@@ -372,30 +371,35 @@
       },
       "land_area": {
         "type": "float",
-        "path": "//dt[text() = \"Площадь участка\"]/following-sibling::dd/text()[normalize-space()]|//div[text() = \"Площадь участка\"]/following-sibling::div/text()[normalize-space()]",
-        "regex": "[\\d\\.]+"
+        "path": "//dt[contains(text(), \"Площадь участка\")]/following-sibling::dd/text()[normalize-space()]|//div[contains(text(), \"Площадь участка\")]/following-sibling::div/text()[normalize-space()]",
+        "regex": "[\\d\\.]{2,}|\\d"
+      },
+      "area_total": {
+        "type": "float",
+        "path": "//dt[contains(text(), \"Общая площадь\")]/following-sibling::dd/text()",
+        "regex": "[\\d\\.]{2,}|\\d"
       },
       "area_land_unit": {
         "type": "string",
-        "path": "//dt[text() = \"Площадь участка\"]/following-sibling::dd/text()[normalize-space()]|//div[text() = \"Площадь участка\"]/following-sibling::div/text()[normalize-space()]",
-        "regex": "[А-Яа-я ]",
+        "path": "//dt[contains(text(), \"Площадь участка\")]/following-sibling::dd/text()[normalize-space()]|//div[contains(text(), \"Площадь участка\")]/following-sibling::div/text()[normalize-space()]",
+        "regex": "[А-Яа-я ]+",
         "string_operations": [
           "lower"
         ]
       },
       "purpose": {
         "type": "string",
-        "path": "//dt[text() = \"Статус участка\"]/following-sibling::dd/text()[normalize-space()]"
+        "path": "//dt[contains(text(), \"Статус участка\")]/following-sibling::dd/text()"
       },
       "date_created": {
         "type": "date",
         "time": "from string",
-        "path": "//dt[text() = \"Дата размещения\"]/following-sibling::dd/text()[normalize-space()]"
+        "path": "//dt[contains(text(), \"Дата размещения\")]/following-sibling::dd/text()[normalize-space()]"
       },
       "date_updated": {
         "type": "date",
         "time": "from string",
-        "path": "//dt[text() = \"Дата обновления\"]/following-sibling::dd/text()[normalize-space()]"
+        "path": "//dt[contains(text(), \"Дата обновления\")]/following-sibling::dd/text()[normalize-space()]"
       },
       "date_info": {
         "type": "date",
@@ -403,16 +407,16 @@
       },
       "description": {
         "type": "list to string",
-        "path": "//div[@id=\"description\"]/text()[normalize-space()]|//div[@class=\"object-text\"]/p/text()[normalize-space()]"
+        "path": "//div[@id=\"description\"]//text()[normalize-space()]|//div[@class=\"object-text\"]/p/text()[normalize-space()]"
       },
       "land_type": {
         "type": "string",
-        "path": "//div[@class=\"object-description\"]//div[text() = \"Статус земли\"]/following-sibling::div/text()[normalize-space()]"
+        "path": "//div[@class=\"object-description\"]//div[contains(text(), \"Статус земли\")]/following-sibling::div/text()"
       },
       "operation": {
         "type": "string",
-        "path": "//ul[@id=\"breadcrumb\"]/li[2]/a/@href[normalize-space()]",
-        "regex": "sale|rent"
+        "path": "//section[@class=\"round_gr detail\"]/h1/text()[normalize-space()]|//div[@class=\"object-head\"][1]/h1/text()[normalize-space()]",
+        "regex": "[Пп]род|[Аа]ренд"
       }
     }
   }
