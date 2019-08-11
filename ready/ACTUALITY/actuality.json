@@ -99,7 +99,7 @@
             },
             "arendator.ru": {
                 "expr": [
-                    "ask_phone(event, 'offers'"
+                    "Отправить заявку"
                 ],
                 "exprn": ""
             },
