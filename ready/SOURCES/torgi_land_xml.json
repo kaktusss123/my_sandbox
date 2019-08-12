@@ -207,7 +207,7 @@
   },
   "sitemap_urls": {
     "start": [
-      "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=2&publishDateFrom=20180601T0000"
+      "https://torgi.gov.ru/opendata/7710349494-torgi/data.xml?bidKind=2&publishDateFrom=20190601T0000"
     ],
     "type": "pagination",
     "crawl_tree": {
@@ -231,7 +231,7 @@
     }
   }],
   "_operation": "",
-  "_task_id": "08.08.2019",
+  "_task_id": "12.08.2019",
   "global_settings": {
     "ROBOTSTXT_OBEY": false,
     "SPLASH_URL": "http://0.0.0.0:8050",
@@ -258,7 +258,7 @@
     "CONCURRENT_REQUESTS": 186,
     "RANDOM_UA_TYPE": "random",
     "AUTOTHROTTLE_ENABLED": true,
-    "DOWNLOAD_TIMEOUT": 120,
+    "DOWNLOAD_TIMEOUT": 300,
     "LOG_LEVEL": "INFO",
     "RETRY_TIMES": 20,
     "COOKIES_ENABLED": false,
