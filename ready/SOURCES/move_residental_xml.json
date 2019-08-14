@@ -1,0 +1,390 @@
+{
+  "_task_id": "333",
+  "_start_urls": [],
+  "_segment": "Земельные участки",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "https://move.ru",
+  "project_id": "metaspider",
+  "spider_id": "metacrawler",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 1000,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": true,
+    "AUTOTHROTTLE_START_DELAY": 1,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1000,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 1000,
+    "RETRY_ENABLED": true,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      301,
+      302,
+      303,
+      451,
+      307,
+      410,
+      502,
+      407
+    ],
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_TIMES": 20,
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": true,
+    "DOWNLOAD_FAIL_ON_DATALOSS": false,
+    "RANDOM_UA_TYPE": "random",
+    "DOWNLOAD_TIMEOUT": 60,
+    "CLOSESPIDER_ITEMCOUNT": 0,
+    "CLOSESPIDER_ERRORCOUNT": 0
+  },
+  "methods": {
+    "crawling_type": "common",
+    "filter_duplicates": true,
+    "allowed_domains": [],
+    "proxy_settings": {
+      "types": [
+        "https"
+      ],
+      "amount": 10000,
+      "save": false
+    }
+  },
+  "crawl_tree": [
+    {
+      "pagination_urls": {
+        "path": "//li[@class='pagination-block__list-item active']/following-sibling::li/a/@href"
+      },
+      "item_urls": {
+        "path": "//div[@class='enshrined-items'][1]/following-sibling::div/div[@class='search-item__header']/a/@href"
+      }
+    }
+  ],
+  "sitemap_urls": {
+    "start": [
+      "https://kaluga.move.ru/robots.txt",
+      "https://tver.move.ru/robots.txt",
+      "https://tyumen.move.ru/robots.txt",
+      "https://kareliya.move.ru/robots.txt",
+      "https://ak.move.ru/robots.txt",
+      "https://kurgan.move.ru/robots.txt",
+      "https://osetiya.move.ru/robots.txt",
+      "https://krasnodar.move.ru/robots.txt",
+      "https://vologda.move.ru/robots.txt",
+      "https://tula.move.ru/robots.txt",
+      "https://ivanovo.move.ru/robots.txt",
+      "https://omsk.move.ru/robots.txt",
+      "https://pskov.move.ru/robots.txt",
+      "https://kchr.move.ru/robots.txt",
+      "https://birobidzhan.move.ru/robots.txt",
+      "https://sevastopol.move.ru/robots.txt",
+      "https://penza.move.ru/robots.txt",
+      "https://saha.move.ru/robots.txt",
+      "https://magadan.move.ru/robots.txt",
+      "https://kbr.move.ru/robots.txt",
+      "https://arhangelsk.move.ru/robots.txt",
+      "https://kalmykiya.move.ru/robots.txt",
+      "https://kemerov.move.ru/robots.txt",
+      "https://krim.move.ru/robots.txt",
+      "https://astrahan.move.ru/robots.txt",
+      "https://hmao.move.ru/robots.txt",
+      "https://bryansk.move.ru/robots.txt",
+      "https://move.ru/robots.txt",
+      "https://ufa.move.ru/robots.txt",
+      "https://ulan-ude.move.ru/robots.txt",
+      "https://spb.move.ru/robots.txt",
+      "https://murmansk.move.ru/robots.txt",
+      "https://stavropol.move.ru/robots.txt",
+      "https://ryazan.move.ru/robots.txt",
+      "https://chita.move.ru/robots.txt",
+      "https://ulyanovsk.move.ru/robots.txt",
+      "https://samara.move.ru/robots.txt",
+      "https://sverdlovsk.move.ru/robots.txt",
+      "https://tambov.move.ru/robots.txt",
+      "https://chuvashia.move.ru/robots.txt",
+      "https://krasnoyarsk.move.ru/robots.txt",
+      "https://voronezh.move.ru/robots.txt",
+      "https://kursk.move.ru/robots.txt",
+      "https://nn.move.ru/robots.txt",
+      "https://vladivostok.move.ru/robots.txt",
+      "https://yaroslavl.move.ru/robots.txt",
+      "https://volgograd.move.ru/robots.txt",
+      "https://lipetsk.move.ru/robots.txt",
+      "https://vnovgorod.move.ru/robots.txt",
+      "https://orel.move.ru/robots.txt",
+      "https://tatarstan.move.ru/robots.txt",
+      "https://chelyabinsk.move.ru/robots.txt",
+      "https://adygeya.move.ru/robots.txt",
+      "https://chechenskaya.move.ru/robots.txt",
+      "https://rnd.move.ru/robots.txt",
+      "https://ra.move.ru/robots.txt",
+      "https://kamchatka.move.ru/robots.txt",
+      "https://smolensk.move.ru/robots.txt",
+      "https://habarovsk.move.ru/robots.txt",
+      "https://hakasiya.move.ru/robots.txt",
+      "https://dagestan.move.ru/robots.txt",
+      "https://vladimir.move.ru/robots.txt",
+      "https://kostroma.move.ru/robots.txt",
+      "https://komi.move.ru/robots.txt",
+      "https://marijel.move.ru/robots.txt",
+      "https://amursk.move.ru/robots.txt",
+      "https://kaliningrad.move.ru/robots.txt",
+      "https://kirov.move.ru/robots.txt",
+      "https://orenburg.move.ru/robots.txt",
+      "https://perm.move.ru/robots.txt",
+      "https://saratov.move.ru/robots.txt",
+      "https://salehard.move.ru/robots.txt",
+      "https://novosibirsk.move.ru/robots.txt",
+      "https://tomsk.move.ru/robots.txt",
+      "https://tyva.move.ru/robots.txt",
+      "https://udmurtia.move.ru/robots.txt",
+      "https://irkutsk.move.ru/robots.txt",
+      "https://belgorod.move.ru/robots.txt",
+      "https://yuzhno-sahalinsk.move.ru/robots.txt",
+      "https://mordoviya.move.ru/robots.txt"
+    ],
+    "type": "robots",
+    "target": "robots",
+    "crawl_tree": {
+      "robots": {
+        "targets": {
+          "sitemap": {
+            "type": "sitemap",
+            "filters": [
+              "index_objects"
+            ]
+          }
+        }
+      },
+      "sitemap": {
+        "targets": {
+          "sitemap_2": {
+            "type": "sitemap",
+            "filters": [
+              "kvartiry",
+              "komnaty"
+            ]
+          }
+        }
+      },
+      "sitemap_2": {
+        "targets": {
+          "item": {
+            "type": "item"
+          }
+        }
+      },
+      "item": {}
+    }
+  },
+  "item_page": {
+    "fields": {
+      "operation": {
+        "type": "string",
+        "path": "(//h3[@class='object-info__title'])[1]/text()",
+        "regex": "прод|аренд",
+        "operations": []
+      },
+      "source_latitude": {
+        "type": "float",
+        "path": "//script[contains(text(),'coordsCenterTile=[')]/text()",
+        "regex": "(?<=coords=\\[)(\\d+\\.\\d+)(?=,\\s)",
+        "operations": []
+      },
+      "address": {
+        "type": "list to string",
+        "path": "//div[@itemprop='address']//text()",
+        "operations": []
+      },
+      "price_currency": {
+        "type": "string",
+        "path": "//meta[@itemprop='priceCurrency']/@content",
+        "operations": []
+      },
+      "source_longitude": {
+        "type": "float",
+        "path": "//script[contains(text(),'coordsCenterTile=[')]/text()",
+        "regex": "(?<=, )(\\d+\\.\\d+)(?=\\])",
+        "operations": []
+      },
+      "seller_name": {
+        "type": "string",
+        "path": "//*[@class='block-user__name'][1]/text()",
+        "operations": []
+      },
+      "company_name": {
+        "type": "string",
+        "path": "//div[contains(@class, 'object-page__user-block')]//div[@class='block-user__agency']/text()",
+        "operations": []
+      },
+      "rent_price_per_area": {
+        "type": "float",
+        "path": "//span[@class='block-price_second-price-value js-price-second-value']/text()",
+        "regex": "\\d*\\W?\\d+",
+        "operations": []
+      },
+      "price_term": {
+        "type": "string",
+        "path": "//li[@class='block-price_price-period block-price_cur-price_li']/text()",
+        "regex": "в сутки|в месяц|в год|в неделю|еженедельно|понедельно|ежедневно|в мес|/год|/мес",
+        "operations": []
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now",
+        "operations": []
+      },
+      "date_created": {
+        "type": "date",
+        "path": "(//li[@class='block-date__time block-date__li']//text())[1]",
+        "time": "from string",
+        "operations": []
+      },
+      "price_total": {
+        "type": "float",
+        "path": "//meta[@itemprop='price']/@content",
+        "operations": []
+      },
+      "title_name": {
+        "type": "list to string",
+        "path": "//h1//span/text()",
+        "operations": []
+      },
+      "federal_subject": {
+        "type": "string",
+        "path": "//span[@class='top-menu__link top-menu__region']/text()[normalize-space()]",
+        "operations": []
+      },
+      "description": {
+        "type": "list to string",
+        "path": "//div[@class='object-page__text-block']/text()",
+        "regex": "[^•|^\\t|^\\r]+",
+        "operations": []
+      },
+      "district_name": {
+        "type": "string",
+        "path": "(//a[@class='geo-block__geo-info_link']/text())[1]",
+        "regex": ".+ р-н",
+        "operations": []
+      },
+      "address_city": {
+        "type": "string",
+        "path": "(//a[@class='geo-block__geo-info_link']/text())[2]",
+        "regex": ".\\. .+",
+        "operations": []
+      },
+      "reference_point": {
+        "type": "string",
+        "path": "(//li[@class='geo-block__block-distance_property geo-block__block-distance_poi']//span/text())[1]",
+        "operations": []
+      },
+      "agent_fee": {
+        "type": "string",
+        "path": "//div[@class=\"object-info__details-table_property_name\"][contains(text(), 'Комиссия агенту')]//following-sibling::div/text()"
+      },
+      "rooms_cnt": {
+        "type": "string",
+        "path": "//div[@class=\"object-info__details-table_property_name\"][contains(text(), 'Количество комнат')]//following-sibling::div/text()"
+      },
+      "floor": {
+        "type": "float",
+        "path": "//div[@class=\"object-info__details-table_property_name\"][contains(text(), 'Этаж')]//following-sibling::div/text()",
+        "regex": "\\d+(?=/)"
+      },
+      "area_total": {
+        "type": "float",
+        "path": "//div[@class=\"object-info__details-table_property_name\"][contains(text(), 'Общая площадь')]//following-sibling::div/text()",
+        "regex": "\\d+"
+      },
+      "area_living": {
+        "type": "float",
+        "path": "//div[@class=\"object-info__details-table_property_name\"][contains(text(), 'Жилая комната')]//following-sibling::div/text()"
+      },
+      "kitchen_area": {
+        "type": "float",
+        "path": "//div[@class=\"object-info__details-table_property_name\"][contains(text(), 'Площадь кухни')]//following-sibling::div/text()",
+        "regex": "\\d+"            
+      },
+      "date_updated": {
+        "type": "date",
+        "time": "from string",
+        "path": "//div[@class=\"object-info__details-table_property_name\"][contains(text(), 'Дата обновления')]//following-sibling::div/text()"
+      },
+      "is_internet": {
+        "type": "string",
+        "path": "//div[@class=\"object-info__details-table_property_name\"][contains(text(), 'Интернет')]//following-sibling::div/text()"
+      },
+      "is_elevator": {
+        "type": "string",
+        "path": "//div[@class=\"object-info__details-table_property_name\"][contains(text(), 'Лифт')]//following-sibling::div/text()"
+      },
+      "is_parking": {
+        "type": "string",
+        "path": "//div[@class=\"object-info__details-table_property_name\"][contains(text(), 'Парковка')]//following-sibling::div/text()"
+      },
+      "is_phone": {
+        "type": "string",
+        "path": "//div[@class=\"object-info__details-table_property_name\"][contains(text(), 'Телефон')]//following-sibling::div/text()"
+      },
+      "building_type": {
+        "type": "string",
+        "path": "//div[@class=\"object-info__details-table_property_name\"][contains(text(), 'Тип здания')]//following-sibling::div/text()"
+      },
+      "year_built": {
+        "type": "float",
+        "path": "//div[@class=\"object-info__details-table_property_name\"][contains(text(), 'Год постройки')]//following-sibling::div/text()"
+      },
+      "floors_cnt": {
+        "type": "float",
+        "path": "//div[@class=\"object-info__details-table_property_name\"][contains(text(), 'Количество этажей')]//following-sibling::div/text()"
+      },
+      "entrance_cnt": {
+        "type": "float",
+        "path": "//div[@class=\"object-info__details-table_property_name\"][contains(text(), 'Количество подъездов')]//following-sibling::div/text()",
+        "regex": "\\d+"            
+      }
+    },
+    "follow": [
+      {
+        "fields": {
+          "phone": {
+            "type": "phone",
+            "path": "data.phones"
+          }
+        },
+        "post_params": {
+          "fields": {
+            "item_id": {
+              "type": "string",
+              "path": "(//div[contains(@class,'phone_number_button-block')]/a/@data-item-id)[1]"
+            }
+          }
+        },
+        "methods": {
+          "crawling_type": "post",
+          "content_type": "json",
+          "filter_duplicates": false,
+          "allowed_domains": [],
+          "proxy_settings": {
+            "types": [
+              "https"
+            ],
+            "amount": 10000,
+            "save": true
+          }
+        },
+        "url": "https://move.ru/ajax/itemsV3/getPhone/"
+      }
+    ]
+  }
+}
