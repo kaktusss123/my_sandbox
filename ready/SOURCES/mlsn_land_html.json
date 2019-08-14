@@ -1,0 +1,305 @@
+{
+  "_task_id": "333",
+  "_start_urls": [
+"https://adigea.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://altay.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://altkray.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://amur.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://arh.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://astrahan.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://belgorod.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://brn.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://bryansk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://chechnya.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://chelyabinsk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://chuk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://chuvash.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://dagestan.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://ekb.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://erveyskaya.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://habarovsk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://hakasia.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://hanti.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://ingush.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://irkutsk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://ivanovo.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://izh.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://kabardbalk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://kaliningrad.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://kalmikiya.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://kaluga.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://karachaevo.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://karelia.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://kazan.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://kemerovo.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://kirov.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://komi.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://kostroma.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://krasnodar.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://krasnodarkray.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://krs.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://krym.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://kurgan.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://kursk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://lenobl.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://lipetsk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://magadan.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://modrdoviya.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://mosobl.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://msk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://murmansk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://nenetsk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://nizhnevartovsk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://nn.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://novgorod.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://nsk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://nvkz.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://nvrsk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://omsk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://orel.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://orenburg.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://osetia.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://penza.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://perm.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://pskov.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://rostov.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://ryazan.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://sahalin.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://samara.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://saratov.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://sevastopol.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://smolensk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://sochi.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://spb.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://stavropol.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://surgut.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://tambov.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://tatarstan.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://tiva.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://tmn.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://tomsk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://tula.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://tver.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://ufa.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://ul.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://ulanude.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://vladimir.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://vladivostok.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://volgograd.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://vologda.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://vrn.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://yakutia.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://yamalonenetsk.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://yaroslavl.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://yoshkar-ola.mlsn.ru/prodazha-zemelnye-uchastki/",
+"https://zabaykalsk.mlsn.ru/prodazha-zemelnye-uchastki/"
+  ],
+  "_segment": "Продажа/аренда участков",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "MLSN",
+  "project_id": "metaspider",
+  "spider_id": "metacrawler",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 1000,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": true,
+    "AUTOTHROTTLE_START_DELAY": 1,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1000,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 1000,
+    "RETRY_ENABLED": true,
+    "RETRY_HTTP_CODES": [
+      500,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      301,
+      302,
+      303,
+      451,
+      307,
+      410,
+      502,
+      407
+    ],
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_TIMES": 20,
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": true,
+    "DOWNLOAD_FAIL_ON_DATALOSS": false,
+    "RANDOM_UA_TYPE": "random",
+    "DOWNLOAD_TIMEOUT": 60,
+    "CLOSESPIDER_ITEMCOUNT": 0,
+    "CLOSESPIDER_ERRORCOUNT": 0
+  },
+  "methods": {
+    "crawling_type": "common",
+    "filter_duplicates": true,
+    "allowed_domains": [],
+    "proxy_settings": {
+      "types": [
+        "https"
+      ],
+      "amount": 10000,
+      "save": false
+    }
+  },
+  "crawl_tree": [
+    {
+      "pagination_urls": {
+        "path": "//link[@rel='next']/@href"
+      },
+      "item_urls": {
+        "path": "//table[@class='table table-bordered grid-view mode-grid'][1]//a[@class='location']/@href"
+      }
+    }
+  ],
+  "item_page": {
+    "fields": {
+      "address_city": {
+        "type": "string",
+        "path": "//head/title/text()",
+        "regex": "(?<=MLSN\\.RU\\s).+"
+      },
+      "title_name": {
+        "type": "string",
+        "path": "//title/text()"
+        
+      },
+      "date_info": {
+        "type": "date",
+        "time": "now"
+      },
+      "price_total": {
+        "type": "float",
+        "path": "//div[@class='ColumnLeft__base']//span[@class='Price__base']/text()",
+        "regex": "\\d+ ?\\d* ?\\d*"
+      },
+      "address": {
+        "type": "string",
+        "path": "//span[@itemprop='name']//span[2]/text()"
+      },
+      "segment_subtype": {
+        "type": "string",
+        "path": "//span[@itemprop='name']//span[1]/text()",
+        "regex": "[Уу]часто",
+        "string-operations": ["lower"]
+      },
+      "operation": {
+        "type": "string",
+        "path": "//head/title/text()",
+        "regex": "[Пп]род|[Аа]ренд"
+      },
+      "area_total": {
+        "type": "float",
+        "path": "//span[@itemprop='name']//span[1]/text()",
+        "regex": "\\d+ ?\\d* ?\\d*"
+      },
+      "description": {
+        "type": "string",
+        "path": "//div[@itemprop='description']//p/text()"
+      },
+      "rent_price_per_area": {
+        "type": "float",
+        "path": "//div[@class='PropertyHeader__priceAddition typography__bodySmall fonts__mainFont']/text()",
+        "regex": "\\d+"
+      },
+      "date_created": {
+        "type": "date",
+        "time": "from string",
+        "path": "//div[@class='PropertyStats__propertyStatistics typography__bodySmall fonts__mainFont']/div[3]/span/text()"
+      },
+      "date_updated": {
+        "type": "date",
+        "time": "from string",
+        "path": "//div[@class='PropertyStats__propertyStatistics typography__bodySmall fonts__mainFont']/div[4]/span/text()"
+      },
+      "seller_name": {
+        "type": "string",
+        "path": "//*[contains(@class, 'ContactsCard__contactName')][1]/text()"
+      },
+      "company_name": {
+        "type": "string",
+        "path": "//div[contains(@class, 'ContactsCard__agencyName')][1]/span/text()[3]|//div[contains(@class, 'ContactsCard__agencyName')][1]/a/text()[3]"
+      },
+      "phone": {
+        "type": "phone",
+        "path": "//html/body/script[2]/text()",
+        "regex": "(?<=number\":\")\\d+"
+      },
+
+          "total_area_object": {
+            "type": "float",
+            "path": "//td[@class='ParamsList__paramName typography__bodySmall fonts__mainFont' and contains(text(),'Площадь общая')]/following-sibling::td/text()",
+            "regex": "\\d+ ?\\d* ?\\d*"
+          },
+          "area_living": {
+            "type": "float",
+            "path": "//td[@class='ParamsList__paramName typography__bodySmall fonts__mainFont' and contains(text(),'Площадь жилая')]/following-sibling::td/text()",
+            "regex": "\\d+ ?\\d* ?\\d*"
+          },
+          "otoplenie": {
+            "type": "string",
+            "path": "//td[@class='ParamsList__paramName typography__bodySmall fonts__mainFont' and contains(text(),'Вид отопления')]/following-sibling::td/text()"
+            
+          },
+          "wall_material": {
+            "type": "string",
+            "path": "//td[@class='ParamsList__paramName typography__bodySmall fonts__mainFont' and contains(text(),'Материал дома')]/following-sibling::td/text()"
+                      
+          },
+
+          "is_electricity": {
+            "type": "string",
+            "path": "//td[@class='ParamsList__paramName typography__bodySmall fonts__mainFont' and contains(text(),'Электричество')]/following-sibling::td/text()"
+            
+          },
+          "is_plumbing": {
+            "type": "string",
+            "path": "//td[@class='ParamsList__paramName typography__bodySmall fonts__mainFont' and contains(text(),'Водопровод')]/following-sibling::td/text()"
+                        
+          },
+          "is_gas": {
+            "type": "string",
+            "path": "//td[@class='ParamsList__paramName typography__bodySmall fonts__mainFont' and contains(text(),'Газ')]/following-sibling::td/text()"
+            
+          },
+          "is_sewage": {
+            "type": "string",
+            "path": "//td[@class='ParamsList__paramName typography__bodySmall fonts__mainFont' and contains(text(),'Канализация')]/following-sibling::td/text()"
+          },
+
+     	 "security_type": {
+            "type": "string",
+            "path": "//td[@class='ParamsList__paramName typography__bodySmall fonts__mainFont' and contains(text(),'Охрана')]/following-sibling::td/text()"
+            
+          },
+          "building_type_g": {
+            "type": "string",
+            "path": "//td[@class='ParamsList__paramName typography__bodySmall fonts__mainFont' and contains(text(),'Гараж')]/following-sibling::td/text()"
+            
+          },
+          "building_type_b": {
+            "type": "string",
+            "path": "//td[@class='ParamsList__paramName typography__bodySmall fonts__mainFont' and contains(text(),'Баня')]/following-sibling::td/text()"
+            
+          },
+          "building_type_h": {
+            "type": "string",
+            "path": "//td[@class='ParamsList__paramName typography__bodySmall fonts__mainFont' and contains(text(),'Хоз. постройки')]/following-sibling::td/text()"
+            
+      	  }
+
+    }
+
+  }
+}
