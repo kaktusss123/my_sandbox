@@ -1,0 +1,487 @@
+{
+        "_task_id": "QP_NEW_HTML_TEST_NO_DUPLICATES",
+        "_start_urls": [
+            "https://bryanskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://bryanskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://moskva.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://moskva.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://leningradskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://leningradskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://mordoviya.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://mordoviya.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://severnaya-osetiya-alaniya.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://severnaya-osetiya-alaniya.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://aksha.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://aksha.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://saratovskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://saratovskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://dagestan.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://dagestan.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://pskovskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://pskovskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://magadanskaya.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://magadanskaya.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://krasnodarskij.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://krasnodarskij.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://mariy-yel.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://mariy-yel.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://altaj.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://altaj.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://tverskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://tverskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://chelyabinskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://chelyabinskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://murmanskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://murmanskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://tyva.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://tyva.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://orenburgskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://orenburgskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://astrahanskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://astrahanskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://ingushetiya.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://ingushetiya.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://kirovskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://kirovskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://peterburg.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://peterburg.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://omskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://omskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://permskiy-kray.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://permskiy-kray.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://neneckij.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://neneckij.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://novgorodskaya.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://novgorodskaya.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://tyumenskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://tyumenskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://kalmykiya.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://kalmykiya.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://saxa-yakutiya.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://saxa-yakutiya.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://amurskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://amurskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://ivanovskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://ivanovskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://karachaevo-cherkesskaya.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://karachaevo-cherkesskaya.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://samarskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://samarskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://tomskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://tomskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://rostovskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://rostovskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://kemerovskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://kemerovskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://udmurtskaya.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://udmurtskaya.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://chuvashskaya-respublika.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://chuvashskaya-respublika.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://chechenskaya-respublika.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://chechenskaya-respublika.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://izmalkovo.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://izmalkovo.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://chukotskij.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://chukotskij.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://kurganskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://kurganskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://smolenskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://smolenskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://kabardino-balkarskaya.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://kabardino-balkarskaya.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://voronezhskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://voronezhskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://orlovskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://orlovskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://tulskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://tulskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://kareliya.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://kareliya.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://vologodskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://vologodskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://kostromskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://kostromskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://tambovskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://tambovskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://nizhegorodskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://nizhegorodskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://yaroslavskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://yaroslavskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://krim.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://krim.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://ryazanskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://ryazanskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://adygeya.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://adygeya.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://bashkortostan.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://bashkortostan.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://kamchatskiy-kray.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://kamchatskiy-kray.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://belgorodskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://belgorodskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://kaluzhskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://kaluzhskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://kaliningradskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://kaliningradskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://kurskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://kurskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://moskovskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://moskovskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://volgogradskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://volgogradskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://saxalinskaya.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://saxalinskaya.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://buryatiya.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://buryatiya.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://vladimirskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://vladimirskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://irkutskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://irkutskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://surskoe.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://surskoe.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://xakasiya.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://xakasiya.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://arhangelskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://arhangelskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://stavropolskij.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://stavropolskij.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://xabarovskij.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://xabarovskij.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://xanty-mansijskij-avtonomnyj-okrug-yugra.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://xanty-mansijskij-avtonomnyj-okrug-yugra.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://primorskiy-kray.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://primorskiy-kray.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://yamalo-neneckij.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://yamalo-neneckij.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://evrejskaya.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://evrejskaya.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://altajskij.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://altajskij.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://komi.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://komi.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://sverdlovskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://sverdlovskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://novosibirskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://novosibirskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://penzenskaya-oblast.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://penzenskaya-oblast.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://krasnoyarskiy-kray.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://krasnoyarskiy-kray.qp.ru/realty/sdau_zemelnye-uchastki",
+            "https://tatarstan.qp.ru/realty/prodau_zemelnye-uchastki",
+            "https://tatarstan.qp.ru/realty/sdau_zemelnye-uchastki"
+        ],
+        "_segment": "Продажа/аренда участков",
+        "_operation": "",
+        "_federal_subject": "",
+        "_source": "QP-RU",
+        "project_id": "metaspider",
+        "spider_id": "metacrawler",
+        "global_settings": {
+            "CONCURRENT_REQUESTS": 1024,
+            "SPLASH_URL": "http://0.0.0.0:8050",
+            "LOG_LEVEL": "INFO",
+            "AUTOTHROTTLE_ENABLED": true,
+            "AUTOTHROTTLE_START_DELAY": 1,
+            "AUTOTHROTTLE_MAX_DELAY": 60,
+            "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+            "CONCURRENT_REQUESTS_PER_DOMAIN": 256,
+            "RETRY_ENABLED": true,
+            "RETRY_HTTP_CODES": [
+                500,
+                503,
+                504,
+                400,
+                403,
+                408,
+                429,
+                505,
+                404,
+                303,
+                307,
+                410,
+                451,
+                407,
+                502
+            ],
+            "HTTPERROR_ALLOWED_CODES": [],
+            "RETRY_TIMES": 40,
+            "ROBOTSTXT_ENABLED": false,
+            "ROBOTSTXT_OBEY": false,
+            "REDIRECT_ENABLED": true,
+            "COOKIES_ENABLED": true,
+            "DOWNLOAD_FAIL_ON_DATALOSS": false,
+            "RANDOM_UA_TYPE": "random",
+            "DOWNLOAD_TIMEOUT": 60,
+            "CLOSESPIDER_ITEMCOUNT": 0,
+            "CLOSESPIDER_ERRORCOUNT": 0
+        },
+        "methods": {
+            "crawling_type": "common",
+            "filter_duplicates": false,
+            "allowed_domains": [],
+            "proxy_settings": {
+                "types": [
+                    "https"
+                ],
+                "amount": 10000,
+                "save": false
+            },
+            "save_cookies": true
+        },
+        "crawl_tree": [
+            {
+                "pagination_urls": {
+                    "path": "(//li[@class='active page-item']/following-sibling::li[1]/a/@href)[1]",
+                    "methods":{"filter_duplicates": false}
+                },
+                "item_urls": {
+                    "path": "//article[contains(@class,'adoc-item')]/a/@href",
+                    "methods":{"filter_duplicates": false}
+                }
+            }
+        ],
+           
+        "item_page": {
+            "fields": {
+                "segment": {
+                    "type": "string",
+                    "path": "//li[@class='breadcrumb-item'][3]/a/text()",
+                    "operations": []
+                },
+                "price_term": {
+                    "type": "string",
+                    "path": "//div[@class='btn-group price-dropdown js-dropdown-openhover']//button[@type='button']/text()[normalize-space()][2]",
+                    "operations": []
+                },
+                "phone": {
+                    "type": "phone",
+                    "path": "//div[@class='manger-info--phone']//text()",
+                    "operations": []
+                },
+                "source_latitude": {
+                    "type": "string",
+                    "path": "//div[@class='map hidden-print']//@data-placemark",
+                    "regex": "\\[(.+),",
+                    "operations": []
+                },
+                "price_currency": {
+                    "type": "string",
+                    "value": "RUB",
+                    "operations": []
+                },
+                "source_longitude": {
+                    "type": "string",
+                    "path": "//div[@class='map hidden-print']//@data-placemark",
+                    "regex": ",(.+)\\]",
+                    "operations": []
+                },
+                "seller_name": {
+                    "type": "string",
+                    "path": "(//div[@class='contacts-table']//div[@class='contact-row-data']//div)[1]/text()"
+                    
+                },
+                   "date_info": {
+                    "type": "date",
+                    "time": "now",
+                    "operations": []
+                },
+                "operation": {
+                    "type": "string",
+                    "path": "//li[@class='breadcrumb-item'][3]/a/text()",
+                    "operations": []
+                },
+                "date_created": {
+                    "type": "date",
+                    "path": "//div[@class='date-view d-inline-block mt-1 hidden-print']//span[@title='Дата публикации']/text()[normalize-space()]",
+                    "time": "from string",
+                    "operations": []
+                },
+                "title_name": {
+                    "type": "string",
+                    "path": "//h1[@class='h1-responsive']//text()",
+                    "operations": []
+                },
+                "email": {
+                    "type": "string",
+                    "path": "//div[@class='contacts-table']//div[@class='contact-row-data']//a[@class='link-black']/text()",
+                    "operations": []
+                },
+                 "price_total": {
+                    "type": "float",
+                    "path": "//div[@class='btn-group price-dropdown js-dropdown-openhover']//button[@type='button']/text()[normalize-space()]",
+                    "regex": "\\d*",
+                    "operations": []
+                },
+                "rent_price_per_area": {
+                    "type": "string",
+                    "path": "//div[@class='btn-group price-dropdown js-dropdown-openhover']//button[@type='button']/text()[normalize-space()]",
+                    "regex": "[А-Яа-яЁё  ]+",
+                    "operations": []
+                },
+                "federal_subject": {
+                    "type": "string",
+                    "path": "//a[@class='nav-link btn-region float-left jsc-region-selector']/text()",
+                    "operations": []
+                },
+                    "dop_info": {
+                    "type": "list to string",
+                    "path" : "//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls multy-link']/a/text()|//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls ']/a/text()"
+                    
+            },
+                    "is_electricity": {
+                    "type": "list to string",
+                    "path" : "//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls multy-link']/a/text()|//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls ']/a/text()",
+                    "regex": "электричество"
+            },
+                    "is_sewage": {
+                    "type": "list to string",
+                    "path" : "//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls multy-link']/a/text()|//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls ']/a/text()",
+                    "regex": "канализация"
+            },
+                    "is_water": {
+                    "type": "list to string",
+                    "path" : "//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls multy-link']/a/text()|//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls ']/a/text()",
+                    "regex": "скважина|колодец|водопровод"
+            },
+                    "forest_type": {
+                    "type": "list to string",
+                    "path" : "//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls multy-link']/a/text()|//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls ']/a/text()",
+                    "regex": "лес"
+            },
+                    "object_access_land": {
+                    "type": "list to string",
+                    "path" : "//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls multy-link']/a/text()|//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls ']/a/text()",
+                    "regex": "круглогодичный доступ"
+            },
+                    "type_offroad": {
+                    "type": "list to string",
+                    "path" : "//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls multy-link']/a/text()|//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls ']/a/text()",
+                    "regex": "(грунтовая дорога|асфальтированная дорога)"
+            },
+                    "is_gas": {
+                    "type": "list to string",
+                    "path" : "//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls multy-link']/a/text()|//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls ']/a/text()",
+                    "regex": "газ"
+            },
+                    "has_buildings": {
+                    "type": "list to string",
+                    "path" : "//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls multy-link']/a/text()|//div[@class='control-label']/span[text()='Дополнительно']/following::div[@class='controls ']/a/text()",
+                    "regex": "баня|дом|сарай|фундамент|хозпостройки|цех|сруб"
+            },
+                    "distance": {
+                    "type": "list to string",
+                    "path" : "//div[@class='control-label']/span[text()='Расстояние до города']/following::div[@class='controls ']/text()",
+                    "regex": "[\\d]+[.]?[\\d]+[\\s]км"
+            },
+                    "trading_status": {
+                    "type": "list to string",
+                    "path" : "//div[@class='control-label']/span[text()='Торг']/following::a[@href='/realty/prodau_zemelnye-uchastki/da' ]//text()|//div[@class='control-label']/span[text()='Торг']/following::a[@href='/realty/prodau_zemelnye-uchastki/net' ]//text()"
+            },
+                    "land_category": {
+                    "type": "string",
+                    "path" : "//div[@class='params']/div[3]/div[@class='controls']/a/text()|//div[@class='params']/div[3]/div[2]/text()|//div[@class='params']/div[3]/div[2]/a/text()"
+                    
+            },
+                    "ownership_type": {
+                    "type": "string",
+                    "path" : "//div[@class='params']/div[4]/div[2]/text()|//div[@class='params']/div[4]/div[2]/a/text()|//div[@class='params']/div[4]/div[@class='controls']/a/text()"
+                    
+            },
+
+                "description": {
+                    "type": "list to string",
+                    "path": "//p[@class='paragraph']/text()",
+                    "operations": []
+                }
+            },
+            "tables": {
+                "table_1": {
+                    "_keys_path": "//div[@class='params']//div[@class='control-label']/span/text()",
+                    "_vals_path": "//div[@class='control-label']/following-sibling::div/text()[normalize-space()]|//div[@class='control-label']/following-sibling::div/a/text()[normalize-space()]|//div[@class='control-label']/following-sibling::div/p[1]",
+                    "key_converter": {
+                        "регион": {
+                            "type": "string",
+                            "name": "address_show"
+                        },
+                        "объект": {
+                            "type": "string",
+                            "name": "building_type"
+                        },
+                        "категория земель": {
+                            "type": "string",
+                            "name": "land1_category"
+                        },
+                        "использование": {
+                            "type": "string",
+                            "name": "purpose"
+                        },
+                        "улица": {
+                            "type": "string",
+                            "name": "street_name"
+                        },
+                        "общая_площадь": {
+                            "type": "float",
+                            "name": "area_total",
+                            "regex": "\\d*\\W?\\d+"
+                        },
+                        "площадь": {
+                            "type": [
+                                "float",
+                                "string"
+                            ],
+                            "name": [
+                                "area_total",
+                                "area_unit"
+                            ],
+                            "regex": [
+                                "\\d*\\W?\\d+",
+                                "[А-Яа-я]+"
+                          ]
+                      }                   
+                       
+                    }
+                }
+            },
+            
+            "follow": [
+                {
+                    "url_constructor": {
+                        "add_to_query": [
+                            {
+                                "id": {
+                                    "type": "string",
+                                    "path": "//input[@name='AdvertId']/@value"
+                                }
+                            },
+                            {
+                                "datatype": {
+                                    "type": "string",
+                                    "value": "json"
+                                }
+                            }
+                        ]
+                    },
+                    "fields": {
+                        "phone": {
+                            "type": "phone",
+                            "path": "phones"
+                        }
+                    },
+                    "methods": {
+                        "crawling_type": "common",
+                        "content_type": "json",
+                        "filter_duplicates": false,
+                        "allowed_domains": [],
+                        "proxy_settings": {
+                            "types": [
+                                "https"
+                            ],
+                            "amount": 10000,
+                            "save": true
+                        }
+                    },
+                    "url": "https://qp.ru/viewadvert/ShowPhones"
+                }
+            ]
+        }
+    }
