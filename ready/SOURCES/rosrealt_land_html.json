@@ -1,0 +1,465 @@
+ {
+    "_comment": "дубли возникали из-за небезопасного перехода на следующую страницу через кнопу далее",
+    "_task_id": "0000-0005-0271&T0118&1",
+    "_start_urls": [
+        "https://rosrealt.ru/adygeya/uchastok/prodam",
+        "https://rosrealt.ru/adygeya/uchastok/arenda",
+        "https://rosrealt.ru/altayskij-kraj/uchastok/prodam",
+        "https://rosrealt.ru/altayskij-kraj/uchastok/arenda",
+        "https://rosrealt.ru/amurskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/amurskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/arhangelskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/arhangelskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/astrahanskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/astrahanskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/bashkortostan/uchastok/prodam",
+        "https://rosrealt.ru/bashkortostan/uchastok/arenda",
+        "https://rosrealt.ru/belgorodskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/belgorodskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/bryanskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/bryanskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/buryatiya/uchastok/prodam",
+        "https://rosrealt.ru/buryatiya/uchastok/arenda",
+        "https://rosrealt.ru/chechnya/uchastok/prodam",
+        "https://rosrealt.ru/chechnya/uchastok/arenda",
+        "https://rosrealt.ru/chelyabinsk/uchastok/prodam",
+        "https://rosrealt.ru/chelyabinsk/uchastok/arenda",
+        "https://rosrealt.ru/chelyabinskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/chelyabinskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/chitinskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/chitinskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/chukotka/uchastok/prodam",
+        "https://rosrealt.ru/chukotka/uchastok/arenda",
+        "https://rosrealt.ru/chuvashiya/uchastok/prodam",
+        "https://rosrealt.ru/chuvashiya/uchastok/arenda",
+        "https://rosrealt.ru/dagestan/uchastok/prodam",
+        "https://rosrealt.ru/dagestan/uchastok/arenda",
+        "https://rosrealt.ru/eao/uchastok/prodam",
+        "https://rosrealt.ru/eao/uchastok/arenda",
+        "https://rosrealt.ru/ekaterinburg/uchastok/prodam",
+        "https://rosrealt.ru/ekaterinburg/uchastok/arenda",
+        "https://rosrealt.ru/habarovskij-kraj/uchastok/prodam",
+        "https://rosrealt.ru/habarovskij-kraj/uchastok/arenda",
+        "https://rosrealt.ru/hakasiya/uchastok/prodam",
+        "https://rosrealt.ru/hakasiya/uchastok/arenda",
+        "https://rosrealt.ru/ingushetiya/uchastok/prodam",
+        "https://rosrealt.ru/ingushetiya/uchastok/arenda",
+        "https://rosrealt.ru/irkutsk/uchastok/prodam",
+        "https://rosrealt.ru/irkutsk/uchastok/arenda",
+        "https://rosrealt.ru/irkutskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/irkutskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/ivanovskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/ivanovskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/kabardino-balkariya/uchastok/prodam",
+        "https://rosrealt.ru/kabardino-balkariya/uchastok/arenda",
+        "https://rosrealt.ru/kalinigradskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/kalinigradskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/kalmykiya/uchastok/prodam",
+        "https://rosrealt.ru/kalmykiya/uchastok/arenda",
+        "https://rosrealt.ru/kaluzhskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/kaluzhskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/kamchatka/uchastok/prodam",
+        "https://rosrealt.ru/kamchatka/uchastok/arenda",
+        "https://rosrealt.ru/karachaevo-cherkessiya/uchastok/prodam",
+        "https://rosrealt.ru/karachaevo-cherkessiya/uchastok/arenda",
+        "https://rosrealt.ru/kareliya/uchastok/prodam",
+        "https://rosrealt.ru/kareliya/uchastok/arenda",
+        "https://rosrealt.ru/kazan/uchastok/prodam",
+        "https://rosrealt.ru/kazan/uchastok/arenda",
+        "https://rosrealt.ru/kemerovskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/kemerovskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/kirovskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/kirovskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/komi/uchastok/prodam",
+        "https://rosrealt.ru/komi/uchastok/arenda",
+        "https://rosrealt.ru/kostromskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/kostromskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/krasnodar/uchastok/prodam",
+        "https://rosrealt.ru/krasnodar/uchastok/arenda",
+        "https://rosrealt.ru/krasnodarskij-kraj/uchastok/prodam",
+        "https://rosrealt.ru/krasnodarskij-kraj/uchastok/arenda",
+        "https://rosrealt.ru/krasnoyarsk/uchastok/prodam",
+        "https://rosrealt.ru/krasnoyarsk/uchastok/arenda",
+        "https://rosrealt.ru/krasnoyarskij-kraj/uchastok/prodam",
+        "https://rosrealt.ru/krasnoyarskij-kraj/uchastok/arenda",
+        "https://rosrealt.ru/krym/uchastok/prodam",
+        "https://rosrealt.ru/krym/uchastok/arenda",
+        "https://rosrealt.ru/kurganskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/kurganskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/kurskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/kurskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/leningradskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/leningradskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/lipetskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/lipetskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/magadanskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/magadanskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/marij-ehl/uchastok/prodam",
+        "https://rosrealt.ru/marij-ehl/uchastok/arenda",
+        "https://rosrealt.ru/mordoviya/uchastok/prodam",
+        "https://rosrealt.ru/mordoviya/uchastok/arenda",
+        "https://rosrealt.ru/moskovskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/moskovskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/moskva/uchastok/prodam",
+        "https://rosrealt.ru/moskva/uchastok/arenda",
+        "https://rosrealt.ru/murmanskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/murmanskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/nizhegorodskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/nizhegorodskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/nizhnij-novgorod/uchastok/prodam",
+        "https://rosrealt.ru/nizhnij-novgorod/uchastok/arenda",
+        "https://rosrealt.ru/novgorodskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/novgorodskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/novosibirsk/uchastok/prodam",
+        "https://rosrealt.ru/novosibirsk/uchastok/arenda",
+        "https://rosrealt.ru/novosibirskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/novosibirskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/omsk/uchastok/prodam",
+        "https://rosrealt.ru/omsk/uchastok/arenda",
+        "https://rosrealt.ru/omskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/omskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/orenburgskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/orenburgskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/orlovskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/orlovskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/penzenskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/penzenskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/permskij-kraj/uchastok/prodam",
+        "https://rosrealt.ru/permskij-kraj/uchastok/arenda",
+        "https://rosrealt.ru/primorskij-kraj/uchastok/prodam",
+        "https://rosrealt.ru/primorskij-kraj/uchastok/arenda",
+        "https://rosrealt.ru/pskovskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/pskovskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/respublika-altaj/uchastok/prodam",
+        "https://rosrealt.ru/respublika-altaj/uchastok/arenda",
+        "https://rosrealt.ru/rostov-na-donu/uchastok/prodam",
+        "https://rosrealt.ru/rostov-na-donu/uchastok/arenda",
+        "https://rosrealt.ru/rostovskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/rostovskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/ryazanskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/ryazanskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/sahalinskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/sahalinskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/samara/uchastok/prodam",
+        "https://rosrealt.ru/samara/uchastok/arenda",
+        "https://rosrealt.ru/samarskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/samarskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/sankt-peterburg/uchastok/prodam",
+        "https://rosrealt.ru/sankt-peterburg/uchastok/arenda",
+        "https://rosrealt.ru/saratov/uchastok/prodam",
+        "https://rosrealt.ru/saratov/uchastok/arenda",
+        "https://rosrealt.ru/saratovskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/saratovskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/severnaya-osetiya/uchastok/prodam",
+        "https://rosrealt.ru/severnaya-osetiya/uchastok/arenda",
+        "https://rosrealt.ru/smolenskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/smolenskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/sochi/uchastok/prodam",
+        "https://rosrealt.ru/sochi/uchastok/arenda",
+        "https://rosrealt.ru/stavropolskij-kraj/uchastok/prodam",
+        "https://rosrealt.ru/stavropolskij-kraj/uchastok/arenda",
+        "https://rosrealt.ru/sverdlovskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/sverdlovskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/tambovskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/tambovskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/tatarstan/uchastok/prodam",
+        "https://rosrealt.ru/tatarstan/uchastok/arenda",
+        "https://rosrealt.ru/tomsk/uchastok/prodam",
+        "https://rosrealt.ru/tomsk/uchastok/arenda",
+        "https://rosrealt.ru/tomskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/tomskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/tulskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/tulskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/tverskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/tverskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/tyumen/uchastok/prodam",
+        "https://rosrealt.ru/tyumen/uchastok/arenda",
+        "https://rosrealt.ru/tyumenskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/tyumenskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/tyva/uchastok/prodam",
+        "https://rosrealt.ru/tyva/uchastok/arenda",
+        "https://rosrealt.ru/udmurtiya/uchastok/prodam",
+        "https://rosrealt.ru/udmurtiya/uchastok/arenda",
+        "https://rosrealt.ru/ufa/uchastok/prodam",
+        "https://rosrealt.ru/ufa/uchastok/arenda",
+        "https://rosrealt.ru/ulyanovskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/ulyanovskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/vladimirskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/vladimirskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/vladivostok/uchastok/prodam",
+        "https://rosrealt.ru/vladivostok/uchastok/arenda",
+        "https://rosrealt.ru/volgogradskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/volgogradskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/vologodskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/vologodskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/voronezhskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/voronezhskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/yakutiya/uchastok/prodam",
+        "https://rosrealt.ru/yakutiya/uchastok/arenda",
+        "https://rosrealt.ru/yanao/uchastok/prodam",
+        "https://rosrealt.ru/yanao/uchastok/arenda",
+        "https://rosrealt.ru/yaroslavskaya-oblast/uchastok/prodam",
+        "https://rosrealt.ru/yaroslavskaya-oblast/uchastok/arenda",
+        "https://rosrealt.ru/yugra/uchastok/prodam",
+        "https://rosrealt.ru/yugra/uchastok/arenda"
+    ],
+    "_segment": "Продажа/аренда участков",
+    "_operation": "",
+    "_federal_subject": "",
+    "_source": "https://rosrealt.ru",
+    "project_id": "metaspider",
+    "spider_id": "metacrawler",
+    "global_settings": {
+        "CONCURRENT_REQUESTS": 256,
+        "SPLASH_URL": "http://0.0.0.0:8050",
+        "LOG_LEVEL": "INFO",
+        "AUTOTHROTTLE_ENABLED": false,
+        "AUTOTHROTTLE_START_DELAY": 1,
+        "AUTOTHROTTLE_MAX_DELAY": 60,
+        "AUTOTHROTTLE_TARGET_CONCURRENCY": 256,
+        "CONCURRENT_REQUESTS_PER_DOMAIN": 256,
+        "RETRY_ENABLED": true,
+        "RETRY_HTTP_CODES": [
+            500,
+            503,
+            504,
+            400,
+            403,
+            408,
+            429,
+            502,
+            505,
+            404,
+            303,
+            302,
+            301,
+            307,
+            410,
+            451
+        ],
+        "HTTPERROR_ALLOWED_CODES": [],
+        "RETRY_TIMES": 20,
+        "ROBOTSTXT_ENABLED": false,
+        "ROBOTSTXT_OBEY": false,
+        "REDIRECT_ENABLED": false,
+        "COOKIES_ENABLED": false,
+        "DOWNLOAD_FAIL_ON_DATALOSS": false,
+        "RANDOM_UA_TYPE": "random",
+        "DOWNLOAD_TIMEOUT": 60,
+        "CLOSESPIDER_ITEMCOUNT": 0,
+        "CLOSESPIDER_ERRORCOUNT": 0
+    },
+    "methods": {
+        "crawling_type": "common",
+        "allowed_domains": [],
+        "proxy_settings": {
+            "types": [
+                "https"
+            ],
+            "amount": 10000,
+            "save": false
+        }
+    },
+    "crawl_tree": [{
+        "pagination_urls": {
+            "path": "//div[@class='info'][2]//div[@class='nolink']/parent::a/following-sibling::a[1]/@href"
+        },
+        "item_urls": {
+            "path": "//div[@id = 'colmain']/div[@class = 'info']/a/@href"
+        }
+    }],
+    "item_page": {
+        "fields": {
+            "segment": {
+                "type": "list to string",
+                "path": "//span[@itemprop='title']//text()",
+                "regex": "квартир|офис|участок|дом|склад|коммерч",
+                "operations": []
+            },
+            "price_term": {
+                "type": "string",
+                "path": "//p[@class='pbig_gray']/text()",
+                "regex": "Общая стоимость|Цена за сотку|Цена за гектар|Стоимость аренды в месяц",
+                "operations": []
+            },
+            "phone": {
+                "type": "phone",
+                "path": "//a[contains(@href,'tel:')]/text()",
+                "operations": []
+            },
+            "source_latitude": {
+                "type": "float",
+                "path": "//script[text()[contains(.,'center')]]/text()",
+                "regex": "center: \\[(.+), ",
+                "operations": []
+            },
+            "source_longitude": {
+                "type": "float",
+                "path": "//script[text()[contains(.,'center')]]/text()",
+                "regex": ", (.+)\\], \\{",
+                "operations": []
+            },
+            "address": {
+                "type": "list to string",
+                "path": "//p[@class='pbig_gray']//b[@class='blue']//text()",
+                "operations": []
+            },
+            "price_currency": {
+                "type": "string",
+                "path": "//b[@class='red_price']/text()",
+                "regex": "[А-Яа-я]+",
+                "operations": []
+            },
+
+            "seller_name": {
+                "type": "string",
+                "path": "//div[@class='kontakt']//p[@class='status']//b//text()",
+                "operations": []
+            },
+
+            "seller_status": {
+                "type": "list to string",
+                "path": "//div[@class='kontakt']/p[@class='status']/text()",
+                "regex": "Риэлтор|Посредник|Собственник|АН",
+                "operations": []
+            },
+            "metro_station": {
+                "type": "string",
+                "path": "//a[contains(@href,'metro')]/text()",
+                "operations": []
+            },
+            "date_info": {
+                "type": "date",
+                "time": "now",
+                "operations": []
+            },
+            "operation": {
+                "type": "list to string",
+                "path": "//span[@itemprop='title']/text()",
+                "regex": "Снять|Купить",
+                "operations": []
+            },
+            "title_name": {
+                "type": "list to string",
+                "path": "//div[@id='pagetitleblock']//text()",
+                "operations": []
+            },
+            "price_total": {
+                "type": "float",
+                "path": "//b[@class='red_price']/text()",
+                "regex": "\\d*\\W?\\d+",
+                "operations": []
+            },
+            "federal_subject": {
+                "type": "string",
+                "path": "//div[@id='path_block']/div[2]/a/span/text()",
+                "operations": []
+            },
+            "description": {
+                "type": "list to string",
+                "path": "//div[@class='info_self']//p/text()",
+                "operations": []
+            },
+            "address_city": {
+                "type": "string",
+                "path": "(//span[@itemprop='title']/text())[2]",
+                "operations": []
+            },
+            "price_unit": {
+                "type": "string",
+                "path": "//div[@id='pagetitleblock']//text()",
+                "regex": "за кв.м.|сот.|Га",
+                "operations": []
+            },
+             "DOP": {
+                "type": "list to string",
+                "path": "//div[@class='info']/table/tr/td/p/text()|//div[@class='info']/table/tr/td/p/a/text()",
+                "operations": []
+            },
+            "land_use": {
+                    "type": "list to string",
+                    "path" : "//div[@class='info']/table/tr/td/p/a/text()",
+                    "regex": "Дачный|Земли поселений|ИЖС|Личное подсобное хозяйство|Под помещение свободного назначения|Промышленный|Рекреационный|Садоводство|Сельхозназначение"
+            },
+              "object_class": {
+                    "type": "list to string",
+                    "path" : "//div[@class='info']/table/tr/td/p/a/text()",
+                    "regex": "Эконом|Бизнес|Комфорт|Элит"
+            }
+
+        },
+        "tables": {
+            "table_2": {
+                "_keys_path": "//div[@class='info']/table/tr/td/p/text()",
+                "_vals_path": "//div[@class='info']/table/tr/td/p/text()",
+                "key_regex": "^.+(?=:)|^.+",
+                "key_converter": {
+                    
+                    "площадь_зу": {
+                        "type": "float",
+                        "name": "land_area",
+                         "regex": "\\d*\\W?\\d+"
+                    },
+                    "назначение_зу": {
+                        "type": "string",
+                        "name": "naznach"
+                         
+                    },
+
+                    "вода": {
+                        "type": "string",
+                        "name": "is_plumbing"
+                    },
+                     "охрана": {
+                        "type": "string",
+                        "name": "security_type"
+                    },
+
+                    "номер": {
+                        "type": "string",
+                        "name": "Number",
+                        "regex": "\\d*\\W?\\d+"
+                    },
+                    "водопровод": {
+                        "type": "string",
+                        "name": "is_plumbing"
+                    },
+
+                    "канализация": {
+                        "type": "string",
+                        "name": "is_sewage"
+                    },
+                    "добавлено": {
+                        "type": "date",
+                        "time": "from string",
+                        "name": "date_created",
+                        "regex": "(?<=добавлено:).+"
+                    },
+
+                    "просмотров": {
+                        "type": "string",
+                        "name": "num_of_vision",
+                        "regex": "\\d*\\W?\\d+"
+                    },
+
+                    "электричество": {
+                        "type": "string",
+                        "name": "is_electricity"
+                        
+                    },
+                    "газ": {
+                        "type": "string",
+                        "name": "is_gas"
+                        
+                    },
+                    "обновлено": {
+                        "type": "date",
+                        "time": "from string",
+                        "name": "date_updated",
+                        "regex": "(?<=обновлено:).+"
+                    }
+                }
+            }
+        }
+    }
+ }
