@@ -1,0 +1,414 @@
+{
+  "_task_id": "NNN_IRR_LAND_SALE_",
+  "_start_urls": [
+        "https://adygeya-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://adygeya-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://altay-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://altay-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://altayskiy-kray.irr.ru/real-estate/out-of-town/lands/",
+        "https://altayskiy-kray.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://amurskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://amurskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://arhangelskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://arhangelskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://astrahanskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://astrahanskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://bashkortostan-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://bashkortostan-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://belgorodskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://belgorodskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://bryanskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://bryanskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://buryatiya-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://buryatiya-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://vladimirskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://vladimirskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://volgogradskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://volgogradskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://vologodskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://vologodskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://voronezhskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://voronezhskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://dagestan-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://dagestan-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://evreyskaya-aobl.irr.ru/real-estate/out-of-town/lands/",
+        "https://evreyskaya-aobl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://zabaykalskiy-kray.irr.ru/real-estate/out-of-town/lands/",
+        "https://zabaykalskiy-kray.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://ivanovskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://ivanovskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://ingushetiya-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://ingushetiya-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://irkutskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://irkutskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://kabardino-balkarskaya-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://kabardino-balkarskaya-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://kaliningradskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://kaliningradskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://kalmykiya-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://kalmykiya-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://kaluzhskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://kaluzhskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://kamchatskiy-kray.irr.ru/real-estate/out-of-town/lands/",
+        "https://kamchatskiy-kray.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://karachaevo-cherkesskaya-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://karachaevo-cherkesskaya-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://kareliya-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://kareliya-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://kemerovskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://kemerovskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://kirovskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://kirovskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://komi-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://komi-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://kostromskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://kostromskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://krasnodarskiy-kray.irr.ru/real-estate/out-of-town/lands/",
+        "https://krasnodarskiy-kray.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://krasnoyarskiy-kray.irr.ru/real-estate/out-of-town/lands/",
+        "https://krasnoyarskiy-kray.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://krym-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://krym-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://kurganskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://kurganskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://kurskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://kurskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://saint-petersburg.irr.ru/real-estate/out-of-town/lands/",
+        "https://saint-petersburg.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://lipetskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://lipetskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://magadanskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://magadanskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://mariy-el-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://mariy-el-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://mordoviya-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://mordoviya-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://irr.ru/real-estate/out-of-town/lands/",
+        "https://irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://murmanskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://murmanskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://nenetskiy-ao.irr.ru/real-estate/out-of-town/lands/",
+        "https://nenetskiy-ao.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://nizhegorodskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://nizhegorodskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://novgorodskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://novgorodskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://novosibirskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://novosibirskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://omskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://omskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://orenburgskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://orenburgskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://orlovskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://orlovskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://penzenskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://penzenskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://permskiy-kray.irr.ru/real-estate/out-of-town/lands/",
+        "https://permskiy-kray.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://primorskiy-kray.irr.ru/real-estate/out-of-town/lands/",
+        "https://primorskiy-kray.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://pskovskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://pskovskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://rostovskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://rostovskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://ryazanskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://ryazanskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://samarskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://samarskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://saratovskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://saratovskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://saha-yakutiya-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://saha-yakutiya-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://sahalinskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://sahalinskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://sverdlovskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://sverdlovskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://sevastopol.irr.ru/real-estate/out-of-town/lands/",
+        "https://sevastopol.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://alaniya-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://alaniya-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://smolenskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://smolenskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://stavropolskiy-kray.irr.ru/real-estate/out-of-town/lands/",
+        "https://stavropolskiy-kray.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://tambovskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://tambovskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://tatarstan-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://tatarstan-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://tverskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://tverskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://tomskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://tomskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://tulskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://tulskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://tyva-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://tyva-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://tyumenskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://tyumenskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://udmurtskaya-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://udmurtskaya-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://ulyanovskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://ulyanovskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://habarovskiy-kray.irr.ru/real-estate/out-of-town/lands/",
+        "https://habarovskiy-kray.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://hakasiya-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://hakasiya-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://yugra-ao.irr.ru/real-estate/out-of-town/lands/",
+        "https://yugra-ao.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://chelyabinskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://chelyabinskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://chechenskaya-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://chechenskaya-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://chuvashskaya-resp.irr.ru/real-estate/out-of-town/lands/",
+        "https://chuvashskaya-resp.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://chukotskiy-ao.irr.ru/real-estate/out-of-town/lands/",
+        "https://chukotskiy-ao.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://yamalo-nenetskiy-ao.irr.ru/real-estate/out-of-town/lands/",
+        "https://yamalo-nenetskiy-ao.irr.ru/real-estate/out-of-town-rent/lands/",
+        "https://yaroslavskaya-obl.irr.ru/real-estate/out-of-town/lands/",
+        "https://yaroslavskaya-obl.irr.ru/real-estate/out-of-town-rent/lands/"],
+  "_segment": "Продажа/аренда участков",
+  "_operation": "",
+  "_federal_subject": "",
+  "_source": "IRR",
+  "global_settings": {
+    "CONCURRENT_REQUESTS": 1024,
+    "CONCURRENT_REQUESTS_PER_DOMAIN": 1024,
+    "DOWNLOAD_TIMEOUT": 60,
+    "SPLASH_URL": "http://0.0.0.0:8050",
+    "LOG_LEVEL": "INFO",
+    "AUTOTHROTTLE_ENABLED": false,
+    "AUTOTHROTTLE_START_DELAY": 1,
+    "AUTOTHROTTLE_MAX_DELAY": 60,
+    "AUTOTHROTTLE_TARGET_CONCURRENCY": 1024,
+    "HTTPERROR_ALLOWED_CODES": [],
+    "RETRY_ENABLED": true,
+    "RETRY_TIMES": 20,
+    "RETRY_HTTP_CODES": [
+      500,
+      511,
+      503,
+      504,
+      400,
+      403,
+      408,
+      429,
+      505,
+      404,
+      303,
+      302,
+      502
+    ],
+    "ROBOTSTXT_ENABLED": false,
+    "ROBOTSTXT_OBEY": false,
+    "REDIRECT_ENABLED": false,
+    "COOKIES_ENABLED": false,
+    "RANDOM_UA_TYPE": "random"
+  },
+  "methods": {
+    "crawling_type": "common",
+    "allowed_domains": [],
+    "proxy_settings": {
+      "types": [
+        "https"
+      ]
+    }
+  },
+  "crawl_tree": [
+    {
+      "pagination_urls": {
+        "path": "//li[contains(@class, 'pagination__pagesItem_active')]/following-sibling::li[1]/a/@href"
+      },
+      "item_urls": {
+        "path": "//div[@class='listing js-productGrid ']//div[@class='listing__itemTitleWrapper']/a/@href"
+      }
+    }
+  ],
+  "item_page": {
+    "fields": {
+      "date_info": {
+        "type": "date",
+        "time": "now"
+      },
+      "federal_subject": {
+        "type": "string",
+        "regex": "\"address_region\":\"([\\w -]+)\""
+
+      },
+      "address_city": {
+        "type": "string",
+        "regex": "\"address_city\":\"([\\w -]+)\""
+        
+      },
+      "currency": {
+        "type": "string",
+        "path": "//meta[@itemprop='priceCurrency']/@content"
+      },
+      "title_name": {
+        "type": "string",
+        "path": "//title/text()"
+      },
+      "address": {
+        "type": "string",
+        "path": "//div[@class='productPage__infoTextBold js-scrollToMap']/text()"
+      },
+      "description": {
+        "type": "list to string",
+        "path": "//p[@itemprop='description']/text()"
+      },
+      "seller_name": {
+        "type": "string",
+        "path": "normalize-space((//div[@class='productPage__infoTextBold productPage__infoTextBold_inline'][count(./*)=1]/a | //div[@class='productPage__infoTextBold productPage__infoTextBold_inline'][count(./*)=0])/text())"
+      },
+      "seller_type": {
+        "type": "string",
+        "path": "//a[@class='js-sellerSiteLink']/text()"
+        
+      },
+      "phone": {
+        "type": "phone_bs64",
+        "path": "//input[@name='phoneBase64']/@value"
+      },
+      "date_created": {
+        "type": "date",
+        "path": "//div[@class='productPage__createDate']/span/text()",
+        "time": "from string"
+      },
+      "price_total": {
+        "type": "float",
+        "path": "//div[@itemprop='price']/@content"
+      },
+      "price_term": {
+        "type": "string",
+        "path": "//div[@itemprop='price']/text()"
+        
+      },
+      "price_unit": {
+        "type": "string",
+        "path": "//div[@itemprop='price']/text()"
+        
+      },
+      "source_latitude": {
+        "type": "float",
+        "path": "//div[@class='js-productPageMap']/@data-map-info",
+        "regex": "(?<=lat\":\")\\d*.\\d+"
+        
+      },
+      "source_longitude": {
+        "type": "float",
+        "path": "//div[@class='js-productPageMap']/@data-map-info",
+        "regex": "(?<=lng\":\")\\d*.\\d+"
+        
+      },
+      "agent_fee": {
+        "type": "string",
+        "path": "//div[@class='productPage__fee']/text()",
+        "regex": "\\d*\\W?\\D+$"
+        
+      },
+      "segment": {
+        "type": "string",
+        "path": "//ul[@class='breadcrumbs__list js-breadcrumbsNav']//li[4]//span/text()"
+      },
+      "operation": {
+        "type": "string",
+        "path": "//ul[@class='breadcrumbs__list js-breadcrumbsNav']//li[3]//span/text()",
+        "regex": "Продажа|Аренда"
+      }
+    },
+    "tables": {
+      "table_1": {
+        "_keys_path": "//li[@class='productPage__infoColumnBlockText']/text()",
+        "_vals_path": "//li[@class='productPage__infoColumnBlockText']/text()",
+        "key_regex": ".+?(?=:.)|^.+$",
+        "key_converter": {
+            "строения": {
+            "name": "building_type",
+            "type": "string",
+            "regex": "(?<=: ).+"
+          },
+            "площадь_участка": {
+            "name": [
+              "area_land",
+              "area_land_unit"
+            ],
+            "type": [
+              "float",
+              "string"
+            ],
+            "regex": [
+              "\\s\\d+[.]?\\d*\\s",
+              "сот|га|м"
+            ]
+          },
+          "район_города": {
+            "name": "intown_district",
+            "type": "string",
+            "regex": "(?<=: ).+"
+          },
+            "улица": {
+            "name": "street_name",
+            "type": "string",
+            "regex": "(?<=: ).+"
+          },
+            "вид_разрешенного_использования": {
+            "name": "land_use",
+            "type": "string",
+            "regex": "(?<=: ).+"
+          },
+          "категория_земли": {
+            "name": "land_category",
+            "type": "string",
+            "regex": "(?<=: ).+"
+          },
+            "электричество_подведено": {
+            "name": "is_electricity",
+            "type": "string"
+          },
+           "единица_площади": {
+            "name": "area_units",
+            "type": "string",
+            "regex": "(?<=: ).+"
+          },
+          "удаленность": {
+            "name": "distance",
+            "type": "string",
+            "regex": "(?<=: ).+"
+          },
+          "охрана": {
+            "name": "security_type",
+            "type": "string"
+          },
+          "водопровод": {
+            "name": "is_plumbing",
+            "type": "string"
+            
+          },
+            "направление": {
+            "name": "direction",
+            "type": "string",
+            "regex": "(?<=: ).+"
+          },
+          "шоссе": {
+            "name": "nearest_highway",
+            "type": "string",
+            "regex": "(?<=: ).+"
+            },
+            "газ": {
+            "name": "is_gas",
+            "type": "string"
+          },
+           "вид_права": {
+            "name": "ownership_type",
+            "type": "string",
+            "regex": "(?<=: ).+"
+          
+
+          }
+          
+        }
+      }
+    }
+  }
+}
+
